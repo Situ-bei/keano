@@ -1,5 +1,5 @@
 import { defineUserConfig } from "vuepress";
-
+import { hopeTheme } from "vuepress-theme-hope";
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -18,7 +18,9 @@ export default defineUserConfig({
     },
   },
 
-  theme,
+  theme: hopeTheme({
+    fullscreen: true,
+  }),
 
   // Enable it with pwa
   // shouldPrefetch: false,
