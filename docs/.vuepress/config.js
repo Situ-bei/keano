@@ -2,7 +2,7 @@ import { blogPlugin } from '@vuepress/plugin-blog'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
-import { recoTheme } from 'vuepress-theme-reco'
+import { recoTheme } from '@vuepress-theme-reco'
 
 export default defineUserConfig({
   lang: 'zh-CN',
