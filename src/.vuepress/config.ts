@@ -18,9 +18,7 @@ export default defineUserConfig({
     },
   },
 
-  theme: hopeTheme({
-    fullscreen: true,
-  }),
+  theme,
 
   // Enable it with pwa
   // shouldPrefetch: false,
