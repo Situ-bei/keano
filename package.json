@@ -19,6 +19,7 @@
     "vuepress": "^2.0.0-rc.7"
   },
   "dependencies": {
-    "keanoblog": "file:"
+    "keanoblog": "file:",
+    "vuepress-theme-reco": "^1.6.17"
   }
 }
