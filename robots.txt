@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://mister-hope.github.io/blog_pages/sitemap.xml
+Sitemap: https://mister-hope.github.io/keano/sitemap.xml
