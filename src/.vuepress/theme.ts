@@ -7,10 +7,14 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "Mr.Hope",
+    name: "Keano",
     url: "https://mister-hope.com",
   },
 
+  fullscreen: true,//设置全屏
+
+  darkmode: "switch",
+  
   iconAssets: "fontawesome-with-brands",
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
