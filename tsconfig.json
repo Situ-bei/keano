@@ -1,14 +1,25 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "target": "ES2022"
+    "resolveJsonModule": true,  // 启用对.json文件的支持，允许导入JSON文件。
+    "esModuleInterop": true, // 启用模块互操作性，简化不同模块类型（如 CommonJS 和 ES 模块）之间的兼容性。
+
+    // 允许编译 JavaScript 文件，即使这些文件不是 TypeScript 文件。
+    // 这使得可以在 TypeScript 项目中包含和编译 JavaScript 代码。
+    "allowJs": true,  
+
+    "module": "NodeNext",  // 启用ES6模块
+    "moduleResolution": "NodeNext", // 启用NodeNext模块解析 指定模块加载方式遵循Node.js的下一代模块解析规则。
+    "target": "ES2022" // 设置编译目标为ES2022
   },
   "include": [
     "src/.vuepress/**/*.ts",
-    "src/.vuepress/**/*.vue"
+    "src/.vuepress/**/*.vue",
+    // "src/.vuepress/**/*"
   ],
+  
   "exclude": [
-    "node_modules"
+    "node_modules",
+    // "dist", 
+    // "__private"
   ]
 }
