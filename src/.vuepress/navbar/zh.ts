@@ -2,69 +2,76 @@ import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
   "/",
-  "/demo/",
-  {
-    text: "博文",
-    icon: "pen-to-square",
-    prefix: "/posts/",
-    children: [
-      {
-        text: "苹果",
-        icon: "pen-to-square",
-        prefix: "apple/",
-        children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-          { text: "苹果2", icon: "pen-to-square", link: "2" },
-          "3",
-          "4",
-        ],
-      },
-      {
-        text: "香蕉",
-        icon: "pen-to-square",
-        prefix: "banana/",
-        children: [
-          {
-            text: "香蕉 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "香蕉 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-          "3",
-          "4",
-        ],
-      },
-      { text: "樱桃", icon: "pen-to-square", link: "cherry" },
-      { text: "火龙果", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
-    ],
-  },
+  { text: "导航", icon: "icon-daohang", link: "/demo/" },
+
+  // 学习
   {
     text: "学习",
-    icon: "learning",
+    icon: "icon-studyfill",
     prefix: "/study/",
-    activeMatch: "^/study/*$",
-    children: [
+    children:[
+      //编程
       {
         text: "编程",
-        icon: "blog",
+        icon: "icon-codingfill",
         prefix: "coding/",
         children: [
-          { 
-            text: "CSS", 
-            icon: "pen-to-square", 
-            link: "CSS/" ,
+          { text: "CSS", icon: "icon-cssfill", link: "CSS/" ,},
+          { text: "HTML", icon: "icon-htmlfill", link: "HTML/",},
+          { text: "JS", icon: "icon-javascript-fill", link: "JS/",},
+          { text: "NodeJS", icon: "icon-nodejsGreen", link: "NodeJS/",},
+          { text: "Vue生态", icon: "icon-logo-vue", link: "Vue/",},
+          { text: "git", icon: "icon-github-fill", link: "git/",},
 
 
-          },
         ],
       },
-    ],
+      //历史
+      {
+        text: "历史",
+        // icon: "icon-codingfill",
+        prefix: "history/",
+        children: [
+          { text: "纵览", icon: "icon-zonglan", link: "overview/",},
+        ],
+      },
+      //百科
+      {
+        text: "百科",
+        icon: "icon-codingfill",
+        prefix: "wiki/",
+        link: "wiki/"
+        // children: [
+        //   { text: "纵览", icon: "icon-cssfill", link: "overview/",},
+        // ],
+      },
+    ]
   },
 
+  // 生活
+  {
+    text: "生活",
+    icon: "icon-studyfill",
+    prefix: "/life/",
+    children: [
+      {
+        text: "书籍",
+        icon: "icon-studyfill",
+        prefix: "books/",
+        link: "books/",
+      },
+      {
+        text: "电影",
+        icon: "icon-studyfill",
+        prefix: "movie/",
+        link: "movie/",
+      },
+      {
+        text: "音乐",
+        icon: "icon-studyfill",
+        prefix: "music/",
+        link: "movie/",
+      },
+    ]
+  },
 ]);

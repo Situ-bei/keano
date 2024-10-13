@@ -20,12 +20,14 @@
     "@vuepress/plugin-pwa": "2.0.0-rc.52",
     "@vuepress/plugin-redirect": "2.0.0-rc.52",
     "@vuepress/plugin-search": "2.0.0-rc.52",
+    "@vuepress/plugin-shiki": "^2.0.0-rc.52",
     "@waline/client": "^3.3.2",
     "aplayer": "^1.10.1",
     "art-template": "^4.13.2",
     "dayjs": "^1.11.13",
     "sass-embedded": "^1.79.4",
     "store": "^2.0.12",
+    "vidstack": "^1.12.11",
     "vue": "^3.5.11",
     "vue-router": "^4.4.5",
     "vuepress": "2.0.0-rc.17",
@@ -33,6 +35,8 @@
     "vuepress-theme-hope": "2.0.0-rc.58"
   },
   "dependencies": {
+    "@vuepress/plugin-back-to-top": "^2.0.0-rc.52",
+    "@vueuse/core": "^11.1.0",
     "axios": "^1.7.7",
     "keanolog": "file:"
   }

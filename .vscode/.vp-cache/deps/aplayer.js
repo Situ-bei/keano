@@ -2,9 +2,9 @@ import {
   __commonJS
 } from "./chunk-HKJ2B2AA.js";
 
-// node_modules/.pnpm/aplayer@1.10.1/node_modules/aplayer/dist/APlayer.min.js
+// node_modules/aplayer/dist/APlayer.min.js
 var require_APlayer_min = __commonJS({
-  "node_modules/.pnpm/aplayer@1.10.1/node_modules/aplayer/dist/APlayer.min.js"(exports, module) {
+  "node_modules/aplayer/dist/APlayer.min.js"(exports, module) {
     !function(e, t) {
       "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define("APlayer", [], t) : "object" == typeof exports ? exports.APlayer = t() : e.APlayer = t();
     }(window, function() {

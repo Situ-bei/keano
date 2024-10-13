@@ -2,47 +2,46 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
-const footerICP_HTML = `
-<a class="footer-icp" href="https://beian.miit.gov.cn" target="_blank">
-  <img src="//file.mo7.cc/static/img/beian.png">
-  陕ICP备2022011574号
-</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-about" href="/about/website.html">关于本站</a>
-`;
+const footerICP_HTML = 
+`
+  <div class="footer-about">
+    <a href="/keano/intro.html">关于本站 | Powered by </a> &nbsp;
+    <a class="footer-VuePress" href="https://github.com/Situ-bei/keano" target="_blank">VuePress</a>&nbsp;
+    <a class="footer-Hope" href="https://github.com/Situ-bei/keano" target="_blank"> Hope </a>
+  </div>
+`
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
-
+  hostname: "https://situ-bei.github.io/keano/",
   author: {
     name: "Keano",
     url: "https://mister-hope.com",
   },
-
   fullscreen: true,//设置全屏
-
-  lastUpdated:true,// 是否显示页面最后更新时间
-
   navbarAutoHide: 'always', //导航栏自动隐藏
-
   darkmode: "toggle", // 暗黑模式
-
-  footer: footerICP_HTML,
-  
-  // 图标引入地址
-  iconAssets: [
-    "fontawesome-with-brands",
-    "//at.alicdn.com/t/c/font_4705467_qzwikjb46w.css",
-  ],  
-
+  themeColor: true, // 启用主题颜色
   logo: "/logo.svg", // logo
+  repo: "https://situ-bei.github.io/keano/", // github仓库
+  docsDir: "src", // 你可以通过在主题选项中设置如下项目，来自动为每个页面生成编辑此页链接
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope", // github仓库
+  //页面元数据：贡献者，最后修改时间，编辑链接
+  contributors: true,
+  lastUpdated: true,
+  editLink: false,   // 想要全局禁用这些项目的显示，请在主题选项中，将以下对应项目设置为 false
+  // 【页脚相关】 https://theme-hope.vuejs.press/zh/guide/layout/footer.html#%E4%BE%8B%E5%AD%90
+  // footer: "",
+  // displayFooter: false, // 页脚是默认隐藏的。如果希望默认全局显示，请在主题选项中设置 displayFooter: true
 
-
-  // 你可以通过在主题选项中设置如下项目，来自动为每个页面生成编辑此页链接
-  docsDir: "src",
+  // 是否开启纯净模式
+  // pure: true,
   
-  // 想要全局禁用这些项目的显示，请在主题选项中，将以下对应项目设置为 false
-  editLink: false,
+  // 图标引入地址 
+  iconAssets: [
+    // "fontawesome-with-brands",
+    "//at.alicdn.com/t/c/font_4705467_qdvh1bur1oj.css",
+  ],  
+  iconPrefix: "iconfont ",
 
   // enable it to preview all changes in time  使其能够及时预览所有更改
   // 由于 git 插件需要调用 Git 程序并且涉及文件 IO，因此此功能会对启动与热更新速度造成严重影响，
@@ -52,7 +51,8 @@ export default hopeTheme({
   
   
   
-  //页面信息
+  //https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
+  //页面信息 
   pageInfo: [
     'Author', //作者信息
     'Word',   //字数
@@ -72,9 +72,14 @@ export default hopeTheme({
     end: ['Search', 'Links', 'Language', 'Outlook'],
   },
   
-  //主页sidebar 链接设置
+  // 博主信息
   blog: {
+    name: 'Icyn',
+    avatar: '//file.mo7.cc/static/lxh_gif/lxh_71.gif',
+    description: '让我们变得更强。',
+    // intro: 'https://blog.mo7.cc/about/me.html',
     medias: {
+      '163Music': "https://music.163.com/#/my/m/music/playlist?id=596766562",
       // Baidu: "https://example.com",
       // BiliBili: "https://example.com",
       // Bitbucket: "https://example.com",
@@ -86,7 +91,7 @@ export default hopeTheme({
       // Facebook: "https://example.com",
       // Flipboard: "https://example.com",
       // Gitee: "https://example.com",
-      // GitHub: "https://example.com",
+      GitHub: "https://github.com/Situ-bei/keano",
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
       // Instagram: "https://example.com",
@@ -111,6 +116,7 @@ export default hopeTheme({
       //   link: "https://theme-hope.vuejs.press",
       // },
     },
+    
   },
 
   locales: {
@@ -120,16 +126,13 @@ export default hopeTheme({
     "/": {
       // navbar
       navbar: zhNavbar,
-
       // sidebar
       sidebar: zhSidebar,
-
-      // footer: "默认页脚",
-
-      displayFooter: true,
-
+      // footer: "由VuePress主题Hope构建",
+      footer: footerICP_HTML,
+      
+      displayFooter: false,
       blog: {
-        description: "一个前端开发者",
         intro: "/intro.html",
       },
       
@@ -144,14 +147,8 @@ export default hopeTheme({
     "/en/": {
       // navbar
       navbar: enNavbar,
-
       // sidebar
       sidebar: enSidebar,
-
-      footer: "Default footer",
-
-      displayFooter: true,
-
       blog: {
         description: "A FrontEnd programmer",
         intro: "/en/intro.html",
@@ -171,17 +168,29 @@ export default hopeTheme({
       "/en/demo/encrypt.html": ["134130"],
     },
   },
+  
 
+  
   //插件
   plugins: {
-    blog: true, // 官方博客插件
+    // 官方博客插件
+    blog: {
+      autoExcerpt: true,// 自动摘要
+    }, 
+
     photoSwipe: false, // 官方图片预览插件，这个插件难用的 一 B
 
+    // 代码块高亮 【shiki插件】
+    shiki: {
+      // 你想要使用的主题
+      themes: {
+        light: "one-light",
+        dark: "one-dark-pro",
+      },
+      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','js'],
+      collapsedLines: true,
+    },
 
-
-    
-
-    
     // Install @waline/client before enabling it  【在启用@waline/client之前安装它 】
     // Note: This is for testing ONLY!  【注意：这仅用于测试！ 】
     // You MUST generate and use your own comment service in production. 【您必须在生产中生成和使用自己的评论服务。】
@@ -201,11 +210,12 @@ export default hopeTheme({
     
     // Register components globally  【全局注册组件】
     components: {
-      components: ["Badge", "VPCard"],
+      components: ["Badge", "VPCard","BiliBili","VidStack"],
     },
 
     // These features are enabled for demo, only preserve features you need here
     // 这些功能可用于演示，仅保留您在此处需要的功能
+    // markdown图片处理
     markdownImage: {
       figure: true,
       lazyload: true,

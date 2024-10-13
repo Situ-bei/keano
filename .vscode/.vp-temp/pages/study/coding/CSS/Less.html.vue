@@ -36,30 +36,30 @@
 <li>定义变量：@变量名: 数据;</li>
 <li>使用变量：CSS属性：@变量名;</li>
 </ul>
-<div class="language-less line-numbers-mode" data-highlighter="shiki" data-ext="less" data-title="less" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 定义变量</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">@myColor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#986801;--shiki-dark:#ABB2BF">pink</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 使用变量</span></span>
-<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">.box</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">color: </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">@myColor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">a</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">color: </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">@myColor</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="language-less line-numbers-mode" data-highlighter="shiki" data-ext="less" data-title="less" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>// 定义变量</span></span>
+<span class="line"><span>@myColor: pink;</span></span>
+<span class="line"><span>// 使用变量</span></span>
+<span class="line"><span>.box {</span></span>
+<span class="line"><span>color: @myColor;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>a {</span></span>
+<span class="line"><span>color: @myColor;</span></span>
+<span class="line"><span>}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ul>
 <h1 id="_5-导入" tabindex="-1"><a class="header-anchor" href="#_5-导入"><span>5 导入</span></a></h1>
 <ul>
 <li>作用：导入 <code v-pre>less</code> 公共样式文件</li>
 <li>语法：导入: <code v-pre>@import “文件路径”;</code></li>
-<li>提示：如果是 <code v-pre>less</code> 文件可以省略后缀<div class="language-less line-numbers-mode" data-highlighter="shiki" data-ext="less" data-title="less" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">@import</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> './base.less'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">@import</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> './common'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span></code></pre>
+<li>提示：如果是 <code v-pre>less</code> 文件可以省略后缀<div class="language-less line-numbers-mode" data-highlighter="shiki" data-ext="less" data-title="less" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>@import './base.less';</span></span>
+<span class="line"><span>@import './common';</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ul>
 <h1 id="_6-导出" tabindex="-1"><a class="header-anchor" href="#_6-导出"><span>6 导出</span></a></h1>
 <ul>
 <li>写法：在 <code v-pre>less</code> 文件的第一行添加 <code v-pre>// out: 存储URL</code></li>
-<li>提示：文件夹名称后面添加 <code v-pre>/</code><div class="language-less line-numbers-mode" data-highlighter="shiki" data-ext="less" data-title="less" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// out: ./index.css</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// out: ./css/</span></span></code></pre>
+<li>提示：文件夹名称后面添加 <code v-pre>/</code><div class="language-less line-numbers-mode" data-highlighter="shiki" data-ext="less" data-title="less" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>// out: ./index.css</span></span>
+<span class="line"><span>// out: ./css/</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ul>
 <h2 id="_6-1-禁止导出" tabindex="-1"><a class="header-anchor" href="#_6-1-禁止导出"><span>6.1 禁止导出</span></a></h2>

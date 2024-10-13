@@ -1,4 +1,4 @@
-<template><div><h1 id="_1-基础" tabindex="-1"><a class="header-anchor" href="#_1-基础"><span>1 基础</span></a></h1>
+<template><div><h1 id="css2-基础" tabindex="-1"><a class="header-anchor" href="#css2-基础"><span>CSS2 基础</span></a></h1>
 <h2 id="_1-1-css简介" tabindex="-1"><a class="header-anchor" href="#_1-1-css简介"><span>1.1 CSS简介</span></a></h2>
 <p>![[Pasted image 20240627154233.png|475]]</p>
 <ul>
@@ -403,7 +403,7 @@ rel ：( relation ：关系）说明引入的文档与当前文档之间的关�
 选择器 1234....n ，可以是我们之前学的任何一种选择器。</p>
 </blockquote>
 <ul>
-<li>举例：<div class="language-css line-numbers-mode" data-highlighter="shiki" data-ext="css" data-title="css" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">/* 选中ul中的所有li */</span></span>
+<li>举例：<div class="language-css line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="css" data-title="css" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">/* 选中ul中的所有li */</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">ul</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> li</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	color: </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">red</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span>
@@ -419,7 +419,7 @@ rel ：( relation ：关系）说明引入的文档与当前文档之间的关�
 <span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">.subject</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> li</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">.front-end</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	color: </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">blue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="collapsed-lines"></div></div></li>
 </ul>
 <p>注意：</p>
 <ol>

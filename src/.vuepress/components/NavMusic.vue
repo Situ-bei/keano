@@ -4,6 +4,8 @@ import MyIcon from './MyIcon.vue';
 import { useRouter } from 'vue-router';
 import { ref, onMounted, nextTick } from 'vue';
 import axios from 'axios';
+// 懒加载
+import { MaybeComputedElementRef, MaybeElement, MaybeRefOrGetter, useIntersectionObserver } from '@vueuse/core'
 
 
 //#region darkMode
@@ -142,7 +144,7 @@ function AddBtnSpin() {
 * 加载音乐列表
 */
 // 加载音乐列表
-const LoadMusicList = (callback) => {
+const LoadMusicList = (callback: { (): void; (): any; }) => {
   axios({
     method: 'get',
     //插件作者的歌单
@@ -151,16 +153,44 @@ const LoadMusicList = (callback) => {
     url: 'https://api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r',
     params: {},
   }).then((response) => {
-    console.log('获取音乐数据',response);
+    // console.log('获取音乐数据',response);
     
     var listData = response.data;
     if (listData && listData.length > 0) {
+      
       GlobalMusicList = listData;
+      // const el = document.getElementById('GlobalAPlayer');
+
+      
     }
-    console.log('加载音乐列表', GlobalMusicList);
+    // console.log('加载音乐列表', GlobalMusicList);
     callback && callback();
   });
 };
+
+let options = {
+  root:  document.querySelector('#GlobalMusicList'),
+  threshold: 0,
+}
+
+const callback = (entries: any, observer: any) => {
+  // console.log('进入回调', entries, observer);
+  
+  entries.forEach((entry: any) => {
+    const el = entry.target 
+    // el.vShow = entry.isIntersecting ? 'true' : 'false';
+    // console.log('打印列表加载',entry);
+    // console.log('打印目标元素',entry.target);
+    // el.setAttribute('v-if', 'false' );
+    
+    el.setAttribute('v-if', entry.isVisible ? 'true' : 'false' );
+    
+  })
+}
+
+const observer = new IntersectionObserver(callback, options);
+
+
 
 onMounted(() => {
   const router = useRouter();
@@ -168,13 +198,21 @@ onMounted(() => {
   LoadMusicList(() => {
     import('aplayer').then((res) => {
       nextTick(() => {
+        // console.log('打印res子组件挂载',res);
         APlayer = res.default;
         InsertMenu();
         NewPlayer();
+        
+        // let observerList = document.querySelectorAll('#GlobalAPlayer .aplayer-list li')
+        // observerList.forEach (item => {
+        //   observer.observe(item)
+        // })
+
+
         // 在这里插入全局事件监听
-        window.document.body.onclick = () => {
-          CloseStatus();
-        };
+        // window.document.body.onclick = () => {
+        //   CloseStatus();
+        // };
       });
       router.afterEach(() => {
         setTimeout(() => {
@@ -189,19 +227,12 @@ onMounted(() => {
 
 <template>
   <ClientOnly>
-    <div class="MyMusic">
+    <div class="MyMusic" >
       <div class="MyMusic_Play" :class="{ hide: !IsShow }">
         <div class="close" @click="CloseStatus"><MyIcon name="guanbi" /></div>
         <div id="GlobalAPlayer">
-          <!-- <Meting 
 
-          mid:="596766562" 
-          server="netease"
-          api= "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r" 
-          type= "playlist"
-          /> -->
         </div>
-
       </div>
     </div>
   </ClientOnly>
@@ -213,56 +244,236 @@ onMounted(() => {
     @content;
   }
 }
+$myshadow: 
+  -.1rem -.1rem .2rem rgba(255, 255, 255,1),
+  .1rem .2rem .2rem hsl(0 0% 50% / .6);
 
-// 浅色模式
-[data-theme='light']{
-  // .MyMusic_Play{
-  //   background-color: rgba(255, 255, 255,0.8) !important;
-    
-  // }
 
-  .aplayer{
-    background:  rgba(255, 255, 255, 0.9)!important;
-    .aplayer-list{
-        li{
-          border-top: transparent;
-          &:hover{
-            background:  linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)!important;
-            border-radius: 5px;
+$myshadowDark: 
+  -.1rem -.1rem .2rem hsla(0, 0%, 53%, 0.6),
+  .2rem .2rem .2rem hsla(0, 0%, 0%, 0.5);
 
-          }
-        }
-        //列表当前播放 高亮
-        .aplayer-list-light{
-          background: linear-gradient( 180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)!important;
-          border-radius: 5px;
-          
+
+// 播放器
+.aplayer{ 
+  margin: 0;
+  color: var(--vp-c-accent-bg) !important;
+  background:  rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(10px);
+  .aplayer-info{
+    border-bottom: 0 !important;
+  }
+  
+  // 播放器主体
+  .aplayer-body{
+      height: 120px !important;
+
+      // 封面
+      .aplayer-pic{
+        border-radius: 50%;
+        top: 5px;
+        left: 5px;
+        // 播放按钮
+        .aplayer-pause{
+          bottom: 10px;
+          right: 10px;
         }
       }
+      
+      // 歌曲大标题
+      .aplayer-music{
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        margin-right: 21px;
+        .aplayer-title{
+          display: inline-block;
+          // width: 50%;
+          // flex: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          
+        }
+        .aplayer-author{
+          display: inline-block;
+          vertical-align: middle;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          // width: 50%;
+          margin-left: 5px;
+          // flex:1;
+        }
+      }
+    }
+  //控制栏容器
+  .aplayer-controller{
+    margin-top: 12px;
+    width: 350px;
+    @include responsive(640px) { // 在屏幕宽度小于或等于 640px 时
+      width: 70vw; // 设置宽度为视口宽度的 20%
+      
+    }
+    margin-left: -100px;
+    left: 0;
+    // 进度条容器
+    .aplayer-bar-wrap{
+      margin-left: 10px;
+      // 进度条组
+      &:hover {
+        span{
+          background: var(--vp-c-accentr);
+        }
+      }
+    }
+    //进度条颜色
+    .aplayer-played{
+      background-color: var(--vp-c-accent-bg) !important;
+    }
+    .aplayer-volume{
+      background-color: var(--vp-c-accent-bg) !important;
+      
+    }
+    .aplayer-time{
+      margin-right: 5px;
+    }
+    
+  }
+
+  // 切换歌曲
+  .aplayer-icon-back,
+  .aplayer-icon-play,
+  .aplayer-icon-forward{
+    display:inline-block;
+  }
+  @include responsive(640px) {
+    .aplayer-icon-back,
+    .aplayer-icon-play,
+    .aplayer-icon-forward{
+      display:none;
+    }
+  }
+  
+  // 歌词
+  .aplayer-lrc{
+    height: 55px;
+    background-color: transparent !important; 
+    border: transparent !important;
+    &::before,
+    &::after {
+        background: transparent !important;
+      }
+    .aplayer-lrc-contents{
+      // transform: translateY(-50px) !important;
+      margin-top: 20px;
+
+    }
+    // 当前播放歌词颜色
+    .aplayer-lrc-current{
+      color: var(--vp-c-accent-bg) !important;
+      font-size: 16px !important;
+    }
+  }
+  // 播放器列表
+  .aplayer-list{
+    color: var(--vp-c-accent-bg) !important;
+    
+    // 歌曲列表
+    ol{
+      padding: 8px;
+      
+      // 歌曲列表
+      li{
+        content-visibility: auto;
+        font-size: 11px !important;
+        border-top: transparent;
+        display: flex;
+        // align-content: center;
+        justify-content: space-between;
+        padding: 0 8px;
+        // hover
+        &:hover{
+            background:  rgba(255, 255, 255, 0.5) !important;
+            border-radius: 9px;
+            box-shadow: $myshadow;
+          }
+        
+        // 歌曲索引
+        .aplayer-list-index{
+          margin-right: 5px !important;
+          margin-left: 5px;
+          display: inline-block;
+          order: 0;
+        }
+        // 歌曲名称
+        .aplayer-list-title{
+          display: inline-block;
+          flex-grow: 1;
+          width: 60%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          order: 0;
+          margin-left: 0px;
+        }
+        //列表歌手名字 颜色
+        .aplayer-list-author{
+          display: inline-block;
+          // align-self: end;
+          // margin-left: 40px;
+          color: var(--vp-c-accent-bg) !important;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          // width: 40%;
+          
+        }
+        
+      }
+
+      // 当前播放标记
+      .aplayer-list-cur{
+        margin-left: 4px;
+        background-color: var(--vp-c-accent-bg) !important;
+        backdrop-filter: blur(5px);
+      }
+      
+      // 当前播放项
+      .aplayer-list-light{
+        background:  rgba(255, 255, 255, 0.6) !important;
+        backdrop-filter: blur(10px);
+        border-radius: 9px;
+        box-shadow: $myshadow;
+      }
+    }
   }
 }
 
+
+  
+
 // 深色模式
 [data-theme='dark']{
-  .MyMusic_Play{
-    // background-color: rgba(34, 34, 34, 0.5) !important;
-  }
   .aplayer{
-    background:  linear-gradient( 180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%)!important;
+    background:  rgba(52, 52, 52, 0.5) !important;
     .aplayer-list{
+      ol{
         li{
-          border-top: transparent;
           &:hover{
-            background:  linear-gradient( 180deg, rgb(40, 40, 40) 0%, rgba(55, 59, 68,1) 100%)!important;
-            border-radius: 5px;
+            background:  rgba(52, 52, 52, 0.5) !important;
+            box-shadow: $myshadowDark;
 
           }
         }
+      }
+
+      // 当前播放标记
+      .aplayer-list-cur{
+        background-color: rgba(255, 255, 255,.2) !important;
+      }
         //列表当前播放 高亮
-        .aplayer-list-light{
-          background: linear-gradient( 180deg, rgb(40, 40, 40) 0%, rgba(55, 59, 68,1) 100%)!important;
-          border-radius: 5px;
-          
+        .aplayer-list-light{  
+          background: rgba(52, 52, 52, 0.5) !important;
+          box-shadow: $myshadowDark;
         }
       }
   }
@@ -279,6 +490,8 @@ onMounted(() => {
 
 .MyMusic_Play {
   // background-color: rgba(255, 255, 255,0.5);
+  // background:  rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(10px);
   user-select: none;
   position: fixed;
   width: 350px;
@@ -310,7 +523,7 @@ onMounted(() => {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
-  transition: 0.3s;
+  transition: 0.4s;
   // transform: scale(1);
   transform: scale(1.2);
   opacity: 1;
@@ -322,87 +535,7 @@ onMounted(() => {
     visibility: hidden;
   }
 
-  .aplayer {
-    margin: 0;
-    // background-color: var(--background-color);
-    color: var(--vp-c-accent-bg) !important;
-    .aplayer-body{
-      height: 120px !important;
-    }
-    // 列表颜色
-    .aplayer-list{
-      color: var(--vp-c-accent-bg) !important;
-    }
-
-    //控制栏容器
-    .aplayer-controller{
-      // display: flex;
-      // justify-content: center;
-      // height: 50px !important;
-      margin-top: 12px;
-
-
-      width: 350px;
-      @include responsive(640px) { // 在屏幕宽度小于或等于 640px 时
-        width: 70vw; // 设置宽度为视口宽度的 20%
-
-      }
-      margin-left: -100px;
-      left: 0;
-      
-      //进度条容器
-      .aplayer-bar-wrap{
-        margin-left: 10px;
-      }
-      .aplayer-time{
-        margin-right: 5px;
-
-      }
-    }
-    .aplayer-lrc{
-      height: 55px;
-      background-color: transparent !important; 
-      border: transparent !important;
-      &::before,
-      &::after {
-          background: transparent !important;
-        }
-      .aplayer-lrc-contents{
-        // transform: translateY(-50px) !important;
-        margin-top: 20px;
- 
-      }
-      // 当前播放歌词颜色
-      .aplayer-lrc-current{
-        color: var(--vp-c-accent-bg) !important;
-        font-size: 16px !important;
-        
-      }
-    }
-
-    //进度条组
-    .aplayer-bar-wrap{
-      &:hover {
-        span{
-          background: var(--vp-c-accentr);
-        }
-      }
-    }
-
-    //进度条颜色
-    .aplayer-played{
-      background-color: var(--vp-c-accent-bg) !important;
-    }
-    .aplayer-volume{
-      background-color: var(--vp-c-accent-bg) !important;
-      
-    }
-    //列表歌手名字颜色
-    .aplayer-list-author{
-      color: var(--vp-c-accent-bg) !important;
-    }
-  }
-
+    
   .close {
     position: absolute;
     right: 6px;

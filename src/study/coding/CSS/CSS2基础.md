@@ -1,14 +1,17 @@
 ---
 number headings: auto, first-level 1, max 6, 1.1
-cssclasses:
-  - 前端
-tags:
-  - Front-end
-  - CSS
-  - CSS2
-data: 2024-06-27 17:49
+category:
+- 前端
+- CSS
+tag:
+- CSS
+- CSS2
+- 让我们变得更强大
+date: 2024-06-27 17:49
 ---
-# 1 基础
+
+# CSS2 基础
+
 
 ## 1.1 CSS简介
 ![[Pasted image 20240627154233.png|475]]

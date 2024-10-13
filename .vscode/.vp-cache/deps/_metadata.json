@@ -1,67 +1,67 @@
 {
-  "hash": "a1d609ae",
-  "configHash": "d1f9887f",
-  "lockfileHash": "2a1b636c",
-  "browserHash": "76183229",
+  "hash": "76ddd738",
+  "configHash": "3aa17e8d",
+  "lockfileHash": "d277636b",
+  "browserHash": "319a2e87",
   "optimized": {
     "@vueuse/core": {
       "src": "../../../node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "cab74bbf",
+      "fileHash": "4bac6b2c",
       "needsInterop": false
     },
     "@vue/devtools-api": {
-      "src": "../../../node_modules/.pnpm/@vue+devtools-api@7.4.6/node_modules/@vue/devtools-api/dist/index.js",
+      "src": "../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "493c398e",
+      "fileHash": "6c8bccb8",
       "needsInterop": false
     },
     "@vuepress/shared": {
-      "src": "../../../node_modules/.pnpm/@vuepress+shared@2.0.0-rc.17/node_modules/@vuepress/shared/dist/index.js",
+      "src": "../../../node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "c5319fd7",
+      "fileHash": "1eb9e943",
       "needsInterop": false
     },
     "vue": {
-      "src": "../../../node_modules/.pnpm/vue@3.5.11/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "54e21ed3",
+      "fileHash": "9c7232b0",
       "needsInterop": false
     },
     "vue-router": {
-      "src": "../../../node_modules/.pnpm/vue-router@4.4.5_vue@3.5.11/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "src": "../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "ea430aed",
+      "fileHash": "c98e356b",
       "needsInterop": false
     },
     "@moefy-canvas/theme-popper": {
-      "src": "../../../node_modules/.pnpm/@moefy-canvas+theme-popper@0.5.2/node_modules/@moefy-canvas/theme-popper/dist/index.js",
+      "src": "../../../node_modules/@moefy-canvas/theme-popper/dist/index.js",
       "file": "@moefy-canvas_theme-popper.js",
-      "fileHash": "b49bf269",
+      "fileHash": "1a434bea",
       "needsInterop": false
     },
     "axios": {
-      "src": "../../../node_modules/.pnpm/axios@1.7.7/node_modules/axios/index.js",
+      "src": "../../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "c2be163b",
+      "fileHash": "cd12721e",
       "needsInterop": false
     },
     "aplayer": {
-      "src": "../../../node_modules/.pnpm/aplayer@1.10.1/node_modules/aplayer/dist/APlayer.min.js",
+      "src": "../../../node_modules/aplayer/dist/APlayer.min.js",
       "file": "aplayer.js",
-      "fileHash": "bd50d7b8",
+      "fileHash": "93258419",
       "needsInterop": true
     },
     "store": {
-      "src": "../../../node_modules/.pnpm/store@2.0.12/node_modules/store/dist/store.legacy.js",
+      "src": "../../../node_modules/store/dist/store.legacy.js",
       "file": "store.js",
-      "fileHash": "588f8be9",
+      "fileHash": "9249cb0d",
       "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-XIDTNVOX": {
-      "file": "chunk-XIDTNVOX.js"
+    "chunk-QPQFSO6H": {
+      "file": "chunk-QPQFSO6H.js"
     },
     "chunk-HKJ2B2AA": {
       "file": "chunk-HKJ2B2AA.js"

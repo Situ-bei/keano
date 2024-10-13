@@ -1,6 +1,6 @@
 import "./chunk-HKJ2B2AA.js";
 
-// node_modules/.pnpm/@moefy-canvas+core@0.5.2/node_modules/@moefy-canvas/core/dist/index.js
+// node_modules/@moefy-canvas/core/dist/index.js
 var p = (r3, t, i2) => {
   if (!t.has(r3))
     throw TypeError("Cannot " + i2);
@@ -104,7 +104,7 @@ var y = class {
 };
 a = /* @__PURE__ */ new WeakMap(), c = /* @__PURE__ */ new WeakMap();
 
-// node_modules/.pnpm/@moefy-canvas+utils@0.5.2/node_modules/@moefy-canvas/utils/dist/index.js
+// node_modules/@moefy-canvas/utils/dist/index.js
 var f2 = (o, t, e2) => {
   if (!t.has(o))
     throw TypeError("Cannot " + e2);
@@ -179,7 +179,7 @@ function v(o, {
   );
 }
 
-// node_modules/.pnpm/ts-debounce@4.0.0/node_modules/ts-debounce/dist/src/index.esm.js
+// node_modules/ts-debounce/dist/src/index.esm.js
 function r2(r3, e2, n3) {
   var i2, t, o;
   void 0 === e2 && (e2 = 50), void 0 === n3 && (n3 = {});
@@ -216,7 +216,7 @@ function r2(r3, e2, n3) {
   }, d4;
 }
 
-// node_modules/.pnpm/@moefy-canvas+theme-popper@0.5.2/node_modules/@moefy-canvas/theme-popper/dist/index.js
+// node_modules/@moefy-canvas/theme-popper/dist/index.js
 var T = (e2, t, i2) => {
   if (!t.has(e2))
     throw TypeError("Cannot " + i2);

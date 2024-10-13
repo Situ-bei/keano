@@ -119,7 +119,8 @@ onMounted(() => {
 
 @mixin bgStyle_light {
   // background-color: rgba(255, 255, 255, 1); // 原色
-  background-image: linear-gradient(50deg, #e595ff 70%, #a6c1ee 30%);
+  background-image: linear-gradient(130deg, #a8efff 40%, var(--vp-c-accent) 60%); // 渐变
+  // background-color: rgba(79, 56, 62,.5);
   // background: 
   //   no-repeat center center / cover
   //   url('/keanologSVG.svg');

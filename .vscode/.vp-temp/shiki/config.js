@@ -1,4 +1,12 @@
-import "F:/桌面/【Vue】/Blog/keano/node_modules/.pnpm/@vuepress+highlighter-helper@2.0.0-rc.52_@vueuse+core@11.1.0_vue@3.5.11__vuepress@2.0.0-rc.17_xdjpzmo4p6xwzq334z5lcemoxm/node_modules/@vuepress/highlighter-helper/lib/client/styles/base.css"
-import "F:/桌面/【Vue】/Blog/keano/node_modules/.pnpm/@vuepress+plugin-shiki@2.0.0-rc.52_@vueuse+core@11.1.0_vue@3.5.11__vuepress@2.0.0-rc.17_@vuep_n5s4byhiltv45stbpichttlpzu/node_modules/@vuepress/plugin-shiki/lib/client/styles/shiki.css"
-import "F:/桌面/【Vue】/Blog/keano/node_modules/.pnpm/@vuepress+highlighter-helper@2.0.0-rc.52_@vueuse+core@11.1.0_vue@3.5.11__vuepress@2.0.0-rc.17_xdjpzmo4p6xwzq334z5lcemoxm/node_modules/@vuepress/highlighter-helper/lib/client/styles/line-numbers.css"
-import "F:/桌面/【Vue】/Blog/keano/node_modules/.pnpm/@vuepress+highlighter-helper@2.0.0-rc.52_@vueuse+core@11.1.0_vue@3.5.11__vuepress@2.0.0-rc.17_xdjpzmo4p6xwzq334z5lcemoxm/node_modules/@vuepress/highlighter-helper/lib/client/styles/notation-highlight.css"
+import "F:/桌面/【Vue】/Blog/keano/node_modules/@vuepress/highlighter-helper/lib/client/styles/base.css"
+import "F:/桌面/【Vue】/Blog/keano/node_modules/@vuepress/plugin-shiki/lib/client/styles/shiki.css"
+import "F:/桌面/【Vue】/Blog/keano/node_modules/@vuepress/highlighter-helper/lib/client/styles/line-numbers.css"
+import "F:/桌面/【Vue】/Blog/keano/node_modules/@vuepress/highlighter-helper/lib/client/styles/notation-highlight.css"
+import "F:/桌面/【Vue】/Blog/keano/node_modules/@vuepress/highlighter-helper/lib/client/styles/collapsed-lines.css"
+import { setupCollapsedLines } from "F:/桌面/【Vue】/Blog/keano/node_modules/@vuepress/highlighter-helper/lib/client/composables/collapsedLines.js"
+
+export default {
+  setup() {
+    setupCollapsedLines()
+  }
+}

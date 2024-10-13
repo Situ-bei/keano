@@ -8,6 +8,9 @@ import { searchPlugin } from "@vuepress/plugin-search";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper/index.js";
 
 
+
+
+
 const __dirname = getDirname(import.meta.url);
 // 【项目路径】
 const SrcPath = path.resolve(__dirname, '../');
@@ -21,20 +24,23 @@ export default defineUserConfig({
     '@src': SrcPath,
   },
 
+
   // 站点路由前缀
   base: "/keano/",
   temp: '.vscode/.vp-temp', // 缓存路径
   cache: '.vscode/.vp-cache', // 缓存路径
-
+  
+  
   
   // 【插件】
   plugins: [
-
+    
     //搜索插件配置
     searchPlugin({
       // 配置项
     }),
 
+    
 
     // 鼠标特效插件
     popperPlugin({
@@ -44,18 +50,18 @@ export default defineUserConfig({
         numParticles: 8,
       },
     }),
-
+    
   ],
   
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "KN",
+      title: "KEANO",
       description: "Keano的博客",
     },
     "/en/": {
       lang: "en-US",
-      title: "Blog Demo",
+      title: "Keano's Blog",
       description: "A blog demo for vuepress-theme-hope",
     },
   },
@@ -63,7 +69,7 @@ export default defineUserConfig({
   //主题设置
   theme,
 
- 
+  
   
   // Enable it with pwa 使用pwa启用它
   shouldPrefetch: false,

@@ -157,6 +157,7 @@ onMounted(() => {
   <ClientOnly>
     <div class="none">Bing壁纸</div>
   </ClientOnly>
+  
 </template>
 
 <style lang="scss">
@@ -304,12 +305,12 @@ onMounted(() => {
 [data-theme='light'] {
   .vp-blog-hero .vp-blog-mask::after {
     background: #000;
-    opacity: 0.3 !important;
+    opacity: 0.5 !important;
   }
   .vp-footer-wrapper {
     &::before {
       background: #000;
-      opacity: 0.3;
+      opacity: 0.5;
     }
   }
 }

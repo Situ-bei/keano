@@ -11,8 +11,42 @@
 
 // 自定义的页脚
 .vp-footer-wrapper {
+    display: flex !important;
+    justify-content: center;
+    // align-items: center !important;
+    // background-color: #fff;
+
 .vp-footer {
-    display: flex;
+    margin-right: 10px;
+    .footer-about {
+        // padding: 2px 3px;
+        // border-radius: 3px;
+        // position: relative;
+        // margin-top: 10px;
+        display: inline-block;
+        
+        a{
+            color: #fff !important;
+            margin: 0;
+            user-select:all;
+        }
+        .footer-VuePress{
+            color: #00842a !important;
+            &:hover{
+                background-color: rgba($color: #0c7bf4, $alpha: 0.8);
+            }
+        }   
+        .footer-Hope{
+            color: var(--vp-c-accent)!important;
+        }
+
+    }
+    }
+    .footer-time{
+        margin-top: 0;
+        display: inline-block;
+        font-size: 12px;
+    }
 }
 
 .footer-icp {
@@ -24,24 +58,18 @@
     & > img {
     width: 14px;
     margin-right: 4px;
+    
     }
 }
-.footer-about {
-    padding: 2px 3px;
-    border-radius: 3px;
-    position: relative;
-    color: #fff;
-    &:hover {
-    background-color: rgba($color: #0c7bf4, $alpha: 0.8);
-    }
-}
-}
+
 // 隐藏首页的内容区域
-.mo7-blog-home {
-.theme-hope-content {
-    display: none;
+.vp-blog-home{
+    .theme-hope-content {
+        display: none;
+    }
 }
-}
+
+
 
 // 让内容在更宽的屏幕上可以有更宽的显示区域，嗯，宽屏补丁。
 :root {
@@ -53,5 +81,7 @@
 }
 }
 
-
-
+// 自定义背景色
+:root{
+    --background-color: #ff0000;
+}

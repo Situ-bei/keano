@@ -1,7 +1,7 @@
 ---
 home: true
 layout: BlogHome
-icon: home
+icon: icon-homefill
 title: 主页
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroText: Keano的树洞
