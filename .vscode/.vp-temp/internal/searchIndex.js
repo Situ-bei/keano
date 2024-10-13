@@ -378,6 +378,20 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "布局",
+    "headers": [],
+    "path": "/life/music/layout.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "音乐",
+    "headers": [],
+    "path": "/life/music/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Markdown 展示",
     "headers": [
       {
@@ -432,20 +446,6 @@ export const SEARCH_INDEX = [
     "title": "电影",
     "headers": [],
     "path": "/life/movie/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "布局",
-    "headers": [],
-    "path": "/life/music/layout.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "音乐",
-    "headers": [],
-    "path": "/life/music/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -717,6 +717,71 @@ export const SEARCH_INDEX = [
     ],
     "path": "/en/posts/banana/4.html",
     "pathLocale": "/en/",
+    "extraFields": []
+  },
+  {
+    "title": "1 常见的版本控制工具",
+    "headers": [
+      {
+        "level": 2,
+        "title": "3.1 设置用户名与邮箱（用户标识，必要）",
+        "slug": "_3-1-设置用户名与邮箱-用户标识-必要",
+        "link": "#_3-1-设置用户名与邮箱-用户标识-必要",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.1 工作流程",
+        "slug": "_4-1-工作流程",
+        "link": "#_4-1-工作流程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.1 11.1、创建工作目录与常用指令",
+        "slug": "_5-1-11-1、创建工作目录与常用指令",
+        "link": "#_5-1-11-1、创建工作目录与常用指令",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.1.1 本地仓库搭建",
+            "slug": "_5-1-1-本地仓库搭建",
+            "link": "#_5-1-1-本地仓库搭建",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.1.2 克隆远程仓库",
+            "slug": "_5-1-2-克隆远程仓库",
+            "link": "#_5-1-2-克隆远程仓库",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "6.1 文件的四种状态",
+        "slug": "_6-1-文件的四种状态",
+        "link": "#_6-1-文件的四种状态",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.2 查看文件状态",
+        "slug": "_6-2-查看文件状态",
+        "link": "#_6-2-查看文件状态",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/git/Git.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Git",
+    "headers": [],
+    "path": "/study/coding/git/",
+    "pathLocale": "/",
     "extraFields": []
   },
   {
@@ -2153,71 +2218,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/study/coding/CSS/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 常见的版本控制工具",
-    "headers": [
-      {
-        "level": 2,
-        "title": "3.1 设置用户名与邮箱（用户标识，必要）",
-        "slug": "_3-1-设置用户名与邮箱-用户标识-必要",
-        "link": "#_3-1-设置用户名与邮箱-用户标识-必要",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.1 工作流程",
-        "slug": "_4-1-工作流程",
-        "link": "#_4-1-工作流程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.1 11.1、创建工作目录与常用指令",
-        "slug": "_5-1-11-1、创建工作目录与常用指令",
-        "link": "#_5-1-11-1、创建工作目录与常用指令",
-        "children": [
-          {
-            "level": 3,
-            "title": "5.1.1 本地仓库搭建",
-            "slug": "_5-1-1-本地仓库搭建",
-            "link": "#_5-1-1-本地仓库搭建",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.1.2 克隆远程仓库",
-            "slug": "_5-1-2-克隆远程仓库",
-            "link": "#_5-1-2-克隆远程仓库",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "6.1 文件的四种状态",
-        "slug": "_6-1-文件的四种状态",
-        "link": "#_6-1-文件的四种状态",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.2 查看文件状态",
-        "slug": "_6-2-查看文件状态",
-        "link": "#_6-2-查看文件状态",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/git/Git.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Git",
-    "headers": [],
-    "path": "/study/coding/git/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3959,935 +3959,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Vue生态",
-    "headers": [],
-    "path": "/study/coding/Vue/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "vite",
-    "headers": [],
-    "path": "/study/coding/Vue/vite.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "初识Vue2 --盛夏的回眸",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.  Vue简介",
-        "slug": "_1-vue简介",
-        "link": "#_1-vue简介",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.1  官网",
-            "slug": "_1-1-官网",
-            "link": "#_1-1-官网",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "1.2 介绍",
-        "slug": "_1-2-介绍",
-        "link": "#_1-2-介绍",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.2.1 Vue 是什么？",
-            "slug": "_1-2-1-vue-是什么",
-            "link": "#_1-2-1-vue-是什么",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.2.2 Vue的特点",
-            "slug": "_1-2-2-vue的特点",
-            "link": "#_1-2-2-vue的特点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2  Vue2 BasicGrammer",
-        "slug": "_2-vue2-basicgrammer",
-        "link": "#_2-vue2-basicgrammer",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.1 引入Vue.js",
-            "slug": "_2-1-引入vue-js",
-            "link": "#_2-1-引入vue-js",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2 创建Vue对象",
-            "slug": "_2-2-创建vue对象",
-            "link": "#_2-2-创建vue对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.3 Vue的MVVM实现",
-            "slug": "_2-3-vue的mvvm实现",
-            "link": "#_2-3-vue的mvvm实现",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.4 模板语法",
-        "slug": "_2-4-模板语法",
-        "link": "#_2-4-模板语法",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.4.1 模板的理解",
-            "slug": "_2-4-1-模板的理解",
-            "link": "#_2-4-1-模板的理解",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.4.2 插值语法：",
-            "slug": "_2-4-2-插值语法",
-            "link": "#_2-4-2-插值语法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.4.3 指令语法：",
-            "slug": "_2-4-3-指令语法",
-            "link": "#_2-4-3-指令语法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.5 数据代理",
-        "slug": "_2-5-数据代理",
-        "link": "#_2-5-数据代理",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.5.1 Object.defineProperty()",
-            "slug": "_2-5-1-object-defineproperty",
-            "link": "#_2-5-1-object-defineproperty",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.5.2 数据代理的定义",
-            "slug": "_2-5-2-数据代理的定义",
-            "link": "#_2-5-2-数据代理的定义",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.5.3 Vue中的数据代理",
-            "slug": "_2-5-3-vue中的数据代理",
-            "link": "#_2-5-3-vue中的数据代理",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.6 事件处理",
-        "slug": "_2-6-事件处理",
-        "link": "#_2-6-事件处理",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.6.1 事件的基本使用",
-            "slug": "_2-6-1-事件的基本使用",
-            "link": "#_2-6-1-事件的基本使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.6.2 事件修饰符",
-            "slug": "_2-6-2-事件修饰符",
-            "link": "#_2-6-2-事件修饰符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.6.3 键盘事件",
-            "slug": "_2-6-3-键盘事件",
-            "link": "#_2-6-3-键盘事件",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.7 计算属性（computed）",
-        "slug": "_2-7-计算属性-computed",
-        "link": "#_2-7-计算属性-computed",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.7.1 计算属性的定义和理解",
-            "slug": "_2-7-1-计算属性的定义和理解",
-            "link": "#_2-7-1-计算属性的定义和理解",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.7.2 计算属性的简写",
-            "slug": "_2-7-2-计算属性的简写",
-            "link": "#_2-7-2-计算属性的简写",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.8 监视属性（watch）",
-        "slug": "_2-8-监视属性-watch",
-        "link": "#_2-8-监视属性-watch",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.8.1 深度监视",
-            "slug": "_2-8-1-深度监视",
-            "link": "#_2-8-1-深度监视",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.8.2 监视的简写",
-            "slug": "_2-8-2-监视的简写",
-            "link": "#_2-8-2-监视的简写",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.8.3 watch VS computed",
-            "slug": "_2-8-3-watch-vs-computed",
-            "link": "#_2-8-3-watch-vs-computed",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.9 样式绑定",
-        "slug": "_2-9-样式绑定",
-        "link": "#_2-9-样式绑定",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.9.1 class样式",
-            "slug": "_2-9-1-class样式",
-            "link": "#_2-9-1-class样式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.9.2 tyle样式",
-            "slug": "_2-9-2-tyle样式",
-            "link": "#_2-9-2-tyle样式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.10 条件渲染",
-        "slug": "_2-10-条件渲染",
-        "link": "#_2-10-条件渲染",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.10.1 v-if",
-            "slug": "_2-10-1-v-if",
-            "link": "#_2-10-1-v-if",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.10.2 v-show",
-            "slug": "_2-10-2-v-show",
-            "link": "#_2-10-2-v-show",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.10.3 v-if和v-show",
-            "slug": "_2-10-3-v-if和v-show",
-            "link": "#_2-10-3-v-if和v-show",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.11 列表渲染",
-        "slug": "_2-11-列表渲染",
-        "link": "#_2-11-列表渲染",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.11.1 基本列表",
-            "slug": "_2-11-1-基本列表",
-            "link": "#_2-11-1-基本列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.2 key的原理",
-            "slug": "_2-11-2-key的原理",
-            "link": "#_2-11-2-key的原理",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.3 Vue监视数据的原理",
-            "slug": "_2-11-3-vue监视数据的原理",
-            "link": "#_2-11-3-vue监视数据的原理",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.4 数组更新检测",
-            "slug": "_2-11-4-数组更新检测",
-            "link": "#_2-11-4-数组更新检测",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.5 过滤与排序",
-            "slug": "_2-11-5-过滤与排序",
-            "link": "#_2-11-5-过滤与排序",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.12 表单数据的收集",
-        "slug": "_2-12-表单数据的收集",
-        "link": "#_2-12-表单数据的收集",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.13 过滤器",
-        "slug": "_2-13-过滤器",
-        "link": "#_2-13-过滤器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.14 Vue 对象的生命周期",
-        "slug": "_2-14-vue-对象的生命周期",
-        "link": "#_2-14-vue-对象的生命周期",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.14.1 原理解释图",
-            "slug": "_2-14-1-原理解释图",
-            "link": "#_2-14-1-原理解释图",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.14.2 父子组件的生命周期",
-            "slug": "_2-14-2-父子组件的生命周期",
-            "link": "#_2-14-2-父子组件的生命周期",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.15 组件",
-        "slug": "_2-15-组件",
-        "link": "#_2-15-组件",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.15.1 组件的概念",
-            "slug": "_2-15-1-组件的概念",
-            "link": "#_2-15-1-组件的概念",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.2 非单文件组件",
-            "slug": "_2-15-2-非单文件组件",
-            "link": "#_2-15-2-非单文件组件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.3 单文件组件",
-            "slug": "_2-15-3-单文件组件",
-            "link": "#_2-15-3-单文件组件",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.1 Vue 脚手架(Vue Cli)",
-        "slug": "_3-1-vue-脚手架-vue-cli",
-        "link": "#_3-1-vue-脚手架-vue-cli",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.1.1 cli基本目录",
-            "slug": "_3-1-1-cli基本目录",
-            "link": "#_3-1-1-cli基本目录",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.2 创建Vue项目",
-            "slug": "_3-1-2-创建vue项目",
-            "link": "#_3-1-2-创建vue项目",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.3 不同版本的Vue",
-            "slug": "_3-1-3-不同版本的vue",
-            "link": "#_3-1-3-不同版本的vue",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.4 vue.config.js配置文件",
-            "slug": "_3-1-4-vue-config-js配置文件",
-            "link": "#_3-1-4-vue-config-js配置文件",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.2 ref属性",
-        "slug": "_3-2-ref属性",
-        "link": "#_3-2-ref属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.3 mixin(混入)",
-        "slug": "_3-3-mixin-混入",
-        "link": "#_3-3-mixin-混入",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.4 Vue 插件",
-        "slug": "_3-4-vue-插件",
-        "link": "#_3-4-vue-插件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.5 scoped样式",
-        "slug": "_3-5-scoped样式",
-        "link": "#_3-5-scoped样式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.6 webStorage",
-        "slug": "_3-6-webstorage",
-        "link": "#_3-6-webstorage",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.7 组件间通讯",
-        "slug": "_3-7-组件间通讯",
-        "link": "#_3-7-组件间通讯",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.7.1 props配置项  父组件 ==> 子组件",
-            "slug": "_3-7-1-props配置项-父组件-子组件",
-            "link": "#_3-7-1-props配置项-父组件-子组件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.7.2 自定义事件    子组件 ==> 父组件",
-            "slug": "_3-7-2-自定义事件-子组件-父组件",
-            "link": "#_3-7-2-自定义事件-子组件-父组件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.7.3 全局事件总线",
-            "slug": "_3-7-3-全局事件总线",
-            "link": "#_3-7-3-全局事件总线",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.7.4 消息订阅与发布",
-            "slug": "_3-7-4-消息订阅与发布",
-            "link": "#_3-7-4-消息订阅与发布",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.8 $nextTick",
-        "slug": "_3-8-nexttick",
-        "link": "#_3-8-nexttick",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.9 插槽（部分api已经弃用）",
-        "slug": "_3-9-插槽-部分api已经弃用",
-        "link": "#_3-9-插槽-部分api已经弃用",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.9.1 默认插槽",
-            "slug": "_3-9-1-默认插槽",
-            "link": "#_3-9-1-默认插槽",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.2 具名插槽",
-            "slug": "_3-9-2-具名插槽",
-            "link": "#_3-9-2-具名插槽",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.3 作用域插槽",
-            "slug": "_3-9-3-作用域插槽",
-            "link": "#_3-9-3-作用域插槽",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.10 VueX",
-        "slug": "_3-10-vuex",
-        "link": "#_3-10-vuex",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.10.1 搭建 Vuex 环境",
-            "slug": "_3-10-1-搭建-vuex-环境",
-            "link": "#_3-10-1-搭建-vuex-环境",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.2 Vuex 的使用",
-            "slug": "_3-10-2-vuex-的使用",
-            "link": "#_3-10-2-vuex-的使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.3 数据映射",
-            "slug": "_3-10-3-数据映射",
-            "link": "#_3-10-3-数据映射",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.4 Vuex 的模块化",
-            "slug": "_3-10-4-vuex-的模块化",
-            "link": "#_3-10-4-vuex-的模块化",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.11 Vue Router",
-        "slug": "_3-11-vue-router",
-        "link": "#_3-11-vue-router",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.11.1 前端路由 和 后端路由",
-            "slug": "_3-11-1-前端路由-和-后端路由",
-            "link": "#_3-11-1-前端路由-和-后端路由",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.2 基本使用",
-            "slug": "_3-11-2-基本使用",
-            "link": "#_3-11-2-基本使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.3 多级路由",
-            "slug": "_3-11-3-多级路由",
-            "link": "#_3-11-3-多级路由",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.4 路由的query 参数",
-            "slug": "_3-11-4-路由的query-参数",
-            "link": "#_3-11-4-路由的query-参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.5 命名路由",
-            "slug": "_3-11-5-命名路由",
-            "link": "#_3-11-5-命名路由",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.6 路由的 params 参数",
-            "slug": "_3-11-6-路由的-params-参数",
-            "link": "#_3-11-6-路由的-params-参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.7 路由的props配置",
-            "slug": "_3-11-7-路由的props配置",
-            "link": "#_3-11-7-路由的props配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.8 <router-link>的replace属性",
-            "slug": "_3-11-8-router-link-的replace属性",
-            "link": "#_3-11-8-router-link-的replace属性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.9 9.编程式路由导航",
-            "slug": "_3-11-9-9-编程式路由导航",
-            "link": "#_3-11-9-9-编程式路由导航",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.10 缓存路由组件",
-            "slug": "_3-11-10-缓存路由组件",
-            "link": "#_3-11-10-缓存路由组件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.11 路由中独有的声明周期",
-            "slug": "_3-11-11-路由中独有的声明周期",
-            "link": "#_3-11-11-路由中独有的声明周期",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.12 路由守卫",
-            "slug": "_3-11-12-路由守卫",
-            "link": "#_3-11-12-路由守卫",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.13 路由器的两种工作模式",
-            "slug": "_3-11-13-路由器的两种工作模式",
-            "link": "#_3-11-13-路由器的两种工作模式",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/study/coding/Vue/Vue2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Vue3",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. Vue3简介",
-        "slug": "_1-vue3简介",
-        "link": "#_1-vue3简介",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. Vue3带来了什么",
-        "slug": "_2-vue3带来了什么",
-        "link": "#_2-vue3带来了什么",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. Vue3.0的工程创建",
-        "slug": "_3-vue3-0的工程创建",
-        "link": "#_3-vue3-0的工程创建",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.1 Vue-cli",
-            "slug": "_3-1-vue-cli",
-            "link": "#_3-1-vue-cli",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.2 Vite",
-            "slug": "_3-2-vite",
-            "link": "#_3-2-vite",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. Vue2.0 和 Vue3.0 区别",
-        "slug": "_4-vue2-0-和-vue3-0-区别",
-        "link": "#_4-vue2-0-和-vue3-0-区别",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.1  入口文件 main.js",
-            "slug": "_4-1-入口文件-main-js",
-            "link": "#_4-1-入口文件-main-js",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "5. 常用的组合式API（Composition API）",
-        "slug": "_5-常用的组合式api-composition-api",
-        "link": "#_5-常用的组合式api-composition-api",
-        "children": [
-          {
-            "level": 3,
-            "title": "5.1 【setup】",
-            "slug": "_5-1-【setup】",
-            "link": "#_5-1-【setup】",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.2 【ref】函数",
-            "slug": "_5-2-【ref】函数",
-            "link": "#_5-2-【ref】函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.3 【reactive】 函数",
-            "slug": "_5-3-【reactive】-函数",
-            "link": "#_5-3-【reactive】-函数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "6. Vue3.0 中的响应式原理、",
-        "slug": "_6-vue3-0-中的响应式原理、",
-        "link": "#_6-vue3-0-中的响应式原理、",
-        "children": [
-          {
-            "level": 3,
-            "title": "6.1 vue2.0 的响应式",
-            "slug": "_6-1-vue2-0-的响应式",
-            "link": "#_6-1-vue2-0-的响应式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "6.2 Vue3.0 的响应式",
-            "slug": "_6-2-vue3-0-的响应式",
-            "link": "#_6-2-vue3-0-的响应式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7. 【reactive】 对比 【ref】",
-        "slug": "_7-【reactive】-对比-【ref】",
-        "link": "#_7-【reactive】-对比-【ref】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 【setup】的两个注意点",
-        "slug": "_8-【setup】的两个注意点",
-        "link": "#_8-【setup】的两个注意点",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9.  计算属性与监视",
-        "slug": "_9-计算属性与监视",
-        "link": "#_9-计算属性与监视",
-        "children": [
-          {
-            "level": 3,
-            "title": "9.1 【computed】函数",
-            "slug": "_9-1-【computed】函数",
-            "link": "#_9-1-【computed】函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "9.2 【watch】函数",
-            "slug": "_9-2-【watch】函数",
-            "link": "#_9-2-【watch】函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "9.3 【watchEffect】 函数",
-            "slug": "_9-3-【watcheffect】-函数",
-            "link": "#_9-3-【watcheffect】-函数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10. 【2.0 和 3.0 生命周期】",
-        "slug": "_10-【2-0-和-3-0-生命周期】",
-        "link": "#_10-【2-0-和-3-0-生命周期】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "11. 【自定义hook函数】",
-        "slug": "_11-【自定义hook函数】",
-        "link": "#_11-【自定义hook函数】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "12. 【toRef】",
-        "slug": "_12-【toref】",
-        "link": "#_12-【toref】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "13. 其它 Composition API",
-        "slug": "_13-其它-composition-api",
-        "link": "#_13-其它-composition-api",
-        "children": [
-          {
-            "level": 3,
-            "title": "13.1 【shallowReactive 与 shallowRef】",
-            "slug": "_13-1-【shallowreactive-与-shallowref】",
-            "link": "#_13-1-【shallowreactive-与-shallowref】",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "13.2  【readonly 与 shallowReadonly】",
-            "slug": "_13-2-【readonly-与-shallowreadonly】",
-            "link": "#_13-2-【readonly-与-shallowreadonly】",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "13.3  【toRaw 与 markRaw】",
-        "slug": "_13-3-【toraw-与-markraw】",
-        "link": "#_13-3-【toraw-与-markraw】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "13.4  【customRef】",
-        "slug": "_13-4-【customref】",
-        "link": "#_13-4-【customref】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.5 【provide 与 inject】",
-        "slug": "_4-5-【provide-与-inject】",
-        "link": "#_4-5-【provide-与-inject】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.6 【响应式数据的判断】",
-        "slug": "_4-6-【响应式数据的判断】",
-        "link": "#_4-6-【响应式数据的判断】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.1 【Options API 存在的问题】",
-        "slug": "_5-1-【options-api-存在的问题】",
-        "link": "#_5-1-【options-api-存在的问题】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.2 【Composition API 的优势】",
-        "slug": "_5-2-【composition-api-的优势】",
-        "link": "#_5-2-【composition-api-的优势】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.1 【Fragment】",
-        "slug": "_6-1-【fragment】",
-        "link": "#_6-1-【fragment】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.2 2.【Teleport】",
-        "slug": "_6-2-2-【teleport】",
-        "link": "#_6-2-2-【teleport】",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.3 【Suspense】",
-        "slug": "_6-3-【suspense】",
-        "link": "#_6-3-【suspense】",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/Vue/Vue3.0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Vue 开发环境",
-    "headers": [],
-    "path": "/study/coding/Vue/Vue%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "1 Node.js简介",
     "headers": [
       {
@@ -5672,6 +4743,935 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Vue生态",
+    "headers": [],
+    "path": "/study/coding/Vue/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "vite",
+    "headers": [],
+    "path": "/study/coding/Vue/vite.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "初识Vue2 --盛夏的回眸",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.  Vue简介",
+        "slug": "_1-vue简介",
+        "link": "#_1-vue简介",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.1  官网",
+            "slug": "_1-1-官网",
+            "link": "#_1-1-官网",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "1.2 介绍",
+        "slug": "_1-2-介绍",
+        "link": "#_1-2-介绍",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.2.1 Vue 是什么？",
+            "slug": "_1-2-1-vue-是什么",
+            "link": "#_1-2-1-vue-是什么",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.2.2 Vue的特点",
+            "slug": "_1-2-2-vue的特点",
+            "link": "#_1-2-2-vue的特点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2   Vue 2 BasicGrammer",
+        "slug": "_2-vue-2-basicgrammer",
+        "link": "#_2-vue-2-basicgrammer",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.1 引入Vue.js",
+            "slug": "_2-1-引入vue-js",
+            "link": "#_2-1-引入vue-js",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2 创建Vue对象",
+            "slug": "_2-2-创建vue对象",
+            "link": "#_2-2-创建vue对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.3 Vue的MVVM实现",
+            "slug": "_2-3-vue的mvvm实现",
+            "link": "#_2-3-vue的mvvm实现",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.4 模板语法",
+        "slug": "_2-4-模板语法",
+        "link": "#_2-4-模板语法",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.4.1 模板的理解",
+            "slug": "_2-4-1-模板的理解",
+            "link": "#_2-4-1-模板的理解",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.4.2 插值语法：",
+            "slug": "_2-4-2-插值语法",
+            "link": "#_2-4-2-插值语法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.4.3 指令语法：",
+            "slug": "_2-4-3-指令语法",
+            "link": "#_2-4-3-指令语法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.5 数据代理",
+        "slug": "_2-5-数据代理",
+        "link": "#_2-5-数据代理",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.5.1 Object.defineProperty()",
+            "slug": "_2-5-1-object-defineproperty",
+            "link": "#_2-5-1-object-defineproperty",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.5.2 数据代理的定义",
+            "slug": "_2-5-2-数据代理的定义",
+            "link": "#_2-5-2-数据代理的定义",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.5.3 Vue中的数据代理",
+            "slug": "_2-5-3-vue中的数据代理",
+            "link": "#_2-5-3-vue中的数据代理",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.6 事件处理",
+        "slug": "_2-6-事件处理",
+        "link": "#_2-6-事件处理",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.6.1 事件的基本使用",
+            "slug": "_2-6-1-事件的基本使用",
+            "link": "#_2-6-1-事件的基本使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.6.2 事件修饰符",
+            "slug": "_2-6-2-事件修饰符",
+            "link": "#_2-6-2-事件修饰符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.6.3 键盘事件",
+            "slug": "_2-6-3-键盘事件",
+            "link": "#_2-6-3-键盘事件",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.7 计算属性（computed）",
+        "slug": "_2-7-计算属性-computed",
+        "link": "#_2-7-计算属性-computed",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.7.1 计算属性的定义和理解",
+            "slug": "_2-7-1-计算属性的定义和理解",
+            "link": "#_2-7-1-计算属性的定义和理解",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.7.2 计算属性的简写",
+            "slug": "_2-7-2-计算属性的简写",
+            "link": "#_2-7-2-计算属性的简写",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.8 监视属性（watch）",
+        "slug": "_2-8-监视属性-watch",
+        "link": "#_2-8-监视属性-watch",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.8.1 深度监视",
+            "slug": "_2-8-1-深度监视",
+            "link": "#_2-8-1-深度监视",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.8.2 监视的简写",
+            "slug": "_2-8-2-监视的简写",
+            "link": "#_2-8-2-监视的简写",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.8.3 watch VS computed",
+            "slug": "_2-8-3-watch-vs-computed",
+            "link": "#_2-8-3-watch-vs-computed",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.9 样式绑定",
+        "slug": "_2-9-样式绑定",
+        "link": "#_2-9-样式绑定",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.9.1 class样式",
+            "slug": "_2-9-1-class样式",
+            "link": "#_2-9-1-class样式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.9.2 tyle样式",
+            "slug": "_2-9-2-tyle样式",
+            "link": "#_2-9-2-tyle样式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.10 条件渲染",
+        "slug": "_2-10-条件渲染",
+        "link": "#_2-10-条件渲染",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.10.1 v-if",
+            "slug": "_2-10-1-v-if",
+            "link": "#_2-10-1-v-if",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.10.2 v-show",
+            "slug": "_2-10-2-v-show",
+            "link": "#_2-10-2-v-show",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.10.3 v-if和v-show",
+            "slug": "_2-10-3-v-if和v-show",
+            "link": "#_2-10-3-v-if和v-show",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.11 列表渲染",
+        "slug": "_2-11-列表渲染",
+        "link": "#_2-11-列表渲染",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.11.1 基本列表",
+            "slug": "_2-11-1-基本列表",
+            "link": "#_2-11-1-基本列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.2 key的原理",
+            "slug": "_2-11-2-key的原理",
+            "link": "#_2-11-2-key的原理",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.3 Vue监视数据的原理",
+            "slug": "_2-11-3-vue监视数据的原理",
+            "link": "#_2-11-3-vue监视数据的原理",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.4 数组更新检测",
+            "slug": "_2-11-4-数组更新检测",
+            "link": "#_2-11-4-数组更新检测",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.5 过滤与排序",
+            "slug": "_2-11-5-过滤与排序",
+            "link": "#_2-11-5-过滤与排序",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.12 表单数据的收集",
+        "slug": "_2-12-表单数据的收集",
+        "link": "#_2-12-表单数据的收集",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.13 过滤器",
+        "slug": "_2-13-过滤器",
+        "link": "#_2-13-过滤器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.14 Vue 对象的生命周期",
+        "slug": "_2-14-vue-对象的生命周期",
+        "link": "#_2-14-vue-对象的生命周期",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.14.1 原理解释图",
+            "slug": "_2-14-1-原理解释图",
+            "link": "#_2-14-1-原理解释图",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.14.2 父子组件的生命周期",
+            "slug": "_2-14-2-父子组件的生命周期",
+            "link": "#_2-14-2-父子组件的生命周期",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.15 组件",
+        "slug": "_2-15-组件",
+        "link": "#_2-15-组件",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.15.1 组件的概念",
+            "slug": "_2-15-1-组件的概念",
+            "link": "#_2-15-1-组件的概念",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.2 非单文件组件",
+            "slug": "_2-15-2-非单文件组件",
+            "link": "#_2-15-2-非单文件组件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.3 单文件组件",
+            "slug": "_2-15-3-单文件组件",
+            "link": "#_2-15-3-单文件组件",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.1 Vue 脚手架(Vue Cli)",
+        "slug": "_3-1-vue-脚手架-vue-cli",
+        "link": "#_3-1-vue-脚手架-vue-cli",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.1.1 cli基本目录",
+            "slug": "_3-1-1-cli基本目录",
+            "link": "#_3-1-1-cli基本目录",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.2 创建Vue项目",
+            "slug": "_3-1-2-创建vue项目",
+            "link": "#_3-1-2-创建vue项目",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.3 不同版本的Vue",
+            "slug": "_3-1-3-不同版本的vue",
+            "link": "#_3-1-3-不同版本的vue",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.4 vue.config.js配置文件",
+            "slug": "_3-1-4-vue-config-js配置文件",
+            "link": "#_3-1-4-vue-config-js配置文件",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.2 ref属性",
+        "slug": "_3-2-ref属性",
+        "link": "#_3-2-ref属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.3 mixin(混入)",
+        "slug": "_3-3-mixin-混入",
+        "link": "#_3-3-mixin-混入",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.4 Vue 插件",
+        "slug": "_3-4-vue-插件",
+        "link": "#_3-4-vue-插件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.5 scoped样式",
+        "slug": "_3-5-scoped样式",
+        "link": "#_3-5-scoped样式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.6 webStorage",
+        "slug": "_3-6-webstorage",
+        "link": "#_3-6-webstorage",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.7 组件间通讯",
+        "slug": "_3-7-组件间通讯",
+        "link": "#_3-7-组件间通讯",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.7.1 props配置项  父组件 ==> 子组件",
+            "slug": "_3-7-1-props配置项-父组件-子组件",
+            "link": "#_3-7-1-props配置项-父组件-子组件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.7.2 自定义事件    子组件 ==> 父组件",
+            "slug": "_3-7-2-自定义事件-子组件-父组件",
+            "link": "#_3-7-2-自定义事件-子组件-父组件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.7.3 全局事件总线",
+            "slug": "_3-7-3-全局事件总线",
+            "link": "#_3-7-3-全局事件总线",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.7.4 消息订阅与发布",
+            "slug": "_3-7-4-消息订阅与发布",
+            "link": "#_3-7-4-消息订阅与发布",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.8 $nextTick",
+        "slug": "_3-8-nexttick",
+        "link": "#_3-8-nexttick",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.9 插槽（部分api已经弃用）",
+        "slug": "_3-9-插槽-部分api已经弃用",
+        "link": "#_3-9-插槽-部分api已经弃用",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.9.1 默认插槽",
+            "slug": "_3-9-1-默认插槽",
+            "link": "#_3-9-1-默认插槽",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.2 具名插槽",
+            "slug": "_3-9-2-具名插槽",
+            "link": "#_3-9-2-具名插槽",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.3 作用域插槽",
+            "slug": "_3-9-3-作用域插槽",
+            "link": "#_3-9-3-作用域插槽",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.10 VueX",
+        "slug": "_3-10-vuex",
+        "link": "#_3-10-vuex",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.10.1 搭建 < Vuex  环境",
+            "slug": "_3-10-1-搭建-vuex-环境",
+            "link": "#_3-10-1-搭建-vuex-环境",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.2 Vuex 的使用",
+            "slug": "_3-10-2-vuex-的使用",
+            "link": "#_3-10-2-vuex-的使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.3 数据映射",
+            "slug": "_3-10-3-数据映射",
+            "link": "#_3-10-3-数据映射",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.4 Vuex 的模块化",
+            "slug": "_3-10-4-vuex-的模块化",
+            "link": "#_3-10-4-vuex-的模块化",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.11 Vue Router",
+        "slug": "_3-11-vue-router",
+        "link": "#_3-11-vue-router",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.11.1 前端路由 和 后端路由",
+            "slug": "_3-11-1-前端路由-和-后端路由",
+            "link": "#_3-11-1-前端路由-和-后端路由",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.2 基本使用",
+            "slug": "_3-11-2-基本使用",
+            "link": "#_3-11-2-基本使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.3 多级路由",
+            "slug": "_3-11-3-多级路由",
+            "link": "#_3-11-3-多级路由",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.4 路由的query 参数",
+            "slug": "_3-11-4-路由的query-参数",
+            "link": "#_3-11-4-路由的query-参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.5 命名路由",
+            "slug": "_3-11-5-命名路由",
+            "link": "#_3-11-5-命名路由",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.6 路由的 params 参数",
+            "slug": "_3-11-6-路由的-params-参数",
+            "link": "#_3-11-6-路由的-params-参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.7 路由的props配置",
+            "slug": "_3-11-7-路由的props配置",
+            "link": "#_3-11-7-路由的props配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.8 <router-link>的replace属性",
+            "slug": "_3-11-8-router-link-的replace属性",
+            "link": "#_3-11-8-router-link-的replace属性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.9 9.编程式路由导航",
+            "slug": "_3-11-9-9-编程式路由导航",
+            "link": "#_3-11-9-9-编程式路由导航",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.10 缓存路由组件",
+            "slug": "_3-11-10-缓存路由组件",
+            "link": "#_3-11-10-缓存路由组件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.11 路由中独有的声明周期",
+            "slug": "_3-11-11-路由中独有的声明周期",
+            "link": "#_3-11-11-路由中独有的声明周期",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.12 路由守卫",
+            "slug": "_3-11-12-路由守卫",
+            "link": "#_3-11-12-路由守卫",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.13 路由器的两种工作模式",
+            "slug": "_3-11-13-路由器的两种工作模式",
+            "link": "#_3-11-13-路由器的两种工作模式",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/study/coding/Vue/Vue2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Vue3",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. Vue3简介",
+        "slug": "_1-vue3简介",
+        "link": "#_1-vue3简介",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. Vue3带来了什么",
+        "slug": "_2-vue3带来了什么",
+        "link": "#_2-vue3带来了什么",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. Vue3.0的工程创建",
+        "slug": "_3-vue3-0的工程创建",
+        "link": "#_3-vue3-0的工程创建",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.1 Vue-cli",
+            "slug": "_3-1-vue-cli",
+            "link": "#_3-1-vue-cli",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.2 Vite",
+            "slug": "_3-2-vite",
+            "link": "#_3-2-vite",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. Vue2.0 和 Vue3.0 区别",
+        "slug": "_4-vue2-0-和-vue3-0-区别",
+        "link": "#_4-vue2-0-和-vue3-0-区别",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.1  入口文件 main.js",
+            "slug": "_4-1-入口文件-main-js",
+            "link": "#_4-1-入口文件-main-js",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "5. 常用的组合式API（Composition API）",
+        "slug": "_5-常用的组合式api-composition-api",
+        "link": "#_5-常用的组合式api-composition-api",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.1 【setup】",
+            "slug": "_5-1-【setup】",
+            "link": "#_5-1-【setup】",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.2 【ref】函数",
+            "slug": "_5-2-【ref】函数",
+            "link": "#_5-2-【ref】函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.3 【reactive】 函数",
+            "slug": "_5-3-【reactive】-函数",
+            "link": "#_5-3-【reactive】-函数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "6. Vue3.0 中的响应式原理、",
+        "slug": "_6-vue3-0-中的响应式原理、",
+        "link": "#_6-vue3-0-中的响应式原理、",
+        "children": [
+          {
+            "level": 3,
+            "title": "6.1 vue2.0 的响应式",
+            "slug": "_6-1-vue2-0-的响应式",
+            "link": "#_6-1-vue2-0-的响应式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "6.2 Vue3.0 的响应式",
+            "slug": "_6-2-vue3-0-的响应式",
+            "link": "#_6-2-vue3-0-的响应式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7. 【reactive】 对比 【ref】",
+        "slug": "_7-【reactive】-对比-【ref】",
+        "link": "#_7-【reactive】-对比-【ref】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 【setup】的两个注意点",
+        "slug": "_8-【setup】的两个注意点",
+        "link": "#_8-【setup】的两个注意点",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9.  计算属性与监视",
+        "slug": "_9-计算属性与监视",
+        "link": "#_9-计算属性与监视",
+        "children": [
+          {
+            "level": 3,
+            "title": "9.1 【computed】函数",
+            "slug": "_9-1-【computed】函数",
+            "link": "#_9-1-【computed】函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "9.2 【watch】函数",
+            "slug": "_9-2-【watch】函数",
+            "link": "#_9-2-【watch】函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "9.3 【watchEffect】 函数",
+            "slug": "_9-3-【watcheffect】-函数",
+            "link": "#_9-3-【watcheffect】-函数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10. 【2.0 和 3.0 生命周期】",
+        "slug": "_10-【2-0-和-3-0-生命周期】",
+        "link": "#_10-【2-0-和-3-0-生命周期】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "11. 【自定义hook函数】",
+        "slug": "_11-【自定义hook函数】",
+        "link": "#_11-【自定义hook函数】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "12. 【toRef】",
+        "slug": "_12-【toref】",
+        "link": "#_12-【toref】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "13. 其它 Composition API",
+        "slug": "_13-其它-composition-api",
+        "link": "#_13-其它-composition-api",
+        "children": [
+          {
+            "level": 3,
+            "title": "13.1 【shallowReactive 与 shallowRef】",
+            "slug": "_13-1-【shallowreactive-与-shallowref】",
+            "link": "#_13-1-【shallowreactive-与-shallowref】",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "13.2  【readonly 与 shallowReadonly】",
+            "slug": "_13-2-【readonly-与-shallowreadonly】",
+            "link": "#_13-2-【readonly-与-shallowreadonly】",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "13.3  【toRaw 与 markRaw】",
+        "slug": "_13-3-【toraw-与-markraw】",
+        "link": "#_13-3-【toraw-与-markraw】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "13.4  【customRef】",
+        "slug": "_13-4-【customref】",
+        "link": "#_13-4-【customref】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.5 【provide 与 inject】",
+        "slug": "_4-5-【provide-与-inject】",
+        "link": "#_4-5-【provide-与-inject】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.6 【响应式数据的判断】",
+        "slug": "_4-6-【响应式数据的判断】",
+        "link": "#_4-6-【响应式数据的判断】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.1 【Options API 存在的问题】",
+        "slug": "_5-1-【options-api-存在的问题】",
+        "link": "#_5-1-【options-api-存在的问题】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.2 【Composition API 的优势】",
+        "slug": "_5-2-【composition-api-的优势】",
+        "link": "#_5-2-【composition-api-的优势】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.1 【Fragment】",
+        "slug": "_6-1-【fragment】",
+        "link": "#_6-1-【fragment】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.2 2.【Teleport】",
+        "slug": "_6-2-2-【teleport】",
+        "link": "#_6-2-2-【teleport】",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.3 【Suspense】",
+        "slug": "_6-3-【suspense】",
+        "link": "#_6-3-【suspense】",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/Vue/Vue3.0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Vue 开发环境",
+    "headers": [],
+    "path": "/study/coding/Vue/Vue%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "菲律宾",
     "headers": [],
     "path": "/study/history/overview/%E8%8F%B2%E5%BE%8B%E5%AE%BE.html",
@@ -5952,20 +5952,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "标签: CSS",
-    "headers": [],
-    "path": "/tag/css/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "标签: CSS2",
-    "headers": [],
-    "path": "/tag/css2/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "标签: Front-end",
     "headers": [],
     "path": "/tag/front-end/",
@@ -5976,6 +5962,20 @@ export const SEARCH_INDEX = [
     "title": "标签: git",
     "headers": [],
     "path": "/tag/git/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: CSS",
+    "headers": [],
+    "path": "/tag/css/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: CSS2",
+    "headers": [],
+    "path": "/tag/css2/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6004,6 +6004,13 @@ export const SEARCH_INDEX = [
     "title": "标签: JavaScript",
     "headers": [],
     "path": "/tag/javascript/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: Node",
+    "headers": [],
+    "path": "/tag/node/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6039,13 +6046,6 @@ export const SEARCH_INDEX = [
     "title": "标签: Vue3.0",
     "headers": [],
     "path": "/tag/vue3.0/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "标签: Node",
-    "headers": [],
-    "path": "/tag/node/",
     "pathLocale": "/",
     "extraFields": []
   },

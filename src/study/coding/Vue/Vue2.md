@@ -55,7 +55,7 @@ date: 2024-07-16T06:13:00
 - mint-ui：基于 vue 的 UI 组件库（移动端）
 - element-ui：基于 vue 的 UI 组件库（PC 端）
 
-## 2  <font color="#00b050">Vue</font>2 BasicGrammer
+## 2   Vue 2 BasicGrammer
 ### 2.1 引入Vue.js
 - 本地引入 
 - CDN引入
@@ -70,7 +70,7 @@ date: 2024-07-16T06:13:00
 - `root`容器里的代码被称为【Vue模板】；
 - `Vue`实例和容器是一一对应的；
 - 真实开发中只有一个Vue实例，并且会配合着组件一起使用；
-- {{xxx}}中的xxx要写`js`表达式，且xxx可以自动读取到`data`中的所有属性；
+- `{{xxx}}`中的xxx要写`js`表达式，且xxx可以自动读取到`data`中的所有属性；
 - 一旦`data`中的数据发生改变，那么页面中用到该数据的地方也会自动更新；
 	```js
 	//创建Vue实例
@@ -484,7 +484,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 ### 2.5.3 Vue中的数据代理
 
 - 通过 vm 对象（vue实例）来代理 data 对象中属性的操作（读/写）
-- <font color="#00b050">Vue</font>中数据代理的好处
+- Vue中数据代理的好处
 - 更加方便地操作 `data` 中的数据
 - 基本原理
 - 通过 `Object.defineProperty()` 把 `data` 对象中所有属性添加到 `vm` 上
@@ -502,12 +502,12 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 - 使用 `v-on:xxx` 或`@xxx`绑定事件，其中xxx是事件名
 - 事件的回调需要配置在methods对象中，最终会在vm上
 - `methods`中配置的函数，不要使用箭头函数，否则`this`就不是`vm`了
-- `methods`中配置的函数，都是被<font color="#00b050">vue</font>所管理的函数，this的指向是vm或者组件实例对象
+- `methods`中配置的函数，都是被vue所管理的函数，this的指向是vm或者组件实例对象
 - `@click="demo"`和`@click="demo($event)"`效果一致，但后者可以传参
 
 ### 2.6.2 事件修饰符
 
-- <font color="#00b050">Vue</font> 中的事件修饰符：
+- Vue 中的事件修饰符：
     - `prevent`：阻止默认事件（常用）
     - `stop`：阻止事件冒泡（常用）
     - `once`：事件只触发一次（常用）
@@ -524,7 +524,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 
 ### 2.6.3 键盘事件
 
-<font color="#00b050">Vue</font> 中常用的按键别名：
+Vue 中常用的按键别名：
 
 | 按键  | 别名    | 按键  | 别名     |
 | --- | ----- | --- | ------ |
@@ -534,7 +534,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 | 上   | up    | 左   | left   |
 | 下   | down  | 右   | right  |
 
-- <font color="#00b050">Vue</font> 未提供别名的按键，可以使用按键原始的`key`值去绑定，但要注意转为`kebab-case`（短横线命名）
+- Vue 未提供别名的按键，可以使用按键原始的`key`值去绑定，但要注意转为`kebab-case`（短横线命名）
 - 系统修饰键（用法特殊）：`ctrl`、`alt`、`shift`、`meta`
 	- 配合`keyup`使用：按下修饰键的同时，再按下其他键，随后释放其他键，事件才会触发
 	- 配合 `keydown` 使用：正常触发事件
@@ -559,11 +559,11 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 - 优势
 	- 与`methods`相比，内部有缓存机制（复用）），效率更高，调式方便
 
-> <font color="#ff0000">备注</font>
+> 备注
 > 	计算属性最终会出现在vm上（而不是出在`vm._data`上），直接读取使用即可
 > 	如果计算属性要被修改，那必须写set函数去响应修改，且set中要引起计算时依赖的数据发生改变
 
-- [n] 语法:
+- 语法:
 
 	```js
 	const vm = new Vue({
@@ -622,7 +622,7 @@ vm.$watch('isHot',{
 ```
 
 - 监视的两种写法：
-	- new <font color="#00b050">Vue</font> 时传入 `watch`配置来监视指定的属性
+	- new Vue 时传入 `watch`配置来监视指定的属性
 	- 通过vm对象的`$watch()`
 - 当属性变化时，回调函数自动调用，在函数内部进行计算
 - 监视的属性必须存在，才能进行监视（在`data`或者`compued`里）
@@ -643,11 +643,11 @@ vm.$watch('isHot',{
 
 
 - 深度监视
-    - <font color="#00b050">Vue</font> 中的`watch`默认不监视对象内部值的改变（只监视一层）
+    - Vue 中的`watch`默认不监视对象内部值的改变（只监视一层）
     - 配置`deep:true`可以监视对象内部值的改变（可以监视多层）
 
-> <font color="#ff0000">备注</font>
->     <font color="#00b050">Vue</font> 自身可以监视多级结构（对象）中数据的改变，但<font color="#00b050">Vue</font>提供给程序员的`watch`默认无法监视多级结构中属性的改变
+> 备注
+>     Vue 自身可以监视多级结构（对象）中数据的改变，但Vue提供给程序员的`watch`默认无法监视多级结构中属性的改变
 >     使用`watch`时根据数据的具体结构，决定是否采用深度监视
 
 ### 2.8.2 监视的简写
@@ -694,8 +694,8 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	- `computed`能完成的功能，`watch`都可以完成
 	- `watch`能完成的功能， `computed`不一定能完成，例如： `watch`可以进行异步操作
 - 两个重要的小原则
-	- 所被<font color="#00b050">Vue</font>管理的函数，最好写成普通函数，这样`this`的指向才是vm或者组件实例对象
-	- 所有不被<font color="#00b050">Vue</font>所管理的函数（定时器的回调函数、`ajax`的回调函数等），最好写成箭头函数，这样`this`的指向才是vm或者组件实例对象
+	- 所被Vue管理的函数，最好写成普通函数，这样`this`的指向才是vm或者组件实例对象
+	- 所有不被Vue所管理的函数（定时器的回调函数、`ajax`的回调函数等），最好写成箭头函数，这样`this`的指向才是vm或者组件实例对象
 
 - 在这里插入图片描述
 
@@ -811,7 +811,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 - 适用于：切换频**率较低**的场景。
 - 特点：不展示的`DOM`元素直接被移除。
 - 注意：`v-if`可以和`v-else-if`、`v-else`一起使用，但要求结构不能被“打断”。
-- [n] 语法:
+- 语法:
 ```html
 <div id="root">
 	<h2>当前的n值是:{{n}}</h2>
@@ -848,7 +848,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 - 写法：`v-show="表达式"`
 - 适用于：切换频**率较高**的场景。
 - 特点：不展示的DOM元素未被移除，仅仅是使用样式隐藏掉
-- [n] 语法:
+- 语法:
 ```html
 <div id="root">
 	<h2>当前的n值是:{{n}}</h2>
@@ -902,7 +902,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 ### 2.11.2 key的原理
 
 1. 虚拟`DOM`中key的作用：
-	- key是虚拟`DOM`对象的标识，当数据发生变化时，<font color="#00b050">Vue</font> 会根据【新数据】生成【新的虚拟`DOM`】, 随后<font color="#00b050">Vue</font>进行【新虚拟`DOM`】与【旧虚拟`DOM`】的差异比较，比较规则如下：
+	- key是虚拟`DOM`对象的标识，当数据发生变化时，Vue 会根据【新数据】生成【新的虚拟`DOM`】, 随后Vue进行【新虚拟`DOM`】与【旧虚拟`DOM`】的差异比较，比较规则如下：
 	<br>
 
 1. 对比规则：
@@ -921,18 +921,18 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 ![[a6c68d2e5e8c4dba81acd6153053e31a.png|640]]
 ### 2.11.3 Vue监视数据的原理
 
-1. <font color="#00b050">Vue</font>会监视`data`中所有层次的数据。
+1. Vue会监视`data`中所有层次的数据。
     
 2. 如何监测对象中的数据？
-	- 通过setter实现监视，且要在new <font color="#00b050">Vue</font>时就传入要监测的数据。
-	- 对象中后追加的属性，<font color="#00b050">Vue</font>默认不做响应式处理
+	- 通过setter实现监视，且要在new Vue时就传入要监测的数据。
+	- 对象中后追加的属性，Vue默认不做响应式处理
 	- 如需给后添加的属性做响应式，请使用如下API：`Vue.set(target，propertyName/index，value)` 或 `vm.$set(target，propertyName/index，value)`
 	
 1. 如何监测数组中的数据？ 通过包裹数组更新元素的方法实现，本质就是做了两件事：
     
     1. 调用原生对应的方法对数组进行更新。
     2. 重新解析模板，进而更新页面。
-4. 在<font color="#00b050">Vue</font>修改数组中的某个元素一定要用如下方法：
+4. 在Vue修改数组中的某个元素一定要用如下方法：
     
     1. 使用这些API: `push()`、`pop()`、`shift()`、`unshift()`、`splice()`、`sort()`、`reverse()`
     2. `Vue.set()` 或 `vm.$set()`
@@ -941,7 +941,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 
 ### 2.11.4 数组更新检测
 
-- <font color="#00b050">Vue</font> 重写了数组中的一系列改变数组内部数据的方法（先调用原生，再更新界面） 
+- Vue 重写了数组中的一系列改变数组内部数据的方法（先调用原生，再更新界面） 
 - Vue将被侦听的数组的变更方法进行了包裹,所以它们也将会触发视图更新。这些被包裹过的方法
 - 包括: `push()，pop()，shift()，unshift()，splice()，sort()，reverse()`
 
@@ -952,7 +952,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 
 - 可以使用`watch`也可以使用计算属性，使用计算属性更加简单方便一点
 <br>
-- [n] 语法:
+- 语法:
 	```html
 	<body>
 	  <!-- 准备好一个容器-->
@@ -1020,7 +1020,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	```
 
 #### 2.11.5.2 排序
-- [n] 语法:
+- 语法:
 	```html
 	<body>
 		<!-- 准备好一个容器-->
@@ -1155,11 +1155,11 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	</script>
 	```
 
-## 2.14 <font color="#00b050">Vue</font> 对象的生命周期
+## 2.14 Vue 对象的生命周期
 
-- [>] **生命周期**：
+-  **生命周期**：
     1. 又名：**生命周期回调函数**、**生命周期函数**、**生命周期钩子**。
-    2. 是什么：<font color="#00b050">Vue</font> 在关键时刻帮我们调用的一些特殊名称的函数。
+    2. 是什么：Vue 在关键时刻帮我们调用的一些特殊名称的函数。
     3. 生命周期函数的名字不可更改，但函数的具体内容是程序员根据需求编写的。
     4. 生命周期函数中的 `this` 指向是 vm 或 组件实例对象(VueComponents)。
 	<br>
@@ -1170,9 +1170,9 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	- `created()`
 		- `data`/`props`/`methods` 都可用,可以通过vm去访问，但组件的结构尚未生成，不能操作`DOM`，只是在内存中生成了 `HTML`结构
 	- `beforeMount()`
-		- 页面生成<font color="#00b050">Vue</font>未解析的`DOM`元素，只是将要将内存中的`HTML`结构渲染到页面
+		- 页面生成Vue未解析的`DOM`元素，只是将要将内存中的`HTML`结构渲染到页面
 	- `mounted()`
-		- 生成经过<font color="#00b050">Vue</font>解析后`DOM`元素，页面渲染到浏览器，可以操作`DOM`元素了
+		- 生成经过Vue解析后`DOM`元素，页面渲染到浏览器，可以操作`DOM`元素了
 		<br>
 1. **更新状态**
 	- `beforeUpdate()`
@@ -1184,12 +1184,12 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	- `beforeDestory()`
 	- `destoryed()`
 
-- [>] 常用的生命周期方法
+-  常用的生命周期方法
 	- `mounted()`: 发送ajax请求, 启动定时器、绑定自定义事件、订阅消息等异步任务【初始化操作】
 	- `beforeDestroy()`: 做收尾工作, 如: 清除定时器、解绑自定义事件、取消订阅消息等【首尾工作】
 
-- [>] 关于销毁 <font color="#00b050">Vue</font> 实例
-    1. 销毁后借助<font color="#00b050">Vue</font>开发者工具看不到任何信息
+-  关于销毁 Vue 实例
+    1. 销毁后借助Vue开发者工具看不到任何信息
     2. 销毁后自定义事件会失效，但原生`DOM`事件依然有效
     3. 一般不会在`beforeDestroy`操作数据，因为即使操作数据，也不会再触发更新流程了。
 
@@ -1224,7 +1224,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 
 ## 2.15 组件
 ### 2.15.1 组件的概念
-- [>] 传统方式编写应用
+-  传统方式编写应用
 - 存在问题：
     - 依赖关系混乱，不好维护
     - 代码复用率不高
@@ -1232,24 +1232,24 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 ![[a5e67412b8c24658a2455130cbadcf6a~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp|650]]
 <br>
 
-- [>] 使用组件方式编写应用
+-  使用组件方式编写应用
 - 组件的定义——实现应用中局部功能代码和资源的集合
 
 ![[30ec041452744aa19d302efc96d4d270~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp|650]]
 ### 2.15.2 非单文件组件
 #### 2.15.2.1 使用组件的三大步骤
-- [>] 定义组件（创建组件）
-- [>] 注册组件
-- [>] 使用组件（写组件标签）
+-  定义组件（创建组件）
+-  注册组件
+-  使用组件（写组件标签）
 ##### 2.15.2.1.1 定义组件
-- [>] `const school = Vue.extend({})`
-- [>] 用`Vue.extend(options)`创建，其中`options`和`new Vue（options)` 时传入的那个`options`几乎一样，但有以下区别
+-  `const school = Vue.extend({})`
+-  用`Vue.extend(options)`创建，其中`options`和`new Vue（options)` 时传入的那个`options`几乎一样，但有以下区别
 	1. 不要写`el`——最终所有的组件都要经过一个vm的管理，由vm中的`el`决定服务哪个容器
 	2. `data`必须写成函数——避免组件被复用时，数据存在引用关系
 
 > - [!] 使用 `<tempalte>` 可以配置组件结构，模板内使用模板字符串，可以换行，使结构更加清楚
 
-- [n] 语法:
+- 语法:
 	```js
 	const school = Vue.extend({
 	    template: `  
@@ -1275,9 +1275,9 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	```
 
 ##### 2.15.2.1.2 注册组件
-- [>] 局部注册：`new Vue`的时候传入`components`选项
-- [>] 全局注册：`Vue.component`('组件名', 组件)
-- - [n] 语法:
+-  局部注册：`new Vue`的时候传入`components`选项
+-  全局注册：`Vue.component`('组件名', 组件)
+- - 语法:
 	```js
 	//全局注册组件
 	  Vue.component('hello', hello)
@@ -1296,7 +1296,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	  })
 	```
 ##### 2.15.2.1.3 使用组件
-- [n] 语法:
+- 语法:
 	```html
 	<!-- 准备好一个容器-->
 	  <div id="root">
@@ -1309,18 +1309,18 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 
 #### 2.15.2.2 组件使用的注意点
 
-- [>] 关于组件名
+-  关于组件名
 - 一个单词组成
 	1. 第一种写法（首字母小写）：`school`
 	2. 第二种写法（首字母大写）：`School`
 - 多个单词组成 
 	1. 第一种写法（`kebab-case`命名）：`my-school`
-	2. 第二种写法（`CamelCase`命名）：`MySchool`（需要<font color="#00b050">Vue</font>脚手架支持）
+	2. 第二种写法（`CamelCase`命名）：`MySchool`（需要Vue脚手架支持）
 > - [!] 备注 
 > 	- 组件名尽可能回避HTML中已有的元素名称，例如h2、H2
 > 	- 可以使用`name`配置项指定组件在开发者工具中呈现的名字
 
-- [n] 语法:
+- 语法:
 	```html
 	<body>
 	    <!-- 准备好一个容器-->
@@ -1360,27 +1360,27 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	```
 
 ![[Pasted image 20240725031412.png|250]]
-- [>] 关于组件标签
+-  关于组件标签
 	- 第一种写法：`<school></school>`
 	- 第二种写法：`<school/>` (不使用脚手架会导致后续组件不能渲染)
 
-- [>] 简写方式 `const school = Vue.extend({options})` 可以简写成 `const school = {options}`
+-  简写方式 `const school = Vue.extend({options})` 可以简写成 `const school = {options}`
 
 #### 2.15.2.3 VueComponent
 
 1. `app` 组件本质是一个名为 `VueComponent` 的构造函数，且不是程序员定义的，是`Vue.extend`生成的
 
-2. 我们只需要写`<app/>`或`<app></app>`，<font color="#00b050">Vue</font>解析时会帮我们创建`app组件`的实例对象，即<font color="#00b050">Vue</font>帮我们执行`new VueComponent({options})`
+2. 我们只需要写`<app/>`或`<app></app>`，Vue解析时会帮我们创建`app组件`的实例对象，即Vue帮我们执行`new VueComponent({options})`
 
 3. 特别注意：每次调用`Vue.extend`，返回的都是一个全新的`VueComponent`
 
 4. 关于`this`指向
-	- 组件配置中：`data函数`、`methods中的函数`、`watch中的函数`、`computed中的函数` 它们的`this`均是【<font color="#00b050">Vue</font>Component实例对象】 
-	- `new Vue(options)`配置中：`data函数`、`methods中的函数`、`watch中的函数`、`computed中的函数` 它们的`this`均是【<font color="#00b050">Vue</font>实例对象】
+	- 组件配置中：`data函数`、`methods中的函数`、`watch中的函数`、`computed中的函数` 它们的`this`均是【VueComponent实例对象】 
+	- `new Vue(options)`配置中：`data函数`、`methods中的函数`、`watch中的函数`、`computed中的函数` 它们的`this`均是【Vue实例对象】
 
-1. <font color="#00b050">Vue</font>Component的实例对象，以后简称VC（也可称之为：组件实例对象）
+1. VueComponent的实例对象，以后简称VC（也可称之为：组件实例对象）
 
-2. <font color="#00b050">Vue</font>的实例对象，以后简称为VM
+2. Vue的实例对象，以后简称为VM
 
 > - [!] 一个重要的内置关系
 > 	```js
@@ -1392,13 +1392,13 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 ### 2.15.3 单文件组件
 
 #### 2.15.3.1 组成
-- [>] 模板页面
+-  模板页面
 	```html
 	<template>
 		页面模板
 	</template>
 	```
-- [>] JS 模块对象
+-  JS 模块对象
 	```js
 	<script>
 	export default {
@@ -1409,7 +1409,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	}
 	</script>
 	```
-- [>] 样式
+-  样式
 	```html
 	<style>
 	    样式定义
@@ -1423,7 +1423,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 1. 注册成标签
 2. 使用组件标签
 
-- [n] 语法:
+- 语法:
 	```html
 	<template>
 	    <div>
@@ -1442,7 +1442,7 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 	</script>
 	```
 
-# 3 <font color="#00b050">Vue</font> Advanced
+# 3 Vue Advanced
 ## 3.1 Vue 脚手架(Vue Cli)
 
 ### 3.1.1 cli基本目录
@@ -1451,12 +1451,12 @@ vm.$watch('isHot',(newValue,oldValue)=>{
 │   ├── favicon.ico: 页签图标
 │   └── index.html: 主页面
 ├── **src**
-│   ├── <font color="#00b050">assets</font>: 存放静态资源
+│   ├── assets: 存放静态资源
 │   │   └── logo.png
-│   │── <font color="#00b050">component</font>: 存放组件
+│   │── component: 存放组件
 │   │   └── HelloWorld.vue
-│   │── <font color="#00b050">App.vue:</font> 汇总所有组件
-│   │── <font color="#00b050">main.js</font>: 入口文件
+│   │── App.vue: 汇总所有组件
+│   │── main.js: 入口文件
 ├── **.gitignore**: git版本管制忽略的配置
 ├── **babel.config.js**: babel的配置文件
 ├── **package.json**: 应用包配置文件
@@ -1500,7 +1500,7 @@ vue creat xx
 2. 应用在html标签上获取的是真实DOM元素，应用在组件标签上是组件实例对象（vc）然后就可以调用该组件的方法和数据
 3. ref可以加在组价标签里，得到这个组件的实例对象,实现父组件直接**调用子组件的方法和数据**,给子组件绑定事件,但是要在`Mounted`函数里执行。
 4. 使用方式：`ref="title"`  `this.$refs.title`
-- [n] 语法:
+- 语法:
 	```html
 	<h1 v-text="msg" ref="title"></h1>
 	<button ref="btn" @click="showDOM">点我输出上方的DOM元素</button>
@@ -1520,8 +1520,8 @@ vue creat xx
 1. 功能：可以把多个组件共用的配置提取成一个混入对象
 2. 使用方式：
 
-- [>] 创建混入组件   
-	- [n] mixin.js
+-  创建混入组件   
+	- mixin.js
 	```js
 	export const hunhe = {
 		methods: {
@@ -1529,14 +1529,14 @@ vue creat xx
 				alert(this.name)
 			}
 	```
-- [>] 入口文件引入并注册组件（全局注册：vm和所有vc都会得到mixin.js中的方法）
+-  入口文件引入并注册组件（全局注册：vm和所有vc都会得到mixin.js中的方法）
 	```js
 	import {hunhe,hunhe2} from './mixin' //引入两个组件
 	Vue.mixin(hunhe)//同时也要注册两个组件
 	Vue.mixin(hunhe2)//全局注册
 	```
 
-- [>] 在需要的组件中引入并注册（局部注册：当前组件可用）
+-  在需要的组件中引入并注册（局部注册：当前组件可用）
 	```js
 	import {hunhe,hunhe2} from './mixin'
 	mixins: [hunru],//在组件data 中的 mixins 属性中注册
@@ -1544,8 +1544,8 @@ vue creat xx
 
 ## 3.4 Vue 插件
 
-1. 功能：用于增强 <font color="#00b050">Vue</font>
-2. 本质：包含`install`方法的一个对象，`install`的第一个参数是<font color="#00b050">Vue</font>，第二个以后的参数是插件使用者传递的数据。
+1. 功能：用于增强 Vue
+2. 本质：包含`install`方法的一个对象，`install`的第一个参数是Vue，第二个以后的参数是插件使用者传递的数据。
 3. 定义插件：
 	```js
 	export default {
@@ -1601,7 +1601,7 @@ vue creat xx
    1. 第一种方式（只接收）：```props:['name'] ```
    2. 第二种方式（限制类型）：```props:{name:String}```
    3. 第三种方式（限制类型、限制必要性、指定默认值）：
-- [n] 语法:
+- 语法:
 	```js
 	//简单声明接收
 	props:['name','age','sex'] 
@@ -1630,7 +1630,7 @@ vue creat xx
 	}
 	```
 
->- [!]   props是只读的，<font color="#00b050">Vue</font> 底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据。
+>- [!]   props是只读的，Vue 底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据。
 
 ### 3.7.2 自定义事件    **子组件 ==> 父组件**
 
@@ -1656,27 +1656,27 @@ vue creat xx
 	  },
 	```
 
-- [>] **解绑自定义事件**
+-  **解绑自定义事件**
 	```js
 	this.$off('atguigu') //解绑一个自定义事件
 	this.$off(['atguigu','demo']) //解绑多个自定义事件
 	this.$off() //解绑所有的自定义事件
 	```
 
-- [>] **子组件使用原生事件**
+-  **子组件使用原生事件**
 - 使用一个事件修饰符(.native)
 - vue会将写在组件中的事件都看做自定义事件，要想触发原生的事件，要加.native
 - `<School @click.native="schoolName" />`
 
 ### 3.7.3 全局事件总线
 实现任意组件间的通信
-- [>] 过程
+-  过程
 	1. 数据发送方，调用 emit ( ′ 事件名称 ′ , 要发送的数据 ) 
 	2. 据接收方，调用on(‘事件名称’，事件处理函数) 
 	3. 最后在beforeDestory()函数中解绑自定义事件
 
 
-- [>] 安装全局事件总线$bus （入口文件）
+-  安装全局事件总线$bus （入口文件）
 	- on, emit,off 属性只有在 vue.prototype上才有，而 vc , vm 都可以访问 vue.prototype ，所以每个组件都可以获得 on, emit,off 属性只有在vue.prototype上才有，并且将 bus 绑定在 vue.prototype 上，每个组件都可以看见它，并且将bus配置为 vm，即 bus 也会拥有on, emit,off属性
 	```js
 	new Vue({
@@ -1688,7 +1688,7 @@ vue creat xx
 	})
 	```
 
-- [>] 发送数据
+-  发送数据
 	```js
 	<button @click="sendStudentName">把学生名给School组件</button>
 	methods: {
@@ -1698,7 +1698,7 @@ vue creat xx
 	},
 	```
 
-- [>] 接受数据
+-  接受数据
 	```js
 	mounted() {
 		this.$bus.$on('hello',(data)=>{
@@ -1712,14 +1712,14 @@ vue creat xx
 
 ### 3.7.4 消息订阅与发布
 一种任意组件间通信的方式
-- [>] 一个第三方库 **pubsub-js**
+-  一个第三方库 **pubsub-js**
 	- `npm i pubsub-js`
 	- 提供了两个方法 
 		- `pubsub.subscribe("  ",opition)`
 		- `pubsub.publish("  ",opition)`
 		- 第一个参数是消息名字，第二个是数据，需要传入一个回调函数，函数传参
 
-- [>] 发布消息
+-  发布消息
 	```js
 	import pubsub from 'pubsub-js'//引入第三方库
 	<button @click="sendStudentName">把学生名给School组件</button>
@@ -1730,7 +1730,7 @@ vue creat xx
 	},
 	```
 
-- [>] 接受消息
+-  接受消息
 	```js
 	import pubsub from 'pubsub-js'//引入第三方库
 	mounted() {
@@ -1748,7 +1748,7 @@ vue creat xx
 
 - this.$nextTick(回调函数)
 
-- <font color="#00b050">vue</font>在解析模板时，不会立即更改，只有将代码执行一遍后统一重新解析
+- vue在解析模板时，不会立即更改，只有将代码执行一遍后统一重新解析
 
 - 只有在DOM元素更新到页面之后才执行函数体内代码
 
@@ -1774,7 +1774,7 @@ vue creat xx
 		2. 父组件：`<template scope="自己命名"></template>`,写在结构外
 
 ### 3.9.1 默认插槽
-- [n] 语法:
+- 语法:
 	```jsx
 	子组件：
 	<template>
@@ -1799,7 +1799,7 @@ vue creat xx
 	```
 
 ### 3.9.2 具名插槽
- - [n] 语法:
+ - 语法:
 	```jsx
 	子组件：
 	<template>
@@ -1836,8 +1836,8 @@ vue creat xx
 	- `scope="自己命名"`，子组件带过来的数据是一个对象，可用传递多组数据，可以结构赋值简化。
 
 - 数据在子组件，父组件使用api接收
-- [n] 语法:
-	```jsx
+- 语法:
+	```vue
 	子组件：
 	<template>
 		<div class="category">
@@ -1868,14 +1868,14 @@ vue creat xx
 
 ## 3.10 VueX
 
-<font color="#00b050">vuex</font> 中一般存储组件之间共享的数据，适用于多组件共享某些数据，将这些共享的数据集中起来管理。
+ vuex  中一般存储组件之间共享的数据，适用于多组件共享某些数据，将这些共享的数据集中起来管理。
 
-<font color="#00b050">vuex</font>中数据都是响应式的，能够保持数据与页面的同步，数据改变重新解析模板。
+ vuex 中数据都是响应式的，能够保持数据与页面的同步，数据改变重新解析模板。
 
-<font color="#00b050">vuex</font>是实现集中式状态管理的一个<font color="#00b050">Vue</font>插件，适用于任意组件间通信。
+ vuex 是实现集中式状态管理的一个 Vue 插件，适用于任意组件间通信。
 ![[26486ea99d7870ae76f53445b661bdcd.png|475]]
 
-### 3.10.1 搭建 <font color="#00b050">Vuex</font> 环境
+### 3.10.1 搭建 < Vuex  环境
 - api：
 	- **数据使用组件**：
 		- `$store.dispatch('a',value)`
@@ -1890,13 +1890,13 @@ vue creat xx
 				- 参数一：context （一个mini state ，它拥有部分state 的属性）
 				- 参数二：用户输入或者选择的数据
 	 
-- [>] 安装vuex
+-  安装vuex
 	- `npm i vuex`安装的是 vuex4 版本，该版本只能用在 vue3，vue2 只能用 vuex3 版本 `npm i vuex@3`
 		- vue3 ---> vuex4   `npm i vuex`
 		- vue2 ---> vuex3   `npm i vuex@3`
 		<br>
 
-- [>] 创建store文件
+-  创建store文件
 	- src/store/index.js （先要有 vuex，再创建 `store`实例）
 	- `store`实例对象是由`Vuex.store({})`构造出来的，构造之后，在vc,vm上就会出现`$store`属性。
 	- `$store`属性中有`dispatch`，`commit`方法
@@ -2005,7 +2005,7 @@ vue creat xx
 ### 3.10.3 数据映射
 api：mapState ， mapGetter ， mapActions ， mapMutations
 > 首先要在组件中引入mapState `import {mapState} from 'vuex'`
-- [>] mapState方法：用于帮助我们映射`state`中的数据为计算属性
+-  mapState方法：用于帮助我们映射`state`中的数据为计算属性
 	```js
 	computed: {
 	    //借助mapState生成计算属性：sum、school、subject（对象写法）
@@ -2018,7 +2018,7 @@ api：mapState ， mapGetter ， mapActions ， mapMutations
 
 
 
-- [>] <strong>mapGetters方法：</strong>用于帮助我们映射```getters```中的数据为计算属性
+-  <strong>mapGetters方法：</strong>用于帮助我们映射```getters```中的数据为计算属性
 	```js
 	computed: {
 	    //借助mapGetters生成计算属性：bigSum（对象写法）
@@ -2030,7 +2030,7 @@ api：mapState ， mapGetter ， mapActions ， mapMutations
 	```
 
 
-- [>] <strong>mapActions方法：</strong>用于帮助我们生成与```actions```对话的方法，即：包含```$store.dispatch(xxx)```的函数
+-  <strong>mapActions方法：</strong>用于帮助我们生成与```actions```对话的方法，即：包含```$store.dispatch(xxx)```的函数
 	```js
 	methods:{
 	    //靠mapActions生成：incrementOdd、incrementWait（对象形式）
@@ -2041,7 +2041,7 @@ api：mapState ， mapGetter ， mapActions ， mapMutations
 	}
 	```
 
-- [>] <strong>mapMutations方法：</strong>用于帮助我们生成与```mutations```对话的方法，即：包含```$store.commit(xxx)```的函数
+-  <strong>mapMutations方法：</strong>用于帮助我们生成与```mutations```对话的方法，即：包含```$store.commit(xxx)```的函数
 	```js
 	methods:{
 	    //靠mapActions生成：increment、decrement（对象形式）
@@ -2139,7 +2139,7 @@ api：mapState ， mapGetter ， mapActions ， mapMutations
 
 ### 3.11.2 基本使用
 
-- [>] 环境搭建
+- 环境搭建
 1. 安装vue-router `npm i vue-router@3.5.2 -S` （vue2版本只能使用 vue-router3）
 2. 创建 src/router 文件夹，创建 index.js 文件并配置。
 	```js
@@ -2153,7 +2153,7 @@ api：mapState ， mapGetter ， mapActions ， mapMutations
 		routes:[
 			{path:'/about',component:About},
 		]
-	})
+	})	
 	```
 3. 在main.js 中引入 VueRouter 插件并注册，然后引入路由，挂载 VueRouter
 	```js
@@ -2172,7 +2172,7 @@ api：mapState ， mapGetter ， mapActions ， mapMutations
 	```
 
 
-- [>] 使用路由
+-  使用路由
 1. 修改 a 标签（active-class可配置高亮样式）
 	```html
 	<router-link active-class="active" to='/home'>首页</router-link>
@@ -2328,14 +2328,14 @@ children:[
 
 ### 3.11.9 9.编程式路由导航
 
-- [>] 声明式导航
+-  声明式导航
 	- ​普通网页中点击 `<a>` 链接，在 vue 中点击都属于声明式导航
 	<br>
-- [>] 编程式导航
+-  编程式导航
 	- ​调用Api实现页面hash地址的变化，to可以怎么写，push()括号内就可以怎么写
 	- 如通过JavaScript的API实现导航的方式 如`location.herf`
 	<br>
-- [>] api:
+-  api:
 	1. `this.$router.push('hash地址')` 跳转到指定位置，并增加一条历史记录，可以前进和回退。
 	2. `this.$router.replace('hash地址')` 跳转到指定位置，并且代替原来页面，不能回退。
 	3. `this.$router.back()` 后退一步
@@ -2366,7 +2366,7 @@ children:[
 
 就是为了控制路由的访问权限，满足一些条件才能进入页面
 
-- [>] 全局前置守卫 `router.beforeEach((to,from,next)=>{})`
+-  全局前置守卫 `router.beforeEach((to,from,next)=>{})`
 - 参数：
 	1. to 是将要访问的路由的信息 to.path 是hash地址
 	2. from 是将要离开的路由的信息
@@ -2391,7 +2391,7 @@ children:[
 	})
 	```
 
-- [>] 全局后置守卫  `router.afterEach((to,from)=>{})`
+-  全局后置守卫  `router.afterEach((to,from)=>{})`
 	```js
 	//全局后置路由守卫————初始化的时候被调用、每次路由切换之后被调用
 	router.afterEach((to,from)=>{
@@ -2400,7 +2400,7 @@ children:[
 	})
 	```
 
-- [>] 独享守卫  `beforeEnter：(to,from,next) => {}`
+-  独享守卫  `beforeEnter：(to,from,next) => {}`
 	- 是某个路由独享的，配置在该路由下
 
 	```js
@@ -2422,7 +2422,7 @@ children:[
 	}
 	```
 
-- [>] 组件内路由守卫
+-  组件内路由守卫
 	- 路由进入该组件时进行一些判断
 		1. 进入守卫 `beforeRouteEnter(to,from,next){}`
 		2. 离开守卫 `beforeRouteLeave (to, from, next) {}`

@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import "aplayer"
 import 'aplayer/dist/APlayer.min.css';
 import MyIcon from './MyIcon.vue';
 import { useRouter } from 'vue-router';
 import { ref, onMounted, nextTick } from 'vue';
 import axios from 'axios';
 // 懒加载
-import { MaybeComputedElementRef, MaybeElement, MaybeRefOrGetter, useIntersectionObserver } from '@vueuse/core'
 
 
 //#region darkMode
@@ -18,6 +18,19 @@ import { MaybeComputedElementRef, MaybeElement, MaybeRefOrGetter, useIntersectio
 let APlayer: any;
 let IsShow = ref(false);
 let GlobalMusicList = [];
+
+const customTemplate = 
+`
+  <div class="custom-aplayer">
+    <button class="custom-play">播放</button>
+    <button class="custom-pause">暂停</button>
+    <div class="custom-progress">
+      <div class="custom-loaded"></div>
+      <div class="custom-played"></div>
+    </div>
+  </div>
+`
+
 
 // 切换状态
 const SwitchStatus = () => {
@@ -88,7 +101,7 @@ const NewPlayer = () => {
   Win.GlobalAPlayer = new APlayer({
     container: document.getElementById('GlobalAPlayer'),
     audio: GlobalMusicList,
-    lrcType: 3,
+    lrcType: 3,  //歌词文件形式 1歌词直接复制进来，2html形式，3数据库获取格式跟下面的一样
     listFolded: false,
     listMaxHeight: '324px',
     mini: false,
@@ -144,28 +157,42 @@ function AddBtnSpin() {
 * 加载音乐列表
 */
 // 加载音乐列表
-const LoadMusicList = (callback: { (): void; (): any; }) => {
-  axios({
-    method: 'get',
-    //插件作者的歌单
-    // url: '//file.mo7.cc/music/list.json',
-    // 自己的歌单
-    url: 'https://api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r',
-    params: {},
-  }).then((response) => {
-    // console.log('获取音乐数据',response);
-    
-    var listData = response.data;
-    if (listData && listData.length > 0) {
+const localMusicList = JSON.parse(localStorage.getItem('localMusicList'));
+const LoadMusicList = async () => {
+  if(localMusicList) {
+    GlobalMusicList = localMusicList;
+    creatAplayer()
+  }else{
+    await axios({
+      method: 'get',
+      //插件作者的歌单
+      // url: '//file.mo7.cc/music/list.json',
+      // 自己的歌单
+      url: 'https://api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r',
+      params: {},
+    }).then((response) => {
+      // console.log('获取音乐数据',response);
       
-      GlobalMusicList = listData;
-      // const el = document.getElementById('GlobalAPlayer');
+      const listData = response.data;
+      if (listData && listData.length > 0) {
+        
+        
+        localStorage.setItem('localMusicList', JSON.stringify(listData));
+        GlobalMusicList = listData;
+        console.log("又获取列表了");
+        
+        // const el = document.getElementById('GlobalAPlayer');
 
-      
-    }
-    // console.log('加载音乐列表', GlobalMusicList);
-    callback && callback();
-  });
+        
+      }
+      // console.log('加载音乐列表', GlobalMusicList);
+      // callback && callback();
+      creatAplayer()
+    }).catch((error) => {
+      console.error('加载音乐列表失败:', error);
+    });
+  }
+
 };
 
 // let options = {
@@ -190,38 +217,39 @@ const LoadMusicList = (callback: { (): void; (): any; }) => {
 
 // const observer = new IntersectionObserver(callback, options);
 
-
-
-onMounted(() => {
+const creatAplayer = () => {
   const router = useRouter();
+  
+  import('aplayer').then((res) => {
+    nextTick(() => {
+      // console.log('打印res子组件挂载',res);
+      APlayer = res.default;
+      InsertMenu();
+      NewPlayer();
+      
+      // let observerList = document.querySelectorAll('#GlobalAPlayer .aplayer-list li')
+      // observerList.forEach (item => {
+      //   observer.observe(item)
+      // })
 
-  LoadMusicList(() => {
-    import('aplayer').then((res) => {
-      nextTick(() => {
-        // console.log('打印res子组件挂载',res);
-        APlayer = res.default;
+
+      // 在这里插入全局事件监听
+      // window.document.body.onclick = () => {
+      //   CloseStatus();
+      // };
+    });
+    
+    router.afterEach(() => {
+      setTimeout(() => {
         InsertMenu();
         NewPlayer();
-        
-        // let observerList = document.querySelectorAll('#GlobalAPlayer .aplayer-list li')
-        // observerList.forEach (item => {
-        //   observer.observe(item)
-        // })
-
-
-        // 在这里插入全局事件监听
-        // window.document.body.onclick = () => {
-        //   CloseStatus();
-        // };
-      });
-      router.afterEach(() => {
-        setTimeout(() => {
-          InsertMenu();
-          NewPlayer();
-        }, 50);
-      });
+      }, 50);
     });
   });
+}
+
+onMounted(  () => {
+  LoadMusicList()
 });
 </script>
 
@@ -231,7 +259,7 @@ onMounted(() => {
       <div class="MyMusic_Play" :class="{ hide: !IsShow }">
         <div class="close" @click="CloseStatus"><MyIcon name="guanbi" /></div>
         <div id="GlobalAPlayer">
-
+          <div class="aplayer-lrc"></div>
         </div>
       </div>
     </div>
@@ -252,6 +280,8 @@ $myshadow:
 $myshadowDark: 
   -.1rem -.1rem .2rem hsla(0, 0%, 53%, 0.6),
   .2rem .2rem .2rem hsla(0, 0%, 0%, 0.5);
+
+  
 
 
 // 播放器
@@ -355,13 +385,17 @@ $myshadowDark:
   
   // 歌词
   .aplayer-lrc{
+    // position: relative;
+    // display: block;
+    // z-index: 99;
     height: 55px;
+    // margin-top: 100px;
     background-color: transparent !important; 
     border: transparent !important;
     &::before,
     &::after {
-        background: transparent !important;
-      }
+      background: transparent !important;
+    }
     .aplayer-lrc-contents{
       // transform: translateY(-50px) !important;
       margin-top: 20px;

@@ -46,7 +46,7 @@
 <li>mint-ui：基于 vue 的 UI 组件库（移动端）</li>
 <li>element-ui：基于 vue 的 UI 组件库（PC 端）</li>
 </ul>
-<h2 id="_2-vue2-basicgrammer" tabindex="-1"><a class="header-anchor" href="#_2-vue2-basicgrammer"><span>2  <font color="#00b050">Vue</font>2 BasicGrammer</span></a></h2>
+<h2 id="_2-vue-2-basicgrammer" tabindex="-1"><a class="header-anchor" href="#_2-vue-2-basicgrammer"><span>2   Vue 2 BasicGrammer</span></a></h2>
 <h3 id="_2-1-引入vue-js" tabindex="-1"><a class="header-anchor" href="#_2-1-引入vue-js"><span>2.1 引入Vue.js</span></a></h3>
 <ul>
 <li>本地引入</li>
@@ -60,7 +60,7 @@
 <li><code v-pre>root</code>容器里的代码被称为【Vue模板】；</li>
 <li><code v-pre>Vue</code>实例和容器是一一对应的；</li>
 <li>真实开发中只有一个Vue实例，并且会配合着组件一起使用；</li>
-<li>{{xxx}}中的xxx要写<code v-pre>js</code>表达式，且xxx可以自动读取到<code v-pre>data</code>中的所有属性；</li>
+<li><code v-pre>{{xxx}}</code>中的xxx要写<code v-pre>js</code>表达式，且xxx可以自动读取到<code v-pre>data</code>中的所有属性；</li>
 <li>一旦<code v-pre>data</code>中的数据发生改变，那么页面中用到该数据的地方也会自动更新；<div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//创建Vue实例</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">new</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> Vue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">	el</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'#root'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//el用于指定当前Vue实例为哪个容器服务，值通常为css选择器字符串。</span></span>
@@ -544,8 +544,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <h3 id="_2-5-3-vue中的数据代理" tabindex="-1"><a class="header-anchor" href="#_2-5-3-vue中的数据代理"><span>2.5.3 Vue中的数据代理</span></a></h3>
 <ul>
 <li>通过 vm 对象（vue实例）来代理 data 对象中属性的操作（读/写）</li>
-<li>
-<font color="#00b050">Vue</font>中数据代理的好处</li>
+<li>Vue中数据代理的好处</li>
 <li>更加方便地操作 <code v-pre>data</code> 中的数据</li>
 <li>基本原理</li>
 <li>通过 <code v-pre>Object.defineProperty()</code> 把 <code v-pre>data</code> 对象中所有属性添加到 <code v-pre>vm</code> 上</li>
@@ -560,13 +559,13 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>使用 <code v-pre>v-on:xxx</code> 或<code v-pre>@xxx</code>绑定事件，其中xxx是事件名</li>
 <li>事件的回调需要配置在methods对象中，最终会在vm上</li>
 <li><code v-pre>methods</code>中配置的函数，不要使用箭头函数，否则<code v-pre>this</code>就不是<code v-pre>vm</code>了</li>
-<li><code v-pre>methods</code>中配置的函数，都是被<font color="#00b050">vue</font>所管理的函数，this的指向是vm或者组件实例对象</li>
+<li><code v-pre>methods</code>中配置的函数，都是被vue所管理的函数，this的指向是vm或者组件实例对象</li>
 <li><code v-pre>@click=&quot;demo&quot;</code>和<code v-pre>@click=&quot;demo($event)&quot;</code>效果一致，但后者可以传参</li>
 </ul>
 <h3 id="_2-6-2-事件修饰符" tabindex="-1"><a class="header-anchor" href="#_2-6-2-事件修饰符"><span>2.6.2 事件修饰符</span></a></h3>
 <ul>
-<li>
-<font color="#00b050">Vue</font> 中的事件修饰符：<ul>
+<li>Vue 中的事件修饰符：
+<ul>
 <li><code v-pre>prevent</code>：阻止默认事件（常用）</li>
 <li><code v-pre>stop</code>：阻止事件冒泡（常用）</li>
 <li><code v-pre>once</code>：事件只触发一次（常用）</li>
@@ -590,7 +589,8 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 </blockquote>
 <h3 id="_2-6-3-键盘事件" tabindex="-1"><a class="header-anchor" href="#_2-6-3-键盘事件"><span>2.6.3 键盘事件</span></a></h3>
-<font color="#00b050">Vue</font> 中常用的按键别名：<table>
+<p>Vue 中常用的按键别名：</p>
+<table>
 <thead>
 <tr>
 <th>按键</th>
@@ -634,7 +634,8 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </table>
 <ul>
 <li>
-<font color="#00b050">Vue</font> 未提供别名的按键，可以使用按键原始的<code v-pre>key</code>值去绑定，但要注意转为<code v-pre>kebab-case</code>（短横线命名）</li>
+<p>Vue 未提供别名的按键，可以使用按键原始的<code v-pre>key</code>值去绑定，但要注意转为<code v-pre>kebab-case</code>（短横线命名）</p>
+</li>
 <li>
 <p>系统修饰键（用法特殊）：<code v-pre>ctrl</code>、<code v-pre>alt</code>、<code v-pre>shift</code>、<code v-pre>meta</code></p>
 <ul>
@@ -682,12 +683,13 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </li>
 </ul>
 <blockquote>
-<font color="#ff0000">备注</font><p>计算属性最终会出现在vm上（而不是出在<code v-pre>vm._data</code>上），直接读取使用即可
+<p>备注
+计算属性最终会出现在vm上（而不是出在<code v-pre>vm._data</code>上），直接读取使用即可
 如果计算属性要被修改，那必须写set函数去响应修改，且set中要引起计算时依赖的数据发生改变</p>
 </blockquote>
 <ul>
 <li>
-<p>[n] 语法:</p>
+<p>语法:</p>
 <div class="language-js line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="js" data-title="js" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> vm</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> new</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> Vue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">	el</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> '#root'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">	data</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
@@ -740,7 +742,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
 <li>监视的两种写法：
 <ul>
-<li>new <font color="#00b050">Vue</font> 时传入 <code v-pre>watch</code>配置来监视指定的属性</li>
+<li>new Vue 时传入 <code v-pre>watch</code>配置来监视指定的属性</li>
 <li>通过vm对象的<code v-pre>$watch()</code></li>
 </ul>
 </li>
@@ -774,16 +776,15 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>
 <p>深度监视</p>
 <ul>
-<li>
-<font color="#00b050">Vue</font> 中的<code v-pre>watch</code>默认不监视对象内部值的改变（只监视一层）</li>
+<li>Vue 中的<code v-pre>watch</code>默认不监视对象内部值的改变（只监视一层）</li>
 <li>配置<code v-pre>deep:true</code>可以监视对象内部值的改变（可以监视多层）</li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<font color="#ff0000">备注</font><pre><code>&lt;font color=&quot;#00b050&quot;&gt;Vue&lt;/font&gt; 自身可以监视多级结构（对象）中数据的改变，但&lt;font color=&quot;#00b050&quot;&gt;Vue&lt;/font&gt;提供给程序员的`watch`默认无法监视多级结构中属性的改变
-使用`watch`时根据数据的具体结构，决定是否采用深度监视
-</code></pre>
+<p>备注
+Vue 自身可以监视多级结构（对象）中数据的改变，但Vue提供给程序员的<code v-pre>watch</code>默认无法监视多级结构中属性的改变
+使用<code v-pre>watch</code>时根据数据的具体结构，决定是否采用深度监视</p>
 </blockquote>
 <h3 id="_2-8-2-监视的简写" tabindex="-1"><a class="header-anchor" href="#_2-8-2-监视的简写"><span>2.8.2 监视的简写</span></a></h3>
 <p><code v-pre>Q</code>：社么时候可以简写<br>
@@ -827,8 +828,8 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>
 <p>两个重要的小原则</p>
 <ul>
-<li>所被<font color="#00b050">Vue</font>管理的函数，最好写成普通函数，这样<code v-pre>this</code>的指向才是vm或者组件实例对象</li>
-<li>所有不被<font color="#00b050">Vue</font>所管理的函数（定时器的回调函数、<code v-pre>ajax</code>的回调函数等），最好写成箭头函数，这样<code v-pre>this</code>的指向才是vm或者组件实例对象</li>
+<li>所被Vue管理的函数，最好写成普通函数，这样<code v-pre>this</code>的指向才是vm或者组件实例对象</li>
+<li>所有不被Vue所管理的函数（定时器的回调函数、<code v-pre>ajax</code>的回调函数等），最好写成箭头函数，这样<code v-pre>this</code>的指向才是vm或者组件实例对象</li>
 </ul>
 </li>
 <li>
@@ -941,7 +942,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>适用于：切换频<strong>率较低</strong>的场景。</li>
 <li>特点：不展示的<code v-pre>DOM</code>元素直接被移除。</li>
 <li>注意：<code v-pre>v-if</code>可以和<code v-pre>v-else-if</code>、<code v-pre>v-else</code>一起使用，但要求结构不能被“打断”。</li>
-<li>[n] 语法:</li>
+<li>语法:</li>
 </ul>
 <div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"root"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>当前的n值是:{{n}}&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
@@ -978,7 +979,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>写法：<code v-pre>v-show=&quot;表达式&quot;</code></li>
 <li>适用于：切换频<strong>率较高</strong>的场景。</li>
 <li>特点：不展示的DOM元素未被移除，仅仅是使用样式隐藏掉</li>
-<li>[n] 语法:</li>
+<li>语法:</li>
 </ul>
 <div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"root"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>当前的n值是:{{n}}&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
@@ -1044,7 +1045,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>
 <p>虚拟<code v-pre>DOM</code>中key的作用：</p>
 <ul>
-<li>key是虚拟<code v-pre>DOM</code>对象的标识，当数据发生变化时，<font color="#00b050">Vue</font> 会根据【新数据】生成【新的虚拟<code v-pre>DOM</code>】, 随后<font color="#00b050">Vue</font>进行【新虚拟<code v-pre>DOM</code>】与【旧虚拟<code v-pre>DOM</code>】的差异比较，比较规则如下：
+<li>key是虚拟<code v-pre>DOM</code>对象的标识，当数据发生变化时，Vue 会根据【新数据】生成【新的虚拟<code v-pre>DOM</code>】, 随后Vue进行【新虚拟<code v-pre>DOM</code>】与【旧虚拟<code v-pre>DOM</code>】的差异比较，比较规则如下：
 <br></li>
 </ul>
 </li>
@@ -1078,12 +1079,13 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <h3 id="_2-11-3-vue监视数据的原理" tabindex="-1"><a class="header-anchor" href="#_2-11-3-vue监视数据的原理"><span>2.11.3 Vue监视数据的原理</span></a></h3>
 <ol>
 <li>
-<font color="#00b050">Vue</font>会监视<code v-pre>data</code>中所有层次的数据。</li>
+<p>Vue会监视<code v-pre>data</code>中所有层次的数据。</p>
+</li>
 <li>
 <p>如何监测对象中的数据？</p>
 <ul>
-<li>通过setter实现监视，且要在new <font color="#00b050">Vue</font>时就传入要监测的数据。</li>
-<li>对象中后追加的属性，<font color="#00b050">Vue</font>默认不做响应式处理</li>
+<li>通过setter实现监视，且要在new Vue时就传入要监测的数据。</li>
+<li>对象中后追加的属性，Vue默认不做响应式处理</li>
 <li>如需给后添加的属性做响应式，请使用如下API：<code v-pre>Vue.set(target，propertyName/index，value)</code> 或 <code v-pre>vm.$set(target，propertyName/index，value)</code></li>
 </ul>
 </li>
@@ -1095,7 +1097,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ol>
 </li>
 <li>
-<p>在<font color="#00b050">Vue</font>修改数组中的某个元素一定要用如下方法：</p>
+<p>在Vue修改数组中的某个元素一定要用如下方法：</p>
 <ol>
 <li>使用这些API: <code v-pre>push()</code>、<code v-pre>pop()</code>、<code v-pre>shift()</code>、<code v-pre>unshift()</code>、<code v-pre>splice()</code>、<code v-pre>sort()</code>、<code v-pre>reverse()</code></li>
 <li><code v-pre>Vue.set()</code> 或 <code v-pre>vm.$set()</code></li>
@@ -1107,8 +1109,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </blockquote>
 <h3 id="_2-11-4-数组更新检测" tabindex="-1"><a class="header-anchor" href="#_2-11-4-数组更新检测"><span>2.11.4 数组更新检测</span></a></h3>
 <ul>
-<li>
-<font color="#00b050">Vue</font> 重写了数组中的一系列改变数组内部数据的方法（先调用原生，再更新界面） </li>
+<li>Vue 重写了数组中的一系列改变数组内部数据的方法（先调用原生，再更新界面）</li>
 <li>Vue将被侦听的数组的变更方法进行了包裹,所以它们也将会触发视图更新。这些被包裹过的方法</li>
 <li>包括: <code v-pre>push()，pop()，shift()，unshift()，splice()，sort()，reverse()</code></li>
 </ul>
@@ -1117,7 +1118,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <ul>
 <li>可以使用<code v-pre>watch</code>也可以使用计算属性，使用计算属性更加简单方便一点
 <br></li>
-<li>[n] 语法:<div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">body</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<li>语法:<div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">body</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  &#x3C;!-- 准备好一个容器--></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  &#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"root"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>人员列表&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
@@ -1184,7 +1185,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 <h4 id="_2-11-5-2-排序" tabindex="-1"><a class="header-anchor" href="#_2-11-5-2-排序"><span>2.11.5.2 排序</span></a></h4>
 <ul>
-<li>[n] 语法:<div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">body</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<li>语法:<div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">body</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">	&#x3C;!-- 准备好一个容器--></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"root"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>人员列表&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
@@ -1331,12 +1332,12 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="collapsed-lines"></div></div></li>
 </ul>
-<h2 id="_2-14-vue-对象的生命周期" tabindex="-1"><a class="header-anchor" href="#_2-14-vue-对象的生命周期"><span>2.14 <font color="#00b050">Vue</font> 对象的生命周期</span></a></h2>
+<h2 id="_2-14-vue-对象的生命周期" tabindex="-1"><a class="header-anchor" href="#_2-14-vue-对象的生命周期"><span>2.14 Vue 对象的生命周期</span></a></h2>
 <ul>
-<li>[&gt;] <strong>生命周期</strong>：
+<li><strong>生命周期</strong>：
 <ol>
 <li>又名：<strong>生命周期回调函数</strong>、<strong>生命周期函数</strong>、<strong>生命周期钩子</strong>。</li>
-<li>是什么：<font color="#00b050">Vue</font> 在关键时刻帮我们调用的一些特殊名称的函数。</li>
+<li>是什么：Vue 在关键时刻帮我们调用的一些特殊名称的函数。</li>
 <li>生命周期函数的名字不可更改，但函数的具体内容是程序员根据需求编写的。</li>
 <li>生命周期函数中的 <code v-pre>this</code> 指向是 vm 或 组件实例对象(VueComponents)。
 <br></li>
@@ -1358,12 +1359,12 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </li>
 <li><code v-pre>beforeMount()</code>
 <ul>
-<li>页面生成<font color="#00b050">Vue</font>未解析的<code v-pre>DOM</code>元素，只是将要将内存中的<code v-pre>HTML</code>结构渲染到页面</li>
+<li>页面生成Vue未解析的<code v-pre>DOM</code>元素，只是将要将内存中的<code v-pre>HTML</code>结构渲染到页面</li>
 </ul>
 </li>
 <li><code v-pre>mounted()</code>
 <ul>
-<li>生成经过<font color="#00b050">Vue</font>解析后<code v-pre>DOM</code>元素，页面渲染到浏览器，可以操作<code v-pre>DOM</code>元素了
+<li>生成经过Vue解析后<code v-pre>DOM</code>元素，页面渲染到浏览器，可以操作<code v-pre>DOM</code>元素了
 <br></li>
 </ul>
 </li>
@@ -1393,16 +1394,16 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ol>
 <ul>
 <li>
-<p>[&gt;] 常用的生命周期方法</p>
+<p>常用的生命周期方法</p>
 <ul>
 <li><code v-pre>mounted()</code>: 发送ajax请求, 启动定时器、绑定自定义事件、订阅消息等异步任务【初始化操作】</li>
 <li><code v-pre>beforeDestroy()</code>: 做收尾工作, 如: 清除定时器、解绑自定义事件、取消订阅消息等【首尾工作】</li>
 </ul>
 </li>
 <li>
-<p>[&gt;] 关于销毁 <font color="#00b050">Vue</font> 实例</p>
+<p>关于销毁 Vue 实例</p>
 <ol>
-<li>销毁后借助<font color="#00b050">Vue</font>开发者工具看不到任何信息</li>
+<li>销毁后借助Vue开发者工具看不到任何信息</li>
 <li>销毁后自定义事件会失效，但原生<code v-pre>DOM</code>事件依然有效</li>
 <li>一般不会在<code v-pre>beforeDestroy</code>操作数据，因为即使操作数据，也不会再触发更新流程了。</li>
 </ol>
@@ -1434,7 +1435,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <h2 id="_2-15-组件" tabindex="-1"><a class="header-anchor" href="#_2-15-组件"><span>2.15 组件</span></a></h2>
 <h3 id="_2-15-1-组件的概念" tabindex="-1"><a class="header-anchor" href="#_2-15-1-组件的概念"><span>2.15.1 组件的概念</span></a></h3>
 <ul>
-<li>[&gt;] 传统方式编写应用</li>
+<li>传统方式编写应用</li>
 <li>存在问题：
 <ul>
 <li>依赖关系混乱，不好维护</li>
@@ -1445,21 +1446,21 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <p>![[a5e67412b8c24658a2455130cbadcf6a~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp|650]]
 <br></p>
 <ul>
-<li>[&gt;] 使用组件方式编写应用</li>
+<li>使用组件方式编写应用</li>
 <li>组件的定义——实现应用中局部功能代码和资源的集合</li>
 </ul>
 <p>![[30ec041452744aa19d302efc96d4d270~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp|650]]</p>
 <h3 id="_2-15-2-非单文件组件" tabindex="-1"><a class="header-anchor" href="#_2-15-2-非单文件组件"><span>2.15.2 非单文件组件</span></a></h3>
 <h4 id="_2-15-2-1-使用组件的三大步骤" tabindex="-1"><a class="header-anchor" href="#_2-15-2-1-使用组件的三大步骤"><span>2.15.2.1 使用组件的三大步骤</span></a></h4>
 <ul>
-<li>[&gt;] 定义组件（创建组件）</li>
-<li>[&gt;] 注册组件</li>
-<li>[&gt;] 使用组件（写组件标签）</li>
+<li>定义组件（创建组件）</li>
+<li>注册组件</li>
+<li>使用组件（写组件标签）</li>
 </ul>
 <h5 id="_2-15-2-1-1-定义组件" tabindex="-1"><a class="header-anchor" href="#_2-15-2-1-1-定义组件"><span>2.15.2.1.1 定义组件</span></a></h5>
 <ul>
-<li>[&gt;] <code v-pre>const school = Vue.extend({})</code></li>
-<li>[&gt;] 用<code v-pre>Vue.extend(options)</code>创建，其中<code v-pre>options</code>和<code v-pre>new Vue（options)</code> 时传入的那个<code v-pre>options</code>几乎一样，但有以下区别
+<li><code v-pre>const school = Vue.extend({})</code></li>
+<li>用<code v-pre>Vue.extend(options)</code>创建，其中<code v-pre>options</code>和<code v-pre>new Vue（options)</code> 时传入的那个<code v-pre>options</code>几乎一样，但有以下区别
 <ol>
 <li>不要写<code v-pre>el</code>——最终所有的组件都要经过一个vm的管理，由vm中的<code v-pre>el</code>决定服务哪个容器</li>
 <li><code v-pre>data</code>必须写成函数——避免组件被复用时，数据存在引用关系</li>
@@ -1472,7 +1473,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 </blockquote>
 <ul>
-<li>[n] 语法:<div class="language-js line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="js" data-title="js" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> school</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> Vue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">extend</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span></span>
+<li>语法:<div class="language-js line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="js" data-title="js" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> school</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> Vue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">extend</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    template</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> `  </span></span>
 <span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">        &#x3C;div class="demo"></span></span>
 <span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">            &#x3C;h2>学校名称：{{schoolName}}&#x3C;/h2></span></span>
@@ -1497,11 +1498,11 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 <h5 id="_2-15-2-1-2-注册组件" tabindex="-1"><a class="header-anchor" href="#_2-15-2-1-2-注册组件"><span>2.15.2.1.2 注册组件</span></a></h5>
 <ul>
-<li>[&gt;] 局部注册：<code v-pre>new Vue</code>的时候传入<code v-pre>components</code>选项</li>
-<li>[&gt;] 全局注册：<code v-pre>Vue.component</code>('组件名', 组件)</li>
+<li>局部注册：<code v-pre>new Vue</code>的时候传入<code v-pre>components</code>选项</li>
+<li>全局注册：<code v-pre>Vue.component</code>('组件名', 组件)</li>
 <li>
 <ul>
-<li>[n] 语法:<div class="language-js line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="js" data-title="js" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//全局注册组件</span></span>
+<li>语法:<div class="language-js line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="js" data-title="js" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//全局注册组件</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  Vue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">component</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'hello'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">hello</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  //创建vm</span></span>
@@ -1522,7 +1523,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 <h5 id="_2-15-2-1-3-使用组件" tabindex="-1"><a class="header-anchor" href="#_2-15-2-1-3-使用组件"><span>2.15.2.1.3 使用组件</span></a></h5>
 <ul>
-<li>[n] 语法:<div class="language-html line-numbers-mode" data-highlighter="shiki" data-ext="html" data-title="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">&#x3C;!-- 准备好一个容器--></span></span>
+<li>语法:<div class="language-html line-numbers-mode" data-highlighter="shiki" data-ext="html" data-title="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">&#x3C;!-- 准备好一个容器--></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  &#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"root"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    &#x3C;!-- 第三步：编写组件标签 --></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &#x3C;</span><span style="--shiki-light:white;--shiki-dark:#E06C75">school</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>&#x3C;/</span><span style="--shiki-light:white;--shiki-dark:#E06C75">school</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
@@ -1533,7 +1534,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 <h4 id="_2-15-2-2-组件使用的注意点" tabindex="-1"><a class="header-anchor" href="#_2-15-2-2-组件使用的注意点"><span>2.15.2.2 组件使用的注意点</span></a></h4>
 <ul>
-<li>[&gt;] 关于组件名</li>
+<li>关于组件名</li>
 <li>一个单词组成
 <ol>
 <li>第一种写法（首字母小写）：<code v-pre>school</code></li>
@@ -1543,7 +1544,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>多个单词组成
 <ol>
 <li>第一种写法（<code v-pre>kebab-case</code>命名）：<code v-pre>my-school</code></li>
-<li>第二种写法（<code v-pre>CamelCase</code>命名）：<code v-pre>MySchool</code>（需要<font color="#00b050">Vue</font>脚手架支持）</li>
+<li>第二种写法（<code v-pre>CamelCase</code>命名）：<code v-pre>MySchool</code>（需要Vue脚手架支持）</li>
 </ol>
 </li>
 </ul>
@@ -1558,7 +1559,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 </blockquote>
 <ul>
-<li>[n] 语法:<div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">body</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<li>语法:<div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">body</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    &#x3C;!-- 准备好一个容器--></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> id</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"root"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        &#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>{{msg}}&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
@@ -1598,14 +1599,14 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <p>![[Pasted image 20240725031412.png|250]]</p>
 <ul>
 <li>
-<p>[&gt;] 关于组件标签</p>
+<p>关于组件标签</p>
 <ul>
 <li>第一种写法：<code v-pre>&lt;school&gt;&lt;/school&gt;</code></li>
 <li>第二种写法：<code v-pre>&lt;school/&gt;</code> (不使用脚手架会导致后续组件不能渲染)</li>
 </ul>
 </li>
 <li>
-<p>[&gt;] 简写方式 <code v-pre>const school = Vue.extend({options})</code> 可以简写成 <code v-pre>const school = {options}</code></p>
+<p>简写方式 <code v-pre>const school = Vue.extend({options})</code> 可以简写成 <code v-pre>const school = {options}</code></p>
 </li>
 </ul>
 <h4 id="_2-15-2-3-vuecomponent" tabindex="-1"><a class="header-anchor" href="#_2-15-2-3-vuecomponent"><span>2.15.2.3 VueComponent</span></a></h4>
@@ -1614,7 +1615,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <p><code v-pre>app</code> 组件本质是一个名为 <code v-pre>VueComponent</code> 的构造函数，且不是程序员定义的，是<code v-pre>Vue.extend</code>生成的</p>
 </li>
 <li>
-<p>我们只需要写<code v-pre>&lt;app/&gt;</code>或<code v-pre>&lt;app&gt;&lt;/app&gt;</code>，<font color="#00b050">Vue</font>解析时会帮我们创建<code v-pre>app组件</code>的实例对象，即<font color="#00b050">Vue</font>帮我们执行<code v-pre>new VueComponent({options})</code></p>
+<p>我们只需要写<code v-pre>&lt;app/&gt;</code>或<code v-pre>&lt;app&gt;&lt;/app&gt;</code>，Vue解析时会帮我们创建<code v-pre>app组件</code>的实例对象，即Vue帮我们执行<code v-pre>new VueComponent({options})</code></p>
 </li>
 <li>
 <p>特别注意：每次调用<code v-pre>Vue.extend</code>，返回的都是一个全新的<code v-pre>VueComponent</code></p>
@@ -1622,14 +1623,16 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>
 <p>关于<code v-pre>this</code>指向</p>
 <ul>
-<li>组件配置中：<code v-pre>data函数</code>、<code v-pre>methods中的函数</code>、<code v-pre>watch中的函数</code>、<code v-pre>computed中的函数</code> 它们的<code v-pre>this</code>均是【<font color="#00b050">Vue</font>Component实例对象】</li>
-<li><code v-pre>new Vue(options)</code>配置中：<code v-pre>data函数</code>、<code v-pre>methods中的函数</code>、<code v-pre>watch中的函数</code>、<code v-pre>computed中的函数</code> 它们的<code v-pre>this</code>均是【<font color="#00b050">Vue</font>实例对象】</li>
+<li>组件配置中：<code v-pre>data函数</code>、<code v-pre>methods中的函数</code>、<code v-pre>watch中的函数</code>、<code v-pre>computed中的函数</code> 它们的<code v-pre>this</code>均是【VueComponent实例对象】</li>
+<li><code v-pre>new Vue(options)</code>配置中：<code v-pre>data函数</code>、<code v-pre>methods中的函数</code>、<code v-pre>watch中的函数</code>、<code v-pre>computed中的函数</code> 它们的<code v-pre>this</code>均是【Vue实例对象】</li>
 </ul>
 </li>
 <li>
-<font color="#00b050">Vue</font>Component的实例对象，以后简称VC（也可称之为：组件实例对象）</li>
+<p>VueComponent的实例对象，以后简称VC（也可称之为：组件实例对象）</p>
+</li>
 <li>
-<font color="#00b050">Vue</font>的实例对象，以后简称为VM</li>
+<p>Vue的实例对象，以后简称为VM</p>
+</li>
 </ol>
 <blockquote>
 <ul>
@@ -1640,11 +1643,11 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <h3 id="_2-15-3-单文件组件" tabindex="-1"><a class="header-anchor" href="#_2-15-3-单文件组件"><span>2.15.3 单文件组件</span></a></h3>
 <h4 id="_2-15-3-1-组成" tabindex="-1"><a class="header-anchor" href="#_2-15-3-1-组成"><span>2.15.3.1 组成</span></a></h4>
 <ul>
-<li>[&gt;] 模板页面<div class="language-html line-numbers-mode" data-highlighter="shiki" data-ext="html" data-title="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<li>模板页面<div class="language-html line-numbers-mode" data-highlighter="shiki" data-ext="html" data-title="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	页面模板</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>[&gt;] JS 模块对象<div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<li>JS 模块对象<div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">export default </span><span style="--shiki-light:#CA1243;--shiki-dark:#C678DD">{</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">    data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">() {return {}},</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    methods</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: {},</span></span>
@@ -1653,7 +1656,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <span class="line"><span style="--shiki-light:#CA1243;--shiki-dark:#C678DD">}</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>[&gt;] 样式<div class="language-html line-numbers-mode" data-highlighter="shiki" data-ext="html" data-title="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">style</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<li>样式<div class="language-html line-numbers-mode" data-highlighter="shiki" data-ext="html" data-title="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">style</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    样式定义</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">&#x3C;</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">style</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
@@ -1665,7 +1668,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>使用组件标签</li>
 </ol>
 <ul>
-<li>[n] 语法:<div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<li>语法:<div class="language-html line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="html" data-title="html" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    &#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        &#x3C;</span><span style="--shiki-light:white;--shiki-dark:#E06C75">HelloWorld</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>&#x3C;/</span><span style="--shiki-light:white;--shiki-dark:#E06C75">HelloWorld</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">> </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">&#x3C;!-- 3. 使用组件标签--></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">        &#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">hello-world</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">hello-world</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
@@ -1682,7 +1685,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="collapsed-lines"></div></div></li>
 </ul>
-<h1 id="_3-vue-advanced" tabindex="-1"><a class="header-anchor" href="#_3-vue-advanced"><span>3 <font color="#00b050">Vue</font> Advanced</span></a></h1>
+<h1 id="_3-vue-advanced" tabindex="-1"><a class="header-anchor" href="#_3-vue-advanced"><span>3 Vue Advanced</span></a></h1>
 <h2 id="_3-1-vue-脚手架-vue-cli" tabindex="-1"><a class="header-anchor" href="#_3-1-vue-脚手架-vue-cli"><span>3.1 Vue 脚手架(Vue Cli)</span></a></h2>
 <h3 id="_3-1-1-cli基本目录" tabindex="-1"><a class="header-anchor" href="#_3-1-1-cli基本目录"><span>3.1.1 cli基本目录</span></a></h3>
 <p>├── <strong>node_modules</strong>   存放项目依赖
@@ -1690,12 +1693,12 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 │   ├── favicon.ico: 页签图标
 │   └── index.html: 主页面
 ├── <strong>src</strong>
-│   ├── <font color="#00b050">assets</font>: 存放静态资源
+│   ├── assets: 存放静态资源
 │   │   └── logo.png
-│   │── <font color="#00b050">component</font>: 存放组件
+│   │── component: 存放组件
 │   │   └── HelloWorld.vue
-│   │── <font color="#00b050">App.vue:</font> 汇总所有组件
-│   │── <font color="#00b050">main.js</font>: 入口文件
+│   │── App.vue: 汇总所有组件
+│   │── main.js: 入口文件
 ├── <strong>.gitignore</strong>: git版本管制忽略的配置
 ├── <strong>babel.config.js</strong>: babel的配置文件
 ├── <strong>package.json</strong>: 应用包配置文件
@@ -1739,7 +1742,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>使用方式：<code v-pre>ref=&quot;title&quot;</code>  <code v-pre>this.$refs.title</code></li>
 </ol>
 <ul>
-<li>[n] 语法:<div class="language-html line-numbers-mode" data-highlighter="shiki" data-ext="html" data-title="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> v-text</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"msg"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> ref</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"title"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<li>语法:<div class="language-html line-numbers-mode" data-highlighter="shiki" data-ext="html" data-title="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h1</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> v-text</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"msg"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> ref</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"title"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">button</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> ref</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"btn"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> @click</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"showDOM"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>点我输出上方的DOM元素&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">button</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:white;--shiki-dark:#E06C75">School</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> ref</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"sch"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/></span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> type</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"text/javascript"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
@@ -1760,9 +1763,9 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ol>
 <ul>
 <li>
-<p>[&gt;] 创建混入组件</p>
+<p>创建混入组件</p>
 <ul>
-<li>[n] mixin.js</li>
+<li>mixin.js</li>
 </ul>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> hunhe</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">	methods</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
@@ -1771,13 +1774,13 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] 入口文件引入并注册组件（全局注册：vm和所有vc都会得到mixin.js中的方法）</p>
+<p>入口文件引入并注册组件（全局注册：vm和所有vc都会得到mixin.js中的方法）</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">hunhe</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">hunhe2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">} </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> './mixin'</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> //引入两个组件</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">Vue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mixin</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">hunhe</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//同时也要注册两个组件</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">Vue</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mixin</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">hunhe2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//全局注册</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] 在需要的组件中引入并注册（局部注册：当前组件可用）</p>
+<p>在需要的组件中引入并注册（局部注册：当前组件可用）</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">hunhe</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">hunhe2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">} </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> './mixin'</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">mixins</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: [</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">hunru</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">],</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//在组件data 中的 mixins 属性中注册</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
@@ -1785,10 +1788,10 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <h2 id="_3-4-vue-插件" tabindex="-1"><a class="header-anchor" href="#_3-4-vue-插件"><span>3.4 Vue 插件</span></a></h2>
 <ol>
 <li>
-<p>功能：用于增强 <font color="#00b050">Vue</font></p>
+<p>功能：用于增强 Vue</p>
 </li>
 <li>
-<p>本质：包含<code v-pre>install</code>方法的一个对象，<code v-pre>install</code>的第一个参数是<font color="#00b050">Vue</font>，第二个以后的参数是插件使用者传递的数据。</p>
+<p>本质：包含<code v-pre>install</code>方法的一个对象，<code v-pre>install</code>的第一个参数是Vue，第二个以后的参数是插件使用者传递的数据。</p>
 </li>
 <li>
 <p>定义插件：</p>
@@ -1854,7 +1857,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <li>第三种方式（限制类型、限制必要性、指定默认值）：</li>
 </ol>
 </li>
-<li>[n] 语法:<div class="language-js line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="js" data-title="js" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//简单声明接收</span></span>
+<li>语法:<div class="language-js line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="js" data-title="js" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//简单声明接收</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">props</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:[</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'name'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'age'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'sex'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">] </span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//接收的同时对数据进行类型限制</span></span>
@@ -1883,7 +1886,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 <blockquote>
 <ul>
-<li>[!]   props是只读的，<font color="#00b050">Vue</font> 底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据。</li>
+<li>[!]   props是只读的，Vue 底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据。</li>
 </ul>
 </blockquote>
 <h3 id="_3-7-2-自定义事件-子组件-父组件" tabindex="-1"><a class="header-anchor" href="#_3-7-2-自定义事件-子组件-父组件"><span>3.7.2 自定义事件    <strong>子组件 ==&gt; 父组件</strong></span></a></h3>
@@ -1911,13 +1914,13 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ol>
 <ul>
 <li>
-<p>[&gt;] <strong>解绑自定义事件</strong></p>
+<p><strong>解绑自定义事件</strong></p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">this</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">$off</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'atguigu'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//解绑一个自定义事件</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">this</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">$off</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">([</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'atguigu'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'demo'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">]) </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//解绑多个自定义事件</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">this</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">$off</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">() </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//解绑所有的自定义事件</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] <strong>子组件使用原生事件</strong></p>
+<p><strong>子组件使用原生事件</strong></p>
 </li>
 <li>
 <p>使用一个事件修饰符(.native)</p>
@@ -1933,7 +1936,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <p>实现任意组件间的通信</p>
 <ul>
 <li>
-<p>[&gt;] 过程</p>
+<p>过程</p>
 <ol>
 <li>数据发送方，调用 emit ( ′ 事件名称 ′ , 要发送的数据 )</li>
 <li>据接收方，调用on(‘事件名称’，事件处理函数)</li>
@@ -1941,7 +1944,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ol>
 </li>
 <li>
-<p>[&gt;] 安装全局事件总线$bus （入口文件）</p>
+<p>安装全局事件总线$bus （入口文件）</p>
 <ul>
 <li>on, emit,off 属性只有在 vue.prototype上才有，而 vc , vm 都可以访问 vue.prototype ，所以每个组件都可以获得 on, emit,off 属性只有在vue.prototype上才有，并且将 bus 绑定在 vue.prototype 上，每个组件都可以看见它，并且将bus配置为 vm，即 bus 也会拥有on, emit,off属性</li>
 </ul>
@@ -1954,7 +1957,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">})</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] 发送数据</p>
+<p>发送数据</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">button</span><span style="--shiki-light:white;--shiki-dark:#FFFFFF"> @click="sendStudentName">把学生名给School组件&#x3C;/button></span></span>
 <span class="line"><span style="--shiki-light:white;--shiki-dark:#FFFFFF">methods:</span><span style="--shiki-light:#383A42;--shiki-dark:#C678DD"> {</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">	sendStudentName</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(){</span></span>
@@ -1963,7 +1966,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#C678DD">}</span><span style="--shiki-light:white;--shiki-dark:#FFFFFF">,</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] 接受数据</p>
+<p>接受数据</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mounted</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">() {</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">	this</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">$bus</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">$on</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'hello'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">		console</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">log</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'我是School组件，收到了数据'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
@@ -1978,7 +1981,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <p>一种任意组件间通信的方式</p>
 <ul>
 <li>
-<p>[&gt;] 一个第三方库 <strong>pubsub-js</strong></p>
+<p>一个第三方库 <strong>pubsub-js</strong></p>
 <ul>
 <li><code v-pre>npm i pubsub-js</code></li>
 <li>提供了两个方法
@@ -1991,7 +1994,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 </li>
 <li>
-<p>[&gt;] 发布消息</p>
+<p>发布消息</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> pubsub</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> from</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 'pubsub-js'</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//引入第三方库</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">button</span><span style="--shiki-light:white;--shiki-dark:#FFFFFF"> @click="sendStudentName">把学生名给School组件&#x3C;/button></span></span>
 <span class="line"><span style="--shiki-light:white;--shiki-dark:#FFFFFF">methods:</span><span style="--shiki-light:#383A42;--shiki-dark:#C678DD"> {</span></span>
@@ -2001,7 +2004,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#C678DD">}</span><span style="--shiki-light:white;--shiki-dark:#FFFFFF">,</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] 接受消息</p>
+<p>接受消息</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> pubsub</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> from</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 'pubsub-js'</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//引入第三方库</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mounted</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">() {</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">	this</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">pubId</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> pubsub</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">subscribe</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'hello'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">msgName</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">data</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
@@ -2020,7 +2023,8 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <p>this.$nextTick(回调函数)</p>
 </li>
 <li>
-<font color="#00b050">vue</font>在解析模板时，不会立即更改，只有将代码执行一遍后统一重新解析</li>
+<p>vue在解析模板时，不会立即更改，只有将代码执行一遍后统一重新解析</p>
+</li>
 <li>
 <p>只有在DOM元素更新到页面之后才执行函数体内代码</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">this</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">$nextTick</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">( () </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
@@ -2058,7 +2062,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ol>
 <h3 id="_3-9-1-默认插槽" tabindex="-1"><a class="header-anchor" href="#_3-9-1-默认插槽"><span>3.9.1 默认插槽</span></a></h3>
 <ul>
-<li>[n] 语法:<div class="language-jsx line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="jsx" data-title="jsx" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>子组件：</span></span>
+<li>语法:<div class="language-jsx line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="jsx" data-title="jsx" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>子组件：</span></span>
 <span class="line"><span>&#x3C;template></span></span>
 <span class="line"><span>	&#x3C;div class="category"></span></span>
 <span class="line"><span>		&#x3C;h3>{{title}}分类&#x3C;/h3></span></span>
@@ -2082,7 +2086,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 <h3 id="_3-9-2-具名插槽" tabindex="-1"><a class="header-anchor" href="#_3-9-2-具名插槽"><span>3.9.2 具名插槽</span></a></h3>
 <ul>
-<li>[n] 语法:<div class="language-jsx line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="jsx" data-title="jsx" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>子组件：</span></span>
+<li>语法:<div class="language-jsx line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="jsx" data-title="jsx" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>子组件：</span></span>
 <span class="line"><span>&#x3C;template></span></span>
 <span class="line"><span>	&#x3C;div class="category"></span></span>
 <span class="line"><span>		&#x3C;h3>{{title}}分类&#x3C;/h3></span></span>
@@ -2122,37 +2126,40 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 <p>数据在子组件，父组件使用api接收</p>
 </li>
 <li>
-<p>[n] 语法:</p>
-<div class="language-jsx line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="jsx" data-title="jsx" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>子组件：</span></span>
-<span class="line"><span>&#x3C;template></span></span>
-<span class="line"><span>	&#x3C;div class="category"></span></span>
-<span class="line"><span>		&#x3C;h3>{{title}}分类&#x3C;/h3></span></span>
-<span class="line"><span>		&#x3C;slot :games="games" msg="hello">我是默认的一些内容&#x3C;/slot></span></span>
-<span class="line"><span>	&#x3C;/div></span></span>
-<span class="line"><span>&#x3C;/template></span></span>
-<span class="line"><span>父组件：</span></span>
-<span class="line"><span>&#x3C;template></span></span>
-<span class="line"><span>	&#x3C;Category title="游戏"></span></span>
-<span class="line"><span>		&#x3C;template scope="atguigu"></span></span>
-<span class="line"><span>			&#x3C;ul></span></span>
-<span class="line"><span>				&#x3C;li v-for="(g,index) in atguigu.games" :key="index">{{g}}&#x3C;/li></span></span>
-<span class="line"><span>			&#x3C;/ul></span></span>
-<span class="line"><span>		&#x3C;/template></span></span>
-<span class="line"><span>	&#x3C;/Category></span></span>
-<span class="line"><span>	</span></span>
-<span class="line"><span>	&#x3C;Category title="游戏"></span></span>
-<span class="line"><span>		&#x3C;template scope="{games}"></span></span>
-<span class="line"><span>			&#x3C;ol></span></span>
-<span class="line"><span>				&#x3C;li style="color:red" v-for="(g,index) in games" :key="index">{{g}}&#x3C;/li></span></span>
-<span class="line"><span>			&#x3C;/ol></span></span>
-<span class="line"><span>		&#x3C;/template></span></span>
-<span class="line"><span>	&#x3C;/Category></span></span>
-<span class="line"><span>&#x3C;/template></span></span></code></pre>
+<p>语法:</p>
+<div class="language-vue line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="vue" data-title="vue" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">子组件：</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> class</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"category"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>{{title}}分类&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">h3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">slot</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> :games</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"games"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> msg</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"hello"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>我是默认的一些内容&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">slot</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">父组件：</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Category</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> title</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"游戏"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> scope</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"atguigu"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">			&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">ul</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">				&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">li</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> v-for</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"(g,index) in atguigu.games"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> :key</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"index"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>{{g}}&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">li</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">			&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">ul</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Category</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Category</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> title</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"游戏"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> scope</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"{games}"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">			&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">ol</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">				&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">li</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> style</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">color:red</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> v-for</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"(g,index) in games"</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> :key</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"index"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">>{{g}}&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">li</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">			&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">ol</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">		&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">	&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">Category</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&#x3C;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="collapsed-lines"></div></div></li>
 </ul>
 <h2 id="_3-10-vuex" tabindex="-1"><a class="header-anchor" href="#_3-10-vuex"><span>3.10 VueX</span></a></h2>
-<font color="#00b050">vuex</font> 中一般存储组件之间共享的数据，适用于多组件共享某些数据，将这些共享的数据集中起来管理。<font color="#00b050">vuex</font>中数据都是响应式的，能够保持数据与页面的同步，数据改变重新解析模板。<font color="#00b050">vuex</font>是实现集中式状态管理的一个<font color="#00b050">Vue</font>插件，适用于任意组件间通信。<p>![[26486ea99d7870ae76f53445b661bdcd.png|475]]</p>
-<h3 id="_3-10-1-搭建-vuex-环境" tabindex="-1"><a class="header-anchor" href="#_3-10-1-搭建-vuex-环境"><span>3.10.1 搭建 <font color="#00b050">Vuex</font> 环境</span></a></h3>
+<p>vuex  中一般存储组件之间共享的数据，适用于多组件共享某些数据，将这些共享的数据集中起来管理。</p>
+<p>vuex 中数据都是响应式的，能够保持数据与页面的同步，数据改变重新解析模板。</p>
+<p>vuex 是实现集中式状态管理的一个 Vue 插件，适用于任意组件间通信。
+![[26486ea99d7870ae76f53445b661bdcd.png|475]]</p>
+<h3 id="_3-10-1-搭建-vuex-环境" tabindex="-1"><a class="header-anchor" href="#_3-10-1-搭建-vuex-环境"><span>3.10.1 搭建 &lt; Vuex  环境</span></a></h3>
 <ul>
 <li>
 <p>api：</p>
@@ -2190,7 +2197,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 </li>
 <li>
-<p>[&gt;] 安装vuex</p>
+<p>安装vuex</p>
 <ul>
 <li><code v-pre>npm i vuex</code>安装的是 vuex4 版本，该版本只能用在 vue3，vue2 只能用 vuex3 版本 <code v-pre>npm i vuex@3</code>
 <ul>
@@ -2202,7 +2209,7 @@ Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数
 </ul>
 </li>
 <li>
-<p>[&gt;] 创建store文件</p>
+<p>创建store文件</p>
 <ul>
 <li>
 <p>src/store/index.js （先要有 vuex，再创建 <code v-pre>store</code>实例）</p>
@@ -2320,7 +2327,7 @@ mutations会收到两个参数，第一个是state，第二个就是传递过来
 </blockquote>
 <ul>
 <li>
-<p>[&gt;] mapState方法：用于帮助我们映射<code v-pre>state</code>中的数据为计算属性</p>
+<p>mapState方法：用于帮助我们映射<code v-pre>state</code>中的数据为计算属性</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">computed</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: {</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    //借助mapState生成计算属性：sum、school、subject（对象写法）</span></span>
 <span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">     ...</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mapState</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">sum</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'sum'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">school</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'school'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">subject</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'subject'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}),</span></span>
@@ -2330,7 +2337,7 @@ mutations会收到两个参数，第一个是state，第二个就是传递过来
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">},</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] <strong>mapGetters方法：</strong>用于帮助我们映射<code v-pre>getters</code>中的数据为计算属性</p>
+<p><strong>mapGetters方法：</strong>用于帮助我们映射<code v-pre>getters</code>中的数据为计算属性</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">computed</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: {</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    //借助mapGetters生成计算属性：bigSum（对象写法）</span></span>
 <span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">    ...</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mapGetters</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">bigSum</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'bigSum'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}),</span></span>
@@ -2340,7 +2347,7 @@ mutations会收到两个参数，第一个是state，第二个就是传递过来
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">},</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] <strong>mapActions方法：</strong>用于帮助我们生成与<code v-pre>actions</code>对话的方法，即：包含<code v-pre>$store.dispatch(xxx)</code>的函数</p>
+<p><strong>mapActions方法：</strong>用于帮助我们生成与<code v-pre>actions</code>对话的方法，即：包含<code v-pre>$store.dispatch(xxx)</code>的函数</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">methods</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:{</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    //靠mapActions生成：incrementOdd、incrementWait（对象形式）</span></span>
 <span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">    ...</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mapActions</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">incrementOdd</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'jiaOdd'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">incrementWait</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'jiaWait'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">})</span></span>
@@ -2350,7 +2357,7 @@ mutations会收到两个参数，第一个是state，第二个就是传递过来
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] <strong>mapMutations方法：</strong>用于帮助我们生成与<code v-pre>mutations</code>对话的方法，即：包含<code v-pre>$store.commit(xxx)</code>的函数</p>
+<p><strong>mapMutations方法：</strong>用于帮助我们生成与<code v-pre>mutations</code>对话的方法，即：包含<code v-pre>$store.commit(xxx)</code>的函数</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">methods</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:{</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    //靠mapActions生成：increment、decrement（对象形式）</span></span>
 <span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">    ...</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">mapMutations</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">increment</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'JIA'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">decrement</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'JIAN'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}),</span></span>
@@ -2451,7 +2458,7 @@ mapActions 与 mapMutations 使用时，若需要传递参数需要：在模板�
 </ul>
 <h3 id="_3-11-2-基本使用" tabindex="-1"><a class="header-anchor" href="#_3-11-2-基本使用"><span>3.11.2 基本使用</span></a></h3>
 <ul>
-<li>[&gt;] 环境搭建</li>
+<li>环境搭建</li>
 </ul>
 <ol>
 <li>安装vue-router <code v-pre>npm i vue-router@3.5.2 -S</code> （vue2版本只能使用 vue-router3）</li>
@@ -2482,7 +2489,7 @@ mapActions 与 mapMutations 使用时，若需要传递参数需要：在模板�
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ol>
 <ul>
-<li>[&gt;] 使用路由</li>
+<li>使用路由</li>
 </ul>
 <ol>
 <li>
@@ -2645,20 +2652,20 @@ mapActions 与 mapMutations 使用时，若需要传递参数需要：在模板�
 </ol>
 <h3 id="_3-11-9-9-编程式路由导航" tabindex="-1"><a class="header-anchor" href="#_3-11-9-9-编程式路由导航"><span>3.11.9 9.编程式路由导航</span></a></h3>
 <ul>
-<li>[&gt;] 声明式导航
+<li>声明式导航
 <ul>
 <li>​普通网页中点击 <code v-pre>&lt;a&gt;</code> 链接，在 vue 中点击都属于声明式导航
 <br></li>
 </ul>
 </li>
-<li>[&gt;] 编程式导航
+<li>编程式导航
 <ul>
 <li>​调用Api实现页面hash地址的变化，to可以怎么写，push()括号内就可以怎么写</li>
 <li>如通过JavaScript的API实现导航的方式 如<code v-pre>location.herf</code>
 <br></li>
 </ul>
 </li>
-<li>[&gt;] api:
+<li>api:
 <ol>
 <li><code v-pre>this.$router.push('hash地址')</code> 跳转到指定位置，并增加一条历史记录，可以前进和回退。</li>
 <li><code v-pre>this.$router.replace('hash地址')</code> 跳转到指定位置，并且代替原来页面，不能回退。</li>
@@ -2695,7 +2702,7 @@ include 要写组件名</li>
 <p>就是为了控制路由的访问权限，满足一些条件才能进入页面</p>
 <ul>
 <li>
-<p>[&gt;] 全局前置守卫 <code v-pre>router.beforeEach((to,from,next)=&gt;{})</code></p>
+<p>全局前置守卫 <code v-pre>router.beforeEach((to,from,next)=&gt;{})</code></p>
 </li>
 <li>
 <p>参数：</p>
@@ -2725,7 +2732,7 @@ include 要写组件名</li>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">})</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] 全局后置守卫  <code v-pre>router.afterEach((to,from)=&gt;{})</code></p>
+<p>全局后置守卫  <code v-pre>router.afterEach((to,from)=&gt;{})</code></p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">//全局后置路由守卫————初始化的时候被调用、每次路由切换之后被调用</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">router</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">afterEach</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">((</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">to</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">from</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">	console</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">log</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">'后置路由守卫'</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">to</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">from</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
@@ -2733,7 +2740,7 @@ include 要写组件名</li>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">})</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
-<p>[&gt;] 独享守卫  <code v-pre>beforeEnter：(to,from,next) =&gt; {}</code></p>
+<p>独享守卫  <code v-pre>beforeEnter：(to,from,next) =&gt; {}</code></p>
 <ul>
 <li>是某个路由独享的，配置在该路由下</li>
 </ul>
@@ -2755,7 +2762,7 @@ include 要写组件名</li>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="collapsed-lines"></div></div></li>
 <li>
-<p>[&gt;] 组件内路由守卫</p>
+<p>组件内路由守卫</p>
 <ul>
 <li>路由进入该组件时进行一些判断
 <ol>
