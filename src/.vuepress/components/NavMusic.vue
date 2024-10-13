@@ -4,6 +4,7 @@ import MyIcon from './MyIcon.vue';
 import { useRouter } from 'vue-router';
 import { ref, onMounted, nextTick } from 'vue';
 import axios from 'axios';
+import store from 'store';
 // 懒加载
 
 
@@ -156,7 +157,8 @@ function AddBtnSpin() {
 * 加载音乐列表
 */
 // 加载音乐列表
-const localMusicList = JSON.parse(localStorage.getItem('localMusicList'));
+const localMusicList = store.get('localMusicList');
+// console.log("store 列表",localMusicList);
 const LoadMusicList = async () => {
   if(localMusicList) {
     GlobalMusicList = localMusicList;
@@ -176,7 +178,9 @@ const LoadMusicList = async () => {
       if (listData && listData.length > 0) {
         
         
-        localStorage.setItem('localMusicList', JSON.stringify(listData));
+        store.set('localMusicList', listData);
+        
+        
         GlobalMusicList = listData;
         console.log("又获取列表了");
         
@@ -413,7 +417,7 @@ $myshadowDark:
     // 歌曲列表
     ol{
       padding: 8px;
-      
+      max-height: 260px;
       // 歌曲列表
       li{
         content-visibility: auto;
