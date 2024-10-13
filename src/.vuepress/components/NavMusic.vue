@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import "aplayer"
 import 'aplayer/dist/APlayer.min.css';
 import MyIcon from './MyIcon.vue';
 import { useRouter } from 'vue-router';
