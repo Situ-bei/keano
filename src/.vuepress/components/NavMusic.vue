@@ -168,27 +168,27 @@ const LoadMusicList = (callback: { (): void; (): any; }) => {
   });
 };
 
-let options = {
-  root:  document.querySelector('#GlobalMusicList'),
-  threshold: 0,
-}
+// let options = {
+//   root:  document.querySelector('#GlobalMusicList'),
+//   threshold: 0,
+// }
 
-const callback = (entries: any, observer: any) => {
-  // console.log('进入回调', entries, observer);
+// const callback = (entries: any, observer: any) => {
+//   // console.log('进入回调', entries, observer);
   
-  entries.forEach((entry: any) => {
-    const el = entry.target 
-    // el.vShow = entry.isIntersecting ? 'true' : 'false';
-    // console.log('打印列表加载',entry);
-    // console.log('打印目标元素',entry.target);
-    // el.setAttribute('v-if', 'false' );
+//   entries.forEach((entry: any) => {
+//     const el = entry.target 
+//     // el.vShow = entry.isIntersecting ? 'true' : 'false';
+//     // console.log('打印列表加载',entry);
+//     // console.log('打印目标元素',entry.target);
+//     // el.setAttribute('v-if', 'false' );
     
-    el.setAttribute('v-if', entry.isVisible ? 'true' : 'false' );
+//     el.setAttribute('v-if', entry.isVisible ? 'true' : 'false' );
     
-  })
-}
+//   })
+// }
 
-const observer = new IntersectionObserver(callback, options);
+// const observer = new IntersectionObserver(callback, options);
 
 
 
