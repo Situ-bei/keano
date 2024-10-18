@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: icon-homefill
 title: 主页
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
+heroImage: /assets/icon/avatar.jpg
 heroText: Keano的树洞
 heroFullScreen: true
 tagline: 让我们变得更强大

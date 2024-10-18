@@ -136,7 +136,7 @@ const GetWord = (path?: string) => {
         //const renderData = response.data;
          //02. 每日好句
         const renderData = {
-         hitokoto: response.data.result.name,
+        hitokoto: response.data.result.name,
           from: response.data.result.from,
         };
         InsertText(renderData);

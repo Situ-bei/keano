@@ -1,4 +1,6 @@
-<template><div><h1 id="菲律宾" tabindex="-1"><a class="header-anchor" href="#菲律宾"><span><strong>菲律宾</strong></span></a></h1>
+<template><div><p>电子地图册之东盟十国--&lt;菲律宾&gt;</p>
+<!-- more -->
+<h1 id="菲律宾" tabindex="-1"><a class="header-anchor" href="#菲律宾"><span><strong>菲律宾</strong></span></a></h1>
 <p>首都：马尼拉
 我国东南方向，东南亚国家，属于东盟成员国。
 面积29.97万平方公里，海岸线18533公里，共有7000多个大小岛屿。

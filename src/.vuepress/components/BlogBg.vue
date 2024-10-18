@@ -127,7 +127,7 @@ onMounted(() => {
 }
 
 @mixin bgStyle_dark {
-  // background-color: rgba(13, 17, 24, 1); // 原色
+  background-color: rgba(13, 17, 24, 1); // 原色
 }
 
 html[data-theme='light'] {
@@ -185,146 +185,167 @@ html[data-theme='dark'] {
   z-index: 5;
 }
 
-.theme-container {
-  .vp-page.vp-blog,
-  .vp-page.vp-blog-home {
-    background: transparent; // 博客背景设置为透明
-  }
-}
+// .theme-container {
+//   .vp-page.vp-blog,
+//   .vp-page.vp-blog-home {
+//     background: transparent; // 博客背景设置为透明
+//   }
+// }
 
+
+// 文章容器样式
 @mixin theme-hope-content-style {
   border-radius: 0.4rem;
-  padding-top: 1px !important;
+  padding-top: 10px !important;
+  // padding-left: 10px;
+  // padding-right: 10px;
 }
+
+// 顶部目录样式
 @mixin toc-style {
   border-radius: 0.4rem;
   padding: 0.6rem 0;
+  backdrop-filter: blur(3px);
 }
 
-[data-theme='light'] {
-  #mo7_bg_grain_parallax {
-    display: none;
-  }
-  #mo7_BlogBg {
-    @include bgStyle_light;
-  }
+// [data-theme='light'] {
+//   #mo7_bg_grain_parallax {
+//     display: none;
+//   }
+//   #mo7_BlogBg {
+//     @include bgStyle_light;
+//   }
 
-  @mixin content-bg-style {
-    background-color: rgba($color: #fff, $alpha: 0.8);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  }
+//   @mixin content-bg-style {
+//     // background-color: rgba($color: #fff, $alpha: 0.2); // 文章背景
+//     background: rgba(255, 255, 255,.6); // 文章容器背景
+//     backdrop-filter: blur(10px);
+//     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; // 边框阴影
 
-  #toc {
-    @include toc-style;
-    @include content-bg-style;
-  }
+//   }
 
-  .theme-container {
-    .vp-sidebar {
-      background: transparent; // 侧边栏透明度
-      // backdrop-filter: blur(2px); // 毛玻璃效果
-    }
+//   #toc {
+//     @include toc-style;
+//     @include content-bg-style;
+//   }
 
-    .theme-hope-content {
-      @include theme-hope-content-style;
-      @include content-bg-style;
-    }
-  }
-}
+//   .theme-container {
+//     .vp-sidebar {
+//       background: transparent; // 侧边栏透明度
+//       // backdrop-filter: blur(2px); // 毛玻璃效果
+//     }
 
-[data-theme='dark'] {
-  #mo7_bg_canvas_nest {
-    display: none;
-  }
-  #mo7_BlogBg {
-    @include bgStyle_dark;
-  }
-  @mixin content-bg-style {
-    background-color: rgba($color: #000000, $alpha: 0.6);
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 8px 0px;
-  }
+//     .theme-hope-content {
+//       @include theme-hope-content-style;
+//       @include content-bg-style;
+//     }
+//   }
+// }
 
-  #toc {
-    @include toc-style;
-    @include content-bg-style;
-  }
+// [data-theme='dark'] {
+//   #mo7_bg_canvas_nest {
+//     display: none;
+//   }
+//   #mo7_BlogBg {
+//     @include bgStyle_dark;
+//   }
+//   @mixin content-bg-style {
+//     // background-color: rgba($color: #000000, $alpha: 0.6);
+//     // box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 8px 0px;
+//   }
 
-  .theme-container {
-    .vp-sidebar {
-      background: transparent; // 侧边栏透明度
-    }
+//   #toc {
+//     @include toc-style;
+//     @include content-bg-style;
+//   }
 
-    .theme-hope-content {
-      @include theme-hope-content-style;
-      @include content-bg-style;
-    }
-  }
-}
+//   .theme-container {
+//     .vp-sidebar {
+//       background: transparent; // 侧边栏透明度
+//     }
 
-@media screen and (max-width: 1240px) {
-  .theme-container {
-    .theme-hope-content {
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-  }
-}
+//     .theme-hope-content {
+//       @include theme-hope-content-style;
+//       @include content-bg-style;
+//     }
+//   }
+// }
 
-@media screen and (max-width: 719px) {
-  .theme-container {
-    .vp-blog-type-switcher {
-      padding-top: 20px;
-    }
+// @media screen and (max-width: 1240px) {
+//   .theme-container {
+//     .theme-hope-content {
+//       // padding-left: 1.2rem;
+//       // padding-right: 1.2rem;
+//       // margin-left: 3vw;
+//       // margin-right: 3vw;
+      
+//       padding-left: 1.2rem;
+//       padding-right: 1.2rem;
+//       // margin-left: 1rem;
+//       // margin-right: 1rem;
+//     }
+//   }
+// }
 
-    .theme-hope-content {
-      margin-left: 0.2rem;
-      margin-right: 0.2rem;
-    }
-  }
+// @media screen and (max-width: 719px) {
+//   .theme-container {
+//     .vp-blog-type-switcher {
+//       padding-top: 20px;
+//     }
 
-  [data-theme='light'] {
-    .theme-container {
-      .vp-sidebar {
-        background: rgba(#fff, 0.6);
-        backdrop-filter: blur(18px); // 毛玻璃效果
-      }
-      .vp-nav-screen {
-        background: rgba(#fff, 0.6);
-        backdrop-filter: blur(18px); // 毛玻璃效果
-      }
-    }
-  }
+//     .theme-hope-content {
+//       // padding-left: 3vw;
+//       // padding-right:3vw;
+//       margin-left: 3vw;
+//       margin-right: 3vw;
+      
+//       // margin-left: 0.2rem;
+//       // margin-right: 0.2rem;
+//     }
+    
+//   }
+  
+//   [data-theme='light'] {
+//     .theme-container {
+//       .vp-sidebar {
+//         background: rgba(#fff, 0.6);
+//         backdrop-filter: blur(18px); // 毛玻璃效果
+//       }
+//       .vp-nav-screen {
+//         background: rgba(#fff, 0.6);
+//         backdrop-filter: blur(18px); // 毛玻璃效果
+//       }
+//     }
+//   }
 
-  [data-theme='dark'] {
-    .theme-container {
-      .vp-sidebar {
-        backdrop-filter: blur(18px); // 毛玻璃效果
-      }
-      .vp-nav-screen {
-        background: transparent;
-        backdrop-filter: blur(18px); // 毛玻璃效果
-      }
-    }
-  }
-}
+//   [data-theme='dark'] {
+//     .theme-container {
+//       .vp-sidebar {
+//         backdrop-filter: blur(18px); // 毛玻璃效果
+//       }
+//       .vp-nav-screen {
+//         background: transparent;
+//         backdrop-filter: blur(18px); // 毛玻璃效果
+//       }
+//     }
+//   }
+// }
 
-.theme-container {
-  .vp-sidebar {
-    backdrop-filter: none;
-  }
-  .vp-sidebar > .vp-sidebar-links {
-    padding-right: 8px;
-  }
-  .vp-sidebar > .vp-sidebar-links {
-    & > li > .vp-sidebar-group {
-      backdrop-filter: blur(2px); // 毛玻璃效果
-      border-radius: 0.4rem;
-      padding: 8px 0;
-    }
-  }
-}
+// .theme-container {
+//   .vp-sidebar {
+//     // backdrop-filter: blur(5px);
+//   }
+//   .vp-sidebar > .vp-sidebar-links {
+//     padding-right: 8px;
+//   }
+//   .vp-sidebar > .vp-sidebar-links {
+//     & > li > .vp-sidebar-group {
+//       // backdrop-filter: blur(2px); // 毛玻璃效果
+//       border-radius: 0.4rem;
+//       // padding: 5px 0;
+//     }
+//   }
+// }
 
 @media screen and (min-width: 1440px) {
   [data-theme='light'] {

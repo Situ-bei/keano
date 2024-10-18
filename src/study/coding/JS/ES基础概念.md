@@ -1,10 +1,12 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
-cssclasses:
-  - 前端
+title: 《ES 基础概念》
+category:
+- 前端
+- JS
 tags:
-  - JavaScript
-  - Front-end
+- JS
+- JS基础
 date: 2024-06-29T22:48:00
 ---
 # 1 JS的简介

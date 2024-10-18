@@ -110,7 +110,8 @@ const NewPlayer = () => {
     storageName: 'GlobalAPlayer',
 
   });
-
+  console.log('播放器已创建',Win.GlobalAPlayer.audio );
+  
   // Win.GlobalAPlayer = document.getElementById('GlobalAPlayer')
   
   // 让按钮旋转
@@ -159,8 +160,15 @@ function AddBtnSpin() {
 // 加载音乐列表
 const localMusicList = store.get('localMusicList');
 // console.log("store 列表",localMusicList);
+// let musicListURL = '//api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r' ;
+let musicListURL = 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=596766562&r=:r' ;
 const LoadMusicList = async () => {
+  
+  console.log("url",musicListURL);
+  
   if(localMusicList) {
+    console.log("有本地列表",localMusicList);
+    
     GlobalMusicList = localMusicList;
     creatAplayer()
   }else{
@@ -169,10 +177,18 @@ const LoadMusicList = async () => {
       //插件作者的歌单
       // url: '//file.mo7.cc/music/list.json',
       // 自己的歌单
-      url: 'https://api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r',
+      url: musicListURL,
       params: {},
     }).then((response) => {
-      // console.log('获取音乐数据',response);
+      console.log('获取音乐数据,判断之前',response.data.message);
+      if (response.data.message == '请求次数已达上限，请明天再试') {
+        alert('音乐API请求次数已达上限，请明天再试');
+        store.remove('localMusicList');
+        musicListURL = '//api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r'
+        alert('赋值');
+        LoadMusicList( )
+        // return;
+      }
       
       const listData = response.data;
       if (listData && listData.length > 0) {
@@ -182,7 +198,7 @@ const LoadMusicList = async () => {
         
         
         GlobalMusicList = listData;
-        console.log("又获取列表了");
+        console.log("又获取列表了,进入列表判断",response);
         
         // const el = document.getElementById('GlobalAPlayer');
 
@@ -414,10 +430,10 @@ $myshadowDark:
   .aplayer-list{
     color: var(--vp-c-accent-bg) !important;
     
-    // 歌曲列表
+    // 歌曲列表 
     ol{
       padding: 8px;
-      max-height: 260px;
+      max-height: 260px !important;
       // 歌曲列表
       li{
         content-visibility: auto;
@@ -611,7 +627,7 @@ $myshadowDark:
   height: 1.6rem;
   width: 1.6rem;
   .btnImg {
-    background-image: url('/img/playBtn_CloudMusic.svg');
+    background-image: url('../public/assets/icon/playBtn_CloudMusic.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

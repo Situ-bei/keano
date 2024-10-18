@@ -1,4 +1,4 @@
-<template><div><h1 id="_1-css3-简介" tabindex="-1"><a class="header-anchor" href="#_1-css3-简介"><span>1 CSS3 简介</span></a></h1>
+<template><div><h1 id="css3-简介" tabindex="-1"><a class="header-anchor" href="#css3-简介"><span>CSS3 简介</span></a></h1>
 <h2 id="_1-1-css3-概述" tabindex="-1"><a class="header-anchor" href="#_1-1-css3-概述"><span>1.1 CSS3 概述</span></a></h2>
 <ul>
 <li>CSS3 是 CSS2 的升级版本，它在 CSS2 的基础上，新增了很多强大的新功能，从而解决一些实际面临的问题。</li>

@@ -2,13 +2,24 @@ import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
   "/",
-  { text: "导航", icon: "icon-daohang", link: "/demo/" },
+  { 
+    text: "导航", 
+    icon: "icon-daohang", 
+    children: [
+      { text: '导航', icon: 'icon-daohang', link: '/demo/' },
+      { text: '全部', icon: 'icon-quanbu1', link: '/article/' },
+      { text: '分类', icon: 'icon-fenlei-copy', link: '/category/' },
+      { text: '标签', icon: 'icon-tianchongxing-', link: '/tag/' },
+      { text: '时间轴', icon: 'icon-shijianzhou', link: '/timeline/' },
+    ],
+  },
 
   // 学习
   {
     text: "学习",
-    icon: "icon-studyfill",
+    icon: "icon-wikifill",
     prefix: "/study/",
+    activeMatch: "^/study/(?:(?!*/|*/).*)?&",
     children:[
       //编程
       {
@@ -22,7 +33,7 @@ export const zhNavbar = navbar([
           { text: "NodeJS", icon: "icon-nodejsGreen", link: "NodeJS/",},
           { text: "Vue生态", icon: "icon-logo-vue", link: "Vue/",},
           { text: "git", icon: "icon-github-fill", link: "git/",},
-
+          { text: "九九八十一难", icon: "icon-github-fill", link: "interview/",},
 
         ],
       },
@@ -38,7 +49,7 @@ export const zhNavbar = navbar([
       //百科
       {
         text: "百科",
-        icon: "icon-codingfill",
+        icon: "icon-wikiColor",
         prefix: "wiki/",
         link: "wiki/"
         // children: [
@@ -51,7 +62,7 @@ export const zhNavbar = navbar([
   // 生活
   {
     text: "生活",
-    icon: "icon-studyfill",
+    icon: "icon-shenghuo",
     prefix: "/life/",
     children: [
       {
@@ -62,16 +73,27 @@ export const zhNavbar = navbar([
       },
       {
         text: "电影",
-        icon: "icon-studyfill",
+        icon: "icon-dianying",
         prefix: "movie/",
         link: "movie/",
       },
       {
         text: "音乐",
-        icon: "icon-studyfill",
+        icon: "icon-music",
         prefix: "music/",
         link: "movie/",
       },
     ]
   },
+  
+  // 随笔
+  {
+    text: "随笔",
+    icon: "icon-wenji-suibi",
+    link: "/essay/",
+  },
+
+  
+
+  
 ]);

@@ -1,12 +1,13 @@
 ---
 number headings: auto, first-level 1, max 6, 1.1
+title: 《HTML4》
 category:
 - 前端
 - HTML
 tags:
 - HTML
 - HTML4
-- 让我们变得更强大
+
 date: 2024-06-24
 ---
 # HTML4

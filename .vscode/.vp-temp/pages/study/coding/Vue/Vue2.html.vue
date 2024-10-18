@@ -1,4 +1,6 @@
-<template><div><h1 id="初识vue2-盛夏的回眸" tabindex="-1"><a class="header-anchor" href="#初识vue2-盛夏的回眸"><span>初识Vue2 --盛夏的回眸</span></a></h1>
+<template><div><p>Vue2.0 学习笔记</p>
+<!-- more -->
+<h1 id="初识vue2-盛夏的回眸" tabindex="-1"><a class="header-anchor" href="#初识vue2-盛夏的回眸"><span>初识Vue2 --盛夏的回眸</span></a></h1>
 <h2 id="_1-vue简介" tabindex="-1"><a class="header-anchor" href="#_1-vue简介"><span>1.  Vue简介</span></a></h2>
 <h3 id="_1-1-官网" tabindex="-1"><a class="header-anchor" href="#_1-1-官网"><span>1.1  官网</span></a></h3>
 <p><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer">中文官网</a>

@@ -1,12 +1,18 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
-cssclasses:
-  - 前端
+title: 《ES 基础之 Web APIs(DOM，BOM)》
+category:
+- 前端
+- JS
 tags:
-  - Front-end
-  - JavaScript
+- JS
+- JS基础
+
+
 date: 2024-07-01T17:24:00
 ---
+JS 基础，web Api部分
+<!-- more -->
 # 1 DOM 简介
 
 ## 1.1 为什么需要 DOM

@@ -1,5 +1,5 @@
 ---
-icon: icon-studyfill
+icon: icon-music
 title: "音乐"
 date: 2024-10-13
 index: false

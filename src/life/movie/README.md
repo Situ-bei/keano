@@ -1,5 +1,5 @@
 ---
-icon: icon-studyfill
+icon: icon-dianying
 title: "电影"
 date: 2024-10-13
 index: false

@@ -1,4 +1,6 @@
-<template><div><h1 id="_1-注释" tabindex="-1"><a class="header-anchor" href="#_1-注释"><span>1 注释</span></a></h1>
+<template><div><p>LESS 是一种 <code v-pre>CSS</code> 预处理器，它扩展了 <code v-pre>CSS</code> 的功能，使样式表的编写更加灵活和可维护。LESS 通过引入变量、嵌套规则、混合（mixins）、函数等高级特性，简化了复杂的样式表编写过程。编写的 LESS 代码最终会被编译成标准的 <code v-pre>CSS</code> 代码，浏览器可以直接解析和应用。</p>
+<!-- more -->
+<h1 id="_1-注释" tabindex="-1"><a class="header-anchor" href="#_1-注释"><span>1 注释</span></a></h1>
 <h2 id="_1-1-单行注释" tabindex="-1"><a class="header-anchor" href="#_1-1-单行注释"><span>1.1 单行注释</span></a></h2>
 <ul>
 <li>语法：<code v-pre>//</code> 注释内容</li>

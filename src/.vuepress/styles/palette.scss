@@ -1,2 +1,60 @@
 // you can change colors here  你可以在这里换颜色
 // $theme-colors:#3eaf7c, #fb9b5f, #2196f3;
+@use "@sass-palette/hope-config";
+
+
+// mobile 首页卡片设置
+.vp-article-wrapper{
+    .vp-article-item{
+        @media (max-width: hope-config.$mobile) {
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    }
+
+}
+
+// 侧边栏 边框
+.theme-container {
+    .vp-sidebar > .vp-sidebar-links {
+        padding-right: 8px;
+    }
+    .vp-sidebar > .vp-sidebar-links {
+        & > li > .vp-sidebar-group {
+            backdrop-filter: blur(2px); // 毛玻璃效果
+            border-radius: 0.4rem;
+            padding: 8px 0 !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    $myshadow: 
+        -.1rem -.1rem .2rem rgba(255, 255, 255,1),
+        .1rem .2rem .2rem hsl(0 0% 50% / .6);
+    [data-theme='light'] {
+        .theme-container {
+        .vp-sidebar > .vp-sidebar-links {
+            & > li > .vp-sidebar-group {
+                // box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+                box-shadow: $myshadow;
+            }
+        }
+        }
+    }
+    $myshadowDark: 
+        -.1rem -.1rem .3rem hsla(0, 0%, 80%, 0.473),
+        .2rem .2rem .3rem hsla(0, 0%, 0%, 0.517);
+
+    [data-theme='dark'] {
+        .theme-container {
+        .vp-sidebar > .vp-sidebar-links {
+            & > li > .vp-sidebar-group {
+                box-shadow: $myshadowDark;
+            }
+        }
+        }
+    }
+}

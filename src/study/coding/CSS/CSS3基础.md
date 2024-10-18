@@ -1,5 +1,6 @@
 ---
 number headings: auto, first-level 1, max 6, 1.1
+# headerDepth: [1, 2, 3]
 cssclasses:
   - 前端
 tags:
@@ -7,7 +8,7 @@ tags:
   - CSS
 date: 2024-06-28T00:56:00
 ---
-# 1 CSS3 简介
+# CSS3 简介
 ## 1.1 CSS3 概述
 - CSS3 是 CSS2 的升级版本，它在 CSS2 的基础上，新增了很多强大的新功能，从而解决一些实际面临的问题。
 - CSS3 在未来会按照模块化的方式去发展： https://www.w3.org/Style/CSS/current-work.html

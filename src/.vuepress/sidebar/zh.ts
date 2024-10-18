@@ -1,7 +1,7 @@
 import { sidebar } from "vuepress-theme-hope";
 const back_home = {
-  text: "首页",
-  icon: "icon-home",
+  text: "主页",
+  icon: "icon-homefill",
   link: "/",
 }
 export const zhSidebar = sidebar({
@@ -9,7 +9,7 @@ export const zhSidebar = sidebar({
   // 导航页总导航
   "/": [
     // 首页
-    "",
+    back_home,
     // 入门
     {
       text: "如何使用",
@@ -52,7 +52,7 @@ export const zhSidebar = sidebar({
             },
             {
               text: "JS",
-              icon: "icon-javascript-filll", 
+              icon: "icon-javascript-fill", 
               collapsible: false,
               prefix: "JS/",
               link: "JS/",
@@ -114,7 +114,7 @@ export const zhSidebar = sidebar({
     // 生活
     {
       text: "生活",
-      icon: "icon-studyfill",
+      icon: "icon-shenghuo",
       prefix: "life/",
       link: "life/",
       // children: "structure",
@@ -130,7 +130,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "电影",
-          icon: "icon-studyfill",
+          icon: "icon-dianying",
           prefix: "movie/",
           link: "movie/",
           collapsible: true,
@@ -138,7 +138,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "音乐",
-          icon: "icon-studyfill",
+          icon: "icon-music",
           prefix: "music/",
           link: "music/",
           collapsible: true,
@@ -178,7 +178,7 @@ export const zhSidebar = sidebar({
     back_home,
     {
       text: "音乐",
-      icon: "icon-studyfill",
+      icon: "icon-music",
       link: "music/",
       children: "structure",
     }
@@ -187,16 +187,106 @@ export const zhSidebar = sidebar({
 
   // 学习页面总导航
   // 编程
-  "/study/coding/":"structure",
-  "/study/coding/CSS/":"structure",
-  "/study/coding/HTML/":"structure",
-  "/study/coding/JS/":"structure",
-  "/study/coding/NodeJS/":"structure",
-  "/study/coding/Vue/":"structure",
-  "/study/coding/git/":"structure",
+  "/study/coding/":[
+    back_home,
+    {
+      text: "编程",
+      icon: "icon-codingfill",
+      // prefix: "coding/",
+      // link: "/study/coding/",
+      // collapsible: true,
+      children: "structure",
+    }
+  ],
+  "/study/coding/CSS/":[
+    back_home,
+    {
+      text: "CSS",
+      icon: "icon-cssfill",
+      // prefix: "coding/",
+      // link: "/study/coding/CSS/",
+      // collapsible: true,
+      children: "structure",
+    }
+  ],
+  "/study/coding/HTML/":[
+    back_home,
+    {
+      text: "HTML",
+      icon: "icon-htmlfill",
+      // prefix: "coding/",
+      // link: "/study/coding/HTML/",
+      // collapsible: true,
+      children: "structure",
+    }
+  ],
+  "/study/coding/JS/":[
+    back_home,
+    {
+      text: "JS",
+      icon: "icon-javascript-filll",
+      // prefix: "coding/",
+      // link: "/study/coding/JS/",
+      // collapsible: true,
+      children: "structure",
+    }
+  ],
+  "/study/coding/NodeJS/":[
+    back_home,
+    {
+      text: "NodeJS",
+      icon: "icon-nodejsGreen",
+      // prefix: "coding/",
+      // link: "/study/coding/NodeJS/",
+      // collapsible: true
+      children: "structure",
+    }
+  ],
+  "/study/coding/Vue/":[
+    back_home,
+    {
+      text: "Vue",
+      icon: "icon-logo-vue",
+      children: "structure",
+      
+    }
+  ],
+  "/study/coding/git/":[
+    back_home,
+    {
+      text: "git",
+      icon: "icon-github-fill",
+      children: "structure",
+      
+    }
+  ],
+  "/study/coding/interview/":[
+    back_home,
+    {
+      text: "面试题",
+      icon: "icon-studyfill",
+      children: "structure",
+      
+    }
+  ],
+  
   //历史
-  "/study/history/":"structure",
-  "/study/history/overview/":"structure",
+  "/study/history/":[
+    back_home,
+    {
+      text: "历史",
+      icon: "icon-TerraCottaWarriors",
+      children: "structure",
+    }
+  ],
+  "/study/history/overview/":[
+    back_home,
+    {
+      text: "纵览",
+      icon: "icon-zonglan",
+      children: "structure",
+    }
+  ],
   //百科
   "/study/wiki/":"structure",
 

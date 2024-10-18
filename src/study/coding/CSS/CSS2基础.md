@@ -1,5 +1,6 @@
 ---
 number headings: auto, first-level 1, max 6, 1.1
+title: "CSS·2 基础"
 category:
 - 前端
 - CSS

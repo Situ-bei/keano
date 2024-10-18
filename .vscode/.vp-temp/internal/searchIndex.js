@@ -143,7 +143,28 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Life",
+    "title": "随笔",
+    "headers": [],
+    "path": "/essay/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "随笔",
+    "headers": [],
+    "path": "/essay/%E5%8F%AF%E6%98%AF.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《面朝大海，春暖花开》",
+    "headers": [],
+    "path": "/essay/%E9%9D%A2%E6%9C%9D%E5%A4%A7%E6%B5%B7%EF%BC%8C%E6%98%A5%E6%9A%96%E8%8A%B1%E5%BC%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "生活",
     "headers": [],
     "path": "/life/",
     "pathLocale": "/",
@@ -357,6 +378,20 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "书籍",
+    "headers": [],
+    "path": "/life/books/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《面朝大海，春暖花开》",
+    "headers": [],
+    "path": "/life/books/%E9%9D%A2%E6%9C%9D%E5%A4%A7%E6%B5%B7%EF%BC%8C%E6%98%A5%E6%9A%96%E8%8A%B1%E5%BC%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Markdown 展示",
     "headers": [
       {
@@ -415,34 +450,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "布局与功能禁用",
-    "headers": [],
-    "path": "/life/books/disable.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "密码加密的文章",
-    "headers": [],
-    "path": "/life/books/encrypt.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "书籍",
-    "headers": [],
-    "path": "/life/books/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "布局",
-    "headers": [],
-    "path": "/life/music/layout.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "音乐",
     "headers": [],
     "path": "/life/music/",
@@ -450,9 +457,45 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "《富士山下》",
+    "headers": [],
+    "path": "/life/music/%E3%80%8A%E5%AF%8C%E5%A3%AB%E5%B1%B1%E4%B8%8B%E3%80%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《现代爱情故事》",
+    "headers": [],
+    "path": "/life/music/%E3%80%8A%E7%8E%B0%E4%BB%A3%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B%E3%80%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《音乐标签文件属性》",
+    "headers": [
+      {
+        "level": 2,
+        "title": "音乐标签文件属性详解",
+        "slug": "音乐标签文件属性详解",
+        "link": "#音乐标签文件属性详解",
+        "children": []
+      }
+    ],
+    "path": "/life/music/%E9%9F%B3%E4%B9%90%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "编程",
     "headers": [],
     "path": "/study/coding/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "历史",
+    "headers": [],
+    "path": "/study/history/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -508,30 +551,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "粤语歌曲",
-    "headers": [],
-    "path": "/study/wiki/%E7%B2%A4%E8%AF%AD%E6%AD%8C.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "雪花的雅称",
     "headers": [],
     "path": "/study/wiki/%E9%9B%AA%E8%8A%B1%E7%9A%84%E9%9B%85%E7%A7%B0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "音乐标签文件属性详解",
-    "headers": [],
-    "path": "/study/wiki/%E9%9F%B3%E4%B9%90%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "历史",
-    "headers": [],
-    "path": "/study/history/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -720,72 +742,1444 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "1 常见的版本控制工具",
+    "title": "CSS·2 基础",
     "headers": [
       {
         "level": 2,
-        "title": "3.1 设置用户名与邮箱（用户标识，必要）",
-        "slug": "_3-1-设置用户名与邮箱-用户标识-必要",
-        "link": "#_3-1-设置用户名与邮箱-用户标识-必要",
+        "title": "1.1 CSS简介",
+        "slug": "_1-1-css简介",
+        "link": "#_1-1-css简介",
         "children": []
       },
       {
         "level": 2,
-        "title": "4.1 工作流程",
-        "slug": "_4-1-工作流程",
-        "link": "#_4-1-工作流程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.1 11.1、创建工作目录与常用指令",
-        "slug": "_5-1-11-1、创建工作目录与常用指令",
-        "link": "#_5-1-11-1、创建工作目录与常用指令",
+        "title": "1.2 CSS的编写位置",
+        "slug": "_1-2-css的编写位置",
+        "link": "#_1-2-css的编写位置",
         "children": [
           {
             "level": 3,
-            "title": "5.1.1 本地仓库搭建",
-            "slug": "_5-1-1-本地仓库搭建",
-            "link": "#_5-1-1-本地仓库搭建",
+            "title": "1.2.1 行内样式",
+            "slug": "_1-2-1-行内样式",
+            "link": "#_1-2-1-行内样式",
             "children": []
           },
           {
             "level": 3,
-            "title": "5.1.2 克隆远程仓库",
-            "slug": "_5-1-2-克隆远程仓库",
-            "link": "#_5-1-2-克隆远程仓库",
+            "title": "1.2.2 内部样式",
+            "slug": "_1-2-2-内部样式",
+            "link": "#_1-2-2-内部样式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.2.3 外部样式",
+            "slug": "_1-2-3-外部样式",
+            "link": "#_1-2-3-外部样式",
             "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "6.1 文件的四种状态",
-        "slug": "_6-1-文件的四种状态",
-        "link": "#_6-1-文件的四种状态",
+        "title": "1.3 样式表的优先级",
+        "slug": "_1-3-样式表的优先级",
+        "link": "#_1-3-样式表的优先级",
         "children": []
       },
       {
         "level": 2,
-        "title": "6.2 查看文件状态",
-        "slug": "_6-2-查看文件状态",
-        "link": "#_6-2-查看文件状态",
+        "title": "1.4 CSS语法规范",
+        "slug": "_1-4-css语法规范",
+        "link": "#_1-4-css语法规范",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.5 CSS代码风格",
+        "slug": "_1-5-css代码风格",
+        "link": "#_1-5-css代码风格",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.1 CSS基本选择器",
+        "slug": "_2-1-css基本选择器",
+        "link": "#_2-1-css基本选择器",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.1.1 通配选择器",
+            "slug": "_2-1-1-通配选择器",
+            "link": "#_2-1-1-通配选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.1.2 元素选择器",
+            "slug": "_2-1-2-元素选择器",
+            "link": "#_2-1-2-元素选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.1.3 类选择器",
+            "slug": "_2-1-3-类选择器",
+            "link": "#_2-1-3-类选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.1.4 ID选择器",
+            "slug": "_2-1-4-id选择器",
+            "link": "#_2-1-4-id选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.1.5 基本选择器总结",
+            "slug": "_2-1-5-基本选择器总结",
+            "link": "#_2-1-5-基本选择器总结",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.2 CSS复合选择器",
+        "slug": "_2-2-css复合选择器",
+        "link": "#_2-2-css复合选择器",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.2.1 交集选择器",
+            "slug": "_2-2-1-交集选择器",
+            "link": "#_2-2-1-交集选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.2 并集选择器",
+            "slug": "_2-2-2-并集选择器",
+            "link": "#_2-2-2-并集选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.3 HTML元素间的关系",
+            "slug": "_2-2-3-html元素间的关系",
+            "link": "#_2-2-3-html元素间的关系",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.4 后代选择器",
+            "slug": "_2-2-4-后代选择器",
+            "link": "#_2-2-4-后代选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.5 子代选择器",
+            "slug": "_2-2-5-子代选择器",
+            "link": "#_2-2-5-子代选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.6 兄弟选择器",
+            "slug": "_2-2-6-兄弟选择器",
+            "link": "#_2-2-6-兄弟选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.7 属性选择器",
+            "slug": "_2-2-7-属性选择器",
+            "link": "#_2-2-7-属性选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.8 伪类选择器",
+            "slug": "_2-2-8-伪类选择器",
+            "link": "#_2-2-8-伪类选择器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.9 伪元素选择器",
+            "slug": "_2-2-9-伪元素选择器",
+            "link": "#_2-2-9-伪元素选择器",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.3 选择器的优先级（权重）",
+        "slug": "_2-3-选择器的优先级-权重",
+        "link": "#_2-3-选择器的优先级-权重",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.1 层叠性",
+        "slug": "_3-1-层叠性",
+        "link": "#_3-1-层叠性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.2 继承性",
+        "slug": "_3-2-继承性",
+        "link": "#_3-2-继承性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.3 优先级",
+        "slug": "_3-3-优先级",
+        "link": "#_3-3-优先级",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.1 像素的概念",
+        "slug": "_4-1-像素的概念",
+        "link": "#_4-1-像素的概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.2 颜色的表示",
+        "slug": "_4-2-颜色的表示",
+        "link": "#_4-2-颜色的表示",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.2.1 表示方式一：颜色名",
+            "slug": "_4-2-1-表示方式一-颜色名",
+            "link": "#_4-2-1-表示方式一-颜色名",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.2.2 表示方式二：rgb 或 rgba",
+            "slug": "_4-2-2-表示方式二-rgb-或-rgba",
+            "link": "#_4-2-2-表示方式二-rgb-或-rgba",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.2.3 表示方式三：HEX 或 HEXA",
+            "slug": "_4-2-3-表示方式三-hex-或-hexa",
+            "link": "#_4-2-3-表示方式三-hex-或-hexa",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.2.4 表示方式四：HSL 或 HSLA",
+            "slug": "_4-2-4-表示方式四-hsl-或-hsla",
+            "link": "#_4-2-4-表示方式四-hsl-或-hsla",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.3 CSS字体属性",
+        "slug": "_4-3-css字体属性",
+        "link": "#_4-3-css字体属性",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.3.1 字体大小",
+            "slug": "_4-3-1-字体大小",
+            "link": "#_4-3-1-字体大小",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.2 字体族",
+            "slug": "_4-3-2-字体族",
+            "link": "#_4-3-2-字体族",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.3 字体风格",
+            "slug": "_4-3-3-字体风格",
+            "link": "#_4-3-3-字体风格",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.4 字体粗细",
+            "slug": "_4-3-4-字体粗细",
+            "link": "#_4-3-4-字体粗细",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.5 字体复合写法",
+            "slug": "_4-3-5-字体复合写法",
+            "link": "#_4-3-5-字体复合写法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.4 CSS文本属性",
+        "slug": "_4-4-css文本属性",
+        "link": "#_4-4-css文本属性",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.4.1 文本颜色",
+            "slug": "_4-4-1-文本颜色",
+            "link": "#_4-4-1-文本颜色",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.2 文本间距",
+            "slug": "_4-4-2-文本间距",
+            "link": "#_4-4-2-文本间距",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.3 文本修饰",
+            "slug": "_4-4-3-文本修饰",
+            "link": "#_4-4-3-文本修饰",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.4 文本缩进",
+            "slug": "_4-4-4-文本缩进",
+            "link": "#_4-4-4-文本缩进",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.5 文本对齐_水平",
+            "slug": "_4-4-5-文本对齐-水平",
+            "link": "#_4-4-5-文本对齐-水平",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.6 细说 font-size",
+            "slug": "_4-4-6-细说-font-size",
+            "link": "#_4-4-6-细说-font-size",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.7 行高",
+            "slug": "_4-4-7-行高",
+            "link": "#_4-4-7-行高",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.8 文本对齐_垂直",
+            "slug": "_4-4-8-文本对齐-垂直",
+            "link": "#_4-4-8-文本对齐-垂直",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.9 vertical-align",
+            "slug": "_4-4-9-vertical-align",
+            "link": "#_4-4-9-vertical-align",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.5 CSS列表属性",
+        "slug": "_4-5-css列表属性",
+        "link": "#_4-5-css列表属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.6 CSS表格属性",
+        "slug": "_4-6-css表格属性",
+        "link": "#_4-6-css表格属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.7 CSS背景属性",
+        "slug": "_4-7-css背景属性",
+        "link": "#_4-7-css背景属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.8 CSS鼠标属性",
+        "slug": "_4-8-css鼠标属性",
+        "link": "#_4-8-css鼠标属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.1 CSS 长度单位",
+        "slug": "_5-1-css-长度单位",
+        "link": "#_5-1-css-长度单位",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.2 元素的显示模式",
+        "slug": "_5-2-元素的显示模式",
+        "link": "#_5-2-元素的显示模式",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.2.1 总结各元素的显示模式",
+            "slug": "_5-2-1-总结各元素的显示模式",
+            "link": "#_5-2-1-总结各元素的显示模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.2.2 修改元素的显示模式",
+            "slug": "_5-2-2-修改元素的显示模式",
+            "link": "#_5-2-2-修改元素的显示模式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "5.3 盒子模型的组成",
+        "slug": "_5-3-盒子模型的组成",
+        "link": "#_5-3-盒子模型的组成",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.4 盒子内容区（content）",
+        "slug": "_5-4-盒子内容区-content",
+        "link": "#_5-4-盒子内容区-content",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.5 关于默认宽度",
+        "slug": "_5-5-关于默认宽度",
+        "link": "#_5-5-关于默认宽度",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.6 盒子内边距（padding）",
+        "slug": "_5-6-盒子内边距-padding",
+        "link": "#_5-6-盒子内边距-padding",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.7 盒子边框（border）",
+        "slug": "_5-7-盒子边框-border",
+        "link": "#_5-7-盒子边框-border",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.8 盒子外边距_margin",
+        "slug": "_5-8-盒子外边距-margin",
+        "link": "#_5-8-盒子外边距-margin",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.8.1 margin 注意事项",
+            "slug": "_5-8-1-margin-注意事项",
+            "link": "#_5-8-1-margin-注意事项",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.8.2 margin 塌陷问题",
+            "slug": "_5-8-2-margin-塌陷问题",
+            "link": "#_5-8-2-margin-塌陷问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.8.3 margin 合并问题",
+            "slug": "_5-8-3-margin-合并问题",
+            "link": "#_5-8-3-margin-合并问题",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "5.9 处理内容溢出",
+        "slug": "_5-9-处理内容溢出",
+        "link": "#_5-9-处理内容溢出",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.10 隐藏元素的方式",
+        "slug": "_5-10-隐藏元素的方式",
+        "link": "#_5-10-隐藏元素的方式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.11 样式的继承",
+        "slug": "_5-11-样式的继承",
+        "link": "#_5-11-样式的继承",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.12 默认样式",
+        "slug": "_5-12-默认样式",
+        "link": "#_5-12-默认样式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.13 布局小技巧",
+        "slug": "_5-13-布局小技巧",
+        "link": "#_5-13-布局小技巧",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.14 元素之间的空白问题",
+        "slug": "_5-14-元素之间的空白问题",
+        "link": "#_5-14-元素之间的空白问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.15 行内块的幽灵空白问题",
+        "slug": "_5-15-行内块的幽灵空白问题",
+        "link": "#_5-15-行内块的幽灵空白问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.1 浮动的简介",
+        "slug": "_6-1-浮动的简介",
+        "link": "#_6-1-浮动的简介",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.2 元素浮动后的特点",
+        "slug": "_6-2-元素浮动后的特点",
+        "link": "#_6-2-元素浮动后的特点",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.3 解决浮动产生的影响",
+        "slug": "_6-3-解决浮动产生的影响",
+        "link": "#_6-3-解决浮动产生的影响",
+        "children": [
+          {
+            "level": 3,
+            "title": "6.3.1 元素浮动后会有哪些影响",
+            "slug": "_6-3-1-元素浮动后会有哪些影响",
+            "link": "#_6-3-1-元素浮动后会有哪些影响",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "6.3.2 解决浮动产生的影响（清除浮动）",
+            "slug": "_6-3-2-解决浮动产生的影响-清除浮动",
+            "link": "#_6-3-2-解决浮动产生的影响-清除浮动",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "6.4 浮动相关属性",
+        "slug": "_6-4-浮动相关属性",
+        "link": "#_6-4-浮动相关属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.1 相对定位",
+        "slug": "_7-1-相对定位",
+        "link": "#_7-1-相对定位",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.1.1 如何设置相对定位？",
+            "slug": "_7-1-1-如何设置相对定位",
+            "link": "#_7-1-1-如何设置相对定位",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.1.2 相对定位的参考点在哪里？",
+            "slug": "_7-1-2-相对定位的参考点在哪里",
+            "link": "#_7-1-2-相对定位的参考点在哪里",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.1.3 相对定位的特点：",
+            "slug": "_7-1-3-相对定位的特点",
+            "link": "#_7-1-3-相对定位的特点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.2 绝对定位",
+        "slug": "_7-2-绝对定位",
+        "link": "#_7-2-绝对定位",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.2.1 如何设置绝对定位？",
+            "slug": "_7-2-1-如何设置绝对定位",
+            "link": "#_7-2-1-如何设置绝对定位",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.2.2 绝对定位的参考点在哪里？",
+            "slug": "_7-2-2-绝对定位的参考点在哪里",
+            "link": "#_7-2-2-绝对定位的参考点在哪里",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.2.3 绝对定位元素的特点：",
+            "slug": "_7-2-3-绝对定位元素的特点",
+            "link": "#_7-2-3-绝对定位元素的特点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.3 固定定位",
+        "slug": "_7-3-固定定位",
+        "link": "#_7-3-固定定位",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.3.1 如何设置为固定定位？",
+            "slug": "_7-3-1-如何设置为固定定位",
+            "link": "#_7-3-1-如何设置为固定定位",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.3.2 固定定位的参考点在哪里？",
+            "slug": "_7-3-2-固定定位的参考点在哪里",
+            "link": "#_7-3-2-固定定位的参考点在哪里",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.3.3 固定定位元素的特点",
+            "slug": "_7-3-3-固定定位元素的特点",
+            "link": "#_7-3-3-固定定位元素的特点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.4 粘性定位",
+        "slug": "_7-4-粘性定位",
+        "link": "#_7-4-粘性定位",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.4.1 如何设置为粘性定位？",
+            "slug": "_7-4-1-如何设置为粘性定位",
+            "link": "#_7-4-1-如何设置为粘性定位",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.4.2 粘性定位的参考点在哪里？",
+            "slug": "_7-4-2-粘性定位的参考点在哪里",
+            "link": "#_7-4-2-粘性定位的参考点在哪里",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.4.3 粘性定位元素的特点",
+            "slug": "_7-4-3-粘性定位元素的特点",
+            "link": "#_7-4-3-粘性定位元素的特点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.5 定位层级",
+        "slug": "_7-5-定位层级",
+        "link": "#_7-5-定位层级",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.6 定位的特殊应用",
+        "slug": "_7-6-定位的特殊应用",
+        "link": "#_7-6-定位的特殊应用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8.1 版心",
+        "slug": "_8-1-版心",
+        "link": "#_8-1-版心",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8.2 常用布局名词",
+        "slug": "_8-2-常用布局名词",
+        "link": "#_8-2-常用布局名词",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8.3 重置默认样式",
+        "slug": "_8-3-重置默认样式",
+        "link": "#_8-3-重置默认样式",
         "children": []
       }
     ],
-    "path": "/study/coding/git/Git.html",
+    "path": "/study/coding/CSS/CSS2%E5%9F%BA%E7%A1%80.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Git",
+    "title": "CSS3 简介",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 CSS3 概述",
+        "slug": "_1-1-css3-概述",
+        "link": "#_1-1-css3-概述",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 CSS3私有前缀",
+        "slug": "_1-2-css3私有前缀",
+        "link": "#_1-2-css3私有前缀",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.2.1 什么是私有前缀",
+            "slug": "_1-2-1-什么是私有前缀",
+            "link": "#_1-2-1-什么是私有前缀",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.2.2 为什么要有私有前缀",
+            "slug": "_1-2-2-为什么要有私有前缀",
+            "link": "#_1-2-2-为什么要有私有前缀",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.2.3 常见浏览器私有前缀",
+            "slug": "_1-2-3-常见浏览器私有前缀",
+            "link": "#_1-2-3-常见浏览器私有前缀",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.1 CSS3 新增长度单位",
+        "slug": "_2-1-css3-新增长度单位",
+        "link": "#_2-1-css3-新增长度单位",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.2 CSS3 新增颜色设置方式",
+        "slug": "_2-2-css3-新增颜色设置方式",
+        "link": "#_2-2-css3-新增颜色设置方式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.3 CSS3 新增选择器",
+        "slug": "_2-3-css3-新增选择器",
+        "link": "#_2-3-css3-新增选择器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.4 CSS3 新增盒模型相关属性",
+        "slug": "_2-4-css3-新增盒模型相关属性",
+        "link": "#_2-4-css3-新增盒模型相关属性",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.4.1 box-shadow 盒子阴影",
+            "slug": "_2-4-1-box-shadow-盒子阴影",
+            "link": "#_2-4-1-box-shadow-盒子阴影",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.4.2 opacity 不透明度",
+            "slug": "_2-4-2-opacity-不透明度",
+            "link": "#_2-4-2-opacity-不透明度",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.5 CSS3 新增背景属性",
+        "slug": "_2-5-css3-新增背景属性",
+        "link": "#_2-5-css3-新增背景属性",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.5.1 background-origin",
+            "slug": "_2-5-1-background-origin",
+            "link": "#_2-5-1-background-origin",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.5.2 background-clip",
+            "slug": "_2-5-2-background-clip",
+            "link": "#_2-5-2-background-clip",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.5.3 background-size",
+            "slug": "_2-5-3-background-size",
+            "link": "#_2-5-3-background-size",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.5.4 backgorund 复合属性",
+            "slug": "_2-5-4-backgorund-复合属性",
+            "link": "#_2-5-4-backgorund-复合属性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.5.5 多背景图",
+            "slug": "_2-5-5-多背景图",
+            "link": "#_2-5-5-多背景图",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.6 CSS3新增边框属性",
+        "slug": "_2-6-css3新增边框属性",
+        "link": "#_2-6-css3新增边框属性",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.6.1 边框圆角",
+            "slug": "_2-6-1-边框圆角",
+            "link": "#_2-6-1-边框圆角",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.6.2 边框外轮廓（了解）",
+            "slug": "_2-6-2-边框外轮廓-了解",
+            "link": "#_2-6-2-边框外轮廓-了解",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.7 CSS3新增文本属性",
+        "slug": "_2-7-css3新增文本属性",
+        "link": "#_2-7-css3新增文本属性",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.7.1 文本阴影",
+            "slug": "_2-7-1-文本阴影",
+            "link": "#_2-7-1-文本阴影",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.7.2 文本换行",
+            "slug": "_2-7-2-文本换行",
+            "link": "#_2-7-2-文本换行",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.7.3 文本溢出",
+            "slug": "_2-7-3-文本溢出",
+            "link": "#_2-7-3-文本溢出",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.7.4 文本修饰",
+            "slug": "_2-7-4-文本修饰",
+            "link": "#_2-7-4-文本修饰",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.7.5 文本描边",
+            "slug": "_2-7-5-文本描边",
+            "link": "#_2-7-5-文本描边",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.8 CSS3 新增渐变",
+        "slug": "_2-8-css3-新增渐变",
+        "link": "#_2-8-css3-新增渐变",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.8.1 线性渐变",
+            "slug": "_2-8-1-线性渐变",
+            "link": "#_2-8-1-线性渐变",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.8.2 径向渐变",
+            "slug": "_2-8-2-径向渐变",
+            "link": "#_2-8-2-径向渐变",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.8.3 重复渐变",
+            "slug": "_2-8-3-重复渐变",
+            "link": "#_2-8-3-重复渐变",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.9 web 字体",
+        "slug": "_2-9-web-字体",
+        "link": "#_2-9-web-字体",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.9.1 基本用法",
+            "slug": "_2-9-1-基本用法",
+            "link": "#_2-9-1-基本用法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.9.2 定制字体",
+            "slug": "_2-9-2-定制字体",
+            "link": "#_2-9-2-定制字体",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.9.3 字体图标",
+            "slug": "_2-9-3-字体图标",
+            "link": "#_2-9-3-字体图标",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.10 2D变换",
+        "slug": "_2-10-2d变换",
+        "link": "#_2-10-2d变换",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.10.1 2D位移",
+            "slug": "_2-10-1-2d位移",
+            "link": "#_2-10-1-2d位移",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.10.2 2D缩放",
+            "slug": "_2-10-2-2d缩放",
+            "link": "#_2-10-2-2d缩放",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.10.3 2D旋转",
+            "slug": "_2-10-3-2d旋转",
+            "link": "#_2-10-3-2d旋转",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.10.4 2D扭曲（了解）",
+            "slug": "_2-10-4-2d扭曲-了解",
+            "link": "#_2-10-4-2d扭曲-了解",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.10.5 多重变换",
+            "slug": "_2-10-5-多重变换",
+            "link": "#_2-10-5-多重变换",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.10.6 变换原点",
+            "slug": "_2-10-6-变换原点",
+            "link": "#_2-10-6-变换原点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.11 3D变换",
+        "slug": "_2-11-3d变换",
+        "link": "#_2-11-3d变换",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.11.1 开启3D空间",
+            "slug": "_2-11-1-开启3d空间",
+            "link": "#_2-11-1-开启3d空间",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.2 设置景深",
+            "slug": "_2-11-2-设置景深",
+            "link": "#_2-11-2-设置景深",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.3 透视点位置",
+            "slug": "_2-11-3-透视点位置",
+            "link": "#_2-11-3-透视点位置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.4 3D 位移",
+            "slug": "_2-11-4-3d-位移",
+            "link": "#_2-11-4-3d-位移",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.5 3D 旋转",
+            "slug": "_2-11-5-3d-旋转",
+            "link": "#_2-11-5-3d-旋转",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.6 3D 缩放",
+            "slug": "_2-11-6-3d-缩放",
+            "link": "#_2-11-6-3d-缩放",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.7 多重变换",
+            "slug": "_2-11-7-多重变换",
+            "link": "#_2-11-7-多重变换",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.11.8 背部可见性",
+            "slug": "_2-11-8-背部可见性",
+            "link": "#_2-11-8-背部可见性",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.12 过渡",
+        "slug": "_2-12-过渡",
+        "link": "#_2-12-过渡",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.12.1 transition-property",
+            "slug": "_2-12-1-transition-property",
+            "link": "#_2-12-1-transition-property",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.12.2 transition-duration",
+            "slug": "_2-12-2-transition-duration",
+            "link": "#_2-12-2-transition-duration",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.12.3 transition-delay",
+            "slug": "_2-12-3-transition-delay",
+            "link": "#_2-12-3-transition-delay",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.12.4 transition-timing-function",
+            "slug": "_2-12-4-transition-timing-function",
+            "link": "#_2-12-4-transition-timing-function",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.12.5 transition 复合属性",
+            "slug": "_2-12-5-transition-复合属性",
+            "link": "#_2-12-5-transition-复合属性",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.13 动画",
+        "slug": "_2-13-动画",
+        "link": "#_2-13-动画",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.13.1 什么是帧",
+            "slug": "_2-13-1-什么是帧",
+            "link": "#_2-13-1-什么是帧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.13.2 什么是关键帧",
+            "slug": "_2-13-2-什么是关键帧",
+            "link": "#_2-13-2-什么是关键帧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.13.3 动画的基本使用",
+            "slug": "_2-13-3-动画的基本使用",
+            "link": "#_2-13-3-动画的基本使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.13.4 动画的其他属性",
+            "slug": "_2-13-4-动画的其他属性",
+            "link": "#_2-13-4-动画的其他属性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.13.5 动画复合属性",
+            "slug": "_2-13-5-动画复合属性",
+            "link": "#_2-13-5-动画复合属性",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.14 多列布局",
+        "slug": "_2-14-多列布局",
+        "link": "#_2-14-多列布局",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.15 15.伸缩盒模型",
+        "slug": "_2-15-15-伸缩盒模型",
+        "link": "#_2-15-15-伸缩盒模型",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.15.1 伸缩盒模型简介",
+            "slug": "_2-15-1-伸缩盒模型简介",
+            "link": "#_2-15-1-伸缩盒模型简介",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.2 伸缩容器、伸缩项目",
+            "slug": "_2-15-2-伸缩容器、伸缩项目",
+            "link": "#_2-15-2-伸缩容器、伸缩项目",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.3 主轴与侧轴",
+            "slug": "_2-15-3-主轴与侧轴",
+            "link": "#_2-15-3-主轴与侧轴",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.4 主轴方向",
+            "slug": "_2-15-4-主轴方向",
+            "link": "#_2-15-4-主轴方向",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.5 主轴换行方式",
+            "slug": "_2-15-5-主轴换行方式",
+            "link": "#_2-15-5-主轴换行方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.6 flex-flow",
+            "slug": "_2-15-6-flex-flow",
+            "link": "#_2-15-6-flex-flow",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.7 主轴对齐方式",
+            "slug": "_2-15-7-主轴对齐方式",
+            "link": "#_2-15-7-主轴对齐方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.8 侧轴对齐方式",
+            "slug": "_2-15-8-侧轴对齐方式",
+            "link": "#_2-15-8-侧轴对齐方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.9 flex 实现水平垂直居中",
+            "slug": "_2-15-9-flex-实现水平垂直居中",
+            "link": "#_2-15-9-flex-实现水平垂直居中",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.10 伸缩性",
+            "slug": "_2-15-10-伸缩性",
+            "link": "#_2-15-10-伸缩性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.11 flex复合属性",
+            "slug": "_2-15-11-flex复合属性",
+            "link": "#_2-15-11-flex复合属性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.12 项目排序",
+            "slug": "_2-15-12-项目排序",
+            "link": "#_2-15-12-项目排序",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.15.13 单独对齐",
+            "slug": "_2-15-13-单独对齐",
+            "link": "#_2-15-13-单独对齐",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.1 媒体查询",
+        "slug": "_3-1-媒体查询",
+        "link": "#_3-1-媒体查询",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.1.1 媒体类型",
+            "slug": "_3-1-1-媒体类型",
+            "link": "#_3-1-1-媒体类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.2 媒体特性",
+            "slug": "_3-1-2-媒体特性",
+            "link": "#_3-1-2-媒体特性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.3 运算符",
+            "slug": "_3-1-3-运算符",
+            "link": "#_3-1-3-运算符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.4 常用阈值",
+            "slug": "_3-1-4-常用阈值",
+            "link": "#_3-1-4-常用阈值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.5 结合外部样式的用法",
+            "slug": "_3-1-5-结合外部样式的用法",
+            "link": "#_3-1-5-结合外部样式的用法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.1 什么是BFC",
+        "slug": "_4-1-什么是bfc",
+        "link": "#_4-1-什么是bfc",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.2 开启了BFC能解决什么问题",
+        "slug": "_4-2-开启了bfc能解决什么问题",
+        "link": "#_4-2-开启了bfc能解决什么问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.3 如何开启BFC",
+        "slug": "_4-3-如何开启bfc",
+        "link": "#_4-3-如何开启bfc",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/CSS/CSS3%E5%9F%BA%E7%A1%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《预编译器之Less》",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 单行注释",
+        "slug": "_1-1-单行注释",
+        "link": "#_1-1-单行注释",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 块注释",
+        "slug": "_1-2-块注释",
+        "link": "#_1-2-块注释",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.1 禁止导出",
+        "slug": "_6-1-禁止导出",
+        "link": "#_6-1-禁止导出",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/CSS/Less.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "CSS",
     "headers": [],
-    "path": "/study/coding/git/",
+    "path": "/study/coding/CSS/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "HTML",
+    "title": "《预编译器之Tailwind》",
+    "headers": [],
+    "path": "/study/coding/CSS/Tailwind.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "响应式布局",
+    "headers": [],
+    "path": "/study/coding/CSS/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "1 移动端布局的基本概述",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 屏幕分辨率",
+        "slug": "_1-1-屏幕分辨率",
+        "link": "#_1-1-屏幕分辨率",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.1 vw和vh基本使用",
+        "slug": "_2-1-vw和vh基本使用",
+        "link": "#_2-1-vw和vh基本使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.2 vw布局",
+        "slug": "_2-2-vw布局",
+        "link": "#_2-2-vw布局",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.3 vh问题",
+        "slug": "_2-3-vh问题",
+        "link": "#_2-3-vh问题",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/CSS/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《HTML<废案>》",
     "headers": [
       {
         "level": 2,
@@ -901,7 +2295,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "HTML4",
+    "title": "《HTML4》",
     "headers": [
       {
         "level": 2,
@@ -1057,7 +2451,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "HTML5",
+    "title": "《HTML5》",
     "headers": [
       {
         "level": 2,
@@ -1186,23 +2580,1446 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
-    "path": "/study/coding/HTML/SEO%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.html",
+    "title": "《HTML5》",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 什么是HTML5",
+        "slug": "_1-1-什么是html5",
+        "link": "#_1-1-什么是html5",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 HTML5 优势",
+        "slug": "_1-2-html5-优势",
+        "link": "#_1-2-html5-优势",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.3 3.HTML5兼容性",
+        "slug": "_1-3-3-html5兼容性",
+        "link": "#_1-3-3-html5兼容性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.1 新增布局标签",
+        "slug": "_2-1-新增布局标签",
+        "link": "#_2-1-新增布局标签",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.2 新增状态标签",
+        "slug": "_2-2-新增状态标签",
+        "link": "#_2-2-新增状态标签",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.2.1 meter 标签",
+            "slug": "_2-2-1-meter-标签",
+            "link": "#_2-2-1-meter-标签",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.2 progress 标签",
+            "slug": "_2-2-2-progress-标签",
+            "link": "#_2-2-2-progress-标签",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.3 新增列表标签",
+        "slug": "_2-3-新增列表标签",
+        "link": "#_2-3-新增列表标签",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.4 新增文本标签",
+        "slug": "_2-4-新增文本标签",
+        "link": "#_2-4-新增文本标签",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.4.1 文本注音",
+            "slug": "_2-4-1-文本注音",
+            "link": "#_2-4-1-文本注音",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.4.2 文本标记",
+            "slug": "_2-4-2-文本标记",
+            "link": "#_2-4-2-文本标记",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.1 表单控件新增属性",
+        "slug": "_3-1-表单控件新增属性",
+        "link": "#_3-1-表单控件新增属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.2 input 新增属性值",
+        "slug": "_3-2-input-新增属性值",
+        "link": "#_3-2-input-新增属性值",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.3 form 标签新增属性",
+        "slug": "_3-3-form-标签新增属性",
+        "link": "#_3-3-form-标签新增属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.1 视频标签",
+        "slug": "_4-1-视频标签",
+        "link": "#_4-1-视频标签",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.2 音频标签",
+        "slug": "_4-2-音频标签",
+        "link": "#_4-2-音频标签",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/interview/HTML5%E5%9F%BA%E7%A1%80.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "九九八十一难",
     "headers": [],
-    "path": "/study/coding/HTML/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7.html",
+    "path": "/study/coding/interview/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "《ES 基础概念》",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 JS的概念",
+        "slug": "_1-1-js的概念",
+        "link": "#_1-1-js的概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.1 2.1引入方式",
+        "slug": "_2-1-2-1引入方式",
+        "link": "#_2-1-2-1引入方式",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.1.1 行内",
+            "slug": "_2-1-1-行内",
+            "link": "#_2-1-1-行内",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.1.2 内部",
+            "slug": "_2-1-2-内部",
+            "link": "#_2-1-2-内部",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.1.3 外部",
+            "slug": "_2-1-3-外部",
+            "link": "#_2-1-3-外部",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.2 注释和结束符",
+        "slug": "_2-2-注释和结束符",
+        "link": "#_2-2-注释和结束符",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.2.1 单行注释",
+            "slug": "_2-2-1-单行注释",
+            "link": "#_2-2-1-单行注释",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.2 多行注释",
+            "slug": "_2-2-2-多行注释",
+            "link": "#_2-2-2-多行注释",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.3 结束符",
+        "slug": "_2-3-结束符",
+        "link": "#_2-3-结束符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.4 大小写",
+        "slug": "_2-4-大小写",
+        "link": "#_2-4-大小写",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.5 忽略空格",
+        "slug": "_2-5-忽略空格",
+        "link": "#_2-5-忽略空格",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.6 输入和输出",
+        "slug": "_2-6-输入和输出",
+        "link": "#_2-6-输入和输出",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.6.1 输出",
+            "slug": "_2-6-1-输出",
+            "link": "#_2-6-1-输出",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.6.2 输入",
+            "slug": "_2-6-2-输入",
+            "link": "#_2-6-2-输入",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.7 字面量",
+        "slug": "_2-7-字面量",
+        "link": "#_2-7-字面量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.1 变量",
+        "slug": "_3-1-变量",
+        "link": "#_3-1-变量",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.1.1 声明变量",
+            "slug": "_3-1-1-声明变量",
+            "link": "#_3-1-1-声明变量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.2 变量赋值",
+            "slug": "_3-1-2-变量赋值",
+            "link": "#_3-1-2-变量赋值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.1.3 变量名命名规则",
+            "slug": "_3-1-3-变量名命名规则",
+            "link": "#_3-1-3-变量名命名规则",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.2 常量",
+        "slug": "_3-2-常量",
+        "link": "#_3-2-常量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.3 数据类型",
+        "slug": "_3-3-数据类型",
+        "link": "#_3-3-数据类型",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.3.1 基本数据类型",
+            "slug": "_3-3-1-基本数据类型",
+            "link": "#_3-3-1-基本数据类型",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.4 类型转换",
+        "slug": "_3-4-类型转换",
+        "link": "#_3-4-类型转换",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.4.1 显式转换",
+            "slug": "_3-4-1-显式转换",
+            "link": "#_3-4-1-显式转换",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.5 运算符",
+        "slug": "_3-5-运算符",
+        "link": "#_3-5-运算符",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.5.1 算术运算符",
+            "slug": "_3-5-1-算术运算符",
+            "link": "#_3-5-1-算术运算符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.5.2 赋值运算符",
+            "slug": "_3-5-2-赋值运算符",
+            "link": "#_3-5-2-赋值运算符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.5.3 一元的±",
+            "slug": "_3-5-3-一元的±",
+            "link": "#_3-5-3-一元的±",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.5.4 自增自减运算符  ++  --",
+            "slug": "_3-5-4-自增自减运算符",
+            "link": "#_3-5-4-自增自减运算符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.5.5 逻辑运算符",
+            "slug": "_3-5-5-逻辑运算符",
+            "link": "#_3-5-5-逻辑运算符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.5.6 比较运算符",
+            "slug": "_3-5-6-比较运算符",
+            "link": "#_3-5-6-比较运算符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.5.7 运算符优先级",
+            "slug": "_3-5-7-运算符优先级",
+            "link": "#_3-5-7-运算符优先级",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.6 语句",
+        "slug": "_3-6-语句",
+        "link": "#_3-6-语句",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.6.1 表达式和语句",
+            "slug": "_3-6-1-表达式和语句",
+            "link": "#_3-6-1-表达式和语句",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.6.2 分支语句",
+            "slug": "_3-6-2-分支语句",
+            "link": "#_3-6-2-分支语句",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.6.3 循环语句",
+            "slug": "_3-6-3-循环语句",
+            "link": "#_3-6-3-循环语句",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.7 对象",
+        "slug": "_3-7-对象",
+        "link": "#_3-7-对象",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.7.1 对象的创建，添加，读取",
+            "slug": "_3-7-1-对象的创建-添加-读取",
+            "link": "#_3-7-1-对象的创建-添加-读取",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.7.2 属性名字和属性值",
+            "slug": "_3-7-2-属性名字和属性值",
+            "link": "#_3-7-2-属性名字和属性值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.7.3 typeof  和 in 运算符",
+            "slug": "_3-7-3-typeof-和-in-运算符",
+            "link": "#_3-7-3-typeof-和-in-运算符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.7.4 枚举对象的属性",
+            "slug": "_3-7-4-枚举对象的属性",
+            "link": "#_3-7-4-枚举对象的属性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.7.5 可变类型",
+            "slug": "_3-7-5-可变类型",
+            "link": "#_3-7-5-可变类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.7.6 变量和对象",
+            "slug": "_3-7-6-变量和对象",
+            "link": "#_3-7-6-变量和对象",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.8 面相对象编程（OOP）",
+        "slug": "_3-8-面相对象编程-oop",
+        "link": "#_3-8-面相对象编程-oop",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.8.1 类（class）",
+            "slug": "_3-8-1-类-class",
+            "link": "#_3-8-1-类-class",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.8.2 封装、继承和多态",
+            "slug": "_3-8-2-封装、继承和多态",
+            "link": "#_3-8-2-封装、继承和多态",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.8.3 对象的结构",
+            "slug": "_3-8-3-对象的结构",
+            "link": "#_3-8-3-对象的结构",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.9 函数（Function）",
+        "slug": "_3-9-函数-function",
+        "link": "#_3-9-函数-function",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.9.1 函数的基本概况",
+            "slug": "_3-9-1-函数的基本概况",
+            "link": "#_3-9-1-函数的基本概况",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.2 函数定义的方式",
+            "slug": "_3-9-2-函数定义的方式",
+            "link": "#_3-9-2-函数定义的方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.3 函数的参数",
+            "slug": "_3-9-3-函数的参数",
+            "link": "#_3-9-3-函数的参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.4 函数的返回值",
+            "slug": "_3-9-4-函数的返回值",
+            "link": "#_3-9-4-函数的返回值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.5 windows 对象",
+            "slug": "_3-9-5-windows-对象",
+            "link": "#_3-9-5-windows-对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.6 变量和函数的提升",
+            "slug": "_3-9-6-变量和函数的提升",
+            "link": "#_3-9-6-变量和函数的提升",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.7 作用域（scope）",
+            "slug": "_3-9-7-作用域-scope",
+            "link": "#_3-9-7-作用域-scope",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.8 this 隐含参数",
+            "slug": "_3-9-8-this-隐含参数",
+            "link": "#_3-9-8-this-隐含参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.9.9 严格模式",
+            "slug": "_3-9-9-严格模式",
+            "link": "#_3-9-9-严格模式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.10 数组（Array）",
+        "slug": "_3-10-数组-array",
+        "link": "#_3-10-数组-array",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.10.1 数组的概况",
+            "slug": "_3-10-1-数组的概况",
+            "link": "#_3-10-1-数组的概况",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.2 遍历数组",
+            "slug": "_3-10-2-遍历数组",
+            "link": "#_3-10-2-遍历数组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.3 数组的方法",
+            "slug": "_3-10-3-数组的方法",
+            "link": "#_3-10-3-数组的方法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.4 数组的拷贝",
+            "slug": "_3-10-4-数组的拷贝",
+            "link": "#_3-10-4-数组的拷贝",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.5 数组去重，排序",
+            "slug": "_3-10-5-数组去重-排序",
+            "link": "#_3-10-5-数组去重-排序",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.6 封装函数",
+            "slug": "_3-10-6-封装函数",
+            "link": "#_3-10-6-封装函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.7 高阶函数",
+            "slug": "_3-10-7-高阶函数",
+            "link": "#_3-10-7-高阶函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.8 闭包",
+            "slug": "_3-10-8-闭包",
+            "link": "#_3-10-8-闭包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.9 递归",
+            "slug": "_3-10-9-递归",
+            "link": "#_3-10-9-递归",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.10 可变参数/剩余参数",
+            "slug": "_3-10-10-可变参数-剩余参数",
+            "link": "#_3-10-10-可变参数-剩余参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.10.11 .call()  .apply()   .bind()",
+            "slug": "_3-10-11-call-apply-bind",
+            "link": "#_3-10-11-call-apply-bind",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.11 内建对象",
+        "slug": "_3-11-内建对象",
+        "link": "#_3-11-内建对象",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.11.1 解构赋值",
+            "slug": "_3-11-1-解构赋值",
+            "link": "#_3-11-1-解构赋值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.2 对象的序列化（JSON）",
+            "slug": "_3-11-2-对象的序列化-json",
+            "link": "#_3-11-2-对象的序列化-json",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.3 Map",
+            "slug": "_3-11-3-map",
+            "link": "#_3-11-3-map",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.4 Set",
+            "slug": "_3-11-4-set",
+            "link": "#_3-11-4-set",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.5 Math",
+            "slug": "_3-11-5-math",
+            "link": "#_3-11-5-math",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.6 Date",
+            "slug": "_3-11-6-date",
+            "link": "#_3-11-6-date",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.7 包装类",
+            "slug": "_3-11-7-包装类",
+            "link": "#_3-11-7-包装类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.8 字符串的方法",
+            "slug": "_3-11-8-字符串的方法",
+            "link": "#_3-11-8-字符串的方法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.9 正则表达式",
+            "slug": "_3-11-9-正则表达式",
+            "link": "#_3-11-9-正则表达式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.10 正则表达式的语法",
+            "slug": "_3-11-10-正则表达式的语法",
+            "link": "#_3-11-10-正则表达式的语法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.11.11 垃圾回收（Garbage collection）",
+            "slug": "_3-11-11-垃圾回收-garbage-collection",
+            "link": "#_3-11-11-垃圾回收-garbage-collection",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/study/coding/JS/ES%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《ES 模块化(ESM)》",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 单个导出导入",
+        "slug": "_1-1-单个导出导入",
+        "link": "#_1-1-单个导出导入",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 多个导入导出",
+        "slug": "_1-2-多个导入导出",
+        "link": "#_1-2-多个导入导出",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/JS/ES%E6%A8%A1%E5%9D%97%E5%8C%96(ESM).html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "1 Java script 简介",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 历史",
+        "slug": "_1-1-历史",
+        "link": "#_1-1-历史",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.1.1 起源",
+            "slug": "_1-1-1-起源",
+            "link": "#_1-1-1-起源",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.1.2 战争",
+            "slug": "_1-1-2-战争",
+            "link": "#_1-1-2-战争",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.1.3 转折",
+            "slug": "_1-1-3-转折",
+            "link": "#_1-1-3-转折",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "1.2 特点",
+        "slug": "_1-2-特点",
+        "link": "#_1-2-特点",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.3 解释型",
+        "slug": "_1-3-解释型",
+        "link": "#_1-3-解释型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.4 函数式编程",
+        "slug": "_1-4-函数式编程",
+        "link": "#_1-4-函数式编程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.5 单线程",
+        "slug": "_1-5-单线程",
+        "link": "#_1-5-单线程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.6 面向对象",
+        "slug": "_1-6-面向对象",
+        "link": "#_1-6-面向对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.7 扩展 ES",
+        "slug": "_1-7-扩展-es",
+        "link": "#_1-7-扩展-es",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.1 基本语法",
+        "slug": "_2-1-基本语法",
+        "link": "#_2-1-基本语法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.1 数值（Number）",
+        "slug": "_4-1-数值-number",
+        "link": "#_4-1-数值-number",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.1.1 类型转换",
+            "slug": "_4-1-1-类型转换",
+            "link": "#_4-1-1-类型转换",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.1.2 运算符",
+            "slug": "_4-1-2-运算符",
+            "link": "#_4-1-2-运算符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.1.3 代码块",
+            "slug": "_4-1-3-代码块",
+            "link": "#_4-1-3-代码块",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.2 对象",
+        "slug": "_4-2-对象",
+        "link": "#_4-2-对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.3 函数（Function）",
+        "slug": "_4-3-函数-function",
+        "link": "#_4-3-函数-function",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.3.1 windows 对象",
+            "slug": "_4-3-1-windows-对象",
+            "link": "#_4-3-1-windows-对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.2 作用域（scope）",
+            "slug": "_4-3-2-作用域-scope",
+            "link": "#_4-3-2-作用域-scope",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.3 this 隐含参数",
+            "slug": "_4-3-3-this-隐含参数",
+            "link": "#_4-3-3-this-隐含参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.3.4 严格模式",
+            "slug": "_4-3-4-严格模式",
+            "link": "#_4-3-4-严格模式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.4 面相对象编程（OOP）",
+        "slug": "_4-4-面相对象编程-oop",
+        "link": "#_4-4-面相对象编程-oop",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.4.1 类（class）",
+            "slug": "_4-4-1-类-class",
+            "link": "#_4-4-1-类-class",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.2 封装、继承和多态",
+            "slug": "_4-4-2-封装、继承和多态",
+            "link": "#_4-4-2-封装、继承和多态",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.3 对象的结构",
+            "slug": "_4-4-3-对象的结构",
+            "link": "#_4-4-3-对象的结构",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.4 旧类",
+            "slug": "_4-4-4-旧类",
+            "link": "#_4-4-4-旧类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.4.5 面向对象编程的总结",
+            "slug": "_4-4-5-面向对象编程的总结",
+            "link": "#_4-4-5-面向对象编程的总结",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.5 数组（Array）",
+        "slug": "_4-5-数组-array",
+        "link": "#_4-5-数组-array",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.5.1 数组（Array）",
+            "slug": "_4-5-1-数组-array",
+            "link": "#_4-5-1-数组-array",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.5.2 遍历数组",
+            "slug": "_4-5-2-遍历数组",
+            "link": "#_4-5-2-遍历数组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.5.3 数组的方法（非破坏性）",
+            "slug": "_4-5-3-数组的方法-非破坏性",
+            "link": "#_4-5-3-数组的方法-非破坏性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.5.4 数组的方法（破坏性）",
+            "slug": "_4-5-4-数组的方法-破坏性",
+            "link": "#_4-5-4-数组的方法-破坏性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.5.5 数组的去重",
+            "slug": "_4-5-5-数组的去重",
+            "link": "#_4-5-5-数组的去重",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.5.6 排序",
+            "slug": "_4-5-6-排序",
+            "link": "#_4-5-6-排序",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.5.7 封装函数",
+            "slug": "_4-5-7-封装函数",
+            "link": "#_4-5-7-封装函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.5.8 高阶函数",
+            "slug": "_4-5-8-高阶函数",
+            "link": "#_4-5-8-高阶函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.5.9 函数的.call()和.apply()和.bind()",
+            "slug": "_4-5-9-函数的-call-和-apply-和-bind",
+            "link": "#_4-5-9-函数的-call-和-apply-和-bind",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "5.1 if 语句",
+        "slug": "_5-1-if-语句",
+        "link": "#_5-1-if-语句",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.2 switch 语句",
+        "slug": "_5-2-switch-语句",
+        "link": "#_5-2-switch-语句",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.1 while 循环",
+        "slug": "_6-1-while-循环",
+        "link": "#_6-1-while-循环",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.2 do-while 循环",
+        "slug": "_6-2-do-while-循环",
+        "link": "#_6-2-do-while-循环",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.3 for 循环",
+        "slug": "_6-3-for-循环",
+        "link": "#_6-3-for-循环",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.4 循环嵌套",
+        "slug": "_6-4-循环嵌套",
+        "link": "#_6-4-循环嵌套",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.5 break 和 continue",
+        "slug": "_6-5-break-和-continue",
+        "link": "#_6-5-break-和-continue",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.1 解构赋值(数组)",
+        "slug": "_7-1-解构赋值-数组",
+        "link": "#_7-1-解构赋值-数组",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.2 解构赋值(对象)",
+        "slug": "_7-2-解构赋值-对象",
+        "link": "#_7-2-解构赋值-对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.3 对象的序列化（JSON）",
+        "slug": "_7-3-对象的序列化-json",
+        "link": "#_7-3-对象的序列化-json",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.3.1 JSON 可以进行深复制",
+            "slug": "_7-3-1-json-可以进行深复制",
+            "link": "#_7-3-1-json-可以进行深复制",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.4 map",
+        "slug": "_7-4-map",
+        "link": "#_7-4-map",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.5 Set",
+        "slug": "_7-5-set",
+        "link": "#_7-5-set",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.6 Math",
+        "slug": "_7-6-math",
+        "link": "#_7-6-math",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.7 Date",
+        "slug": "_7-7-date",
+        "link": "#_7-7-date",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.7.1 日期的格式化",
+            "slug": "_7-7-1-日期的格式化",
+            "link": "#_7-7-1-日期的格式化",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.8 包装类",
+        "slug": "_7-8-包装类",
+        "link": "#_7-8-包装类",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.8.1 字符串的方法",
+            "slug": "_7-8-1-字符串的方法",
+            "link": "#_7-8-1-字符串的方法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.9 正则表达式",
+        "slug": "_7-9-正则表达式",
+        "link": "#_7-9-正则表达式",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.9.1 正则表达式的语法",
+            "slug": "_7-9-1-正则表达式的语法",
+            "link": "#_7-9-1-正则表达式的语法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.10 垃圾回收",
+        "slug": "_7-10-垃圾回收",
+        "link": "#_7-10-垃圾回收",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8.1 DOM 简介",
+        "slug": "_8-1-dom-简介",
+        "link": "#_8-1-dom-简介",
+        "children": [
+          {
+            "level": 3,
+            "title": "8.1.1 为什么需要 DOM",
+            "slug": "_8-1-1-为什么需要-dom",
+            "link": "#_8-1-1-为什么需要-dom",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8.1.2 什么是 DOM",
+            "slug": "_8-1-2-什么是-dom",
+            "link": "#_8-1-2-什么是-dom",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8.1.3 DOM 概念",
+            "slug": "_8-1-3-dom-概念",
+            "link": "#_8-1-3-dom-概念",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "8.2 如何使用 DOM",
+        "slug": "_8-2-如何使用-dom",
+        "link": "#_8-2-如何使用-dom",
+        "children": [
+          {
+            "level": 3,
+            "title": "8.2.1 文档节点 (Document Node)",
+            "slug": "_8-2-1-文档节点-document-node",
+            "link": "#_8-2-1-文档节点-document-node",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8.2.2 元素节点（Element Node）",
+            "slug": "_8-2-2-元素节点-element-node",
+            "link": "#_8-2-2-元素节点-element-node",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8.2.3 文本节点(Text Node)",
+            "slug": "_8-2-3-文本节点-text-node",
+            "link": "#_8-2-3-文本节点-text-node",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8.2.4 属性节点 (Attr Node)",
+            "slug": "_8-2-4-属性节点-attr-node",
+            "link": "#_8-2-4-属性节点-attr-node",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "8.3 事件节点（Event Node）",
+        "slug": "_8-3-事件节点-event-node",
+        "link": "#_8-3-事件节点-event-node",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8.4 文档加载事件",
+        "slug": "_8-4-文档加载事件",
+        "link": "#_8-4-文档加载事件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8.5 Dom 的修改",
+        "slug": "_8-5-dom-的修改",
+        "link": "#_8-5-dom-的修改",
+        "children": [
+          {
+            "level": 3,
+            "title": "8.5.1 节点的克隆(cloneNode )",
+            "slug": "_8-5-1-节点的克隆-clonenode",
+            "link": "#_8-5-1-节点的克隆-clonenode",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "8.6 修改 CSS 样式",
+        "slug": "_8-6-修改-css-样式",
+        "link": "#_8-6-修改-css-样式",
+        "children": [
+          {
+            "level": 3,
+            "title": "8.6.1 读取样式",
+            "slug": "_8-6-1-读取样式",
+            "link": "#_8-6-1-读取样式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8.6.2 操作 class 类改变 CSS",
+            "slug": "_8-6-2-操作-class-类改变-css",
+            "link": "#_8-6-2-操作-class-类改变-css",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "8.7 事件对象",
+        "slug": "_8-7-事件对象",
+        "link": "#_8-7-事件对象",
+        "children": [
+          {
+            "level": 3,
+            "title": "8.7.1 不同的事件对象和事件的冒泡（bubble）",
+            "slug": "_8-7-1-不同的事件对象和事件的冒泡-bubble",
+            "link": "#_8-7-1-不同的事件对象和事件的冒泡-bubble",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8.7.2 事件的委派",
+            "slug": "_8-7-2-事件的委派",
+            "link": "#_8-7-2-事件的委派",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8.7.3 事件的捕获",
+            "slug": "_8-7-3-事件的捕获",
+            "link": "#_8-7-3-事件的捕获",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "9.1 Navigator",
+        "slug": "_9-1-navigator",
+        "link": "#_9-1-navigator",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9.2 Location",
+        "slug": "_9-2-location",
+        "link": "#_9-2-location",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9.3 History",
+        "slug": "_9-3-history",
+        "link": "#_9-3-history",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9.4 定时器",
+        "slug": "_9-4-定时器",
+        "link": "#_9-4-定时器",
+        "children": [
+          {
+            "level": 3,
+            "title": "9.4.1 事件循环(event loop)",
+            "slug": "_9-4-1-事件循环-event-loop",
+            "link": "#_9-4-1-事件循环-event-loop",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/study/coding/JS/JavaScript.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JavaScript思维导图",
+    "headers": [
+      {
+        "level": 2,
+        "title": "2 基本语法",
+        "slug": "_2-基本语法",
+        "link": "#_2-基本语法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3 字面量和变量",
+        "slug": "_3-字面量和变量",
+        "link": "#_3-字面量和变量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4 数据类型",
+        "slug": "_4-数据类型",
+        "link": "#_4-数据类型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5 流程控制语句",
+        "slug": "_5-流程控制语句",
+        "link": "#_5-流程控制语句",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6 循环语句",
+        "slug": "_6-循环语句",
+        "link": "#_6-循环语句",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/JS/JavaScript%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JS",
     "headers": [],
-    "path": "/study/coding/HTML/%E8%A1%A8%E6%A0%BC%E5%92%8C%E9%AA%8C%E8%AF%81.html",
+    "path": "/study/coding/JS/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《ES 基础之 Web APIs(DOM，BOM)》",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 为什么需要 DOM",
+        "slug": "_1-1-为什么需要-dom",
+        "link": "#_1-1-为什么需要-dom",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 什么是 DOM",
+        "slug": "_1-2-什么是-dom",
+        "link": "#_1-2-什么是-dom",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.3 DOM 概念",
+        "slug": "_1-3-dom-概念",
+        "link": "#_1-3-dom-概念",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.3.1 节点（Node）",
+            "slug": "_1-3-1-节点-node",
+            "link": "#_1-3-1-节点-node",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "1.4 Dom 的修改",
+        "slug": "_1-4-dom-的修改",
+        "link": "#_1-4-dom-的修改",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/JS/Web%20APIs(DOM%EF%BC%8CBOM).html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《JS常用方法》",
+    "headers": [],
+    "path": "/study/coding/JS/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1991,1317 +4808,67 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "1 JS的简介",
+    "title": "《git的使用》",
     "headers": [
       {
         "level": 2,
-        "title": "1.1 JS的概念",
-        "slug": "_1-1-js的概念",
-        "link": "#_1-1-js的概念",
+        "title": "3.1 设置用户名与邮箱（用户标识，必要）",
+        "slug": "_3-1-设置用户名与邮箱-用户标识-必要",
+        "link": "#_3-1-设置用户名与邮箱-用户标识-必要",
         "children": []
       },
       {
         "level": 2,
-        "title": "2.1 2.1引入方式",
-        "slug": "_2-1-2-1引入方式",
-        "link": "#_2-1-2-1引入方式",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.1.1 行内",
-            "slug": "_2-1-1-行内",
-            "link": "#_2-1-1-行内",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.1.2 内部",
-            "slug": "_2-1-2-内部",
-            "link": "#_2-1-2-内部",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.1.3 外部",
-            "slug": "_2-1-3-外部",
-            "link": "#_2-1-3-外部",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.2 注释和结束符",
-        "slug": "_2-2-注释和结束符",
-        "link": "#_2-2-注释和结束符",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.2.1 单行注释",
-            "slug": "_2-2-1-单行注释",
-            "link": "#_2-2-1-单行注释",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.2 多行注释",
-            "slug": "_2-2-2-多行注释",
-            "link": "#_2-2-2-多行注释",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.3 结束符",
-        "slug": "_2-3-结束符",
-        "link": "#_2-3-结束符",
+        "title": "4.1 工作流程",
+        "slug": "_4-1-工作流程",
+        "link": "#_4-1-工作流程",
         "children": []
       },
       {
         "level": 2,
-        "title": "2.4 大小写",
-        "slug": "_2-4-大小写",
-        "link": "#_2-4-大小写",
+        "title": "5.1 11.1、创建工作目录与常用指令",
+        "slug": "_5-1-11-1、创建工作目录与常用指令",
+        "link": "#_5-1-11-1、创建工作目录与常用指令",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.1.1 本地仓库搭建",
+            "slug": "_5-1-1-本地仓库搭建",
+            "link": "#_5-1-1-本地仓库搭建",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.1.2 克隆远程仓库",
+            "slug": "_5-1-2-克隆远程仓库",
+            "link": "#_5-1-2-克隆远程仓库",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "6.1 文件的四种状态",
+        "slug": "_6-1-文件的四种状态",
+        "link": "#_6-1-文件的四种状态",
         "children": []
       },
       {
         "level": 2,
-        "title": "2.5 忽略空格",
-        "slug": "_2-5-忽略空格",
-        "link": "#_2-5-忽略空格",
+        "title": "6.2 查看文件状态",
+        "slug": "_6-2-查看文件状态",
+        "link": "#_6-2-查看文件状态",
         "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.6 输入和输出",
-        "slug": "_2-6-输入和输出",
-        "link": "#_2-6-输入和输出",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.6.1 输出",
-            "slug": "_2-6-1-输出",
-            "link": "#_2-6-1-输出",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.6.2 输入",
-            "slug": "_2-6-2-输入",
-            "link": "#_2-6-2-输入",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.7 字面量",
-        "slug": "_2-7-字面量",
-        "link": "#_2-7-字面量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.1 变量",
-        "slug": "_3-1-变量",
-        "link": "#_3-1-变量",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.1.1 声明变量",
-            "slug": "_3-1-1-声明变量",
-            "link": "#_3-1-1-声明变量",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.2 变量赋值",
-            "slug": "_3-1-2-变量赋值",
-            "link": "#_3-1-2-变量赋值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.3 变量名命名规则",
-            "slug": "_3-1-3-变量名命名规则",
-            "link": "#_3-1-3-变量名命名规则",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.2 常量",
-        "slug": "_3-2-常量",
-        "link": "#_3-2-常量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.3 数据类型",
-        "slug": "_3-3-数据类型",
-        "link": "#_3-3-数据类型",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.3.1 基本数据类型",
-            "slug": "_3-3-1-基本数据类型",
-            "link": "#_3-3-1-基本数据类型",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.4 类型转换",
-        "slug": "_3-4-类型转换",
-        "link": "#_3-4-类型转换",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.4.1 显式转换",
-            "slug": "_3-4-1-显式转换",
-            "link": "#_3-4-1-显式转换",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.5 运算符",
-        "slug": "_3-5-运算符",
-        "link": "#_3-5-运算符",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.5.1 算术运算符",
-            "slug": "_3-5-1-算术运算符",
-            "link": "#_3-5-1-算术运算符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.5.2 赋值运算符",
-            "slug": "_3-5-2-赋值运算符",
-            "link": "#_3-5-2-赋值运算符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.5.3 一元的±",
-            "slug": "_3-5-3-一元的±",
-            "link": "#_3-5-3-一元的±",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.5.4 自增自减运算符  ++  --",
-            "slug": "_3-5-4-自增自减运算符",
-            "link": "#_3-5-4-自增自减运算符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.5.5 逻辑运算符",
-            "slug": "_3-5-5-逻辑运算符",
-            "link": "#_3-5-5-逻辑运算符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.5.6 比较运算符",
-            "slug": "_3-5-6-比较运算符",
-            "link": "#_3-5-6-比较运算符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.5.7 运算符优先级",
-            "slug": "_3-5-7-运算符优先级",
-            "link": "#_3-5-7-运算符优先级",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.6 语句",
-        "slug": "_3-6-语句",
-        "link": "#_3-6-语句",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.6.1 表达式和语句",
-            "slug": "_3-6-1-表达式和语句",
-            "link": "#_3-6-1-表达式和语句",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.6.2 分支语句",
-            "slug": "_3-6-2-分支语句",
-            "link": "#_3-6-2-分支语句",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.6.3 循环语句",
-            "slug": "_3-6-3-循环语句",
-            "link": "#_3-6-3-循环语句",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.7 对象",
-        "slug": "_3-7-对象",
-        "link": "#_3-7-对象",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.7.1 对象的创建，添加，读取",
-            "slug": "_3-7-1-对象的创建-添加-读取",
-            "link": "#_3-7-1-对象的创建-添加-读取",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.7.2 属性名字和属性值",
-            "slug": "_3-7-2-属性名字和属性值",
-            "link": "#_3-7-2-属性名字和属性值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.7.3 typeof  和 in 运算符",
-            "slug": "_3-7-3-typeof-和-in-运算符",
-            "link": "#_3-7-3-typeof-和-in-运算符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.7.4 枚举对象的属性",
-            "slug": "_3-7-4-枚举对象的属性",
-            "link": "#_3-7-4-枚举对象的属性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.7.5 可变类型",
-            "slug": "_3-7-5-可变类型",
-            "link": "#_3-7-5-可变类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.7.6 变量和对象",
-            "slug": "_3-7-6-变量和对象",
-            "link": "#_3-7-6-变量和对象",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.8 面相对象编程（OOP）",
-        "slug": "_3-8-面相对象编程-oop",
-        "link": "#_3-8-面相对象编程-oop",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.8.1 类（class）",
-            "slug": "_3-8-1-类-class",
-            "link": "#_3-8-1-类-class",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.8.2 封装、继承和多态",
-            "slug": "_3-8-2-封装、继承和多态",
-            "link": "#_3-8-2-封装、继承和多态",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.8.3 对象的结构",
-            "slug": "_3-8-3-对象的结构",
-            "link": "#_3-8-3-对象的结构",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.9 函数（Function）",
-        "slug": "_3-9-函数-function",
-        "link": "#_3-9-函数-function",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.9.1 函数的基本概况",
-            "slug": "_3-9-1-函数的基本概况",
-            "link": "#_3-9-1-函数的基本概况",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.2 函数定义的方式",
-            "slug": "_3-9-2-函数定义的方式",
-            "link": "#_3-9-2-函数定义的方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.3 函数的参数",
-            "slug": "_3-9-3-函数的参数",
-            "link": "#_3-9-3-函数的参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.4 函数的返回值",
-            "slug": "_3-9-4-函数的返回值",
-            "link": "#_3-9-4-函数的返回值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.5 windows 对象",
-            "slug": "_3-9-5-windows-对象",
-            "link": "#_3-9-5-windows-对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.6 变量和函数的提升",
-            "slug": "_3-9-6-变量和函数的提升",
-            "link": "#_3-9-6-变量和函数的提升",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.7 作用域（scope）",
-            "slug": "_3-9-7-作用域-scope",
-            "link": "#_3-9-7-作用域-scope",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.8 this 隐含参数",
-            "slug": "_3-9-8-this-隐含参数",
-            "link": "#_3-9-8-this-隐含参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.9.9 严格模式",
-            "slug": "_3-9-9-严格模式",
-            "link": "#_3-9-9-严格模式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.10 数组（Array）",
-        "slug": "_3-10-数组-array",
-        "link": "#_3-10-数组-array",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.10.1 数组的概况",
-            "slug": "_3-10-1-数组的概况",
-            "link": "#_3-10-1-数组的概况",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.2 遍历数组",
-            "slug": "_3-10-2-遍历数组",
-            "link": "#_3-10-2-遍历数组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.3 数组的方法",
-            "slug": "_3-10-3-数组的方法",
-            "link": "#_3-10-3-数组的方法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.4 数组的拷贝",
-            "slug": "_3-10-4-数组的拷贝",
-            "link": "#_3-10-4-数组的拷贝",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.5 数组去重，排序",
-            "slug": "_3-10-5-数组去重-排序",
-            "link": "#_3-10-5-数组去重-排序",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.6 封装函数",
-            "slug": "_3-10-6-封装函数",
-            "link": "#_3-10-6-封装函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.7 高阶函数",
-            "slug": "_3-10-7-高阶函数",
-            "link": "#_3-10-7-高阶函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.8 闭包",
-            "slug": "_3-10-8-闭包",
-            "link": "#_3-10-8-闭包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.9 递归",
-            "slug": "_3-10-9-递归",
-            "link": "#_3-10-9-递归",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.10 可变参数/剩余参数",
-            "slug": "_3-10-10-可变参数-剩余参数",
-            "link": "#_3-10-10-可变参数-剩余参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.10.11 .call()  .apply()   .bind()",
-            "slug": "_3-10-11-call-apply-bind",
-            "link": "#_3-10-11-call-apply-bind",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.11 内建对象",
-        "slug": "_3-11-内建对象",
-        "link": "#_3-11-内建对象",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.11.1 解构赋值",
-            "slug": "_3-11-1-解构赋值",
-            "link": "#_3-11-1-解构赋值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.2 对象的序列化（JSON）",
-            "slug": "_3-11-2-对象的序列化-json",
-            "link": "#_3-11-2-对象的序列化-json",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.3 Map",
-            "slug": "_3-11-3-map",
-            "link": "#_3-11-3-map",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.4 Set",
-            "slug": "_3-11-4-set",
-            "link": "#_3-11-4-set",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.5 Math",
-            "slug": "_3-11-5-math",
-            "link": "#_3-11-5-math",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.6 Date",
-            "slug": "_3-11-6-date",
-            "link": "#_3-11-6-date",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.7 包装类",
-            "slug": "_3-11-7-包装类",
-            "link": "#_3-11-7-包装类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.8 字符串的方法",
-            "slug": "_3-11-8-字符串的方法",
-            "link": "#_3-11-8-字符串的方法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.9 正则表达式",
-            "slug": "_3-11-9-正则表达式",
-            "link": "#_3-11-9-正则表达式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.10 正则表达式的语法",
-            "slug": "_3-11-10-正则表达式的语法",
-            "link": "#_3-11-10-正则表达式的语法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.11.11 垃圾回收（Garbage collection）",
-            "slug": "_3-11-11-垃圾回收-garbage-collection",
-            "link": "#_3-11-11-垃圾回收-garbage-collection",
-            "children": []
-          }
-        ]
       }
     ],
-    "path": "/study/coding/JS/ES%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5.html",
+    "path": "/study/coding/git/Git.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "1 语法",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 单个导出导入",
-        "slug": "_1-1-单个导出导入",
-        "link": "#_1-1-单个导出导入",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.2 多个导入导出",
-        "slug": "_1-2-多个导入导出",
-        "link": "#_1-2-多个导入导出",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/JS/ES%E6%A8%A1%E5%9D%97%E5%8C%96(ESM).html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 Java script 简介",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 历史",
-        "slug": "_1-1-历史",
-        "link": "#_1-1-历史",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.1.1 起源",
-            "slug": "_1-1-1-起源",
-            "link": "#_1-1-1-起源",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.1.2 战争",
-            "slug": "_1-1-2-战争",
-            "link": "#_1-1-2-战争",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.1.3 转折",
-            "slug": "_1-1-3-转折",
-            "link": "#_1-1-3-转折",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "1.2 特点",
-        "slug": "_1-2-特点",
-        "link": "#_1-2-特点",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.3 解释型",
-        "slug": "_1-3-解释型",
-        "link": "#_1-3-解释型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.4 函数式编程",
-        "slug": "_1-4-函数式编程",
-        "link": "#_1-4-函数式编程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.5 单线程",
-        "slug": "_1-5-单线程",
-        "link": "#_1-5-单线程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.6 面向对象",
-        "slug": "_1-6-面向对象",
-        "link": "#_1-6-面向对象",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.7 扩展 ES",
-        "slug": "_1-7-扩展-es",
-        "link": "#_1-7-扩展-es",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.1 基本语法",
-        "slug": "_2-1-基本语法",
-        "link": "#_2-1-基本语法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.1 数值（Number）",
-        "slug": "_4-1-数值-number",
-        "link": "#_4-1-数值-number",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.1.1 类型转换",
-            "slug": "_4-1-1-类型转换",
-            "link": "#_4-1-1-类型转换",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.1.2 运算符",
-            "slug": "_4-1-2-运算符",
-            "link": "#_4-1-2-运算符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.1.3 代码块",
-            "slug": "_4-1-3-代码块",
-            "link": "#_4-1-3-代码块",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.2 对象",
-        "slug": "_4-2-对象",
-        "link": "#_4-2-对象",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.3 函数（Function）",
-        "slug": "_4-3-函数-function",
-        "link": "#_4-3-函数-function",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.3.1 windows 对象",
-            "slug": "_4-3-1-windows-对象",
-            "link": "#_4-3-1-windows-对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.3.2 作用域（scope）",
-            "slug": "_4-3-2-作用域-scope",
-            "link": "#_4-3-2-作用域-scope",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.3.3 this 隐含参数",
-            "slug": "_4-3-3-this-隐含参数",
-            "link": "#_4-3-3-this-隐含参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.3.4 严格模式",
-            "slug": "_4-3-4-严格模式",
-            "link": "#_4-3-4-严格模式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.4 面相对象编程（OOP）",
-        "slug": "_4-4-面相对象编程-oop",
-        "link": "#_4-4-面相对象编程-oop",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.4.1 类（class）",
-            "slug": "_4-4-1-类-class",
-            "link": "#_4-4-1-类-class",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.2 封装、继承和多态",
-            "slug": "_4-4-2-封装、继承和多态",
-            "link": "#_4-4-2-封装、继承和多态",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.3 对象的结构",
-            "slug": "_4-4-3-对象的结构",
-            "link": "#_4-4-3-对象的结构",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.4 旧类",
-            "slug": "_4-4-4-旧类",
-            "link": "#_4-4-4-旧类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.5 面向对象编程的总结",
-            "slug": "_4-4-5-面向对象编程的总结",
-            "link": "#_4-4-5-面向对象编程的总结",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.5 数组（Array）",
-        "slug": "_4-5-数组-array",
-        "link": "#_4-5-数组-array",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.5.1 数组（Array）",
-            "slug": "_4-5-1-数组-array",
-            "link": "#_4-5-1-数组-array",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.5.2 遍历数组",
-            "slug": "_4-5-2-遍历数组",
-            "link": "#_4-5-2-遍历数组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.5.3 数组的方法（非破坏性）",
-            "slug": "_4-5-3-数组的方法-非破坏性",
-            "link": "#_4-5-3-数组的方法-非破坏性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.5.4 数组的方法（破坏性）",
-            "slug": "_4-5-4-数组的方法-破坏性",
-            "link": "#_4-5-4-数组的方法-破坏性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.5.5 数组的去重",
-            "slug": "_4-5-5-数组的去重",
-            "link": "#_4-5-5-数组的去重",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.5.6 排序",
-            "slug": "_4-5-6-排序",
-            "link": "#_4-5-6-排序",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.5.7 封装函数",
-            "slug": "_4-5-7-封装函数",
-            "link": "#_4-5-7-封装函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.5.8 高阶函数",
-            "slug": "_4-5-8-高阶函数",
-            "link": "#_4-5-8-高阶函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.5.9 函数的.call()和.apply()和.bind()",
-            "slug": "_4-5-9-函数的-call-和-apply-和-bind",
-            "link": "#_4-5-9-函数的-call-和-apply-和-bind",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "5.1 if 语句",
-        "slug": "_5-1-if-语句",
-        "link": "#_5-1-if-语句",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.2 switch 语句",
-        "slug": "_5-2-switch-语句",
-        "link": "#_5-2-switch-语句",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.1 while 循环",
-        "slug": "_6-1-while-循环",
-        "link": "#_6-1-while-循环",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.2 do-while 循环",
-        "slug": "_6-2-do-while-循环",
-        "link": "#_6-2-do-while-循环",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.3 for 循环",
-        "slug": "_6-3-for-循环",
-        "link": "#_6-3-for-循环",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.4 循环嵌套",
-        "slug": "_6-4-循环嵌套",
-        "link": "#_6-4-循环嵌套",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.5 break 和 continue",
-        "slug": "_6-5-break-和-continue",
-        "link": "#_6-5-break-和-continue",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.1 解构赋值(数组)",
-        "slug": "_7-1-解构赋值-数组",
-        "link": "#_7-1-解构赋值-数组",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.2 解构赋值(对象)",
-        "slug": "_7-2-解构赋值-对象",
-        "link": "#_7-2-解构赋值-对象",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.3 对象的序列化（JSON）",
-        "slug": "_7-3-对象的序列化-json",
-        "link": "#_7-3-对象的序列化-json",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.3.1 JSON 可以进行深复制",
-            "slug": "_7-3-1-json-可以进行深复制",
-            "link": "#_7-3-1-json-可以进行深复制",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.4 map",
-        "slug": "_7-4-map",
-        "link": "#_7-4-map",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.5 Set",
-        "slug": "_7-5-set",
-        "link": "#_7-5-set",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.6 Math",
-        "slug": "_7-6-math",
-        "link": "#_7-6-math",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.7 Date",
-        "slug": "_7-7-date",
-        "link": "#_7-7-date",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.7.1 日期的格式化",
-            "slug": "_7-7-1-日期的格式化",
-            "link": "#_7-7-1-日期的格式化",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.8 包装类",
-        "slug": "_7-8-包装类",
-        "link": "#_7-8-包装类",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.8.1 字符串的方法",
-            "slug": "_7-8-1-字符串的方法",
-            "link": "#_7-8-1-字符串的方法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.9 正则表达式",
-        "slug": "_7-9-正则表达式",
-        "link": "#_7-9-正则表达式",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.9.1 正则表达式的语法",
-            "slug": "_7-9-1-正则表达式的语法",
-            "link": "#_7-9-1-正则表达式的语法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.10 垃圾回收",
-        "slug": "_7-10-垃圾回收",
-        "link": "#_7-10-垃圾回收",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.1 DOM 简介",
-        "slug": "_8-1-dom-简介",
-        "link": "#_8-1-dom-简介",
-        "children": [
-          {
-            "level": 3,
-            "title": "8.1.1 为什么需要 DOM",
-            "slug": "_8-1-1-为什么需要-dom",
-            "link": "#_8-1-1-为什么需要-dom",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8.1.2 什么是 DOM",
-            "slug": "_8-1-2-什么是-dom",
-            "link": "#_8-1-2-什么是-dom",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8.1.3 DOM 概念",
-            "slug": "_8-1-3-dom-概念",
-            "link": "#_8-1-3-dom-概念",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "8.2 如何使用 DOM",
-        "slug": "_8-2-如何使用-dom",
-        "link": "#_8-2-如何使用-dom",
-        "children": [
-          {
-            "level": 3,
-            "title": "8.2.1 文档节点 (Document Node)",
-            "slug": "_8-2-1-文档节点-document-node",
-            "link": "#_8-2-1-文档节点-document-node",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8.2.2 元素节点（Element Node）",
-            "slug": "_8-2-2-元素节点-element-node",
-            "link": "#_8-2-2-元素节点-element-node",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8.2.3 文本节点(Text Node)",
-            "slug": "_8-2-3-文本节点-text-node",
-            "link": "#_8-2-3-文本节点-text-node",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8.2.4 属性节点 (Attr Node)",
-            "slug": "_8-2-4-属性节点-attr-node",
-            "link": "#_8-2-4-属性节点-attr-node",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "8.3 事件节点（Event Node）",
-        "slug": "_8-3-事件节点-event-node",
-        "link": "#_8-3-事件节点-event-node",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.4 文档加载事件",
-        "slug": "_8-4-文档加载事件",
-        "link": "#_8-4-文档加载事件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.5 Dom 的修改",
-        "slug": "_8-5-dom-的修改",
-        "link": "#_8-5-dom-的修改",
-        "children": [
-          {
-            "level": 3,
-            "title": "8.5.1 节点的克隆(cloneNode )",
-            "slug": "_8-5-1-节点的克隆-clonenode",
-            "link": "#_8-5-1-节点的克隆-clonenode",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "8.6 修改 CSS 样式",
-        "slug": "_8-6-修改-css-样式",
-        "link": "#_8-6-修改-css-样式",
-        "children": [
-          {
-            "level": 3,
-            "title": "8.6.1 读取样式",
-            "slug": "_8-6-1-读取样式",
-            "link": "#_8-6-1-读取样式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8.6.2 操作 class 类改变 CSS",
-            "slug": "_8-6-2-操作-class-类改变-css",
-            "link": "#_8-6-2-操作-class-类改变-css",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "8.7 事件对象",
-        "slug": "_8-7-事件对象",
-        "link": "#_8-7-事件对象",
-        "children": [
-          {
-            "level": 3,
-            "title": "8.7.1 不同的事件对象和事件的冒泡（bubble）",
-            "slug": "_8-7-1-不同的事件对象和事件的冒泡-bubble",
-            "link": "#_8-7-1-不同的事件对象和事件的冒泡-bubble",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8.7.2 事件的委派",
-            "slug": "_8-7-2-事件的委派",
-            "link": "#_8-7-2-事件的委派",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8.7.3 事件的捕获",
-            "slug": "_8-7-3-事件的捕获",
-            "link": "#_8-7-3-事件的捕获",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "9.1 Navigator",
-        "slug": "_9-1-navigator",
-        "link": "#_9-1-navigator",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9.2 Location",
-        "slug": "_9-2-location",
-        "link": "#_9-2-location",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9.3 History",
-        "slug": "_9-3-history",
-        "link": "#_9-3-history",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9.4 定时器",
-        "slug": "_9-4-定时器",
-        "link": "#_9-4-定时器",
-        "children": [
-          {
-            "level": 3,
-            "title": "9.4.1 事件循环(event loop)",
-            "slug": "_9-4-1-事件循环-event-loop",
-            "link": "#_9-4-1-事件循环-event-loop",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/study/coding/JS/JavaScript.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JavaScript思维导图",
-    "headers": [
-      {
-        "level": 2,
-        "title": "2 基本语法",
-        "slug": "_2-基本语法",
-        "link": "#_2-基本语法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3 字面量和变量",
-        "slug": "_3-字面量和变量",
-        "link": "#_3-字面量和变量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4 数据类型",
-        "slug": "_4-数据类型",
-        "link": "#_4-数据类型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5 流程控制语句",
-        "slug": "_5-流程控制语句",
-        "link": "#_5-流程控制语句",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6 循环语句",
-        "slug": "_6-循环语句",
-        "link": "#_6-循环语句",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/JS/JavaScript%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JS",
+    "title": "Git",
     "headers": [],
-    "path": "/study/coding/JS/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 DOM 简介",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 为什么需要 DOM",
-        "slug": "_1-1-为什么需要-dom",
-        "link": "#_1-1-为什么需要-dom",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.2 什么是 DOM",
-        "slug": "_1-2-什么是-dom",
-        "link": "#_1-2-什么是-dom",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.3 DOM 概念",
-        "slug": "_1-3-dom-概念",
-        "link": "#_1-3-dom-概念",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.3.1 节点（Node）",
-            "slug": "_1-3-1-节点-node",
-            "link": "#_1-3-1-节点-node",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "1.4 Dom 的修改",
-        "slug": "_1-4-dom-的修改",
-        "link": "#_1-4-dom-的修改",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/JS/Web%20APIs(DOM%EF%BC%8CBOM).html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 对象的方法（object method）",
-    "headers": [],
-    "path": "/study/coding/JS/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95.html",
+    "path": "/study/coding/git/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3320,7 +4887,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "初识Vue2 --盛夏的回眸",
+    "title": "《初识Vue2 --盛夏的回眸》",
     "headers": [
       {
         "level": 2,
@@ -3969,7 +5536,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Vue3",
+    "title": "《初识Vue3 --盛夏的炙热》",
     "headers": [
       {
         "level": 2,
@@ -4235,1444 +5802,14 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "CSS2 基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 CSS简介",
-        "slug": "_1-1-css简介",
-        "link": "#_1-1-css简介",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.2 CSS的编写位置",
-        "slug": "_1-2-css的编写位置",
-        "link": "#_1-2-css的编写位置",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.2.1 行内样式",
-            "slug": "_1-2-1-行内样式",
-            "link": "#_1-2-1-行内样式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.2.2 内部样式",
-            "slug": "_1-2-2-内部样式",
-            "link": "#_1-2-2-内部样式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.2.3 外部样式",
-            "slug": "_1-2-3-外部样式",
-            "link": "#_1-2-3-外部样式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "1.3 样式表的优先级",
-        "slug": "_1-3-样式表的优先级",
-        "link": "#_1-3-样式表的优先级",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.4 CSS语法规范",
-        "slug": "_1-4-css语法规范",
-        "link": "#_1-4-css语法规范",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.5 CSS代码风格",
-        "slug": "_1-5-css代码风格",
-        "link": "#_1-5-css代码风格",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.1 CSS基本选择器",
-        "slug": "_2-1-css基本选择器",
-        "link": "#_2-1-css基本选择器",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.1.1 通配选择器",
-            "slug": "_2-1-1-通配选择器",
-            "link": "#_2-1-1-通配选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.1.2 元素选择器",
-            "slug": "_2-1-2-元素选择器",
-            "link": "#_2-1-2-元素选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.1.3 类选择器",
-            "slug": "_2-1-3-类选择器",
-            "link": "#_2-1-3-类选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.1.4 ID选择器",
-            "slug": "_2-1-4-id选择器",
-            "link": "#_2-1-4-id选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.1.5 基本选择器总结",
-            "slug": "_2-1-5-基本选择器总结",
-            "link": "#_2-1-5-基本选择器总结",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.2 CSS复合选择器",
-        "slug": "_2-2-css复合选择器",
-        "link": "#_2-2-css复合选择器",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.2.1 交集选择器",
-            "slug": "_2-2-1-交集选择器",
-            "link": "#_2-2-1-交集选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.2 并集选择器",
-            "slug": "_2-2-2-并集选择器",
-            "link": "#_2-2-2-并集选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.3 HTML元素间的关系",
-            "slug": "_2-2-3-html元素间的关系",
-            "link": "#_2-2-3-html元素间的关系",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.4 后代选择器",
-            "slug": "_2-2-4-后代选择器",
-            "link": "#_2-2-4-后代选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.5 子代选择器",
-            "slug": "_2-2-5-子代选择器",
-            "link": "#_2-2-5-子代选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.6 兄弟选择器",
-            "slug": "_2-2-6-兄弟选择器",
-            "link": "#_2-2-6-兄弟选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.7 属性选择器",
-            "slug": "_2-2-7-属性选择器",
-            "link": "#_2-2-7-属性选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.8 伪类选择器",
-            "slug": "_2-2-8-伪类选择器",
-            "link": "#_2-2-8-伪类选择器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.9 伪元素选择器",
-            "slug": "_2-2-9-伪元素选择器",
-            "link": "#_2-2-9-伪元素选择器",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.3 选择器的优先级（权重）",
-        "slug": "_2-3-选择器的优先级-权重",
-        "link": "#_2-3-选择器的优先级-权重",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.1 层叠性",
-        "slug": "_3-1-层叠性",
-        "link": "#_3-1-层叠性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.2 继承性",
-        "slug": "_3-2-继承性",
-        "link": "#_3-2-继承性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.3 优先级",
-        "slug": "_3-3-优先级",
-        "link": "#_3-3-优先级",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.1 像素的概念",
-        "slug": "_4-1-像素的概念",
-        "link": "#_4-1-像素的概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.2 颜色的表示",
-        "slug": "_4-2-颜色的表示",
-        "link": "#_4-2-颜色的表示",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.2.1 表示方式一：颜色名",
-            "slug": "_4-2-1-表示方式一-颜色名",
-            "link": "#_4-2-1-表示方式一-颜色名",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.2.2 表示方式二：rgb 或 rgba",
-            "slug": "_4-2-2-表示方式二-rgb-或-rgba",
-            "link": "#_4-2-2-表示方式二-rgb-或-rgba",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.2.3 表示方式三：HEX 或 HEXA",
-            "slug": "_4-2-3-表示方式三-hex-或-hexa",
-            "link": "#_4-2-3-表示方式三-hex-或-hexa",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.2.4 表示方式四：HSL 或 HSLA",
-            "slug": "_4-2-4-表示方式四-hsl-或-hsla",
-            "link": "#_4-2-4-表示方式四-hsl-或-hsla",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.3 CSS字体属性",
-        "slug": "_4-3-css字体属性",
-        "link": "#_4-3-css字体属性",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.3.1 字体大小",
-            "slug": "_4-3-1-字体大小",
-            "link": "#_4-3-1-字体大小",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.3.2 字体族",
-            "slug": "_4-3-2-字体族",
-            "link": "#_4-3-2-字体族",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.3.3 字体风格",
-            "slug": "_4-3-3-字体风格",
-            "link": "#_4-3-3-字体风格",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.3.4 字体粗细",
-            "slug": "_4-3-4-字体粗细",
-            "link": "#_4-3-4-字体粗细",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.3.5 字体复合写法",
-            "slug": "_4-3-5-字体复合写法",
-            "link": "#_4-3-5-字体复合写法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.4 CSS文本属性",
-        "slug": "_4-4-css文本属性",
-        "link": "#_4-4-css文本属性",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.4.1 文本颜色",
-            "slug": "_4-4-1-文本颜色",
-            "link": "#_4-4-1-文本颜色",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.2 文本间距",
-            "slug": "_4-4-2-文本间距",
-            "link": "#_4-4-2-文本间距",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.3 文本修饰",
-            "slug": "_4-4-3-文本修饰",
-            "link": "#_4-4-3-文本修饰",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.4 文本缩进",
-            "slug": "_4-4-4-文本缩进",
-            "link": "#_4-4-4-文本缩进",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.5 文本对齐_水平",
-            "slug": "_4-4-5-文本对齐-水平",
-            "link": "#_4-4-5-文本对齐-水平",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.6 细说 font-size",
-            "slug": "_4-4-6-细说-font-size",
-            "link": "#_4-4-6-细说-font-size",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.7 行高",
-            "slug": "_4-4-7-行高",
-            "link": "#_4-4-7-行高",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.8 文本对齐_垂直",
-            "slug": "_4-4-8-文本对齐-垂直",
-            "link": "#_4-4-8-文本对齐-垂直",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.4.9 vertical-align",
-            "slug": "_4-4-9-vertical-align",
-            "link": "#_4-4-9-vertical-align",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.5 CSS列表属性",
-        "slug": "_4-5-css列表属性",
-        "link": "#_4-5-css列表属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.6 CSS表格属性",
-        "slug": "_4-6-css表格属性",
-        "link": "#_4-6-css表格属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.7 CSS背景属性",
-        "slug": "_4-7-css背景属性",
-        "link": "#_4-7-css背景属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.8 CSS鼠标属性",
-        "slug": "_4-8-css鼠标属性",
-        "link": "#_4-8-css鼠标属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.1 CSS 长度单位",
-        "slug": "_5-1-css-长度单位",
-        "link": "#_5-1-css-长度单位",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.2 元素的显示模式",
-        "slug": "_5-2-元素的显示模式",
-        "link": "#_5-2-元素的显示模式",
-        "children": [
-          {
-            "level": 3,
-            "title": "5.2.1 总结各元素的显示模式",
-            "slug": "_5-2-1-总结各元素的显示模式",
-            "link": "#_5-2-1-总结各元素的显示模式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.2.2 修改元素的显示模式",
-            "slug": "_5-2-2-修改元素的显示模式",
-            "link": "#_5-2-2-修改元素的显示模式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "5.3 盒子模型的组成",
-        "slug": "_5-3-盒子模型的组成",
-        "link": "#_5-3-盒子模型的组成",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.4 盒子内容区（content）",
-        "slug": "_5-4-盒子内容区-content",
-        "link": "#_5-4-盒子内容区-content",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.5 关于默认宽度",
-        "slug": "_5-5-关于默认宽度",
-        "link": "#_5-5-关于默认宽度",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.6 盒子内边距（padding）",
-        "slug": "_5-6-盒子内边距-padding",
-        "link": "#_5-6-盒子内边距-padding",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.7 盒子边框（border）",
-        "slug": "_5-7-盒子边框-border",
-        "link": "#_5-7-盒子边框-border",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.8 盒子外边距_margin",
-        "slug": "_5-8-盒子外边距-margin",
-        "link": "#_5-8-盒子外边距-margin",
-        "children": [
-          {
-            "level": 3,
-            "title": "5.8.1 margin 注意事项",
-            "slug": "_5-8-1-margin-注意事项",
-            "link": "#_5-8-1-margin-注意事项",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.8.2 margin 塌陷问题",
-            "slug": "_5-8-2-margin-塌陷问题",
-            "link": "#_5-8-2-margin-塌陷问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.8.3 margin 合并问题",
-            "slug": "_5-8-3-margin-合并问题",
-            "link": "#_5-8-3-margin-合并问题",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "5.9 处理内容溢出",
-        "slug": "_5-9-处理内容溢出",
-        "link": "#_5-9-处理内容溢出",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.10 隐藏元素的方式",
-        "slug": "_5-10-隐藏元素的方式",
-        "link": "#_5-10-隐藏元素的方式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.11 样式的继承",
-        "slug": "_5-11-样式的继承",
-        "link": "#_5-11-样式的继承",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.12 默认样式",
-        "slug": "_5-12-默认样式",
-        "link": "#_5-12-默认样式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.13 布局小技巧",
-        "slug": "_5-13-布局小技巧",
-        "link": "#_5-13-布局小技巧",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.14 元素之间的空白问题",
-        "slug": "_5-14-元素之间的空白问题",
-        "link": "#_5-14-元素之间的空白问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.15 行内块的幽灵空白问题",
-        "slug": "_5-15-行内块的幽灵空白问题",
-        "link": "#_5-15-行内块的幽灵空白问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.1 浮动的简介",
-        "slug": "_6-1-浮动的简介",
-        "link": "#_6-1-浮动的简介",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.2 元素浮动后的特点",
-        "slug": "_6-2-元素浮动后的特点",
-        "link": "#_6-2-元素浮动后的特点",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.3 解决浮动产生的影响",
-        "slug": "_6-3-解决浮动产生的影响",
-        "link": "#_6-3-解决浮动产生的影响",
-        "children": [
-          {
-            "level": 3,
-            "title": "6.3.1 元素浮动后会有哪些影响",
-            "slug": "_6-3-1-元素浮动后会有哪些影响",
-            "link": "#_6-3-1-元素浮动后会有哪些影响",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "6.3.2 解决浮动产生的影响（清除浮动）",
-            "slug": "_6-3-2-解决浮动产生的影响-清除浮动",
-            "link": "#_6-3-2-解决浮动产生的影响-清除浮动",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "6.4 浮动相关属性",
-        "slug": "_6-4-浮动相关属性",
-        "link": "#_6-4-浮动相关属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.1 相对定位",
-        "slug": "_7-1-相对定位",
-        "link": "#_7-1-相对定位",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.1.1 如何设置相对定位？",
-            "slug": "_7-1-1-如何设置相对定位",
-            "link": "#_7-1-1-如何设置相对定位",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.1.2 相对定位的参考点在哪里？",
-            "slug": "_7-1-2-相对定位的参考点在哪里",
-            "link": "#_7-1-2-相对定位的参考点在哪里",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.1.3 相对定位的特点：",
-            "slug": "_7-1-3-相对定位的特点",
-            "link": "#_7-1-3-相对定位的特点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.2 绝对定位",
-        "slug": "_7-2-绝对定位",
-        "link": "#_7-2-绝对定位",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.2.1 如何设置绝对定位？",
-            "slug": "_7-2-1-如何设置绝对定位",
-            "link": "#_7-2-1-如何设置绝对定位",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.2.2 绝对定位的参考点在哪里？",
-            "slug": "_7-2-2-绝对定位的参考点在哪里",
-            "link": "#_7-2-2-绝对定位的参考点在哪里",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.2.3 绝对定位元素的特点：",
-            "slug": "_7-2-3-绝对定位元素的特点",
-            "link": "#_7-2-3-绝对定位元素的特点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.3 固定定位",
-        "slug": "_7-3-固定定位",
-        "link": "#_7-3-固定定位",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.3.1 如何设置为固定定位？",
-            "slug": "_7-3-1-如何设置为固定定位",
-            "link": "#_7-3-1-如何设置为固定定位",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.3.2 固定定位的参考点在哪里？",
-            "slug": "_7-3-2-固定定位的参考点在哪里",
-            "link": "#_7-3-2-固定定位的参考点在哪里",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.3.3 固定定位元素的特点",
-            "slug": "_7-3-3-固定定位元素的特点",
-            "link": "#_7-3-3-固定定位元素的特点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.4 粘性定位",
-        "slug": "_7-4-粘性定位",
-        "link": "#_7-4-粘性定位",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.4.1 如何设置为粘性定位？",
-            "slug": "_7-4-1-如何设置为粘性定位",
-            "link": "#_7-4-1-如何设置为粘性定位",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.4.2 粘性定位的参考点在哪里？",
-            "slug": "_7-4-2-粘性定位的参考点在哪里",
-            "link": "#_7-4-2-粘性定位的参考点在哪里",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.4.3 粘性定位元素的特点",
-            "slug": "_7-4-3-粘性定位元素的特点",
-            "link": "#_7-4-3-粘性定位元素的特点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.5 定位层级",
-        "slug": "_7-5-定位层级",
-        "link": "#_7-5-定位层级",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.6 定位的特殊应用",
-        "slug": "_7-6-定位的特殊应用",
-        "link": "#_7-6-定位的特殊应用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.1 版心",
-        "slug": "_8-1-版心",
-        "link": "#_8-1-版心",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.2 常用布局名词",
-        "slug": "_8-2-常用布局名词",
-        "link": "#_8-2-常用布局名词",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.3 重置默认样式",
-        "slug": "_8-3-重置默认样式",
-        "link": "#_8-3-重置默认样式",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/CSS/CSS2%E5%9F%BA%E7%A1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 CSS3 简介",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 CSS3 概述",
-        "slug": "_1-1-css3-概述",
-        "link": "#_1-1-css3-概述",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.2 CSS3私有前缀",
-        "slug": "_1-2-css3私有前缀",
-        "link": "#_1-2-css3私有前缀",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.2.1 什么是私有前缀",
-            "slug": "_1-2-1-什么是私有前缀",
-            "link": "#_1-2-1-什么是私有前缀",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.2.2 为什么要有私有前缀",
-            "slug": "_1-2-2-为什么要有私有前缀",
-            "link": "#_1-2-2-为什么要有私有前缀",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.2.3 常见浏览器私有前缀",
-            "slug": "_1-2-3-常见浏览器私有前缀",
-            "link": "#_1-2-3-常见浏览器私有前缀",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.1 CSS3 新增长度单位",
-        "slug": "_2-1-css3-新增长度单位",
-        "link": "#_2-1-css3-新增长度单位",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.2 CSS3 新增颜色设置方式",
-        "slug": "_2-2-css3-新增颜色设置方式",
-        "link": "#_2-2-css3-新增颜色设置方式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.3 CSS3 新增选择器",
-        "slug": "_2-3-css3-新增选择器",
-        "link": "#_2-3-css3-新增选择器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.4 CSS3 新增盒模型相关属性",
-        "slug": "_2-4-css3-新增盒模型相关属性",
-        "link": "#_2-4-css3-新增盒模型相关属性",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.4.1 box-shadow 盒子阴影",
-            "slug": "_2-4-1-box-shadow-盒子阴影",
-            "link": "#_2-4-1-box-shadow-盒子阴影",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.4.2 opacity 不透明度",
-            "slug": "_2-4-2-opacity-不透明度",
-            "link": "#_2-4-2-opacity-不透明度",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.5 CSS3 新增背景属性",
-        "slug": "_2-5-css3-新增背景属性",
-        "link": "#_2-5-css3-新增背景属性",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.5.1 background-origin",
-            "slug": "_2-5-1-background-origin",
-            "link": "#_2-5-1-background-origin",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.5.2 background-clip",
-            "slug": "_2-5-2-background-clip",
-            "link": "#_2-5-2-background-clip",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.5.3 background-size",
-            "slug": "_2-5-3-background-size",
-            "link": "#_2-5-3-background-size",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.5.4 backgorund 复合属性",
-            "slug": "_2-5-4-backgorund-复合属性",
-            "link": "#_2-5-4-backgorund-复合属性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.5.5 多背景图",
-            "slug": "_2-5-5-多背景图",
-            "link": "#_2-5-5-多背景图",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.6 CSS3新增边框属性",
-        "slug": "_2-6-css3新增边框属性",
-        "link": "#_2-6-css3新增边框属性",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.6.1 边框圆角",
-            "slug": "_2-6-1-边框圆角",
-            "link": "#_2-6-1-边框圆角",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.6.2 边框外轮廓（了解）",
-            "slug": "_2-6-2-边框外轮廓-了解",
-            "link": "#_2-6-2-边框外轮廓-了解",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.7 CSS3新增文本属性",
-        "slug": "_2-7-css3新增文本属性",
-        "link": "#_2-7-css3新增文本属性",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.7.1 文本阴影",
-            "slug": "_2-7-1-文本阴影",
-            "link": "#_2-7-1-文本阴影",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.7.2 文本换行",
-            "slug": "_2-7-2-文本换行",
-            "link": "#_2-7-2-文本换行",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.7.3 文本溢出",
-            "slug": "_2-7-3-文本溢出",
-            "link": "#_2-7-3-文本溢出",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.7.4 文本修饰",
-            "slug": "_2-7-4-文本修饰",
-            "link": "#_2-7-4-文本修饰",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.7.5 文本描边",
-            "slug": "_2-7-5-文本描边",
-            "link": "#_2-7-5-文本描边",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.8 CSS3 新增渐变",
-        "slug": "_2-8-css3-新增渐变",
-        "link": "#_2-8-css3-新增渐变",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.8.1 线性渐变",
-            "slug": "_2-8-1-线性渐变",
-            "link": "#_2-8-1-线性渐变",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.8.2 径向渐变",
-            "slug": "_2-8-2-径向渐变",
-            "link": "#_2-8-2-径向渐变",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.8.3 重复渐变",
-            "slug": "_2-8-3-重复渐变",
-            "link": "#_2-8-3-重复渐变",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.9 web 字体",
-        "slug": "_2-9-web-字体",
-        "link": "#_2-9-web-字体",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.9.1 基本用法",
-            "slug": "_2-9-1-基本用法",
-            "link": "#_2-9-1-基本用法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.9.2 定制字体",
-            "slug": "_2-9-2-定制字体",
-            "link": "#_2-9-2-定制字体",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.9.3 字体图标",
-            "slug": "_2-9-3-字体图标",
-            "link": "#_2-9-3-字体图标",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.10 2D变换",
-        "slug": "_2-10-2d变换",
-        "link": "#_2-10-2d变换",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.10.1 2D位移",
-            "slug": "_2-10-1-2d位移",
-            "link": "#_2-10-1-2d位移",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.10.2 2D缩放",
-            "slug": "_2-10-2-2d缩放",
-            "link": "#_2-10-2-2d缩放",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.10.3 2D旋转",
-            "slug": "_2-10-3-2d旋转",
-            "link": "#_2-10-3-2d旋转",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.10.4 2D扭曲（了解）",
-            "slug": "_2-10-4-2d扭曲-了解",
-            "link": "#_2-10-4-2d扭曲-了解",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.10.5 多重变换",
-            "slug": "_2-10-5-多重变换",
-            "link": "#_2-10-5-多重变换",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.10.6 变换原点",
-            "slug": "_2-10-6-变换原点",
-            "link": "#_2-10-6-变换原点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.11 3D变换",
-        "slug": "_2-11-3d变换",
-        "link": "#_2-11-3d变换",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.11.1 开启3D空间",
-            "slug": "_2-11-1-开启3d空间",
-            "link": "#_2-11-1-开启3d空间",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.2 设置景深",
-            "slug": "_2-11-2-设置景深",
-            "link": "#_2-11-2-设置景深",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.3 透视点位置",
-            "slug": "_2-11-3-透视点位置",
-            "link": "#_2-11-3-透视点位置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.4 3D 位移",
-            "slug": "_2-11-4-3d-位移",
-            "link": "#_2-11-4-3d-位移",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.5 3D 旋转",
-            "slug": "_2-11-5-3d-旋转",
-            "link": "#_2-11-5-3d-旋转",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.6 3D 缩放",
-            "slug": "_2-11-6-3d-缩放",
-            "link": "#_2-11-6-3d-缩放",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.7 多重变换",
-            "slug": "_2-11-7-多重变换",
-            "link": "#_2-11-7-多重变换",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.11.8 背部可见性",
-            "slug": "_2-11-8-背部可见性",
-            "link": "#_2-11-8-背部可见性",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.12 过渡",
-        "slug": "_2-12-过渡",
-        "link": "#_2-12-过渡",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.12.1 transition-property",
-            "slug": "_2-12-1-transition-property",
-            "link": "#_2-12-1-transition-property",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.12.2 transition-duration",
-            "slug": "_2-12-2-transition-duration",
-            "link": "#_2-12-2-transition-duration",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.12.3 transition-delay",
-            "slug": "_2-12-3-transition-delay",
-            "link": "#_2-12-3-transition-delay",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.12.4 transition-timing-function",
-            "slug": "_2-12-4-transition-timing-function",
-            "link": "#_2-12-4-transition-timing-function",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.12.5 transition 复合属性",
-            "slug": "_2-12-5-transition-复合属性",
-            "link": "#_2-12-5-transition-复合属性",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.13 动画",
-        "slug": "_2-13-动画",
-        "link": "#_2-13-动画",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.13.1 什么是帧",
-            "slug": "_2-13-1-什么是帧",
-            "link": "#_2-13-1-什么是帧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.13.2 什么是关键帧",
-            "slug": "_2-13-2-什么是关键帧",
-            "link": "#_2-13-2-什么是关键帧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.13.3 动画的基本使用",
-            "slug": "_2-13-3-动画的基本使用",
-            "link": "#_2-13-3-动画的基本使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.13.4 动画的其他属性",
-            "slug": "_2-13-4-动画的其他属性",
-            "link": "#_2-13-4-动画的其他属性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.13.5 动画复合属性",
-            "slug": "_2-13-5-动画复合属性",
-            "link": "#_2-13-5-动画复合属性",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.14 多列布局",
-        "slug": "_2-14-多列布局",
-        "link": "#_2-14-多列布局",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.15 15.伸缩盒模型",
-        "slug": "_2-15-15-伸缩盒模型",
-        "link": "#_2-15-15-伸缩盒模型",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.15.1 伸缩盒模型简介",
-            "slug": "_2-15-1-伸缩盒模型简介",
-            "link": "#_2-15-1-伸缩盒模型简介",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.2 伸缩容器、伸缩项目",
-            "slug": "_2-15-2-伸缩容器、伸缩项目",
-            "link": "#_2-15-2-伸缩容器、伸缩项目",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.3 主轴与侧轴",
-            "slug": "_2-15-3-主轴与侧轴",
-            "link": "#_2-15-3-主轴与侧轴",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.4 主轴方向",
-            "slug": "_2-15-4-主轴方向",
-            "link": "#_2-15-4-主轴方向",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.5 主轴换行方式",
-            "slug": "_2-15-5-主轴换行方式",
-            "link": "#_2-15-5-主轴换行方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.6 flex-flow",
-            "slug": "_2-15-6-flex-flow",
-            "link": "#_2-15-6-flex-flow",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.7 主轴对齐方式",
-            "slug": "_2-15-7-主轴对齐方式",
-            "link": "#_2-15-7-主轴对齐方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.8 侧轴对齐方式",
-            "slug": "_2-15-8-侧轴对齐方式",
-            "link": "#_2-15-8-侧轴对齐方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.9 flex 实现水平垂直居中",
-            "slug": "_2-15-9-flex-实现水平垂直居中",
-            "link": "#_2-15-9-flex-实现水平垂直居中",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.10 伸缩性",
-            "slug": "_2-15-10-伸缩性",
-            "link": "#_2-15-10-伸缩性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.11 flex复合属性",
-            "slug": "_2-15-11-flex复合属性",
-            "link": "#_2-15-11-flex复合属性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.12 项目排序",
-            "slug": "_2-15-12-项目排序",
-            "link": "#_2-15-12-项目排序",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.15.13 单独对齐",
-            "slug": "_2-15-13-单独对齐",
-            "link": "#_2-15-13-单独对齐",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.1 媒体查询",
-        "slug": "_3-1-媒体查询",
-        "link": "#_3-1-媒体查询",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.1.1 媒体类型",
-            "slug": "_3-1-1-媒体类型",
-            "link": "#_3-1-1-媒体类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.2 媒体特性",
-            "slug": "_3-1-2-媒体特性",
-            "link": "#_3-1-2-媒体特性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.3 运算符",
-            "slug": "_3-1-3-运算符",
-            "link": "#_3-1-3-运算符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.4 常用阈值",
-            "slug": "_3-1-4-常用阈值",
-            "link": "#_3-1-4-常用阈值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.1.5 结合外部样式的用法",
-            "slug": "_3-1-5-结合外部样式的用法",
-            "link": "#_3-1-5-结合外部样式的用法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.1 什么是BFC",
-        "slug": "_4-1-什么是bfc",
-        "link": "#_4-1-什么是bfc",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.2 开启了BFC能解决什么问题",
-        "slug": "_4-2-开启了bfc能解决什么问题",
-        "link": "#_4-2-开启了bfc能解决什么问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.3 如何开启BFC",
-        "slug": "_4-3-如何开启bfc",
-        "link": "#_4-3-如何开启bfc",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/CSS/CSS3%E5%9F%BA%E7%A1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 注释",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 单行注释",
-        "slug": "_1-1-单行注释",
-        "link": "#_1-1-单行注释",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.2 块注释",
-        "slug": "_1-2-块注释",
-        "link": "#_1-2-块注释",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.1 禁止导出",
-        "slug": "_6-1-禁止导出",
-        "link": "#_6-1-禁止导出",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/CSS/Less.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "CSS",
+    "title": "纵览",
     "headers": [],
-    "path": "/study/coding/CSS/",
+    "path": "/study/history/overview/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
-    "path": "/study/coding/CSS/Tailwind.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/study/coding/CSS/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 移动端布局的基本概述",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 屏幕分辨率",
-        "slug": "_1-1-屏幕分辨率",
-        "link": "#_1-1-屏幕分辨率",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.1 vw和vh基本使用",
-        "slug": "_2-1-vw和vh基本使用",
-        "link": "#_2-1-vw和vh基本使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.2 vw布局",
-        "slug": "_2-2-vw布局",
-        "link": "#_2-2-vw布局",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.3 vh问题",
-        "slug": "_2-3-vh问题",
-        "link": "#_2-3-vh问题",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/CSS/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "菲律宾",
+    "title": "《电子地图册之东盟十国--<菲律宾>》",
     "headers": [],
     "path": "/study/history/overview/%E8%8F%B2%E5%BE%8B%E5%AE%BE.html",
     "pathLocale": "/",
@@ -5707,13 +5844,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Overview",
-    "headers": [],
-    "path": "/study/history/overview/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "分类",
     "headers": [],
     "path": "/category/",
@@ -5735,6 +5865,27 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "生活 分类",
+    "headers": [],
+    "path": "/category/%E7%94%9F%E6%B4%BB/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "阅读 分类",
+    "headers": [],
+    "path": "/category/%E9%98%85%E8%AF%BB/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "音乐 分类",
+    "headers": [],
+    "path": "/category/%E9%9F%B3%E4%B9%90/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "百科 分类",
     "headers": [],
     "path": "/category/%E7%99%BE%E7%A7%91/",
@@ -5749,6 +5900,13 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "CSS 分类",
+    "headers": [],
+    "path": "/category/css/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "HTML 分类",
     "headers": [],
     "path": "/category/html/",
@@ -5756,16 +5914,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Vue 分类",
+    "title": "JS 分类",
     "headers": [],
-    "path": "/category/vue/",
+    "path": "/category/js/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "CSS 分类",
+    "title": "Vue 分类",
     "headers": [],
-    "path": "/category/css/",
+    "path": "/category/vue/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5896,6 +6054,62 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "标签: 诗歌",
+    "headers": [],
+    "path": "/tag/%E8%AF%97%E6%AD%8C/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 海子",
+    "headers": [],
+    "path": "/tag/%E6%B5%B7%E5%AD%90/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 粤语歌曲",
+    "headers": [],
+    "path": "/tag/%E7%B2%A4%E8%AF%AD%E6%AD%8C%E6%9B%B2/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 学唱",
+    "headers": [],
+    "path": "/tag/%E5%AD%A6%E5%94%B1/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 富士山下",
+    "headers": [],
+    "path": "/tag/%E5%AF%8C%E5%A3%AB%E5%B1%B1%E4%B8%8B/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 陈奕迅",
+    "headers": [],
+    "path": "/tag/%E9%99%88%E5%A5%95%E8%BF%85/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 《现代爱情故事》",
+    "headers": [],
+    "path": "/tag/%E3%80%8A%E7%8E%B0%E4%BB%A3%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B%E3%80%8B/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 音乐知识",
+    "headers": [],
+    "path": "/tag/%E9%9F%B3%E4%B9%90%E7%9F%A5%E8%AF%86/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "标签: 光伏",
     "headers": [],
     "path": "/tag/%E5%85%89%E4%BC%8F/",
@@ -5945,9 +6159,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "标签: 歌曲",
+    "title": "标签: CSS",
     "headers": [],
-    "path": "/tag/%E6%AD%8C%E6%9B%B2/",
+    "path": "/tag/css/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: CSS2",
+    "headers": [],
+    "path": "/tag/css2/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5959,9 +6180,30 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "标签: git",
+    "title": "标签: Less",
     "headers": [],
-    "path": "/tag/git/",
+    "path": "/tag/less/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 预编译器",
+    "headers": [],
+    "path": "/tag/%E9%A2%84%E7%BC%96%E8%AF%91%E5%99%A8/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: Tailwind",
+    "headers": [],
+    "path": "/tag/tailwind/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 响应式布局",
+    "headers": [],
+    "path": "/tag/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5987,6 +6229,34 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "标签: JS",
+    "headers": [],
+    "path": "/tag/js/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: JS基础",
+    "headers": [],
+    "path": "/tag/js%E5%9F%BA%E7%A1%80/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: JS模块化",
+    "headers": [],
+    "path": "/tag/js%E6%A8%A1%E5%9D%97%E5%8C%96/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: JS方法",
+    "headers": [],
+    "path": "/tag/js%E6%96%B9%E6%B3%95/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "标签: Node",
     "headers": [],
     "path": "/tag/node/",
@@ -5994,9 +6264,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "标签: JavaScript",
+    "title": "标签: git",
     "headers": [],
-    "path": "/tag/javascript/",
+    "path": "/tag/git/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6036,20 +6306,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "标签: CSS",
-    "headers": [],
-    "path": "/tag/css/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "标签: CSS2",
-    "headers": [],
-    "path": "/tag/css2/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "标签: 电子地图册",
     "headers": [],
     "path": "/tag/%E7%94%B5%E5%AD%90%E5%9C%B0%E5%9B%BE%E5%86%8C/",
@@ -6067,6 +6323,13 @@ export const SEARCH_INDEX = [
     "title": "标签: 王骁",
     "headers": [],
     "path": "/tag/%E7%8E%8B%E9%AA%81/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: 国际政治",
+    "headers": [],
+    "path": "/tag/%E5%9B%BD%E9%99%85%E6%94%BF%E6%B2%BB/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6207,6 +6470,20 @@ export const SEARCH_INDEX = [
     "title": "Timeline",
     "headers": [],
     "path": "/en/timeline/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "随笔",
+    "headers": [],
+    "path": "/en/essay/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "随笔",
+    "headers": [],
+    "path": "/essay/",
     "pathLocale": "/",
     "extraFields": []
   }

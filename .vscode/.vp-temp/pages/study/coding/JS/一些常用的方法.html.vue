@@ -1,4 +1,6 @@
-<template><div><h1 id="_1-对象的方法-object-method" tabindex="-1"><a class="header-anchor" href="#_1-对象的方法-object-method"><span>1 对象的方法（object method）</span></a></h1>
+<template><div><p>常用的JS方法</p>
+<!-- more -->
+<h1 id="_1-对象的方法-object-method" tabindex="-1"><a class="header-anchor" href="#_1-对象的方法-object-method"><span>1 对象的方法（object method）</span></a></h1>
 <h1 id="_2-数组的方法-array-method" tabindex="-1"><a class="header-anchor" href="#_2-数组的方法-array-method"><span>2 数组的方法(Array Method)</span></a></h1>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span># Array.Prototype.toString()</span></span>
 <span class="line"><span>可以将数组转换成字符串</span></span>

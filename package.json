@@ -1,7 +1,7 @@
 {
   "name": "keanolog",
   "description": "keano的博客",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -35,7 +35,6 @@
     "vuepress-theme-hope": "2.0.0-rc.58"
   },
   "dependencies": {
-    "@vuepress/plugin-back-to-top": "^2.0.0-rc.52",
     "@vueuse/core": "^11.1.0",
     "axios": "^1.7.7",
     "keanolog": "file:"

@@ -1,15 +1,18 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
+title: 《初识Vue2 --盛夏的回眸》
+
 category:
 - 前端
 - Vue
 tags:
 - 前端
 - Vue2.0
-- 让我们变得更强大
+
 date: 2024-07-16T06:13:00
 ---
-
+Vue2.0 学习笔记
+<!-- more -->
 #  初识Vue2 --盛夏的回眸
 
 

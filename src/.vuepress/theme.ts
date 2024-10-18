@@ -11,8 +11,10 @@ const footerICP_HTML =
   </div>
 `
 
-export default hopeTheme({
+export default hopeTheme(
+  {
   hostname: "https://situ-bei.github.io/keano/",
+  // 全局默认作者
   author: {
     name: "Keano",
     url: "https://mister-hope.com",
@@ -23,6 +25,7 @@ export default hopeTheme({
   themeColor: true, // 启用主题颜色
   logo: "/logo.svg", // logo
   repo: "https://situ-bei.github.io/keano/", // github仓库
+  // 文档在仓库中的目录
   docsDir: "src", // 你可以通过在主题选项中设置如下项目，来自动为每个页面生成编辑此页链接
 
   //页面元数据：贡献者，最后修改时间，编辑链接
@@ -39,7 +42,7 @@ export default hopeTheme({
   // 图标引入地址 
   iconAssets: [
     // "fontawesome-with-brands",
-    "//at.alicdn.com/t/c/font_4705467_qdvh1bur1oj.css",
+    "//at.alicdn.com/t/c/font_4705467_yj8r9pev4wh.css",
   ],  
   iconPrefix: "iconfont ",
 
@@ -72,12 +75,17 @@ export default hopeTheme({
     end: ['Search', 'Links', 'Language', 'Outlook'],
   },
   
+  // siderbar 排序
+  // https://theme-hope.vuejs.press/zh/guide/layout/sidebar.html#%E8%BF%9B%E9%98%B6%E6%8E%A7%E5%88%B6
+  sidebarSorter: ["date-desc"],
+  
   // 博主信息
   blog: {
     name: 'Icyn',
-    avatar: '//file.mo7.cc/static/lxh_gif/lxh_71.gif',
+    avatar: '/assets/icon/avatar.jpg',
     description: '让我们变得更强。',
-    // intro: 'https://blog.mo7.cc/about/me.html',
+    intro: '//situ-bei.github.io/keano/',
+    
     medias: {
       '163Music': "https://music.163.com/#/my/m/music/playlist?id=596766562",
       // Baidu: "https://example.com",
@@ -175,9 +183,25 @@ export default hopeTheme({
   plugins: {
     // 官方博客插件
     blog: {
-      autoExcerpt: true,// 自动摘要
-    }, 
+      // 默认文章过滤器
+      filter: ({ filePathRelative, frontmatter }) => {
+        // 将标记为非文章，并且是说说的加入文章采集中，以便后续筛选
+        if (!frontmatter.article && frontmatter.essay) return true;
 
+        return true;
+      },
+      
+      // 自定义文章类型
+      type: [
+        {
+          key: "essay",
+          filter: (page) => page.frontmatter.essay === true,
+          layout: "Essay",
+          frontmatter: () => ({ title: "随笔" }),
+        },
+      ],
+    }, 
+    
     photoSwipe: false, // 官方图片预览插件，这个插件难用的 一 B
 
     // 代码块高亮 【shiki插件】
@@ -188,7 +212,7 @@ export default hopeTheme({
         dark: "one-dark-pro",
       },
       langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','js'],
-      collapsedLines: true,
+      collapsedLines: true, // 是否折叠代码行
     },
 
     // Install @waline/client before enabling it  【在启用@waline/client之前安装它 】
@@ -350,4 +374,7 @@ export default hopeTheme({
     //   plugins: ["highlight", "math", "search", "notes", "zoom"],
     // },
   },
-});
+  
+},
+{ custom: true }, // 配置自定义主题
+);

@@ -1,15 +1,15 @@
 ---
-icon: icon-studyfill
-title: "Life"
+icon: icon-shenghuo
+title: "生活"
 date: 2024-10-13
 index: false
 timeline: false
 article: false
 ---
-# 学习
+# 生活
 
-::: important  Life
-    存放一些生活碎片
+::: important  生活
+        存放一些生活碎片
 :::
 
 ---

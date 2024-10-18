@@ -1,61 +1,55 @@
 {
-  "hash": "7e2b1156",
-  "configHash": "3aa17e8d",
-  "lockfileHash": "a74e17b8",
-  "browserHash": "a38ada37",
+  "hash": "fbd5447e",
+  "configHash": "d5a50cb5",
+  "lockfileHash": "09f91f65",
+  "browserHash": "a42b56d7",
   "optimized": {
-    "@vueuse/core": {
-      "src": "../../../node_modules/@vueuse/core/index.mjs",
-      "file": "@vueuse_core.js",
-      "fileHash": "def1d252",
-      "needsInterop": false
-    },
     "@vue/devtools-api": {
       "src": "../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "24f37c44",
+      "fileHash": "3299784c",
       "needsInterop": false
     },
     "@vuepress/shared": {
       "src": "../../../node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "965e7d06",
+      "fileHash": "ba73fb0d",
       "needsInterop": false
     },
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "e38deed8",
+      "fileHash": "5e2b7bf9",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "44bdf537",
+      "fileHash": "7527e047",
       "needsInterop": false
     },
     "@moefy-canvas/theme-popper": {
       "src": "../../../node_modules/@moefy-canvas/theme-popper/dist/index.js",
       "file": "@moefy-canvas_theme-popper.js",
-      "fileHash": "2f4e6e85",
+      "fileHash": "4c5ade4b",
       "needsInterop": false
     },
     "axios": {
       "src": "../../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "5bebeea8",
+      "fileHash": "fcad66a2",
       "needsInterop": false
     },
     "store": {
       "src": "../../../node_modules/store/dist/store.legacy.js",
       "file": "store.js",
-      "fileHash": "06357053",
+      "fileHash": "1c5b412f",
       "needsInterop": true
     },
     "aplayer": {
       "src": "../../../node_modules/aplayer/dist/APlayer.min.js",
       "file": "aplayer.js",
-      "fileHash": "6dd90db9",
+      "fileHash": "a685f345",
       "needsInterop": true
     }
   },

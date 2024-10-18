@@ -1,4 +1,6 @@
-<template><div><h1 id="_1-语法" tabindex="-1"><a class="header-anchor" href="#_1-语法"><span>1 语法</span></a></h1>
+<template><div><p>ES模块化（ECMAScript Modules，简称 ESM）是 JavaScript 的官方模块系统，它在 ECMAScript 6（ES6）中被正式引入。ES模块化提供了一种标准化的方式来组织和管理代码，使得代码的复用性和可维护性大大提高。</p>
+<!-- more -->
+<h1 id="_1-语法" tabindex="-1"><a class="header-anchor" href="#_1-语法"><span>1 语法</span></a></h1>
 <h2 id="_1-1-单个导出导入" tabindex="-1"><a class="header-anchor" href="#_1-1-单个导出导入"><span>1.1 单个导出导入</span></a></h2>
 <ul>
 <li>

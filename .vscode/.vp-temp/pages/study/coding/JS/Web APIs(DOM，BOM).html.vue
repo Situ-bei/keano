@@ -1,4 +1,6 @@
-<template><div><h1 id="_1-dom-简介" tabindex="-1"><a class="header-anchor" href="#_1-dom-简介"><span>1 DOM 简介</span></a></h1>
+<template><div><p>JS 基础，web Api部分</p>
+<!-- more -->
+<h1 id="_1-dom-简介" tabindex="-1"><a class="header-anchor" href="#_1-dom-简介"><span>1 DOM 简介</span></a></h1>
 <h2 id="_1-1-为什么需要-dom" tabindex="-1"><a class="header-anchor" href="#_1-1-为什么需要-dom"><span>1.1 为什么需要 DOM</span></a></h2>
 <blockquote>
 <p>前边我们所学习的 JS 基础课程，学习了 JS 的基础知识。但是在学习过程中你会发现，似乎 JS 和网页并没有太大的关系。换句话说，我们所编写的 JS 代码，除了是写在网页中以外，并没有和网页产生任何实质的联系。如果 JS 不能操作网页，那么对于我们来说它就是一个废物，没有任何的使用价值。所以我们就需要一个新的技术，一个可以让我们使用 JS 来操作网页的技术，也就是 DOM。</p>

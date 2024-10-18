@@ -1,4 +1,6 @@
-<template><div><h1 id="_1-常见的版本控制工具" tabindex="-1"><a class="header-anchor" href="#_1-常见的版本控制工具"><span>1 常见的版本控制工具</span></a></h1>
+<template><div><p>Git 是一个分布式版本控制系统，用于跟踪计算机文件的变更，并协调多个用户之间的工作。它由 Linus Torvalds 于 2005 年创建，最初是为了更好地管理 Linux 内核的开发。Git 已经成为当今最流行的版本控制系统之一，广泛应用于软件开发和个人项目中。</p>
+<!-- more -->
+<h1 id="_1-常见的版本控制工具" tabindex="-1"><a class="header-anchor" href="#_1-常见的版本控制工具"><span>1 常见的版本控制工具</span></a></h1>
 <ul>
 <li>
 <p>主流的版本控制器有如下这些：</p>

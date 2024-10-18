@@ -1,4 +1,6 @@
-<template><div><h1 id="vue3" tabindex="-1"><a class="header-anchor" href="#vue3"><span>Vue3</span></a></h1>
+<template><div><p>Vue3.0 学习笔记</p>
+<!-- more -->
+<h1 id="vue3" tabindex="-1"><a class="header-anchor" href="#vue3"><span>Vue3</span></a></h1>
 <h2 id="_1-vue3简介" tabindex="-1"><a class="header-anchor" href="#_1-vue3简介"><span>1. Vue3简介</span></a></h2>
 <ul>
 <li>2020年9月18日，Vue.js发布3.0版本，代号：One Piece（海贼王）</li>

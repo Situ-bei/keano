@@ -1,12 +1,17 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
+title: "《预编译器之Less》"
 cssclasses:
-  - 前端
+- 前端
+- CSS
 tags:
-  - CSS
-  - Front-end
+- CSS
+- Less
+- 预编译器
 date: 2024-07-02T02:16:00
 ---
+LESS 是一种 `CSS` 预处理器，它扩展了 `CSS` 的功能，使样式表的编写更加灵活和可维护。LESS 通过引入变量、嵌套规则、混合（mixins）、函数等高级特性，简化了复杂的样式表编写过程。编写的 LESS 代码最终会被编译成标准的 `CSS` 代码，浏览器可以直接解析和应用。
+<!-- more -->
 # 1 注释
 ## 1.1 单行注释
 - 语法：`//` 注释内容
