@@ -166,13 +166,53 @@ const LoadMusicList = async () => {
   
   console.log("url",musicListURL);
   
-  if(localMusicList) {
-    console.log("有本地列表",localMusicList);
+  // if(localMusicList) {
+  //   console.log("有本地列表",localMusicList);
     
-    GlobalMusicList = localMusicList;
-    creatAplayer()
-  }else{
-    await axios({
+  //   GlobalMusicList = localMusicList;
+  //   creatAplayer()
+  // }else{
+  //   await axios({
+  //     method: 'get',
+  //     //插件作者的歌单
+  //     // url: '//file.mo7.cc/music/list.json',
+  //     // 自己的歌单
+  //     url: musicListURL,
+  //     params: {},
+  //   }).then((response) => {
+  //     console.log('获取音乐数据,判断之前',response.data.message);
+  //     if (response.data.message == '请求次数已达上限，请明天再试') {
+  //       alert('音乐API请求次数已达上限，请明天再试');
+  //       store.remove('localMusicList');
+  //       musicListURL = '//api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r'
+  //       alert('赋值');
+  //       LoadMusicList( )
+  //       // return;
+  //     }
+      
+  //     const listData = response.data;
+  //     if (listData && listData.length > 0) {
+        
+        
+  //       store.set('localMusicList', listData);
+        
+        
+  //       GlobalMusicList = listData;
+  //       console.log("又获取列表了,进入列表判断",response);
+        
+  //       // const el = document.getElementById('GlobalAPlayer');
+
+        
+  //     }
+  //     // console.log('加载音乐列表', GlobalMusicList);
+  //     // callback && callback();
+  //     creatAplayer()
+  //   }).catch((error) => {
+  //     console.error('加载音乐列表失败:', error);
+  //   });
+  // }
+
+  await axios({
       method: 'get',
       //插件作者的歌单
       // url: '//file.mo7.cc/music/list.json',
@@ -183,20 +223,14 @@ const LoadMusicList = async () => {
       console.log('获取音乐数据,判断之前',response.data.message);
       if (response.data.message == '请求次数已达上限，请明天再试') {
         alert('音乐API请求次数已达上限，请明天再试');
-        store.remove('localMusicList');
+        // store.remove('localMusicList');
         musicListURL = '//api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r'
         alert('赋值');
         LoadMusicList( )
         // return;
       }
-      
       const listData = response.data;
       if (listData && listData.length > 0) {
-        
-        
-        store.set('localMusicList', listData);
-        
-        
         GlobalMusicList = listData;
         console.log("又获取列表了,进入列表判断",response);
         
@@ -210,8 +244,6 @@ const LoadMusicList = async () => {
     }).catch((error) => {
       console.error('加载音乐列表失败:', error);
     });
-  }
-
 };
 
 // let options = {

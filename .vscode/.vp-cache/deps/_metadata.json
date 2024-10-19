@@ -1,73 +1,73 @@
 {
-  "hash": "df355c0c",
-  "configHash": "b284e1bb",
+  "hash": "dfaaf2ac",
+  "configHash": "9a8be2b0",
   "lockfileHash": "09f91f65",
-  "browserHash": "9228fd27",
+  "browserHash": "e36fff07",
   "optimized": {
     "markmap-lib": {
       "src": "../../../node_modules/markmap-lib/dist/browser/index.mjs",
       "file": "markmap-lib.js",
-      "fileHash": "73b897fb",
+      "fileHash": "920bfaad",
       "needsInterop": false
     },
     "markmap-toolbar": {
       "src": "../../../node_modules/markmap-toolbar/dist/index.mjs",
       "file": "markmap-toolbar.js",
-      "fileHash": "cdcdb985",
+      "fileHash": "eb908f25",
       "needsInterop": false
     },
     "markmap-view": {
       "src": "../../../node_modules/markmap-view/dist/index.js",
       "file": "markmap-view.js",
-      "fileHash": "9fccbb78",
+      "fileHash": "371e6ccf",
       "needsInterop": false
     },
     "@vue/devtools-api": {
       "src": "../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "cb6891fc",
+      "fileHash": "aa10a9bd",
       "needsInterop": false
     },
     "@vuepress/shared": {
       "src": "../../../node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "e5017908",
+      "fileHash": "22c0a374",
       "needsInterop": false
     },
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "ed210213",
+      "fileHash": "a3b057cd",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "df787dfd",
+      "fileHash": "df825389",
       "needsInterop": false
     },
     "@moefy-canvas/theme-popper": {
       "src": "../../../node_modules/@moefy-canvas/theme-popper/dist/index.js",
       "file": "@moefy-canvas_theme-popper.js",
-      "fileHash": "a99309d7",
+      "fileHash": "7c0b63f9",
       "needsInterop": false
     },
     "axios": {
       "src": "../../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "aa0153a6",
+      "fileHash": "793ee6f0",
       "needsInterop": false
     },
     "store": {
       "src": "../../../node_modules/store/dist/store.legacy.js",
       "file": "store.js",
-      "fileHash": "73a6b6c2",
+      "fileHash": "651e2f98",
       "needsInterop": true
     },
     "aplayer": {
       "src": "../../../node_modules/aplayer/dist/APlayer.min.js",
       "file": "aplayer.js",
-      "fileHash": "50b99642",
+      "fileHash": "b6c8506e",
       "needsInterop": true
     }
   },

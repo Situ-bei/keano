@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, nextTick, ref } from 'vue';
+import { onMounted, nextTick, ref, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 import MyIcon from './MyIcon.vue';
@@ -8,6 +8,47 @@ let ImageArr = ref([]);
 let ShowPreviewBox = ref(false);
 let CurrentImgIdx = ref(0);
 
+//#region   移动端切换逻辑
+// const currentImageIndex = ref(0);
+let startX = 0;
+let moveX = 0;
+let isMobile = false;
+
+const detectDeviceType = () => {
+  if (window.innerWidth <= 768 || /Mobi|Android/i.test(navigator.userAgent)) {
+    isMobile = true;
+  } else {
+    isMobile = false;
+  }
+};
+const handleTouchStart = (e: TouchEvent) => {
+  if (isMobile) {
+    startX = e.touches[0].clientX;
+  }
+};
+
+
+const handleTouchMove = (e: TouchEvent) => {
+  if (isMobile) {
+    moveX = e.touches[0].clientX;
+  }
+};
+
+const handleTouchEnd = () => {
+  if(isMobile){
+    const swipeThreshold = 50; // 滑动阈值，单位为像素
+
+    if (startX - moveX > swipeThreshold) {
+      // 向左滑动
+      CurrentImgIdx.value = (CurrentImgIdx.value + 1) % ImageArr.value.length;
+    } else if (moveX - startX > swipeThreshold) {
+      // 向右滑动
+      CurrentImgIdx.value = (CurrentImgIdx.value - 1 + ImageArr.value.length) % ImageArr.value.length;
+    }
+  }
+};
+
+//#endregion
 function ClosePreviewBox() {
   ShowPreviewBox.value = false;
   document.body.style.overflow = 'auto';
@@ -39,10 +80,10 @@ function fullscreenFunc() {
   // window.open(imgElm.getAttribute('src'));
   if (imgElm.requestFullscreen) {
     imgElm.requestFullscreen();
-  } else if (imgElm.webkitRequestFullscreen) { // Chrome, Safari and Opera
-    imgElm.webkitRequestFullscreen();
-  } else if (imgElm.msRequestFullscreen) { // IE/Edge
-    imgElm.msRequestFullscreen();
+  } else if ((imgElm as any).webkitRequestFullscreen) { // Chrome, Safari and Opera
+    (imgElm as any).webkitRequestFullscreen();
+  } else if ((imgElm as any).msRequestFullscreen) { // IE/Edge
+    (imgElm as any).msRequestFullscreen();
   }
 }
 
@@ -239,7 +280,13 @@ onMounted(() => {
       }, 1000);
     });
   });
+  
+  detectDeviceType();
+  window.addEventListener('resize', detectDeviceType);
 });
+onUnmounted(() => {
+      window.removeEventListener('resize', detectDeviceType);
+    });
 </script>
 
 <template>
@@ -277,6 +324,7 @@ onMounted(() => {
       </div>
 
       <img
+        v-if="!isMobile"
         id="Mo7PreviewBox-img"
         @mousedown="on_mousedown"
         @touchstart="on_mousedown"
@@ -284,7 +332,11 @@ onMounted(() => {
         :alt="ImageArr[CurrentImgIdx].alt"
         srcset=""
       />
-
+      <div v-else class="slider" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">
+        <transition name="slide">
+          <img :key="CurrentImgIdx" :src="ImageArr[CurrentImgIdx].src" alt="Slide Image" />
+        </transition>
+      </div>
       <div class="Mo7PreviewBox-idxView">
         <div class="Mo7PreviewBox-idxView-box">
           <div class="Mo7PreviewBox-idxView-idx">{{ CurrentImgIdx + 1 }}/{{ ImageArr.length }}</div>
@@ -293,6 +345,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
+      
     </div>
   </ClientOnly>
 </template>
@@ -378,5 +431,37 @@ onMounted(() => {
   user-select: none;
   -webkit-user-drag: none;
   box-shadow: rgba(0, 0, 0, 0.9) 0px 5px 15px;
+}
+
+
+// .slider {
+//   width: 100%;
+//   overflow: hidden;
+// }
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.3s ease;
+}
+
+
+.slide-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-leave-from {
+  transform: translateX(0);
+}
+
+.slide-enter-to {
+  transform: translateX(0);
 }
 </style>

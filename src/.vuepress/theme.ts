@@ -202,7 +202,7 @@ export default hopeTheme(
       ],
     }, 
     
-    photoSwipe: false, // 官方图片预览插件，这个插件难用的 一 B
+    photoSwipe: true, // 官方图片预览插件，这个插件难用的 一 B
 
     // 代码块高亮 【shiki插件】
     shiki: {

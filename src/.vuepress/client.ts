@@ -75,7 +75,7 @@ export default defineClientConfig({
     CommentHideBtn, // 评论区的显示和隐藏按钮，默认是隐藏评论区的，当有留言需要的时候点击按钮显示评论区。
     BlogBeautify, // 了一些相关的主题的细节美化，包括文章分割线小汽车等，基本全是 css 效果。使用 vue 插件实现着扩展方便。
     // BlogBg,  // 背景美化，让整个博客可以添加自定义的背景，让观感更加舒适。包括 sidebar 的毛玻璃效果等。还有内容部分的视觉优化。
-    PreviewImage,
+    // PreviewImage,
     // ...
   ],
 });

@@ -81,7 +81,7 @@ export const zhNavbar = navbar([
         text: "音乐",
         icon: "icon-music",
         prefix: "music/",
-        link: "movie/",
+        link: "music/",
       },
     ]
   },
