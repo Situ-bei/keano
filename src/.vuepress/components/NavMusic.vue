@@ -5,14 +5,8 @@ import { useRouter } from 'vue-router';
 import { ref, onMounted, nextTick } from 'vue';
 import axios from 'axios';
 import store from 'store';
-// 懒加载
+const router = useRouter();
 
-
-//#region darkMode
-
-
-
-// #endregion
 
 
 let APlayer: any;
@@ -269,7 +263,7 @@ const LoadMusicList = async () => {
 // const observer = new IntersectionObserver(callback, options);
 
 const creatAplayer = () => {
-  const router = useRouter();
+  
   
   import('aplayer').then((res) => {
     nextTick(() => {
@@ -290,7 +284,7 @@ const creatAplayer = () => {
       // };
     });
     
-    router.afterEach(() => {
+    router?.afterEach(() => {
       setTimeout(() => {
         InsertMenu();
         NewPlayer();
