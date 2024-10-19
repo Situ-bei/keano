@@ -8,6 +8,8 @@ tags:
 - JS
 - JS基础
 date: 2024-06-29T22:48:00
+article: false
+
 ---
 # 1 JS的简介
 ## 1.1 JS的概念

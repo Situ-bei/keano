@@ -1,7 +1,7 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
 title: 《初识Vue3 --盛夏的炙热》
-
+order: 1
 category:
 - 前端
 - Vue
@@ -10,6 +10,7 @@ tags:
 - Vue3.0
 - 让我们变得更强大
 date: 2024-08-07T17:47:00
+article: false
 ---
 Vue3.0 学习笔记
 

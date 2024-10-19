@@ -1,51 +1,65 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
+title: NodeJS 李李立超老师版本
+category: 
+- 前端
+- NodeJS
+tag: 
+- NodeJS
+- NodeJS 基础
+- 李立超
+date: 2024-06-29
+article: false
+
 ---
-# 1 Node.js简介
+# 1 NodeJS简介
 
+
+## 1.1 Node.js
+ 
+- 运行在服务器端的js
+- 用来编写服务器
+- 特点：
+	- 单线程、异步、非阻塞
+	- 统一API
+
+## 1.2 nvm(推荐)
+- 命令
+```shell
+nvm list # 显示已安装的node版本
+nvm install 版本 # 安装指定版本的node
+nvm node_mirror https://npmmirror.com/mirrors/node/ # 配置nvm的镜像服务器
+nvm use 版本 # 指定要使用的node版本
 ```
- Node.js
-    - 运行在服务器端的js
-    - 用来编写服务器
-    - 特点：
-        - 单线程、异步、非阻塞
-        - 统一API
 
-    nvm(推荐)
-        - 命令
-            nvm list - 显示已安装的node版本
-            nvm install 版本 - 安装指定版本的node
-            配置nvm的镜像服务器
-                nvm node_mirror https://npmmirror.com/mirrors/node/
-            nvm use 版本 - 指定要使用的node版本
+## 1.3 node.js和JavaScript有什么区别
+- ECMAScript（node有） 
+- DOM（node没有） 
+- BOM（node没有）
 
-    node.js和JavaScript有什么区别
-        ECMAScript（node有） DOM（node没有） BOM（node没有）
-```
 
 
 # 2 异步编程
 
-```
-进程和线程
+1. 进程和线程
 	- 进程（厂房）
 		- 程序的运行的环境
 	- 线程（工人）
 		- 线程是实际进行运算的东西
 
-同步
+2. 同步
 	- 通常情况代码都是自上向下一行一行执行的
 	- 前边的代码不执行后边的代码也不会执行
 	- 同步的代码执行会出现阻塞的情况
 	- 一行代码执行慢会影响到整个程序的执行
 
-解决同步问题：
+3. 解决同步问题：
 	- java python
 		- 通过多线程来解决
 	- node.js
 		- 通过异步方式来解决
 
-异步
+4. 异步
 	- 一段代码的执行不会影响到其他的程序
 	- 异步的问题：
 		异步的代码无法通过return来设置返回值
@@ -61,7 +75,7 @@ number headings: auto, first-level 1, max 6, contents ^top, 1.1
 			- Promise是一个可以用来存储数据的对象
 				Promise存储数据的方式比较特殊，
 				这种特殊方式使得Promise可以用来存储异步调用的数据
-```
+
 
 ## 2.1 Promise
 

@@ -9,6 +9,8 @@ tags:
 - JS模块化
 
 date: 2024-06-29T22:48:00
+article: false
+
 ---
 ES模块化（ECMAScript Modules，简称 ESM）是 JavaScript 的官方模块系统，它在 ECMAScript 6（ES6）中被正式引入。ES模块化提供了一种标准化的方式来组织和管理代码，使得代码的复用性和可维护性大大提高。
 <!-- more -->

@@ -42,7 +42,7 @@ export default hopeTheme(
   // 图标引入地址 
   iconAssets: [
     // "fontawesome-with-brands",
-    "//at.alicdn.com/t/c/font_4705467_yj8r9pev4wh.css",
+    "//at.alicdn.com/t/c/font_4705467_zsopmp7l4j.css",
   ],  
   iconPrefix: "iconfont ",
 
@@ -256,6 +256,12 @@ export default hopeTheme(
     // This features is enabled for demo, only preserve if you need it
     markdownTab: true,
 
+    markdownHint: {
+      // 启用 GFM 警告
+      alert: true,
+    },
+    
+    
     // These features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
@@ -283,6 +289,7 @@ export default hopeTheme(
       sup: true,
       tasklist: true,
       vPre: true,
+      markmap: true,
 
       // install chart.js before enabling it
       // chart: true,

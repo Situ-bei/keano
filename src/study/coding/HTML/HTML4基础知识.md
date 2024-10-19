@@ -7,6 +7,7 @@ category:
 tags:
 - HTML
 - HTML4
+article: false
 
 date: 2024-06-24
 ---

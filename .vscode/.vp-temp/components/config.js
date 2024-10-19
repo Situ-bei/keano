@@ -20,7 +20,7 @@ export default {
   },
   setup: () => {
     useStyleTag(`\
-@import url("//at.alicdn.com/t/c/font_4705467_yj8r9pev4wh.css");
+@import url("//at.alicdn.com/t/c/font_4705467_zsopmp7l4j.css");
 `);
   },
   rootComponents: [

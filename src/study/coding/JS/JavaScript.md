@@ -1,5 +1,14 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^TOC, skip ^skipped, 1.1
+title: JavaScript
+category:
+- 前端
+- JS
+tags:
+- JS
+- JS 基础
+article: false
+date: 2024-06-29T22:48:00
 ---
 # 1 Java script 简介
 ## 1.1 历史

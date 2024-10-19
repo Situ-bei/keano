@@ -1,5 +1,7 @@
 <template><div><h1 id="vite" tabindex="-1"><a class="header-anchor" href="#vite"><span>vite</span></a></h1>
-<p>官方网站：<a href="https://cn.vitejs.dev/" target="_blank" rel="noopener noreferrer">https://cn.vitejs.dev/</a></p>
+<ul>
+<li>官方网站：<a href="https://cn.vitejs.dev/" target="_blank" rel="noopener noreferrer">https://cn.vitejs.dev/</a></li>
+</ul>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 1 npm 7+，需要添加额外的 --：</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">npm</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> create</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> vite@latest</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> my-vue-app</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> --template</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> vue</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><ul>

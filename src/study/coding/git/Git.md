@@ -1,12 +1,14 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
 title: 《git的使用》
-cssclasses:
-  - 前端
+category:
+- 前端
+- git
 tags:
-  - Front-end
-  - git
+- git
 data: 2024-07-14T05:57:00
+article: false
+
 ---
 Git 是一个分布式版本控制系统，用于跟踪计算机文件的变更，并协调多个用户之间的工作。它由 Linus Torvalds 于 2005 年创建，最初是为了更好地管理 Linux 内核的开发。Git 已经成为当今最流行的版本控制系统之一，广泛应用于软件开发和个人项目中。
 <!-- more -->

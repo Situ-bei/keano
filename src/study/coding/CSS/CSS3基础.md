@@ -1,12 +1,17 @@
 ---
 number headings: auto, first-level 1, max 6, 1.1
 # headerDepth: [1, 2, 3]
-cssclasses:
-  - 前端
+title: 《CSS3 基础》
+category:
+- 前端
+- CSS
 tags:
-  - Front-end
-  - CSS
+- CSS
+- CSS3
+- CSS基础
 date: 2024-06-28T00:56:00
+article: false
+
 ---
 # CSS3 简介
 ## 1.1 CSS3 概述

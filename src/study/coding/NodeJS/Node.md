@@ -1,11 +1,14 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
-cssclasses:
-  - 前端
+title: NodeJS 尚硅谷版本
+category:
+- 前端
+- NodeJS
 tags:
-  - Front-end
-  - Node
-data: 2024-07-04T18:43:00
+- NodeJS
+- NodeJS 基础
+date: 2024-07-04T18:43:00
+article: false
 ---
 # 1 Node.js简介
 

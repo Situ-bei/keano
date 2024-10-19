@@ -1,6 +1,7 @@
-<template><div><p>永远年轻,永远纯粹!</p>
+<template><div><div style="text-align:center">
+<p>永远年轻,永远纯粹!</p>
 <!-- more -->
-<div style="text-align:center">
+<figure><img src="@source/life/books/images/面朝大海,春暖花开.webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h2 id="《面朝大海-春暖花开》" tabindex="-1"><a class="header-anchor" href="#《面朝大海-春暖花开》"><span>《面朝大海，春暖花开》</span></a></h2>
 <p>从明天起，做一个幸福的人</p>
 <p>喂马、劈柴，周游世界</p>

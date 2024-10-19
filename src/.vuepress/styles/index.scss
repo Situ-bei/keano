@@ -43,7 +43,7 @@
     border-radius: 0.5rem;
     padding-top: 15px !important;
     backdrop-filter:  blur(0.75rem) !important;
-    padding: 1rem 1.5rem !important;
+    padding: 1rem 1rem !important;
     // margin: 0 3vw !important;
     // width: 100%;
     @media (max-width: hope-config.$pad) {
@@ -165,7 +165,17 @@ $markdownTabColor:  rgb(255, 255, 255,.4);
 }
 }
 
+// 目录条
 
+// markdownMap 
+.mm-toolbar-item:hover{
+    background-color: var(--vp-c-accent-hover) !important;
+    color: var(--vp-c-accent-bg) !important;
+}
+.mm-toolbar-item.active > *, .mm-toolbar-item:hover > *{
+    // background-color: transparent;
+    color: var(--vp-c-text) !important;
+}
 
 // 自定义的页脚
 .vp-footer-wrapper {
@@ -186,12 +196,13 @@ $markdownTabColor:  rgb(255, 255, 255,.4);
         a{
             color: #fff !important;
             margin: 0;
-            user-select:all;
+            // user-select:all;
         }
         .footer-VuePress{
             color: #00842a !important;
             &:hover{
-                background-color: rgba($color: #0c7bf4, $alpha: 0.8);
+                // background-color: rgba($color: #0c7bf4, $alpha: 0.8);
+                color: rgba($color: #0c7bf4, $alpha: 0.8);
             }
         }   
         .footer-Hope{
@@ -239,7 +250,3 @@ $markdownTabColor:  rgb(255, 255, 255,.4);
 }
 }
 
-// 自定义背景色
-:root{
-    --background-color: #ff0000;
-}

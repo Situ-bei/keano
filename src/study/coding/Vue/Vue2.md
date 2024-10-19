@@ -1,7 +1,7 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
 title: 《初识Vue2 --盛夏的回眸》
-
+order: 0
 category:
 - 前端
 - Vue
@@ -10,6 +10,7 @@ tags:
 - Vue2.0
 
 date: 2024-07-16T06:13:00
+article: false
 ---
 Vue2.0 学习笔记
 <!-- more -->
@@ -19,8 +20,9 @@ Vue2.0 学习笔记
 ## 1.  Vue简介
 ### 1.1  官网
 
-[中文官网](https://cn.vuejs.org/) 
-[英文官网](https://vuejs.org/)
+1. [中文官网](https://cn.vuejs.org/) 
+
+2. [英文官网](https://vuejs.org/)
 
 ## 1.2 介绍
 ### 1.2.1 Vue 是什么？

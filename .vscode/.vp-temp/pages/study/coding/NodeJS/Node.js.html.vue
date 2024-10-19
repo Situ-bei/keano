@@ -1,57 +1,101 @@
-<template><div><h1 id="_1-node-js简介" tabindex="-1"><a class="header-anchor" href="#_1-node-js简介"><span>1 Node.js简介</span></a></h1>
-<div class="language- line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="" data-title="" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span> Node.js</span></span>
-<span class="line"><span>    - 运行在服务器端的js</span></span>
-<span class="line"><span>    - 用来编写服务器</span></span>
-<span class="line"><span>    - 特点：</span></span>
-<span class="line"><span>        - 单线程、异步、非阻塞</span></span>
-<span class="line"><span>        - 统一API</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>    nvm(推荐)</span></span>
-<span class="line"><span>        - 命令</span></span>
-<span class="line"><span>            nvm list - 显示已安装的node版本</span></span>
-<span class="line"><span>            nvm install 版本 - 安装指定版本的node</span></span>
-<span class="line"><span>            配置nvm的镜像服务器</span></span>
-<span class="line"><span>                nvm node_mirror https://npmmirror.com/mirrors/node/</span></span>
-<span class="line"><span>            nvm use 版本 - 指定要使用的node版本</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>    node.js和JavaScript有什么区别</span></span>
-<span class="line"><span>        ECMAScript（node有） DOM（node没有） BOM（node没有）</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="collapsed-lines"></div></div><h1 id="_2-异步编程" tabindex="-1"><a class="header-anchor" href="#_2-异步编程"><span>2 异步编程</span></a></h1>
-<div class="language- line-numbers-mode has-collapsed-lines collapsed" data-highlighter="shiki" data-ext="" data-title="" style="--vp-collapsed-lines:15;--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>进程和线程</span></span>
-<span class="line"><span>	- 进程（厂房）</span></span>
-<span class="line"><span>		- 程序的运行的环境</span></span>
-<span class="line"><span>	- 线程（工人）</span></span>
-<span class="line"><span>		- 线程是实际进行运算的东西</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>同步</span></span>
-<span class="line"><span>	- 通常情况代码都是自上向下一行一行执行的</span></span>
-<span class="line"><span>	- 前边的代码不执行后边的代码也不会执行</span></span>
-<span class="line"><span>	- 同步的代码执行会出现阻塞的情况</span></span>
-<span class="line"><span>	- 一行代码执行慢会影响到整个程序的执行</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>解决同步问题：</span></span>
-<span class="line"><span>	- java python</span></span>
-<span class="line"><span>		- 通过多线程来解决</span></span>
-<span class="line"><span>	- node.js</span></span>
-<span class="line"><span>		- 通过异步方式来解决</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>异步</span></span>
-<span class="line"><span>	- 一段代码的执行不会影响到其他的程序</span></span>
-<span class="line"><span>	- 异步的问题：</span></span>
-<span class="line"><span>		异步的代码无法通过return来设置返回值</span></span>
-<span class="line"><span>	- 特点：</span></span>
-<span class="line"><span>		1.不会阻塞其他代码的执行</span></span>
-<span class="line"><span>		2.需要通过回调函数来返回结果</span></span>
-<span class="line"><span>	- 基于回调函数的异步带来的问题</span></span>
-<span class="line"><span>		1. 代码的可读性差</span></span>
-<span class="line"><span>		2. 可调试性差</span></span>
-<span class="line"><span>	- 解决问题：</span></span>
-<span class="line"><span>		- 需要一个东西，可以代替回调函数来给我们返回结果</span></span>
-<span class="line"><span>		- Promise横空出世</span></span>
-<span class="line"><span>			- Promise是一个可以用来存储数据的对象</span></span>
-<span class="line"><span>				Promise存储数据的方式比较特殊，</span></span>
-<span class="line"><span>				这种特殊方式使得Promise可以用来存储异步调用的数据</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="collapsed-lines"></div></div><h2 id="_2-1-promise" tabindex="-1"><a class="header-anchor" href="#_2-1-promise"><span>2.1 Promise</span></a></h2>
+<template><div><h1 id="_1-nodejs简介" tabindex="-1"><a class="header-anchor" href="#_1-nodejs简介"><span>1 NodeJS简介</span></a></h1>
+<h2 id="_1-1-node-js" tabindex="-1"><a class="header-anchor" href="#_1-1-node-js"><span>1.1 Node.js</span></a></h2>
+<ul>
+<li>运行在服务器端的js</li>
+<li>用来编写服务器</li>
+<li>特点：
+<ul>
+<li>单线程、异步、非阻塞</li>
+<li>统一API</li>
+</ul>
+</li>
+</ul>
+<h2 id="_1-2-nvm-推荐" tabindex="-1"><a class="header-anchor" href="#_1-2-nvm-推荐"><span>1.2 nvm(推荐)</span></a></h2>
+<ul>
+<li>命令</li>
+</ul>
+<div class="language-shell line-numbers-mode" data-highlighter="shiki" data-ext="shell" data-title="shell" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">nvm</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> list</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # 显示已安装的node版本</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">nvm</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 版本</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # 安装指定版本的node</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">nvm</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> node_mirror</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://npmmirror.com/mirrors/node/</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # 配置nvm的镜像服务器</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">nvm</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> use</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> 版本</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"> # 指定要使用的node版本</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_1-3-node-js和javascript有什么区别" tabindex="-1"><a class="header-anchor" href="#_1-3-node-js和javascript有什么区别"><span>1.3 node.js和JavaScript有什么区别</span></a></h2>
+<ul>
+<li>ECMAScript（node有）</li>
+<li>DOM（node没有）</li>
+<li>BOM（node没有）</li>
+</ul>
+<h1 id="_2-异步编程" tabindex="-1"><a class="header-anchor" href="#_2-异步编程"><span>2 异步编程</span></a></h1>
+<ol>
+<li>
+<p>进程和线程</p>
+<ul>
+<li>进程（厂房）
+<ul>
+<li>程序的运行的环境</li>
+</ul>
+</li>
+<li>线程（工人）
+<ul>
+<li>线程是实际进行运算的东西</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>同步</p>
+<ul>
+<li>通常情况代码都是自上向下一行一行执行的</li>
+<li>前边的代码不执行后边的代码也不会执行</li>
+<li>同步的代码执行会出现阻塞的情况</li>
+<li>一行代码执行慢会影响到整个程序的执行</li>
+</ul>
+</li>
+<li>
+<p>解决同步问题：</p>
+<ul>
+<li>java python
+<ul>
+<li>通过多线程来解决</li>
+</ul>
+</li>
+<li>node.js
+<ul>
+<li>通过异步方式来解决</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>异步</p>
+<ul>
+<li>一段代码的执行不会影响到其他的程序</li>
+<li>异步的问题：
+异步的代码无法通过return来设置返回值</li>
+<li>特点：
+1.不会阻塞其他代码的执行
+2.需要通过回调函数来返回结果</li>
+<li>基于回调函数的异步带来的问题
+<ol>
+<li>代码的可读性差</li>
+<li>可调试性差</li>
+</ol>
+</li>
+<li>解决问题：
+<ul>
+<li>需要一个东西，可以代替回调函数来给我们返回结果</li>
+<li>Promise横空出世
+<ul>
+<li>Promise是一个可以用来存储数据的对象
+Promise存储数据的方式比较特殊，
+这种特殊方式使得Promise可以用来存储异步调用的数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="_2-1-promise" tabindex="-1"><a class="header-anchor" href="#_2-1-promise"><span>2.1 Promise</span></a></h2>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre v-pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>异步调用必须要通过回调函数来返回数据，</span></span>
 <span class="line"><span>	当我们进行一些复杂的调用的时，会出现“回调地狱”</span></span>
 <span class="line"><span></span></span>

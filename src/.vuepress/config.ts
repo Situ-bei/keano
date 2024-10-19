@@ -2,7 +2,8 @@ import { defineUserConfig } from "vuepress";
 import { getDirname, path } from 'vuepress/utils';
 import theme from "./theme.js";
 // 【搜索插件】
-import { searchPlugin } from "@vuepress/plugin-search";
+// import { searchPlugin } from "@vuepress/plugin-search";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 // 【鼠标特效插件】
 import { popperPlugin } from "./plugins/vuepress-plugin-popper/index.js";
@@ -35,10 +36,37 @@ export default defineUserConfig({
   plugins: [
     
     //搜索插件配置
-    searchPlugin({
-      // 配置项
-    }),
-
+    // searchPlugin({
+    //   // 配置项
+    // }),
+    searchProPlugin (
+      {
+        // 索引全部内容
+        indexContent: true,
+        autoSuggestions: true,
+        // 为分类和标签添加索引
+        customFields: [
+          {
+            getter(page: any) {
+              return page.frontmatter.category;
+            },
+            formatter: {
+              '/': '分类：$content',
+              '/en/': 'Category: $content',
+            },
+          },
+          {
+            getter(page: any) {
+              return page.frontmatter.tag;
+            },
+            formatter: {
+              '/': '标签：$content',
+              '/en/': 'Tag: $content',
+            },
+          },
+        ],
+      }
+    ),
     
 
     // 鼠标特效插件

@@ -1,7 +1,7 @@
 {
   "name": "keanolog",
   "description": "keano的博客",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -25,6 +25,9 @@
     "aplayer": "^1.10.1",
     "art-template": "^4.13.2",
     "dayjs": "^1.11.13",
+    "markmap-lib": "^0.17.2",
+    "markmap-toolbar": "^0.17.2",
+    "markmap-view": "^0.17.2",
     "sass-embedded": "^1.79.4",
     "store": "^2.0.12",
     "vidstack": "^1.12.11",
@@ -37,6 +40,7 @@
   "dependencies": {
     "@vueuse/core": "^11.1.0",
     "axios": "^1.7.7",
-    "keanolog": "file:"
+    "keanolog": "file:",
+    "vuepress-plugin-search-pro": "^2.0.0-rc.57"
   }
 }

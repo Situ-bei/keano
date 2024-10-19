@@ -36,7 +36,14 @@ function shrinkFunc() {
 
 function fullscreenFunc() {
   const imgElm = document.getElementById('Mo7PreviewBox-img');
-  window.open(imgElm.getAttribute('src'));
+  // window.open(imgElm.getAttribute('src'));
+  if (imgElm.requestFullscreen) {
+    imgElm.requestFullscreen();
+  } else if (imgElm.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    imgElm.webkitRequestFullscreen();
+  } else if (imgElm.msRequestFullscreen) { // IE/Edge
+    imgElm.msRequestFullscreen();
+  }
 }
 
 function leftFunc() {
@@ -247,10 +254,10 @@ onMounted(() => {
     >
       <div class="Mo7PreviewBox-topBar">
         <div class="btn" @click="leftFunc" :class="{ hide: CurrentImgIdx === 0 }">
-          <MyIcon class="icon" name="xiangzuo"></MyIcon>
+          <MyIcon class="icon" name="zuo"></MyIcon>
         </div>
         <div class="btn" @click="rightFunc" :class="{ hide: CurrentImgIdx === ImageArr.length - 1 }">
-          <MyIcon class="icon" name="xiangyou"></MyIcon>
+          <MyIcon class="icon" name="you"></MyIcon>
         </div>
         <div class="btn" @click.stop="zoomFunc">
           <MyIcon class="icon" name="fangda"></MyIcon>
@@ -332,7 +339,7 @@ onMounted(() => {
     .btn {
       display: block;
       margin-left: 10px;
-      background-color: rgba(0, 0, 0, 0.4);
+      // background-color: rgba(0, 0, 0, 0.4);
       &.hide {
         opacity: 0.4;
       }

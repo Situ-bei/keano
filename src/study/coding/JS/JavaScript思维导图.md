@@ -1,6 +1,15 @@
 ---
 
 mindmap-plugin: basic
+title: JavaScript思维导图
+category: 
+- 前端
+- JS
+tag: 
+- JS
+- JS基础
+date: 2024-06-29T22:48:00
+article: false
 
 ---
 

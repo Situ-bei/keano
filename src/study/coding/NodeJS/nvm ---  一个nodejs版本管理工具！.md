@@ -1,15 +1,26 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
-cssclasses:
-  - 前端
+title: Nvm--- NodeJS版本管理工具！
+category:
+- 前端
+- NodeJS
 tags:
-  - Front-end
-  - Node
-data: 2024-08-27T13:31:00
----
-官方网站：https://nvm.uihtm.com/
+- NodeJS
+- nvm
 
-nvm 命令提示
+data: 2024-08-27T13:31:00
+article: false
+---
+::: info Nvm
+    NodeJS版本管理工具！
+:::
+
+<!-- more -->
+
+官方网站：[https://nvm.uihtm.com](https://nvm.uihtm.com/)
+
+
+### **nvm 命令提示**
 
 - `nvm arch`：显示node是运行在32位还是64位。
 - `nvm install <version> [arch]` ：安装node， version是特定版本也可以是最新稳定版本latest。可选参数arch指定安装32位还是64位版本，默认是系统位数。可以添加--insecure绕过远程服务器的SSL。

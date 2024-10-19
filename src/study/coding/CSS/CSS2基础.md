@@ -1,14 +1,17 @@
 ---
 number headings: auto, first-level 1, max 6, 1.1
-title: "CSS·2 基础"
+title: 《CSS2 基础》
 category:
 - 前端
 - CSS
 tag:
 - CSS
 - CSS2
+- CSS基础
 - 让我们变得更强大
 date: 2024-06-27 17:49
+article: false
+
 ---
 
 # CSS2 基础

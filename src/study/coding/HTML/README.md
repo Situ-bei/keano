@@ -1,6 +1,6 @@
 ---
 icon: icon-htmlfill
-title: "HTML"
+title: HTML
 date: 2024-10-11
 index: false
 timeline: false

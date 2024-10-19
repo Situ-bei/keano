@@ -1,5 +1,6 @@
 ---
 number headings: auto, first-level 1, max 6, contents ^top, 1.1
+title: 《Vite》
 category:
 - 前端
 - Vue
@@ -12,7 +13,7 @@ date: 2024-08-27T13:29:00
 ---
 # vite
 
-官方网站：[https://cn.vitejs.dev/](https://cn.vitejs.dev/)
+- 官方网站：[https://cn.vitejs.dev/](https://cn.vitejs.dev/)
 
 ```bash
 # 1 npm 7+，需要添加额外的 --：

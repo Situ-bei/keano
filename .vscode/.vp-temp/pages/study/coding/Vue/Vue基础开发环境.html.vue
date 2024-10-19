@@ -1,28 +1,21 @@
 <template><div><h1 id="vue-开发环境" tabindex="-1"><a class="header-anchor" href="#vue-开发环境"><span>Vue 开发环境</span></a></h1>
 <ul>
-<li>[&gt;] Vue3 官网：https://cn.vuejs.org/</li>
-<li>[&gt;] Vue2 官网：https://v2.cn.vuejs.org/</li>
-</ul>
-<hr>
-<ul>
-<li>
-<p>[&gt;] vue项目生态：http://t.csdnimg.cn/kL5xq</p>
-</li>
-<li>
-<p>[&gt;] Vue开发者工具  ：</p>
-<ul>
+<li>Vue3 官网：<a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer">https://cn.vuejs.org/</a></li>
+<li>Vue2 官网：<a href="https://v2.cn.vuejs.org/" target="_blank" rel="noopener noreferrer">https://v2.cn.vuejs.org/</a></li>
+<li>vue项目生态：<a href="http://t.csdnimg.cn/kL5xq" target="_blank" rel="noopener noreferrer">http://t.csdnimg.cn/kL5xq</a></li>
+<li>Vue开发者工具  ：
+<ol>
 <li>Vue2  使用 <code v-pre>Vue Cli</code></li>
-<li>Vue3 使用 <code v-pre>Vite</code>
-<br></li>
-</ul>
+<li>Vue3 使用 <code v-pre>Vite</code></li>
+</ol>
 </li>
-<li>
-<p>[&gt;] VScode插件：</p>
+</ul>
+<h3 id="vscode插件" tabindex="-1"><a class="header-anchor" href="#vscode插件"><span>VScode插件</span></a></h3>
 <ol>
 <li>
 <p><strong>Vetur</strong>（基于Vue2）</p>
 <ul>
-<li>Vetur是VSCode中最受欢迎的Vue插件之一。它提供了语法高亮、智能感知、Emmet、linting/错误检查、格式化、自动补全、调试等功能。Vetur的的linting功能可以帮助您检查代码中的错误和不良实践，而自动补全功能则可以大大提高编写Vue代码的速度。</li>
+<li>Vetur 是 VSCode 中最受欢迎的Vue插件之一。它提供了语法高亮、智能感知、Emmet、linting/错误检查、格式化、自动补全、调试等功能。Vetur的的linting功能可以帮助您检查代码中的错误和不良实践，而自动补全功能则可以大大提高编写Vue代码的速度。</li>
 </ul>
 </li>
 <li>
@@ -44,8 +37,6 @@
 </ul>
 </li>
 </ol>
-</li>
-</ul>
 </div></template>
 
 

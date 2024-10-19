@@ -394,7 +394,7 @@ $myshadowDark:
   .aplayer-icon-forward{
     display:inline-block;
   }
-  @include responsive(640px) {
+  @include responsive(hope-config.$pad) {
     .aplayer-icon-back,
     .aplayer-icon-play,
     .aplayer-icon-forward{
@@ -433,7 +433,11 @@ $myshadowDark:
     // 歌曲列表 
     ol{
       padding: 8px;
-      max-height: 260px !important;
+      
+      // max-height: 300px !important;
+      // @include responsive(hope-config.$mobile) {
+      //   max-height: 90vw;
+      // }
       // 歌曲列表
       li{
         content-visibility: auto;

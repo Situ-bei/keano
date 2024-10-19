@@ -170,8 +170,8 @@
 <p>使用原则：</p>
 </li>
 </ol>
-<blockquote>
-<p>[!NOTE]</p>
+<div class="hint-container note">
+<p class="hint-container-title">注</p>
 <ol>
 <li>块级元素 中能写 行内元素 和 块级元素（简单记：块级元素中几乎什么都能写）。</li>
 <li>行内元素 中能写 行内元素，但不能写 块级元素。</li>
@@ -180,7 +180,7 @@ h1~h6 不能互相嵌套。
 p 中不要写块级元素。</li>
 </ol>
 <p>备注： marquee 元素设计的初衷是：让文字有动画效果，但如今我们可以通过 CSS 来实现了，而且还可以实现的更加炫酷，所以 marquee 标签已经：过时了（废弃了），不推荐使用。我们只是在开篇的时候，用他做了一个引子而已，在后续的学习过程中，这些已经废弃的标签，我们直接跳过。</p>
-</blockquote>
+</div>
 <h3 id="_5-4-文本标签-常用的" tabindex="-1"><a class="header-anchor" href="#_5-4-文本标签-常用的"><span>5.4 文本标签_常用的</span></a></h3>
 <ol>
 <li>用于包裹：词汇、短语等。</li>
@@ -270,9 +270,9 @@ p 中不要写块级元素。</li>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!important]
-备注：</p>
+<div class="hint-container important">
+<p class="hint-container-title">重要</p>
+<p>备注：</p>
 <ol>
 <li>这些不常用的文本标签，编码时不用过于纠结（酌情而定，不用也没毛病）。</li>
 <li>blockquote 与 address 是块级元素，其他的文本标签，都是行内元素。</li>
@@ -281,7 +281,7 @@ small 、 b 、 u 、 q 、 blockquote</li>
 <li>HTML标签太多了！记住那些：重要的、语义感强的标签即可；截止目前，有这些：
 h1~h6 、 p 、 div 、 em 、 strong 、 span</li>
 </ol>
-</blockquote>
+</div>
 <h3 id="_5-6-图片标签" tabindex="-1"><a class="header-anchor" href="#_5-6-图片标签"><span>5.6 图片标签</span></a></h3>
 <h4 id="_5-6-1-基本使用" tabindex="-1"><a class="header-anchor" href="#_5-6-1-基本使用"><span>5.6.1 基本使用</span></a></h4>
 <table>

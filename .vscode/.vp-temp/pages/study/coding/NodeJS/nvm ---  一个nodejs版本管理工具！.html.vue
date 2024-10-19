@@ -1,5 +1,11 @@
-<template><div><p>官方网站：https://nvm.uihtm.com/</p>
-<p>nvm 命令提示</p>
+<template><div><div class="hint-container info">
+<p class="hint-container-title">Nvm</p>
+<pre><code>NodeJS版本管理工具！
+</code></pre>
+</div>
+<!-- more -->
+<p>官方网站：<a href="https://nvm.uihtm.com/" target="_blank" rel="noopener noreferrer">https://nvm.uihtm.com</a></p>
+<h3 id="nvm-命令提示" tabindex="-1"><a class="header-anchor" href="#nvm-命令提示"><span><strong>nvm 命令提示</strong></span></a></h3>
 <ul>
 <li><code v-pre>nvm arch</code>：显示node是运行在32位还是64位。</li>
 <li><code v-pre>nvm install &lt;version&gt; [arch]</code> ：安装node， version是特定版本也可以是最新稳定版本latest。可选参数arch指定安装32位还是64位版本，默认是系统位数。可以添加--insecure绕过远程服务器的SSL。</li>

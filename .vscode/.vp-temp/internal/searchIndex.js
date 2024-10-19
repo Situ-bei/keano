@@ -14,20 +14,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Intro Page",
-    "headers": [],
-    "path": "/en/intro.html",
-    "pathLocale": "/en/",
-    "extraFields": []
-  },
-  {
-    "title": "Blog Home",
-    "headers": [],
-    "path": "/en/",
-    "pathLocale": "/en/",
-    "extraFields": []
-  },
-  {
     "title": "布局与功能禁用",
     "headers": [],
     "path": "/demo/disable.html",
@@ -161,6 +147,20 @@ export const SEARCH_INDEX = [
     "headers": [],
     "path": "/essay/%E9%9D%A2%E6%9C%9D%E5%A4%A7%E6%B5%B7%EF%BC%8C%E6%98%A5%E6%9A%96%E8%8A%B1%E5%BC%80.html",
     "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Intro Page",
+    "headers": [],
+    "path": "/en/intro.html",
+    "pathLocale": "/en/",
+    "extraFields": []
+  },
+  {
+    "title": "Blog Home",
+    "headers": [],
+    "path": "/en/",
+    "pathLocale": "/en/",
     "extraFields": []
   },
   {
@@ -378,20 +378,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "书籍",
-    "headers": [],
-    "path": "/life/books/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "《面朝大海，春暖花开》",
-    "headers": [],
-    "path": "/life/books/%E9%9D%A2%E6%9C%9D%E5%A4%A7%E6%B5%B7%EF%BC%8C%E6%98%A5%E6%9A%96%E8%8A%B1%E5%BC%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Markdown 展示",
     "headers": [
       {
@@ -450,6 +436,20 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "书籍",
+    "headers": [],
+    "path": "/life/books/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《面朝大海，春暖花开》",
+    "headers": [],
+    "path": "/life/books/%E9%9D%A2%E6%9C%9D%E5%A4%A7%E6%B5%B7%EF%BC%8C%E6%98%A5%E6%9A%96%E8%8A%B1%E5%BC%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "音乐",
     "headers": [],
     "path": "/life/music/",
@@ -489,13 +489,6 @@ export const SEARCH_INDEX = [
     "title": "编程",
     "headers": [],
     "path": "/study/coding/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "历史",
-    "headers": [],
-    "path": "/study/history/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -554,6 +547,13 @@ export const SEARCH_INDEX = [
     "title": "雪花的雅称",
     "headers": [],
     "path": "/study/wiki/%E9%9B%AA%E8%8A%B1%E7%9A%84%E9%9B%85%E7%A7%B0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "历史",
+    "headers": [],
+    "path": "/study/history/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2179,6 +2179,200 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "《HTML5》",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 什么是HTML5",
+        "slug": "_1-1-什么是html5",
+        "link": "#_1-1-什么是html5",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 HTML5 优势",
+        "slug": "_1-2-html5-优势",
+        "link": "#_1-2-html5-优势",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.3 3.HTML5兼容性",
+        "slug": "_1-3-3-html5兼容性",
+        "link": "#_1-3-3-html5兼容性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.1 新增布局标签",
+        "slug": "_2-1-新增布局标签",
+        "link": "#_2-1-新增布局标签",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.2 新增状态标签",
+        "slug": "_2-2-新增状态标签",
+        "link": "#_2-2-新增状态标签",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.2.1 meter 标签",
+            "slug": "_2-2-1-meter-标签",
+            "link": "#_2-2-1-meter-标签",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2.2 progress 标签",
+            "slug": "_2-2-2-progress-标签",
+            "link": "#_2-2-2-progress-标签",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.3 新增列表标签",
+        "slug": "_2-3-新增列表标签",
+        "link": "#_2-3-新增列表标签",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.4 新增文本标签",
+        "slug": "_2-4-新增文本标签",
+        "link": "#_2-4-新增文本标签",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.4.1 文本注音",
+            "slug": "_2-4-1-文本注音",
+            "link": "#_2-4-1-文本注音",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.4.2 文本标记",
+            "slug": "_2-4-2-文本标记",
+            "link": "#_2-4-2-文本标记",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3.1 表单控件新增属性",
+        "slug": "_3-1-表单控件新增属性",
+        "link": "#_3-1-表单控件新增属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.2 input 新增属性值",
+        "slug": "_3-2-input-新增属性值",
+        "link": "#_3-2-input-新增属性值",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.3 form 标签新增属性",
+        "slug": "_3-3-form-标签新增属性",
+        "link": "#_3-3-form-标签新增属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.1 视频标签",
+        "slug": "_4-1-视频标签",
+        "link": "#_4-1-视频标签",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.2 音频标签",
+        "slug": "_4-2-音频标签",
+        "link": "#_4-2-音频标签",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/interview/HTML5%E5%9F%BA%E7%A1%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "九九八十一难",
+    "headers": [],
+    "path": "/study/coding/interview/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "《git的使用》",
+    "headers": [
+      {
+        "level": 2,
+        "title": "3.1 设置用户名与邮箱（用户标识，必要）",
+        "slug": "_3-1-设置用户名与邮箱-用户标识-必要",
+        "link": "#_3-1-设置用户名与邮箱-用户标识-必要",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.1 工作流程",
+        "slug": "_4-1-工作流程",
+        "link": "#_4-1-工作流程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.1 11.1、创建工作目录与常用指令",
+        "slug": "_5-1-11-1、创建工作目录与常用指令",
+        "link": "#_5-1-11-1、创建工作目录与常用指令",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.1.1 本地仓库搭建",
+            "slug": "_5-1-1-本地仓库搭建",
+            "link": "#_5-1-1-本地仓库搭建",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.1.2 克隆远程仓库",
+            "slug": "_5-1-2-克隆远程仓库",
+            "link": "#_5-1-2-克隆远程仓库",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "6.1 文件的四种状态",
+        "slug": "_6-1-文件的四种状态",
+        "link": "#_6-1-文件的四种状态",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.2 查看文件状态",
+        "slug": "_6-2-查看文件状态",
+        "link": "#_6-2-查看文件状态",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/git/Git.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Git",
+    "headers": [],
+    "path": "/study/coding/git/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "《HTML<废案>》",
     "headers": [
       {
@@ -2580,131 +2774,786 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "《HTML5》",
+    "title": "1 Node.js简介",
     "headers": [
       {
         "level": 2,
-        "title": "1.1 什么是HTML5",
-        "slug": "_1-1-什么是html5",
-        "link": "#_1-1-什么是html5",
+        "title": "2.1 Promise",
+        "slug": "_2-1-promise",
+        "link": "#_2-1-promise",
         "children": []
       },
       {
         "level": 2,
-        "title": "1.2 HTML5 优势",
-        "slug": "_1-2-html5-优势",
-        "link": "#_1-2-html5-优势",
+        "title": "2.2 Promise的静态方法",
+        "slug": "_2-2-promise的静态方法",
+        "link": "#_2-2-promise的静态方法",
         "children": []
       },
       {
         "level": 2,
-        "title": "1.3 3.HTML5兼容性",
-        "slug": "_1-3-3-html5兼容性",
-        "link": "#_1-3-3-html5兼容性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.1 新增布局标签",
-        "slug": "_2-1-新增布局标签",
-        "link": "#_2-1-新增布局标签",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.2 新增状态标签",
-        "slug": "_2-2-新增状态标签",
-        "link": "#_2-2-新增状态标签",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.2.1 meter 标签",
-            "slug": "_2-2-1-meter-标签",
-            "link": "#_2-2-1-meter-标签",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2.2 progress 标签",
-            "slug": "_2-2-2-progress-标签",
-            "link": "#_2-2-2-progress-标签",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.3 新增列表标签",
-        "slug": "_2-3-新增列表标签",
-        "link": "#_2-3-新增列表标签",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.4 新增文本标签",
-        "slug": "_2-4-新增文本标签",
-        "link": "#_2-4-新增文本标签",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.4.1 文本注音",
-            "slug": "_2-4-1-文本注音",
-            "link": "#_2-4-1-文本注音",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.4.2 文本标记",
-            "slug": "_2-4-2-文本标记",
-            "link": "#_2-4-2-文本标记",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.1 表单控件新增属性",
-        "slug": "_3-1-表单控件新增属性",
-        "link": "#_3-1-表单控件新增属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.2 input 新增属性值",
-        "slug": "_3-2-input-新增属性值",
-        "link": "#_3-2-input-新增属性值",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.3 form 标签新增属性",
-        "slug": "_3-3-form-标签新增属性",
-        "link": "#_3-3-form-标签新增属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.1 视频标签",
-        "slug": "_4-1-视频标签",
-        "link": "#_4-1-视频标签",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.2 音频标签",
-        "slug": "_4-2-音频标签",
-        "link": "#_4-2-音频标签",
+        "title": "2.3 async和await",
+        "slug": "_2-3-async和await",
+        "link": "#_2-3-async和await",
         "children": []
       }
     ],
-    "path": "/study/coding/interview/HTML5%E5%9F%BA%E7%A1%80.html",
+    "path": "/study/coding/NodeJS/Node.js.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "九九八十一难",
+    "title": "1 Node.js简介",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 Node.js",
+        "slug": "_1-1-node-js",
+        "link": "#_1-1-node-js",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 NodeJS的安装",
+        "slug": "_1-2-nodejs的安装",
+        "link": "#_1-2-nodejs的安装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.3 node.js和JavaScript有什么区别",
+        "slug": "_1-3-node-js和javascript有什么区别",
+        "link": "#_1-3-node-js和javascript有什么区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.1 进程和线程",
+        "slug": "_2-1-进程和线程",
+        "link": "#_2-1-进程和线程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.2 同步",
+        "slug": "_2-2-同步",
+        "link": "#_2-2-同步",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.2.1 解决同步问题：",
+            "slug": "_2-2-1-解决同步问题",
+            "link": "#_2-2-1-解决同步问题",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2.3 异步",
+        "slug": "_2-3-异步",
+        "link": "#_2-3-异步",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.1 回调地狱",
+        "slug": "_3-1-回调地狱",
+        "link": "#_3-1-回调地狱",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.2 Promise",
+        "slug": "_3-2-promise",
+        "link": "#_3-2-promise",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.2.1 Promise语法格式",
+            "slug": "_3-2-1-promise语法格式",
+            "link": "#_3-2-1-promise语法格式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.2.2 Promise链式",
+            "slug": "_3-2-2-promise链式",
+            "link": "#_3-2-2-promise链式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.2.3 Promise的方法",
+            "slug": "_3-2-3-promise的方法",
+            "link": "#_3-2-3-promise的方法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4.1 async 和 await",
+        "slug": "_4-1-async-和-await",
+        "link": "#_4-1-async-和-await",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.1 模块分类",
+        "slug": "_5-1-模块分类",
+        "link": "#_5-1-模块分类",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.1.1 内置模块",
+            "slug": "_5-1-1-内置模块",
+            "link": "#_5-1-1-内置模块",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.1.2 自定义模块",
+            "slug": "_5-1-2-自定义模块",
+            "link": "#_5-1-2-自定义模块",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.1.3 第三方模块",
+            "slug": "_5-1-3-第三方模块",
+            "link": "#_5-1-3-第三方模块",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "5.2 语法",
+        "slug": "_5-2-语法",
+        "link": "#_5-2-语法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.3 模块作用域",
+        "slug": "_5-3-模块作用域",
+        "link": "#_5-3-模块作用域",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.1 概念",
+        "slug": "_6-1-概念",
+        "link": "#_6-1-概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.2 特点",
+        "slug": "_6-2-特点",
+        "link": "#_6-2-特点",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6.3 使用",
+        "slug": "_6-3-使用",
+        "link": "#_6-3-使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "6.3.1 3-1. 创建 Buffer",
+            "slug": "_6-3-1-3-1-创建-buffer",
+            "link": "#_6-3-1-3-1-创建-buffer",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "6.3.2 Buffer 与字符串的转化",
+            "slug": "_6-3-2-buffer-与字符串的转化",
+            "link": "#_6-3-2-buffer-与字符串的转化",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "6.3.3 Buffer 的读写",
+            "slug": "_6-3-3-buffer-的读写",
+            "link": "#_6-3-3-buffer-的读写",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.1 文件写入",
+        "slug": "_7-1-文件写入",
+        "link": "#_7-1-文件写入",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.1.1 writeFile 异步写入",
+            "slug": "_7-1-1-writefile-异步写入",
+            "link": "#_7-1-1-writefile-异步写入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.1.2 writeFileSync 同步写入",
+            "slug": "_7-1-2-writefilesync-同步写入",
+            "link": "#_7-1-2-writefilesync-同步写入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.1.3 appendFile / appendFileSync 追加写入",
+            "slug": "_7-1-3-appendfile-appendfilesync-追加写入",
+            "link": "#_7-1-3-appendfile-appendfilesync-追加写入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.1.4 createWriteStream 流式写入",
+            "slug": "_7-1-4-createwritestream-流式写入",
+            "link": "#_7-1-4-createwritestream-流式写入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.1.5 写入文件的场景",
+            "slug": "_7-1-5-写入文件的场景",
+            "link": "#_7-1-5-写入文件的场景",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.2 文件读取",
+        "slug": "_7-2-文件读取",
+        "link": "#_7-2-文件读取",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.2.1 readFile 异步读取",
+            "slug": "_7-2-1-readfile-异步读取",
+            "link": "#_7-2-1-readfile-异步读取",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.2.2 readFileSync 同步读取",
+            "slug": "_7-2-2-readfilesync-同步读取",
+            "link": "#_7-2-2-readfilesync-同步读取",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.2.3 createReadStream 流式读取",
+            "slug": "_7-2-3-createreadstream-流式读取",
+            "link": "#_7-2-3-createreadstream-流式读取",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.2.4 读取文件应用场景",
+            "slug": "_7-2-4-读取文件应用场景",
+            "link": "#_7-2-4-读取文件应用场景",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.3 文件移动与重命名",
+        "slug": "_7-3-文件移动与重命名",
+        "link": "#_7-3-文件移动与重命名",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.4 文件删除",
+        "slug": "_7-4-文件删除",
+        "link": "#_7-4-文件删除",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.5 文件夹操作",
+        "slug": "_7-5-文件夹操作",
+        "link": "#_7-5-文件夹操作",
+        "children": [
+          {
+            "level": 3,
+            "title": "7.5.1 mkdir 创建文件夹",
+            "slug": "_7-5-1-mkdir-创建文件夹",
+            "link": "#_7-5-1-mkdir-创建文件夹",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.5.2 readdir 读取文件夹",
+            "slug": "_7-5-2-readdir-读取文件夹",
+            "link": "#_7-5-2-readdir-读取文件夹",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7.5.3 rmdir 删除文件夹",
+            "slug": "_7-5-3-rmdir-删除文件夹",
+            "link": "#_7-5-3-rmdir-删除文件夹",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "7.6 查看资源状态",
+        "slug": "_7-6-查看资源状态",
+        "link": "#_7-6-查看资源状态",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.7 相对路径问题",
+        "slug": "_7-7-相对路径问题",
+        "link": "#_7-7-相对路径问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7.8 __dirname",
+        "slug": "_7-8-dirname",
+        "link": "#_7-8-dirname",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8.1 __fileName",
+        "slug": "_8-1-filename",
+        "link": "#_8-1-filename",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8.2 path.parse()",
+        "slug": "_8-2-path-parse",
+        "link": "#_8-2-path-parse",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "10.1 概念",
+        "slug": "_10-1-概念",
+        "link": "#_10-1-概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "10.2 请求报文的组成",
+        "slug": "_10-2-请求报文的组成",
+        "link": "#_10-2-请求报文的组成",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.2.1 HTTP 的请求行",
+            "slug": "_10-2-1-http-的请求行",
+            "link": "#_10-2-1-http-的请求行",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.2.2 HTTP 请求头",
+            "slug": "_10-2-2-http-请求头",
+            "link": "#_10-2-2-http-请求头",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.2.3 HTTP 的请求体",
+            "slug": "_10-2-3-http-的请求体",
+            "link": "#_10-2-3-http-的请求体",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10.3 响应报文的组成",
+        "slug": "_10-3-响应报文的组成",
+        "link": "#_10-3-响应报文的组成",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.3.1 响应行",
+            "slug": "_10-3-1-响应行",
+            "link": "#_10-3-1-响应行",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.3.2 响应头",
+            "slug": "_10-3-2-响应头",
+            "link": "#_10-3-2-响应头",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.3.3 空行",
+            "slug": "_10-3-3-空行",
+            "link": "#_10-3-3-空行",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.3.4 响应体",
+            "slug": "_10-3-4-响应体",
+            "link": "#_10-3-4-响应体",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10.4 创建 HTTP 服务",
+        "slug": "_10-4-创建-http-服务",
+        "link": "#_10-4-创建-http-服务",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.4.1 操作步骤",
+            "slug": "_10-4-1-操作步骤",
+            "link": "#_10-4-1-操作步骤",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.4.2 测试",
+            "slug": "_10-4-2-测试",
+            "link": "#_10-4-2-测试",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.4.3 注意事项",
+            "slug": "_10-4-3-注意事项",
+            "link": "#_10-4-3-注意事项",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10.5 浏览器查看 HTTP 报文",
+        "slug": "_10-5-浏览器查看-http-报文",
+        "link": "#_10-5-浏览器查看-http-报文",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.5.1 点击步骤",
+            "slug": "_10-5-1-点击步骤",
+            "link": "#_10-5-1-点击步骤",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.5.2 查看请求行与请求头",
+            "slug": "_10-5-2-查看请求行与请求头",
+            "link": "#_10-5-2-查看请求行与请求头",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.5.3 查看请求体",
+            "slug": "_10-5-3-查看请求体",
+            "link": "#_10-5-3-查看请求体",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.5.4 查看 URL 查询字符串",
+            "slug": "_10-5-4-查看-url-查询字符串",
+            "link": "#_10-5-4-查看-url-查询字符串",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.5.5 查看响应行与响应头",
+            "slug": "_10-5-5-查看响应行与响应头",
+            "link": "#_10-5-5-查看响应行与响应头",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.5.6 查看响应体",
+            "slug": "_10-5-6-查看响应体",
+            "link": "#_10-5-6-查看响应体",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10.6 获取 HTTP 请求报文",
+        "slug": "_10-6-获取-http-请求报文",
+        "link": "#_10-6-获取-http-请求报文",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.6.1 练习(practice)",
+            "slug": "_10-6-1-练习-practice",
+            "link": "#_10-6-1-练习-practice",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10.7 设置 HTTP 响应报文",
+        "slug": "_10-7-设置-http-响应报文",
+        "link": "#_10-7-设置-http-响应报文",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.7.1 练习(practice)",
+            "slug": "_10-7-1-练习-practice",
+            "link": "#_10-7-1-练习-practice",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10.8 网页资源的基本加载过程",
+        "slug": "_10-8-网页资源的基本加载过程",
+        "link": "#_10-8-网页资源的基本加载过程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "10.9 静态资源服务",
+        "slug": "_10-9-静态资源服务",
+        "link": "#_10-9-静态资源服务",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.9.1 网站根目录或静态资源目录",
+            "slug": "_10-9-1-网站根目录或静态资源目录",
+            "link": "#_10-9-1-网站根目录或静态资源目录",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.9.2 网页中的 URL",
+            "slug": "_10-9-2-网页中的-url",
+            "link": "#_10-9-2-网页中的-url",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.9.3 网页中使用 URL 的场景小结",
+            "slug": "_10-9-3-网页中使用-url-的场景小结",
+            "link": "#_10-9-3-网页中使用-url-的场景小结",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.9.4 设置资源类型（mime类型）",
+            "slug": "_10-9-4-设置资源类型-mime类型",
+            "link": "#_10-9-4-设置资源类型-mime类型",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10.10 GET和POST请求的区别",
+        "slug": "_10-10-get和post请求的区别",
+        "link": "#_10-10-get和post请求的区别",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.10.1 GET 和 POST 请求场景小结",
+            "slug": "_10-10-1-get-和-post-请求场景小结",
+            "link": "#_10-10-1-get-和-post-请求场景小结",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "11.1 express 介绍",
+        "slug": "_11-1-express-介绍",
+        "link": "#_11-1-express-介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "11.2 express 使用",
+        "slug": "_11-2-express-使用",
+        "link": "#_11-2-express-使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "11.2.1 express 下载",
+            "slug": "_11-2-1-express-下载",
+            "link": "#_11-2-1-express-下载",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.2.2 express 初体验",
+            "slug": "_11-2-2-express-初体验",
+            "link": "#_11-2-2-express-初体验",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "11.3 express 路由",
+        "slug": "_11-3-express-路由",
+        "link": "#_11-3-express-路由",
+        "children": [
+          {
+            "level": 3,
+            "title": "11.3.1 什么是路由",
+            "slug": "_11-3-1-什么是路由",
+            "link": "#_11-3-1-什么是路由",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.3.2 路由的使用",
+            "slug": "_11-3-2-路由的使用",
+            "link": "#_11-3-2-路由的使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.3.3 获取请求参数",
+            "slug": "_11-3-3-获取请求参数",
+            "link": "#_11-3-3-获取请求参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.3.4 获取路由参数",
+            "slug": "_11-3-4-获取路由参数",
+            "link": "#_11-3-4-获取路由参数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "11.4 express 响应设置",
+        "slug": "_11-4-express-响应设置",
+        "link": "#_11-4-express-响应设置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "11.5 express 中间件",
+        "slug": "_11-5-express-中间件",
+        "link": "#_11-5-express-中间件",
+        "children": [
+          {
+            "level": 3,
+            "title": "11.5.1 什么是中间件",
+            "slug": "_11-5-1-什么是中间件",
+            "link": "#_11-5-1-什么是中间件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.5.2 中间件的作用",
+            "slug": "_11-5-2-中间件的作用",
+            "link": "#_11-5-2-中间件的作用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.5.3 中间件的类型",
+            "slug": "_11-5-3-中间件的类型",
+            "link": "#_11-5-3-中间件的类型",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "11.6 Router(中间件的一种)",
+        "slug": "_11-6-router-中间件的一种",
+        "link": "#_11-6-router-中间件的一种",
+        "children": [
+          {
+            "level": 3,
+            "title": "11.6.1 什么是 Router",
+            "slug": "_11-6-1-什么是-router",
+            "link": "#_11-6-1-什么是-router",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.6.2 Router 作用",
+            "slug": "_11-6-2-router-作用",
+            "link": "#_11-6-2-router-作用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.6.3 Router 使用",
+            "slug": "_11-6-3-router-使用",
+            "link": "#_11-6-3-router-使用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "12.1 什么是模板引擎",
+        "slug": "_12-1-什么是模板引擎",
+        "link": "#_12-1-什么是模板引擎",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "12.2 什么是 EJS",
+        "slug": "_12-2-什么是-ejs",
+        "link": "#_12-2-什么是-ejs",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "12.3 EJS 初体验",
+        "slug": "_12-3-ejs-初体验",
+        "link": "#_12-3-ejs-初体验",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "12.4 EJS 常用语法",
+        "slug": "_12-4-ejs-常用语法",
+        "link": "#_12-4-ejs-常用语法",
+        "children": []
+      }
+    ],
+    "path": "/study/coding/NodeJS/Node.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
     "headers": [],
-    "path": "/study/coding/interview/",
+    "path": "/study/coding/NodeJS/nvm%20---%20%20%E4%B8%80%E4%B8%AAnodejs%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%EF%BC%81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "NodeJS",
+    "headers": [],
+    "path": "/study/coding/NodeJS/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4020,855 +4869,6 @@ export const SEARCH_INDEX = [
     "title": "《JS常用方法》",
     "headers": [],
     "path": "/study/coding/JS/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 Node.js简介",
-    "headers": [
-      {
-        "level": 2,
-        "title": "2.1 Promise",
-        "slug": "_2-1-promise",
-        "link": "#_2-1-promise",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.2 Promise的静态方法",
-        "slug": "_2-2-promise的静态方法",
-        "link": "#_2-2-promise的静态方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.3 async和await",
-        "slug": "_2-3-async和await",
-        "link": "#_2-3-async和await",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/NodeJS/Node.js.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "1 Node.js简介",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 Node.js",
-        "slug": "_1-1-node-js",
-        "link": "#_1-1-node-js",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.2 NodeJS的安装",
-        "slug": "_1-2-nodejs的安装",
-        "link": "#_1-2-nodejs的安装",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.3 node.js和JavaScript有什么区别",
-        "slug": "_1-3-node-js和javascript有什么区别",
-        "link": "#_1-3-node-js和javascript有什么区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.1 进程和线程",
-        "slug": "_2-1-进程和线程",
-        "link": "#_2-1-进程和线程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.2 同步",
-        "slug": "_2-2-同步",
-        "link": "#_2-2-同步",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.2.1 解决同步问题：",
-            "slug": "_2-2-1-解决同步问题",
-            "link": "#_2-2-1-解决同步问题",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.3 异步",
-        "slug": "_2-3-异步",
-        "link": "#_2-3-异步",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.1 回调地狱",
-        "slug": "_3-1-回调地狱",
-        "link": "#_3-1-回调地狱",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.2 Promise",
-        "slug": "_3-2-promise",
-        "link": "#_3-2-promise",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.2.1 Promise语法格式",
-            "slug": "_3-2-1-promise语法格式",
-            "link": "#_3-2-1-promise语法格式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.2.2 Promise链式",
-            "slug": "_3-2-2-promise链式",
-            "link": "#_3-2-2-promise链式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.2.3 Promise的方法",
-            "slug": "_3-2-3-promise的方法",
-            "link": "#_3-2-3-promise的方法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.1 async 和 await",
-        "slug": "_4-1-async-和-await",
-        "link": "#_4-1-async-和-await",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.1 模块分类",
-        "slug": "_5-1-模块分类",
-        "link": "#_5-1-模块分类",
-        "children": [
-          {
-            "level": 3,
-            "title": "5.1.1 内置模块",
-            "slug": "_5-1-1-内置模块",
-            "link": "#_5-1-1-内置模块",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.1.2 自定义模块",
-            "slug": "_5-1-2-自定义模块",
-            "link": "#_5-1-2-自定义模块",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.1.3 第三方模块",
-            "slug": "_5-1-3-第三方模块",
-            "link": "#_5-1-3-第三方模块",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "5.2 语法",
-        "slug": "_5-2-语法",
-        "link": "#_5-2-语法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.3 模块作用域",
-        "slug": "_5-3-模块作用域",
-        "link": "#_5-3-模块作用域",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.1 概念",
-        "slug": "_6-1-概念",
-        "link": "#_6-1-概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.2 特点",
-        "slug": "_6-2-特点",
-        "link": "#_6-2-特点",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.3 使用",
-        "slug": "_6-3-使用",
-        "link": "#_6-3-使用",
-        "children": [
-          {
-            "level": 3,
-            "title": "6.3.1 3-1. 创建 Buffer",
-            "slug": "_6-3-1-3-1-创建-buffer",
-            "link": "#_6-3-1-3-1-创建-buffer",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "6.3.2 Buffer 与字符串的转化",
-            "slug": "_6-3-2-buffer-与字符串的转化",
-            "link": "#_6-3-2-buffer-与字符串的转化",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "6.3.3 Buffer 的读写",
-            "slug": "_6-3-3-buffer-的读写",
-            "link": "#_6-3-3-buffer-的读写",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.1 文件写入",
-        "slug": "_7-1-文件写入",
-        "link": "#_7-1-文件写入",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.1.1 writeFile 异步写入",
-            "slug": "_7-1-1-writefile-异步写入",
-            "link": "#_7-1-1-writefile-异步写入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.1.2 writeFileSync 同步写入",
-            "slug": "_7-1-2-writefilesync-同步写入",
-            "link": "#_7-1-2-writefilesync-同步写入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.1.3 appendFile / appendFileSync 追加写入",
-            "slug": "_7-1-3-appendfile-appendfilesync-追加写入",
-            "link": "#_7-1-3-appendfile-appendfilesync-追加写入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.1.4 createWriteStream 流式写入",
-            "slug": "_7-1-4-createwritestream-流式写入",
-            "link": "#_7-1-4-createwritestream-流式写入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.1.5 写入文件的场景",
-            "slug": "_7-1-5-写入文件的场景",
-            "link": "#_7-1-5-写入文件的场景",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.2 文件读取",
-        "slug": "_7-2-文件读取",
-        "link": "#_7-2-文件读取",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.2.1 readFile 异步读取",
-            "slug": "_7-2-1-readfile-异步读取",
-            "link": "#_7-2-1-readfile-异步读取",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.2.2 readFileSync 同步读取",
-            "slug": "_7-2-2-readfilesync-同步读取",
-            "link": "#_7-2-2-readfilesync-同步读取",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.2.3 createReadStream 流式读取",
-            "slug": "_7-2-3-createreadstream-流式读取",
-            "link": "#_7-2-3-createreadstream-流式读取",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.2.4 读取文件应用场景",
-            "slug": "_7-2-4-读取文件应用场景",
-            "link": "#_7-2-4-读取文件应用场景",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.3 文件移动与重命名",
-        "slug": "_7-3-文件移动与重命名",
-        "link": "#_7-3-文件移动与重命名",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.4 文件删除",
-        "slug": "_7-4-文件删除",
-        "link": "#_7-4-文件删除",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.5 文件夹操作",
-        "slug": "_7-5-文件夹操作",
-        "link": "#_7-5-文件夹操作",
-        "children": [
-          {
-            "level": 3,
-            "title": "7.5.1 mkdir 创建文件夹",
-            "slug": "_7-5-1-mkdir-创建文件夹",
-            "link": "#_7-5-1-mkdir-创建文件夹",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.5.2 readdir 读取文件夹",
-            "slug": "_7-5-2-readdir-读取文件夹",
-            "link": "#_7-5-2-readdir-读取文件夹",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7.5.3 rmdir 删除文件夹",
-            "slug": "_7-5-3-rmdir-删除文件夹",
-            "link": "#_7-5-3-rmdir-删除文件夹",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.6 查看资源状态",
-        "slug": "_7-6-查看资源状态",
-        "link": "#_7-6-查看资源状态",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.7 相对路径问题",
-        "slug": "_7-7-相对路径问题",
-        "link": "#_7-7-相对路径问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.8 __dirname",
-        "slug": "_7-8-dirname",
-        "link": "#_7-8-dirname",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.1 __fileName",
-        "slug": "_8-1-filename",
-        "link": "#_8-1-filename",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.2 path.parse()",
-        "slug": "_8-2-path-parse",
-        "link": "#_8-2-path-parse",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "10.1 概念",
-        "slug": "_10-1-概念",
-        "link": "#_10-1-概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "10.2 请求报文的组成",
-        "slug": "_10-2-请求报文的组成",
-        "link": "#_10-2-请求报文的组成",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.2.1 HTTP 的请求行",
-            "slug": "_10-2-1-http-的请求行",
-            "link": "#_10-2-1-http-的请求行",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.2.2 HTTP 请求头",
-            "slug": "_10-2-2-http-请求头",
-            "link": "#_10-2-2-http-请求头",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.2.3 HTTP 的请求体",
-            "slug": "_10-2-3-http-的请求体",
-            "link": "#_10-2-3-http-的请求体",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10.3 响应报文的组成",
-        "slug": "_10-3-响应报文的组成",
-        "link": "#_10-3-响应报文的组成",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.3.1 响应行",
-            "slug": "_10-3-1-响应行",
-            "link": "#_10-3-1-响应行",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.3.2 响应头",
-            "slug": "_10-3-2-响应头",
-            "link": "#_10-3-2-响应头",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.3.3 空行",
-            "slug": "_10-3-3-空行",
-            "link": "#_10-3-3-空行",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.3.4 响应体",
-            "slug": "_10-3-4-响应体",
-            "link": "#_10-3-4-响应体",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10.4 创建 HTTP 服务",
-        "slug": "_10-4-创建-http-服务",
-        "link": "#_10-4-创建-http-服务",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.4.1 操作步骤",
-            "slug": "_10-4-1-操作步骤",
-            "link": "#_10-4-1-操作步骤",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.4.2 测试",
-            "slug": "_10-4-2-测试",
-            "link": "#_10-4-2-测试",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.4.3 注意事项",
-            "slug": "_10-4-3-注意事项",
-            "link": "#_10-4-3-注意事项",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10.5 浏览器查看 HTTP 报文",
-        "slug": "_10-5-浏览器查看-http-报文",
-        "link": "#_10-5-浏览器查看-http-报文",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.5.1 点击步骤",
-            "slug": "_10-5-1-点击步骤",
-            "link": "#_10-5-1-点击步骤",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.5.2 查看请求行与请求头",
-            "slug": "_10-5-2-查看请求行与请求头",
-            "link": "#_10-5-2-查看请求行与请求头",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.5.3 查看请求体",
-            "slug": "_10-5-3-查看请求体",
-            "link": "#_10-5-3-查看请求体",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.5.4 查看 URL 查询字符串",
-            "slug": "_10-5-4-查看-url-查询字符串",
-            "link": "#_10-5-4-查看-url-查询字符串",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.5.5 查看响应行与响应头",
-            "slug": "_10-5-5-查看响应行与响应头",
-            "link": "#_10-5-5-查看响应行与响应头",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.5.6 查看响应体",
-            "slug": "_10-5-6-查看响应体",
-            "link": "#_10-5-6-查看响应体",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10.6 获取 HTTP 请求报文",
-        "slug": "_10-6-获取-http-请求报文",
-        "link": "#_10-6-获取-http-请求报文",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.6.1 练习(practice)",
-            "slug": "_10-6-1-练习-practice",
-            "link": "#_10-6-1-练习-practice",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10.7 设置 HTTP 响应报文",
-        "slug": "_10-7-设置-http-响应报文",
-        "link": "#_10-7-设置-http-响应报文",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.7.1 练习(practice)",
-            "slug": "_10-7-1-练习-practice",
-            "link": "#_10-7-1-练习-practice",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10.8 网页资源的基本加载过程",
-        "slug": "_10-8-网页资源的基本加载过程",
-        "link": "#_10-8-网页资源的基本加载过程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "10.9 静态资源服务",
-        "slug": "_10-9-静态资源服务",
-        "link": "#_10-9-静态资源服务",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.9.1 网站根目录或静态资源目录",
-            "slug": "_10-9-1-网站根目录或静态资源目录",
-            "link": "#_10-9-1-网站根目录或静态资源目录",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.9.2 网页中的 URL",
-            "slug": "_10-9-2-网页中的-url",
-            "link": "#_10-9-2-网页中的-url",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.9.3 网页中使用 URL 的场景小结",
-            "slug": "_10-9-3-网页中使用-url-的场景小结",
-            "link": "#_10-9-3-网页中使用-url-的场景小结",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.9.4 设置资源类型（mime类型）",
-            "slug": "_10-9-4-设置资源类型-mime类型",
-            "link": "#_10-9-4-设置资源类型-mime类型",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10.10 GET和POST请求的区别",
-        "slug": "_10-10-get和post请求的区别",
-        "link": "#_10-10-get和post请求的区别",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.10.1 GET 和 POST 请求场景小结",
-            "slug": "_10-10-1-get-和-post-请求场景小结",
-            "link": "#_10-10-1-get-和-post-请求场景小结",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "11.1 express 介绍",
-        "slug": "_11-1-express-介绍",
-        "link": "#_11-1-express-介绍",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "11.2 express 使用",
-        "slug": "_11-2-express-使用",
-        "link": "#_11-2-express-使用",
-        "children": [
-          {
-            "level": 3,
-            "title": "11.2.1 express 下载",
-            "slug": "_11-2-1-express-下载",
-            "link": "#_11-2-1-express-下载",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.2.2 express 初体验",
-            "slug": "_11-2-2-express-初体验",
-            "link": "#_11-2-2-express-初体验",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "11.3 express 路由",
-        "slug": "_11-3-express-路由",
-        "link": "#_11-3-express-路由",
-        "children": [
-          {
-            "level": 3,
-            "title": "11.3.1 什么是路由",
-            "slug": "_11-3-1-什么是路由",
-            "link": "#_11-3-1-什么是路由",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.3.2 路由的使用",
-            "slug": "_11-3-2-路由的使用",
-            "link": "#_11-3-2-路由的使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.3.3 获取请求参数",
-            "slug": "_11-3-3-获取请求参数",
-            "link": "#_11-3-3-获取请求参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.3.4 获取路由参数",
-            "slug": "_11-3-4-获取路由参数",
-            "link": "#_11-3-4-获取路由参数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "11.4 express 响应设置",
-        "slug": "_11-4-express-响应设置",
-        "link": "#_11-4-express-响应设置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "11.5 express 中间件",
-        "slug": "_11-5-express-中间件",
-        "link": "#_11-5-express-中间件",
-        "children": [
-          {
-            "level": 3,
-            "title": "11.5.1 什么是中间件",
-            "slug": "_11-5-1-什么是中间件",
-            "link": "#_11-5-1-什么是中间件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.5.2 中间件的作用",
-            "slug": "_11-5-2-中间件的作用",
-            "link": "#_11-5-2-中间件的作用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.5.3 中间件的类型",
-            "slug": "_11-5-3-中间件的类型",
-            "link": "#_11-5-3-中间件的类型",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "11.6 Router(中间件的一种)",
-        "slug": "_11-6-router-中间件的一种",
-        "link": "#_11-6-router-中间件的一种",
-        "children": [
-          {
-            "level": 3,
-            "title": "11.6.1 什么是 Router",
-            "slug": "_11-6-1-什么是-router",
-            "link": "#_11-6-1-什么是-router",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.6.2 Router 作用",
-            "slug": "_11-6-2-router-作用",
-            "link": "#_11-6-2-router-作用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.6.3 Router 使用",
-            "slug": "_11-6-3-router-使用",
-            "link": "#_11-6-3-router-使用",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "12.1 什么是模板引擎",
-        "slug": "_12-1-什么是模板引擎",
-        "link": "#_12-1-什么是模板引擎",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "12.2 什么是 EJS",
-        "slug": "_12-2-什么是-ejs",
-        "link": "#_12-2-什么是-ejs",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "12.3 EJS 初体验",
-        "slug": "_12-3-ejs-初体验",
-        "link": "#_12-3-ejs-初体验",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "12.4 EJS 常用语法",
-        "slug": "_12-4-ejs-常用语法",
-        "link": "#_12-4-ejs-常用语法",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/NodeJS/Node.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/study/coding/NodeJS/nvm%20---%20%20%E4%B8%80%E4%B8%AAnodejs%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%EF%BC%81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "NodeJS",
-    "headers": [],
-    "path": "/study/coding/NodeJS/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "《git的使用》",
-    "headers": [
-      {
-        "level": 2,
-        "title": "3.1 设置用户名与邮箱（用户标识，必要）",
-        "slug": "_3-1-设置用户名与邮箱-用户标识-必要",
-        "link": "#_3-1-设置用户名与邮箱-用户标识-必要",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.1 工作流程",
-        "slug": "_4-1-工作流程",
-        "link": "#_4-1-工作流程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.1 11.1、创建工作目录与常用指令",
-        "slug": "_5-1-11-1、创建工作目录与常用指令",
-        "link": "#_5-1-11-1、创建工作目录与常用指令",
-        "children": [
-          {
-            "level": 3,
-            "title": "5.1.1 本地仓库搭建",
-            "slug": "_5-1-1-本地仓库搭建",
-            "link": "#_5-1-1-本地仓库搭建",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.1.2 克隆远程仓库",
-            "slug": "_5-1-2-克隆远程仓库",
-            "link": "#_5-1-2-克隆远程仓库",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "6.1 文件的四种状态",
-        "slug": "_6-1-文件的四种状态",
-        "link": "#_6-1-文件的四种状态",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.2 查看文件状态",
-        "slug": "_6-2-查看文件状态",
-        "link": "#_6-2-查看文件状态",
-        "children": []
-      }
-    ],
-    "path": "/study/coding/git/Git.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Git",
-    "headers": [],
-    "path": "/study/coding/git/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6215,6 +6215,20 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "标签: HTML5",
+    "headers": [],
+    "path": "/tag/html5/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "标签: git",
+    "headers": [],
+    "path": "/tag/git/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "标签: HTML4",
     "headers": [],
     "path": "/tag/html4/",
@@ -6222,9 +6236,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "标签: HTML5",
+    "title": "标签: Node",
     "headers": [],
-    "path": "/tag/html5/",
+    "path": "/tag/node/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6253,20 +6267,6 @@ export const SEARCH_INDEX = [
     "title": "标签: JS方法",
     "headers": [],
     "path": "/tag/js%E6%96%B9%E6%B3%95/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "标签: Node",
-    "headers": [],
-    "path": "/tag/node/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "标签: git",
-    "headers": [],
-    "path": "/tag/git/",
     "pathLocale": "/",
     "extraFields": []
   },
