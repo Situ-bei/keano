@@ -6,7 +6,8 @@ import { ref, onMounted, nextTick } from 'vue';
 import axios from 'axios';
 import store from 'store';
 const router = useRouter();
-
+let musicListURL = 'https://api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r' ;
+// let musicListURL = 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=596766562&r=:r' ;
 
 
 let APlayer: any;
@@ -151,14 +152,12 @@ function AddBtnSpin() {
 * }
 * 加载音乐列表
 */
-// 加载音乐列表
-const localMusicList = store.get('localMusicList');
-// console.log("store 列表",localMusicList);
-// let musicListURL = '//api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r' ;
-let musicListURL = 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=596766562&r=:r' ;
+
+
+
 const LoadMusicList = async () => {
   
-  console.log("url",musicListURL);
+  console.log("当前歌单api",musicListURL);
   
   // if(localMusicList) {
   //   console.log("有本地列表",localMusicList);
@@ -215,25 +214,24 @@ const LoadMusicList = async () => {
       params: {},
     }).then((response) => {
       console.log('获取音乐数据,判断之前',response.data.message);
+
+      // 判断接口是否可用
       if (response.data.message == '请求次数已达上限，请明天再试') {
         alert('音乐API请求次数已达上限，请明天再试');
-        // store.remove('localMusicList');
-        musicListURL = '//api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r'
+        musicListURL = '//api.i-meto.com/meting/api?server=netease&type=playlist&id=596766562&r=:r' 
         alert('赋值');
         LoadMusicList( )
         // return;
       }
+
+      // 获取歌单后赋值
       const listData = response.data;
       if (listData && listData.length > 0) {
         GlobalMusicList = listData;
-        console.log("又获取列表了,进入列表判断",response);
-        
-        // const el = document.getElementById('GlobalAPlayer');
-
-        
+        console.log("已经获取歌单成功并赋值",GlobalMusicList);
       }
-      // console.log('加载音乐列表', GlobalMusicList);
-      // callback && callback();
+
+      // 创建播放器实例
       creatAplayer()
     }).catch((error) => {
       console.error('加载音乐列表失败:', error);
@@ -284,7 +282,8 @@ const creatAplayer = () => {
       // };
     });
     
-    router?.afterEach(() => {
+    // 路由更新
+    router.afterEach(() => {
       setTimeout(() => {
         InsertMenu();
         NewPlayer();
