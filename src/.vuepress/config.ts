@@ -26,7 +26,7 @@ export default defineUserConfig({
 
 
   // 站点路由前缀
-  base: "/keano/",
+  // base: "/keano/",
   temp: '.vscode/.vp-temp', // 缓存路径
   cache: '.vscode/.vp-cache', // 缓存路径
   

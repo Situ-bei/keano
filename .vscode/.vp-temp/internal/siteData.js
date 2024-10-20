@@ -1,4 +1,4 @@
-export const siteData = JSON.parse("{\"base\":\"/keano/\",\"lang\":\"en-US\",\"title\":\"\",\"description\":\"\",\"head\":[[\"meta\",{\"name\":\"referrer\",\"content\":\"no-referrer-when-downgrade\"}]],\"locales\":{\"/\":{\"lang\":\"zh-CN\",\"title\":\"KEANO\",\"description\":\"Keano的博客\"},\"/en/\":{\"lang\":\"en-US\",\"title\":\"Keano's Blog\",\"description\":\"A blog demo for vuepress-theme-hope\"}}}")
+export const siteData = JSON.parse("{\"base\":\"/\",\"lang\":\"en-US\",\"title\":\"\",\"description\":\"\",\"head\":[[\"meta\",{\"name\":\"referrer\",\"content\":\"no-referrer-when-downgrade\"}]],\"locales\":{\"/\":{\"lang\":\"zh-CN\",\"title\":\"KEANO\",\"description\":\"Keano的博客\"},\"/en/\":{\"lang\":\"en-US\",\"title\":\"Keano's Blog\",\"description\":\"A blog demo for vuepress-theme-hope\"}}}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()
