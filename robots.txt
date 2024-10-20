@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://situ-bei.github.io/keano/keano/sitemap.xml
+Sitemap: https://situ-bei.github.io/keano/sitemap.xml
