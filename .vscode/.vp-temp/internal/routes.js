@@ -192,6 +192,7 @@ export const routes = Object.fromEntries([
   ["/en/timeline/", { loader: () => import(/* webpackChunkName: "en_timeline_index.html" */"F:/桌面/【Vue】/Blog/keano/.vscode/.vp-temp/pages/en/timeline/index.html.js"), meta: {"t":"Timeline","I":false,"y":"p"} }],
   ["/en/essay/", { loader: () => import(/* webpackChunkName: "en_essay_index.html" */"F:/桌面/【Vue】/Blog/keano/.vscode/.vp-temp/pages/en/essay/index.html.js"), meta: {"t":"随笔","y":"p"} }],
   ["/essay/", { loader: () => import(/* webpackChunkName: "essay_index.html" */"F:/桌面/【Vue】/Blog/keano/.vscode/.vp-temp/pages/essay/index.html.js"), meta: {"t":"随笔","y":"p"} }],
+  ["/life/movie/%E3%80%8A%E5%AF%8C%E5%A3%AB%E5%B1%B1%E4%B8%8B%E3%80%8B.html", { loader: () => import(/* webpackChunkName: "life_movie_《富士山下》.html" */"F:/桌面/【Vue】/Blog/keano/.vscode/.vp-temp/pages/life/movie/《富士山下》.html.js"), meta: {"d":1719619200000,"l":"2024年6月29日","c":["生活","音乐"],"g":["粤语歌曲","学唱","富士山下","陈奕迅"],"e":"<p>粤语歌曲谐音学唱</p>\n","r":{"minutes":2.48,"words":743},"t":"《富士山下》","y":"a"} }],
 ]);
 
 if (import.meta.webpackHot) {
