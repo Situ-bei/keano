@@ -32,7 +32,7 @@ export default defineUserConfig({
   
   head: [
     ["meta", { name: "referrer", content: "no-referrer-when-downgrade" }],
-    ['link', { rel: 'preload', href: '/keano/.vuepress/public/font/xinkai.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }]
+    // ['link', { rel: 'preload', href: '/keano/.vuepress/public/font/xinkai.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }]
   ], // 禁止 referrer
   
   // 【插件】
