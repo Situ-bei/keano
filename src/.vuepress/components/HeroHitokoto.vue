@@ -200,7 +200,7 @@ onMounted(() => {
 }
 
 .word {
-  font-family: '华文行楷';
+  font-family: xinkai;
 }
 
 #hitokoto_text {

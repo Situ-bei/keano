@@ -16,8 +16,11 @@ import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
 import "vuepress-theme-hope/presets/left-blog-info.scss"
 import "vuepress-theme-hope/presets/round-blogger-avatar.scss"  // 博主头像裁剪为圆形
 
+// 引入音乐播放器组件
+// import NavMusic from './components/NavMusic.vue'
+
 // 【自定义组件】
-// import Essay from "./components/essay/News.vue"
+import Essay from "./components/essay/News.vue"
 
 const TopNavBeautify = defineAsyncComponent(() => import('./components/TopNavBeautify.vue'));
 const HeroBG = defineAsyncComponent(() => import('./components/HeroBG.vue'));
@@ -29,7 +32,7 @@ const MyIcon = defineAsyncComponent(() => import('./components/MyIcon.vue'));
 const BlogBg = defineAsyncComponent(() => import('./components/BlogBg.vue'));
 const BlogBeautify = defineAsyncComponent(() => import('./components/BlogBeautify.vue'));
 const PreviewImage = defineAsyncComponent(() => import('./components/PreviewImage.vue'));
-const Essay = defineAsyncComponent(() => import('./components/essay/News.vue'));
+// const Essay =  defineAsyncComponent(() => import('./components/essay/News.vue'));
 
 // https://theme-hope.vuejs.press/zh/guide/advanced/client.html#%E4%BE%8B%E5%AD%90
 export default defineClientConfig({
@@ -77,5 +80,6 @@ export default defineClientConfig({
     // BlogBg,  // 背景美化，让整个博客可以添加自定义的背景，让观感更加舒适。包括 sidebar 的毛玻璃效果等。还有内容部分的视觉优化。
     // PreviewImage,
     // ...
+    // Essay
   ],
 });

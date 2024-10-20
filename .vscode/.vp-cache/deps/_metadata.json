@@ -2,72 +2,72 @@
   "hash": "dfaaf2ac",
   "configHash": "9a8be2b0",
   "lockfileHash": "09f91f65",
-  "browserHash": "e36fff07",
+  "browserHash": "1e428b36",
   "optimized": {
     "markmap-lib": {
       "src": "../../../node_modules/markmap-lib/dist/browser/index.mjs",
       "file": "markmap-lib.js",
-      "fileHash": "920bfaad",
+      "fileHash": "652269c9",
       "needsInterop": false
     },
     "markmap-toolbar": {
       "src": "../../../node_modules/markmap-toolbar/dist/index.mjs",
       "file": "markmap-toolbar.js",
-      "fileHash": "eb908f25",
+      "fileHash": "1b33aecd",
       "needsInterop": false
     },
     "markmap-view": {
       "src": "../../../node_modules/markmap-view/dist/index.js",
       "file": "markmap-view.js",
-      "fileHash": "371e6ccf",
+      "fileHash": "8b003a6c",
       "needsInterop": false
     },
     "@vue/devtools-api": {
       "src": "../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "aa10a9bd",
+      "fileHash": "eab5efa3",
       "needsInterop": false
     },
     "@vuepress/shared": {
       "src": "../../../node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "22c0a374",
+      "fileHash": "45d6472c",
       "needsInterop": false
     },
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "a3b057cd",
+      "fileHash": "726b7e27",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "df825389",
+      "fileHash": "29610d2b",
       "needsInterop": false
     },
     "@moefy-canvas/theme-popper": {
       "src": "../../../node_modules/@moefy-canvas/theme-popper/dist/index.js",
       "file": "@moefy-canvas_theme-popper.js",
-      "fileHash": "7c0b63f9",
+      "fileHash": "7deff040",
       "needsInterop": false
     },
     "axios": {
       "src": "../../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "793ee6f0",
+      "fileHash": "5d7ce1b1",
       "needsInterop": false
-    },
-    "store": {
-      "src": "../../../node_modules/store/dist/store.legacy.js",
-      "file": "store.js",
-      "fileHash": "651e2f98",
-      "needsInterop": true
     },
     "aplayer": {
       "src": "../../../node_modules/aplayer/dist/APlayer.min.js",
       "file": "aplayer.js",
-      "fileHash": "b6c8506e",
+      "fileHash": "e22f3b17",
+      "needsInterop": true
+    },
+    "store": {
+      "src": "../../../node_modules/store/dist/store.legacy.js",
+      "file": "store.js",
+      "fileHash": "593431c1",
       "needsInterop": true
     }
   },

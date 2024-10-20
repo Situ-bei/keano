@@ -2,14 +2,14 @@
 @use "@sass-palette/hope-config";
 
 // 在线字体
-@font-face {
-    font-family: "ZWZT";
-    src: url("https://cdn.jsdelivr.net/gh/ZhongZN/ZFonts/13.woff2")
-        format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: "ZWZT";
+//     src: url("https://cdn.jsdelivr.net/gh/ZhongZN/ZFonts/13.woff2")
+//         format("woff2");
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
 @font-face {
     font-family: "PRshouxie";
     src: url("https://cdn.jsdelivr.net/gh/oragekk/blog-assets/font/8d6a7466947745f9f211cd17e0ed5dc3.woff2")
@@ -25,6 +25,7 @@
 @font-face {
     font-family: "xinkai";
     src: url(../public/font/xinkai.woff2);
+    font-display: swap; // 确保在字体加载期间使用备用字体
 }
 
 // place your custom styles here  在此处放置您的自定义样式

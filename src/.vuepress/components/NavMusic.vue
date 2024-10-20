@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import 'aplayer/dist/APlayer.min.css';
 import MyIcon from './MyIcon.vue';
-import { useRouter } from 'vue-router';
-import { ref, onMounted, nextTick } from 'vue';
+import { onBeforeRouteUpdate, useRouter } from 'vue-router';
+import { ref, onMounted, nextTick, onUpdated} from 'vue';
 import axios from 'axios';
 import store from 'store';
 const router = useRouter();
@@ -67,6 +67,17 @@ const InsertMenu = () => {
   };
 };
 
+// 添加按钮旋转
+function AddBtnSpin() {
+  const Win: any = window;
+  if (Win.GlobalAPlayer && Win.GlobalAPlayer.mode) {
+    if (Win.GlobalAPlayer.paused) {
+      document.getElementById('MyMusic_icon')?.setAttribute('spin', 'false');
+    } else {
+      document.getElementById('MyMusic_icon')?.setAttribute('spin', 'true');
+    }
+  }
+}
 // 创建播放器
 const NewPlayer = () => {
   if (!APlayer) {
@@ -91,21 +102,23 @@ const NewPlayer = () => {
   const playExist = playElm.classList.contains('aplayer');
   if (playExist) {
     return;
+  }else{
+      Win.GlobalAPlayer = new APlayer({
+      container: document.getElementById('GlobalAPlayer'),
+      audio: GlobalMusicList,
+      lrcType: 3,  //歌词文件形式 1歌词直接复制进来，2html形式，3数据库获取格式跟下面的一样
+      listFolded: false,
+      listMaxHeight: '324px',
+      mini: false,
+      fixed: false,
+      volume: 2,
+      storageName: 'GlobalAPlayer',
+    });
+    console.log('APlayer 接管，播放器已创建' );
   }
 
-  Win.GlobalAPlayer = new APlayer({
-    container: document.getElementById('GlobalAPlayer'),
-    audio: GlobalMusicList,
-    lrcType: 3,  //歌词文件形式 1歌词直接复制进来，2html形式，3数据库获取格式跟下面的一样
-    listFolded: false,
-    listMaxHeight: '324px',
-    mini: false,
-    fixed: false,
-    volume: 2,
-    storageName: 'GlobalAPlayer',
 
-  });
-  console.log('播放器已创建',Win.GlobalAPlayer.audio );
+  
   
   // Win.GlobalAPlayer = document.getElementById('GlobalAPlayer')
   
@@ -118,16 +131,7 @@ const NewPlayer = () => {
   });
 };
 
-function AddBtnSpin() {
-  const Win: any = window;
-  if (Win.GlobalAPlayer && Win.GlobalAPlayer.mode) {
-    if (Win.GlobalAPlayer.paused) {
-      document.getElementById('MyMusic_icon')?.setAttribute('spin', 'false');
-    } else {
-      document.getElementById('MyMusic_icon')?.setAttribute('spin', 'true');
-    }
-  }
-}
+
 
 // function StopMusic() {
 //   const Win: any = window;
@@ -158,54 +162,8 @@ function AddBtnSpin() {
 const LoadMusicList = async () => {
   
   console.log("当前歌单api",musicListURL);
-  
-  // if(localMusicList) {
-  //   console.log("有本地列表",localMusicList);
-    
-  //   GlobalMusicList = localMusicList;
-  //   creatAplayer()
-  // }else{
-  //   await axios({
-  //     method: 'get',
-  //     //插件作者的歌单
-  //     // url: '//file.mo7.cc/music/list.json',
-  //     // 自己的歌单
-  //     url: musicListURL,
-  //     params: {},
-  //   }).then((response) => {
-  //     console.log('获取音乐数据,判断之前',response.data.message);
-  //     if (response.data.message == '请求次数已达上限，请明天再试') {
-  //       alert('音乐API请求次数已达上限，请明天再试');
-  //       store.remove('localMusicList');
-  //       musicListURL = '//api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r'
-  //       alert('赋值');
-  //       LoadMusicList( )
-  //       // return;
-  //     }
-      
-  //     const listData = response.data;
-  //     if (listData && listData.length > 0) {
-        
-        
-  //       store.set('localMusicList', listData);
-        
-        
-  //       GlobalMusicList = listData;
-  //       console.log("又获取列表了,进入列表判断",response);
-        
-  //       // const el = document.getElementById('GlobalAPlayer');
-
-        
-  //     }
-  //     // console.log('加载音乐列表', GlobalMusicList);
-  //     // callback && callback();
-  //     creatAplayer()
-  //   }).catch((error) => {
-  //     console.error('加载音乐列表失败:', error);
-  //   });
-  // }
-
-  await axios({
+  try {
+    await axios({
       method: 'get',
       //插件作者的歌单
       // url: '//file.mo7.cc/music/list.json',
@@ -215,12 +173,12 @@ const LoadMusicList = async () => {
     }).then((response) => {
       console.log('获取音乐数据,判断之前',response.data.message);
 
-      // 判断接口是否可用
+      // // 判断接口是否可用
       if (response.data.message == '请求次数已达上限，请明天再试') {
         alert('音乐API请求次数已达上限，请明天再试');
         musicListURL = '//api.i-meto.com/meting/api?server=netease&type=playlist&id=596766562&r=:r' 
         alert('赋值');
-        LoadMusicList( )
+        return LoadMusicList()
         // return;
       }
 
@@ -233,9 +191,16 @@ const LoadMusicList = async () => {
 
       // 创建播放器实例
       creatAplayer()
-    }).catch((error) => {
-      console.error('加载音乐列表失败:', error);
-    });
+
+    })
+  } catch (error) {
+    alert(`
+      歌单获取失败 
+      错误信息：${error.message}
+      错误代码：${error.code}
+      `)
+    console.error('加载音乐列表失败:', error);
+  }
 };
 
 // let options = {
@@ -261,15 +226,13 @@ const LoadMusicList = async () => {
 // const observer = new IntersectionObserver(callback, options);
 
 const creatAplayer = () => {
-  
-  
   import('aplayer').then((res) => {
     nextTick(() => {
-      // console.log('打印res子组件挂载',res);
+      
       APlayer = res.default;
       InsertMenu();
       NewPlayer();
-      
+      // console.log('打印res子组件挂载',APlayer);
       // let observerList = document.querySelectorAll('#GlobalAPlayer .aplayer-list li')
       // observerList.forEach (item => {
       //   observer.observe(item)
@@ -283,18 +246,24 @@ const creatAplayer = () => {
     });
     
     // 路由更新
-    router.afterEach(() => {
+    router.afterEach( (to,from) => {
+      console.log('监测到路由更新');
       setTimeout(() => {
         InsertMenu();
         NewPlayer();
-      }, 50);
+        console.log('路由更新,更新播放器实例afterEach');
+      }, 30);
     });
   });
 }
 
+
 onMounted(  () => {
   LoadMusicList()
+
 });
+
+
 </script>
 
 <template>

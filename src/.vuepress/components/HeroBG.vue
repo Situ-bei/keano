@@ -166,9 +166,16 @@ onMounted(() => {
   font-family: 'mo7_font';
   src: url('/font/mo7_font.ttf');
 }
+@font-face {
+    font-family: "xinkai";
+    src: url(../public/font/xinkai.woff2);
+    font-display: swap; // 确保在字体加载期间使用备用字体
+}
+
+
 .vp-blog-hero-title {
   font-size: 3.8rem;
-  font-family: 'mo7_font';
+  font-family: xinkai;
   cursor: pointer;
 }
 

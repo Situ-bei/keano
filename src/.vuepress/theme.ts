@@ -17,13 +17,13 @@ export default hopeTheme(
   // 全局默认作者
   author: {
     name: "Keano",
-    url: "https://mister-hope.com",
+    url: "https://situ-bei.github.io/keano/",
   },
   fullscreen: true,//设置全屏
   navbarAutoHide: 'always', //导航栏自动隐藏
   darkmode: "toggle", // 暗黑模式
   themeColor: true, // 启用主题颜色
-  logo: "/logo.svg", // logo
+  logo: "/logo.png", // 导航栏logo
   repo: "https://situ-bei.github.io/keano/", // github仓库
   // 文档在仓库中的目录
   docsDir: "src", // 你可以通过在主题选项中设置如下项目，来自动为每个页面生成编辑此页链接
@@ -174,6 +174,7 @@ export default hopeTheme(
     config: {
       "/demo/encrypt.html": ["134130"],
       "/en/demo/encrypt.html": ["134130"],
+      "/study/coding/": "134130"
     },
   },
   
@@ -229,7 +230,7 @@ export default hopeTheme(
       repoId:"R_kgDOM9t6kQ",   // Giscus的仓库ID
       categoryId:"DIC_kwDOM9t6kc4CjMst", // Giscus的分类ID
       category:'Announcements',  // Giscus的分类
-
+      lazyLoading: true,
     },
     
     // Register components globally  【全局注册组件】

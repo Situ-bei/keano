@@ -30,7 +30,10 @@ export default defineUserConfig({
   temp: '.vscode/.vp-temp', // 缓存路径
   cache: '.vscode/.vp-cache', // 缓存路径
   
-  head: [["meta", { name: "referrer", content: "no-referrer-when-downgrade" }]], // 禁止 referrer
+  head: [
+    ["meta", { name: "referrer", content: "no-referrer-when-downgrade" }],
+    ['link', { rel: 'preload', href: '/keano/.vuepress/public/font/xinkai.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }]
+  ], // 禁止 referrer
   
   // 【插件】
   plugins: [
