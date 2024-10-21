@@ -1,0 +1,199 @@
+// you can change colors here  你可以在这里换颜色
+// $theme-colors:#3eaf7c, #fb9b5f, #2196f3;
+@use "@sass-palette/hope-config";
+
+
+// mobile 首页卡片设置
+.vp-article-wrapper{
+    .vp-article-item{
+        @media (max-width: hope-config.$mobile) {
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    }
+
+}
+
+// 底部分页器
+.vp-pagination{
+    .vp-pagination-number {
+        border: none;
+        div{
+            &.active {
+                background-color: var(--vp-c-accent) !important;
+                // z-index: 99;
+            }
+        }
+    }
+    .vp-pagination-button{
+        border: none
+    }
+    
+}
+
+// 侧边栏 边框
+.theme-container {
+    .vp-sidebar > .vp-sidebar-links {
+        padding-right: 8px;
+    }
+    .vp-sidebar > .vp-sidebar-links {
+        & > li > .vp-sidebar-group {
+            backdrop-filter: blur(2px); // 毛玻璃效果
+            border-radius: 0.4rem;
+            padding: 8px 0 !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    $myshadow: 
+        -.1rem -.1rem .2rem rgba(255, 255, 255,1),
+        .1rem .2rem .2rem hsl(0 0% 50% / .6);
+    [data-theme='light'] {
+        .theme-container {
+        .vp-sidebar > .vp-sidebar-links {
+            & > li > .vp-sidebar-group {
+                // box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+                box-shadow: $myshadow;
+            }
+        }
+        }
+    }
+    $myshadowDark: 
+        -.1rem -.1rem .3rem hsla(0, 0%, 80%, 0.473),
+        .2rem .2rem .3rem hsla(0, 0%, 0%, 0.517);
+
+    [data-theme='dark'] {
+        .theme-container {
+        .vp-sidebar > .vp-sidebar-links {
+            & > li > .vp-sidebar-group {
+                box-shadow: $myshadowDark;
+            }
+        }
+        }
+    }
+}
+
+// 代码块样式
+[data-theme="light"] .code-demo-container {
+    background-color: #ff00006c;
+    box-shadow: #fdbc40 !important;
+}
+[data-theme="dark"] .code-demo-container {
+    background-color: rgb(40, 44, 52,.5);
+}   
+// tabs
+.vp-code-tabs-nav {
+    margin: 0.875rem 0 -1.25rem 0;
+}
+    
+.theme-hope-content > div[class*="language-"] {
+    @media (max-width: hope-config.$tablet) {
+        margin: 0.875rem -1.5rem;
+        border-radius: 6px;
+        box-shadow: #fdbc40 !important;
+    }
+    @media (max-width: hope-config.$mobile) {
+        margin: 0.875rem -0.5rem;
+        border-radius: 6px;
+        box-shadow: #fdbc40 !important;
+    }
+}
+div[class*="language-"].line-numbers-mode:after {
+    position: absolute;
+    top: 0.7rem;
+    left: 0.7rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 12px;
+    content: "";
+    background: #fc625d;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+}
+div[class*="language-"]:after {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.7rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 12px;
+    content: "";
+    background: #fc625d;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+}
+// 代码块样式修改 【代码块数字】
+div[class*="language-"].line-numbers-mode .line-numbers {
+    // background-color: var(--code-bg-color) !important;
+    
+    
+    width: 2.4rem;
+    padding: 0.6rem 0;
+    margin-top: 34px;
+    margin-bottom: 10px;
+}
+// 代码块样式修改 【代码块背景】
+[data-theme="dark"] div[class*="language-"]{
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+div[class*="language-"] {
+    // background-color: var(--code-bg-color) !important;
+    background-color: rgb(255, 255, 255,.3);
+    backdrop-filter: blur(10px);
+    padding-top: 33px;
+    padding-bottom: 2px;
+    margin: 20px 0;
+}
+div[class*="language-"]:before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0.55rem;
+    left: 5rem;
+    z-index: 3;
+    color: var(--code-line-number-color);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: system-ui;
+}
+div[class*="language-"]:hover:before {
+    display: block !important;
+}
+div[class*="language-"].line-numbers-mode pre code {
+    padding: 0.6rem 0  .5rem;
+}
+div[class*="language-"]:not([class*="line-numbers-mode"]) pre code {
+    padding: 0 1rem;
+}
+div[class*="language-"].line-numbers-mode pre {
+    margin: 0;
+    margin-left: 2.4rem;
+    border-left: 2px solid var(--code-highlight-bg-color);
+    border-radius: 0px;
+}
+// 代码块高亮
+div[class*=language-] .line.highlighted{
+    padding: 0 0 0 var(--code-padding-x);
+}
+
+// 引用样式修改
+body {
+    // 引用样式修改
+    blockquote {
+        border-inline-start: 0.2rem solid;
+        border-color: var(--vp-c-accent);
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 0.8rem 1rem;
+        color: var(--vp-c-accent);
+        border-radius: .625rem;
+    }
+}
+
+[data-theme="dark"] blockquote {
+    // border-color: #8c9595 !important;
+    background-color: rgba(14, 14, 14, 0.234)
+    // color: #999;
+}
+
