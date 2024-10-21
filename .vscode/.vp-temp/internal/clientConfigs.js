@@ -16,7 +16,7 @@ import * as clientConfig14 from 'F:/桌面/【Vue】/Blog/keano/node_modules/@vu
 import * as clientConfig15 from 'F:/桌面/【Vue】/Blog/keano/node_modules/@vuepress/plugin-redirect/lib/client/config.js'
 import * as clientConfig16 from 'F:/桌面/【Vue】/Blog/keano/.vscode/.vp-temp/theme-hope/config.js'
 import * as clientConfig17 from 'F:/桌面/【Vue】/Blog/keano/node_modules/vuepress-plugin-search-pro/lib/client/config.js'
-import * as clientConfig18 from 'F:/桌面/【Vue】/Blog/keano/src/.vuepress/plugins/vuepress-plugin-meteor/client/popper-client-config.ts'
+import * as clientConfig18 from 'F:/桌面/【Vue】/Blog/keano/src/.vuepress/plugins/vuepress-plugin-meteor'
 import * as clientConfig19 from 'F:/桌面/【Vue】/Blog/keano/src/.vuepress/plugins/vuepress-plugin-gradient-cover/client/cover-client-config.ts'
 import * as clientConfig20 from 'F:/桌面/【Vue】/Blog/keano/src/.vuepress/plugins/vuepress-plugin-canvas/client/canvas-client-config.ts'
 import * as clientConfig21 from 'F:/桌面/【Vue】/Blog/keano/src/.vuepress/client.ts'

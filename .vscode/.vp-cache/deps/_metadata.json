@@ -2,60 +2,54 @@
   "hash": "6a020eef",
   "configHash": "b36ccd0f",
   "lockfileHash": "09f91f65",
-  "browserHash": "427b3135",
+  "browserHash": "b7f3dc32",
   "optimized": {
     "markmap-lib": {
       "src": "../../../node_modules/markmap-lib/dist/browser/index.mjs",
       "file": "markmap-lib.js",
-      "fileHash": "72a66663",
+      "fileHash": "55fcf35b",
       "needsInterop": false
     },
     "markmap-toolbar": {
       "src": "../../../node_modules/markmap-toolbar/dist/index.mjs",
       "file": "markmap-toolbar.js",
-      "fileHash": "2b6b6fbd",
+      "fileHash": "2dc903d1",
       "needsInterop": false
     },
     "markmap-view": {
       "src": "../../../node_modules/markmap-view/dist/index.js",
       "file": "markmap-view.js",
-      "fileHash": "95e8e721",
+      "fileHash": "eff95525",
       "needsInterop": false
     },
     "@vue/devtools-api": {
       "src": "../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "af297342",
+      "fileHash": "06edf0c5",
       "needsInterop": false
     },
     "@vuepress/shared": {
       "src": "../../../node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "49d9c341",
+      "fileHash": "f9bcae8a",
       "needsInterop": false
     },
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "651c63a0",
+      "fileHash": "2b6b462f",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "3a9b7657",
-      "needsInterop": false
-    },
-    "@moefy-canvas/theme-meteor": {
-      "src": "../../../node_modules/@moefy-canvas/theme-meteor/dist/index.js",
-      "file": "@moefy-canvas_theme-meteor.js",
-      "fileHash": "3bec7c56",
+      "fileHash": "14ae8c92",
       "needsInterop": false
     },
     "axios": {
       "src": "../../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "6772ae8b",
+      "fileHash": "84cc9a17",
       "needsInterop": false
     }
   },
