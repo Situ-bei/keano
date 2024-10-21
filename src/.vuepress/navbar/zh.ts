@@ -33,7 +33,7 @@ export const zhNavbar = navbar([
           { text: "NodeJS", icon: "icon-nodejsGreen", link: "NodeJS/",},
           { text: "Vue生态", icon: "icon-logo-vue", link: "Vue/",},
           { text: "git", icon: "icon-github-fill", link: "git/",},
-          { text: "九九八十一难", icon: "icon-github-fill", link: "interview/",},
+          { text: "九九八十一难", icon: "icon-martial-arts", link: "interview/",},
 
         ],
       },

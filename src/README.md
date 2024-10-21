@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: icon-homefill
 title: 主页
-heroImage: /assets/icon/avatar.jpg
+heroImage: /assets/icon/avatar.png
 heroText: Keano的树洞
 heroFullScreen: true
 tagline: 让我们变得更强大

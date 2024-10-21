@@ -78,6 +78,13 @@ export const zhSidebar = sidebar({
               prefix: "git/",
               link: "git/",
             },
+            {
+              text: "九九八十一难",
+              icon: "icon-martial-arts", 
+              collapsible: false,
+              prefix: "interview/",
+              link: "interview/",
+            },
           ],
         },
         //历史
@@ -263,8 +270,8 @@ export const zhSidebar = sidebar({
   "/study/coding/interview/":[
     back_home,
     {
-      text: "面试题",
-      icon: "icon-studyfill",
+      text: "九九八十一难",
+      icon: "icon-martial-arts",
       children: "structure",
       
     }
