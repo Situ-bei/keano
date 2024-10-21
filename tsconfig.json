@@ -19,7 +19,7 @@
     "baseUrl": "./",  // F:\桌面\【Vue】\Blog\keano\node_modules
     "paths": {
       // "@vh/*" : ["node_modules/vuepress-theme-hope/*"]
-      // "@/*": ["src/*"],
+      "@/*": ["src/*"],
       "@theme-hope/*": ["node_modules/vuepress-theme-hope/lib/client/*"],
       "vuepress-theme-hope/*": ["node_modules/vuepress-theme-hope/lib/*"], // vuepress-theme-hope/client/components/transitions/DropTransition.js
     },

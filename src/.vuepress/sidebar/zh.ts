@@ -10,10 +10,10 @@ export const zhSidebar = sidebar({
   "/": [
     // 首页
     back_home,
-    // 入门
+    // 指南
     {
-      text: "如何使用",
-      icon: "laptop-code",
+      text: "指南",
+      icon: "icon-shiyongzhinan",
       prefix: "demo/",
       link: "demo/",
       children: "structure",
@@ -82,7 +82,7 @@ export const zhSidebar = sidebar({
               text: "九九八十一难",
               icon: "icon-martial-arts", 
               collapsible: false,
-              prefix: "interview/",
+              prefix: "interview/", // structure
               link: "interview/",
             },
           ],

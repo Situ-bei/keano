@@ -1,4 +1,6 @@
-<template><div><h1 id="_1-node-js简介" tabindex="-1"><a class="header-anchor" href="#_1-node-js简介"><span>1 Node.js简介</span></a></h1>
+<template><div><p>NodeJS 尚硅谷版本</p>
+<!-- more -->
+<h1 id="node-js简介" tabindex="-1"><a class="header-anchor" href="#node-js简介"><span>Node.js简介</span></a></h1>
 <h2 id="_1-1-node-js" tabindex="-1"><a class="header-anchor" href="#_1-1-node-js"><span>1.1 Node.js</span></a></h2>
 <ul>
 <li>运行在服务器端的 JavaScript</li>

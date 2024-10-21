@@ -1,11 +1,9 @@
 <template><div><h1 id="浏览器的缓存机制和原理" tabindex="-1"><a class="header-anchor" href="#浏览器的缓存机制和原理"><span>浏览器的缓存机制和原理</span></a></h1>
-<h1 id="浏览器的缓存机制和原理-1" tabindex="-1"><a class="header-anchor" href="#浏览器的缓存机制和原理-1"><span>浏览器的缓存机制和原理</span></a></h1>
 <p>浏览器的缓存机制也就是我们说的 HTTP 缓存机制，其机制是根据 HTTP 报文的缓存标识进行的。</p>
 <p>在前端开发中，我们追求性能和用户体验。对于一个网站，查看性能最简单的方式就是打开网站的速度。</p>
 <p>而一个好的缓存策略可以大大提升网站的性能，使得已经下载后的资源被重复利用，减少客户端和服务器之间的请求次数，减少带宽，减少网络负荷。缓存可以说是性能优化中简单高效的一种优化方式了。</p>
 <p>对于一个数据请求来说，可以分为发起<strong>网络请求</strong>、<strong>后端处理</strong>、<strong>浏览器响应</strong>三个步骤。浏览器缓存可以帮助我们在第一和第三步骤中优化性能。比如说直接使用缓存而不发起请求，或者发起了请求但后端存储的数据和前端一致，那么就没有必要再将数据回传回来，这样就减少了响应数据。</p>
-<!-- more -->
-<MarkMap id="markmap-19" content="eJx1kE1LAlEUhvfzKw60KfAOjbWSaGMGga76BdN4bS7q3OHOZB+riFADP6IQTQRpZRunTUqJ1p/x3tFVf6HrxwiRLc97znmf9xyEkJLVWTqr2xEFwKAZyg4Zxlc4jnM4E4GwMhtRNkD0qpNOkT+9+M1bf/jIuw3RGvBinz+UeKXt3+fl0Abw4WDRVBQEsQubMOxsmq5rg6Zub4FEACCYXjcnX4WgD7xbF15v4n36I0/U+9P6W0hUOtI74NyJWlG02iFfut98iMbr+L3MC3n/2ZOUqG6YGEWp5TKambM0VZOoeZxyldfyy0QI4rrjogRNkhTBSdg7YftwlFoJ6JhYBoZ/4/7e/hv6e1haG1vqa4PHXP0U5PuApJClWxQldNcM6MEFC6/xqCwxckdTwcEsRww4pyyNmZTCKiRwlrJLMGafkMqOCgfESa/qXRXsM8dc1soPsEXkTQ=="></MarkMap><h2 id="缓存过程分析" tabindex="-1"><a class="header-anchor" href="#缓存过程分析"><span><strong>缓存过程分析</strong></span></a></h2>
+<MarkMap id="markmap-15" content="eJx1kE1LAlEUhvfzKw60KfAOjbWSaGMGga76BdN4bS7q3OHOZB+riFADP6IQTQRpZRunTUqJ1p/x3tFVf6HrxwiRLc97znmf9xyEkJLVWTqr2xEFwKAZyg4Zxlc4jnM4E4GwMhtRNkD0qpNOkT+9+M1bf/jIuw3RGvBinz+UeKXt3+fl0Abw4WDRVBQEsQubMOxsmq5rg6Zub4FEACCYXjcnX4WgD7xbF15v4n36I0/U+9P6W0hUOtI74NyJWlG02iFfut98iMbr+L3MC3n/2ZOUqG6YGEWp5TKambM0VZOoeZxyldfyy0QI4rrjogRNkhTBSdg7YftwlFoJ6JhYBoZ/4/7e/hv6e1haG1vqa4PHXP0U5PuApJClWxQldNcM6MEFC6/xqCwxckdTwcEsRww4pyyNmZTCKiRwlrJLMGafkMqOCgfESa/qXRXsM8dc1soPsEXkTQ=="></MarkMap><h2 id="_1-缓存过程分析" tabindex="-1"><a class="header-anchor" href="#_1-缓存过程分析"><span>1. <strong>缓存过程分析</strong></span></a></h2>
 <p>浏览器与服务器通信的方式为应答模式。</p>
 <p>即：浏览器发起HTTP请求———服务器响应该请求。浏览器第一次向服务器发起该请求，拿到请求结果后，会根据响应报文中响应头的缓存标识，决定是否缓存结果，缓存，则将请求结果和缓存标识存入浏览器缓存中。</p>
 <figure><img src="@source/study/coding/interview/images/1-1.jpeg" alt="第一次发起http请求" tabindex="0" loading="lazy"><figcaption>第一次发起http请求</figcaption></figure>
@@ -20,7 +18,7 @@
 <p>当存在缓存时，客户端第一次向服务器请求数据时，客户端会缓存到内存或者硬盘当中，当第二次获取相同的资源，强缓存和协商缓存的应对方式有所不同。</p>
 <p><strong>强缓存</strong>：当客户端第二次向服务器请求相同的资源时，不会向服务器发送请求，而是直接从 <strong>内存/硬盘</strong> 中读取。</p>
 <p><strong>协商缓存</strong>：当客户端第二次向服务器请求相同的资源时，先向服务器发送请求 <strong>&quot;询问&quot;</strong> 该请求的文件缓存在本地与服务器相比是否更改，如果更改，则更新文件，如果没有就从内存/硬盘中读取。</p>
-<h2 id="强缓存" tabindex="-1"><a class="header-anchor" href="#强缓存"><span><strong>强缓存</strong></span></a></h2>
+<h2 id="_2-强缓存" tabindex="-1"><a class="header-anchor" href="#_2-强缓存"><span>2. <strong>强缓存</strong></span></a></h2>
 <p>强缓存就是向浏览器缓存查找请求结果，并根据该结果的缓存规则来决定是否使用该缓存结果的过程</p>
 <p>强缓存不会向服务器发送请求，直接从缓存中读取资源，在 chrome 控制台的 Network 选项中可以看到该请求返回 200 的状态码，并且 Size 显示from disk cache 或 from memory cache。</p>
 <p>强缓存可以通过设置两种 HTTP Header 实现：<strong><code v-pre>Expires</code></strong> 和 <strong><code v-pre>Cache-Control</code></strong>。</p>
@@ -81,7 +79,7 @@
 </li>
 </ul>
 </div>
-<h2 id="协商缓存" tabindex="-1"><a class="header-anchor" href="#协商缓存"><span><strong>协商缓存</strong></span></a></h2>
+<h2 id="_3-协商缓存" tabindex="-1"><a class="header-anchor" href="#_3-协商缓存"><span>3. <strong>协商缓存</strong></span></a></h2>
 <p>协商缓存就是强缓存失效后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程，主要有以下两种情况：</p>
 <ol>
 <li>协商缓存生效，返回304和Not Modified：</li>
@@ -130,7 +128,7 @@
 <li>在性能上，Etag要逊于Last-Modified，毕竟Last-Modified只需要记录时间，而Etag需要服务器通过算法来计算出一个hash值。</li>
 <li>在优先级上，服务器校验优先考虑Etag</li>
 </ul>
-<h2 id="两种缓存策略的执行机制" tabindex="-1"><a class="header-anchor" href="#两种缓存策略的执行机制"><span><strong>两种缓存策略的执行机制</strong></span></a></h2>
+<h2 id="_4-两种缓存策略的执行机制" tabindex="-1"><a class="header-anchor" href="#_4-两种缓存策略的执行机制"><span>4. <strong>两种缓存策略的执行机制</strong></span></a></h2>
 <ul>
 <li>
 <p><strong>强制缓存优先于协商缓存进行</strong>。</p>
@@ -143,7 +141,7 @@
 <p><strong>协商缓存由服务器决定是否使用缓存</strong>，若协商缓存失效，那么代表该请求的缓存失效，返回200，重新返回资源和缓存标识，再存入浏览器缓存中；生效则返回304，继续使用缓存。</p>
 </li>
 </ul>
-<h2 id="缓存位置" tabindex="-1"><a class="header-anchor" href="#缓存位置"><span><strong>缓存位置</strong></span></a></h2>
+<h2 id="_5-缓存位置" tabindex="-1"><a class="header-anchor" href="#_5-缓存位置"><span>5. <strong>缓存位置</strong></span></a></h2>
 <p>从缓存位置上来说分为4种，并且各自有优先级，当依次查找缓存且都没有命中的时候，才会去请求网络。</p>
 <ol>
 <li>Service Worker</li>
@@ -188,7 +186,7 @@
 <p>如果以上四种缓存都没有命中的话，那么只能发起请求来获取资源了。</p>
 <p>为了性能上的考虑，大部分的接口都应该选择好缓存策略，也就是我们刚刚介绍的强缓存和协商缓存策略
 用户行为对缓存的影响</p>
-<h2 id="用户行为对浏览器缓存的影响" tabindex="-1"><a class="header-anchor" href="#用户行为对浏览器缓存的影响"><span><strong>用户行为对浏览器缓存的影响</strong></span></a></h2>
+<h2 id="_6-用户行为对浏览器缓存的影响" tabindex="-1"><a class="header-anchor" href="#_6-用户行为对浏览器缓存的影响"><span>6. <strong>用户行为对浏览器缓存的影响</strong></span></a></h2>
 <p>指的就是用户在浏览器如何操作时，会触发怎样的缓存策略。主要有 3 种：</p>
 <ol>
 <li>

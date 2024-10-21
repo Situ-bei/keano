@@ -10,7 +10,9 @@ tags:
 date: 2024-07-04T18:43:00
 article: false
 ---
-# 1 Node.js简介
+NodeJS 尚硅谷版本
+<!-- more -->
+# Node.js简介
 
 ## 1.1 Node.js
 - 运行在服务器端的 JavaScript

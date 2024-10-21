@@ -18,13 +18,9 @@ export const DenaroMoefyCanvas = defineComponent({
       return canvas;
     };
     const themeConfig: PopperConfig = {
-      shape: popperOptions.config.shape
-        ? popperOptions.config.shape
-        : PopperShape.Star,
+      shape: popperOptions.config.shape ? popperOptions.config.shape : PopperShape.Star,
       size: popperOptions.config.size ? popperOptions.config.size : 1.75,
-      numParticles: popperOptions.config.numParticles
-        ? popperOptions.config.numParticles
-        : 10,
+      numParticles: popperOptions.config.numParticles ? popperOptions.config.numParticles : 10,
     };
     const canvasOptions: CanvasOptions = {
       opacity: 1,

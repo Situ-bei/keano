@@ -1,5 +1,4 @@
-<template><div><h1 id="html5" tabindex="-1"><a class="header-anchor" href="#html5"><span>HTML5</span></a></h1>
-<h1 id="_1-html5简介" tabindex="-1"><a class="header-anchor" href="#_1-html5简介"><span>1 HTML5简介</span></a></h1>
+<template><div><h1 id="_1-html5简介" tabindex="-1"><a class="header-anchor" href="#_1-html5简介"><span>1 HTML5简介</span></a></h1>
 <h2 id="_1-1-什么是html5" tabindex="-1"><a class="header-anchor" href="#_1-1-什么是html5"><span>1.1 什么是HTML5</span></a></h2>
 <ul>
 <li><code v-pre>HTML5</code> 是新一代的 <code v-pre>HTML</code> 标准，2014年10月由万维网联盟（ W3C ）完成标准制定。</li>

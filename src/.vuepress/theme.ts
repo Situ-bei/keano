@@ -2,6 +2,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
+
 const footerICP_HTML = 
 `
   <div class="footer-about">
@@ -39,10 +40,10 @@ export default hopeTheme(
   // 是否开启纯净模式
   // pure: true,
   
-  // 图标引入地址 
+  // 图标引入地址 icon地址
   iconAssets: [
     // "fontawesome-with-brands",
-    "//at.alicdn.com/t/c/font_4705467_xorutuoniqo.css",
+    "//at.alicdn.com/t/c/font_4705467_zwe7ixcig4k.css",
   ],  
   iconPrefix: "iconfont ",
 
@@ -77,7 +78,7 @@ export default hopeTheme(
   
   // siderbar 排序
   // https://theme-hope.vuejs.press/zh/guide/layout/sidebar.html#%E8%BF%9B%E9%98%B6%E6%8E%A7%E5%88%B6
-  sidebarSorter: ["date-desc"],
+  sidebarSorter: ["order","date-desc"],
   
   // 博主信息
   blog: {
@@ -178,8 +179,6 @@ export default hopeTheme(
     },
   },
   
-
-  
   //插件
   plugins: {
     // 官方博客插件
@@ -204,7 +203,8 @@ export default hopeTheme(
     }, 
     
     photoSwipe: true, // 官方图片预览插件，这个插件难用的 一 B
-
+    
+    
     // 代码块高亮 【shiki插件】
     shiki: {
       // 你想要使用的主题
@@ -292,6 +292,7 @@ export default hopeTheme(
       vPre: true,
       markmap: true,
       footnote: true,
+      
 
       // install chart.js before enabling it
       // chart: true,

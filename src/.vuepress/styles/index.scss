@@ -43,7 +43,7 @@
 @mixin theme-hope-content{
     border-radius: 0.5rem;
     padding-top: 15px !important;
-    backdrop-filter:  blur(0.75rem) !important;
+    // backdrop-filter:  blur(0.75rem) !important;
     padding: 1rem 1rem !important;
     // margin: 0 3vw !important;
     // width: 100%;
@@ -82,8 +82,8 @@ $myshadowDark:
 .theme-container {
     .vp-page.vp-blog,
     .vp-page.vp-blog-home {
-        background: rgba(255, 255, 255,.4) !important; // 博客背景设置为透明
-        backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255,.2) !important; // 博客背景设置为透明
+        backdrop-filter: blur(10px);
     }
     
 }

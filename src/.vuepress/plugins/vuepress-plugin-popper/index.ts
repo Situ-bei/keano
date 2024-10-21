@@ -19,4 +19,5 @@ const popperPlugin = (options?: PopperOption): PluginFunction => {
     };
   };
 };
-export { popperPlugin };
+
+export { popperPlugin};
