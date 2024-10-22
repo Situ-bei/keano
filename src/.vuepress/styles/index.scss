@@ -1,0 +1,221 @@
+//  引入hope主体 的 颜色配置文件
+@use "@sass-palette/hope-config";
+
+// 本地字体
+@font-face {
+    font-family: "xinkai";
+    src: url(../public/font/xinkai.woff2);
+    font-display: swap; // 确保在字体加载期间使用备用字体
+}
+
+// 文章容器混合
+@mixin theme-hope-content{
+    border-radius: 0.5rem;
+    padding-top: 15px !important;
+    // backdrop-filter:  blur(0.75rem) !important;
+    padding: 1rem 1rem !important;
+    // margin: 0 3vw !important;
+    // width: 100%;
+    @media (max-width: hope-config.$pad) {
+        margin: 0 3vw !important;
+    }
+}
+.theme-hope-content:not(.custom){
+    padding-top: 15px !important;
+}
+
+// 侧边栏混合
+@mixin theme-hope-sidebar{
+    background: transparent !important;
+    backdrop-filter: blur(.3125rem) !important;  // 应用背景模糊和饱和度增强效果
+    transition: 0.3s;
+    @media (min-width: hope-config.$pad) {
+        // z-index: 4;
+        // background-color: rgba(255, 255, 255, 0.301);
+        background: transparent !important;
+        backdrop-filter:saturate(150%) blur(.35rem);
+        
+    }
+}
+
+// 隐藏组件额外文字 元素
+.none {
+    width: 0;
+    height: 0;
+    user-select: none;
+    pointer-events: none;
+    overflow: hidden;
+    display: none;
+}
+
+// 阴影
+$myshadow: 
+    -.1rem -.1rem .2rem rgba(255, 255, 255,1),
+    .1rem .2rem .2rem hsl(0 0% 50% / .6);
+$myshadowDark: 
+-.1rem -.1rem .3rem hsla(0, 0%, 80%, 0.473),
+.2rem .2rem .3rem hsla(0, 0%, 0%, 0.564);
+
+// 博客首页背景
+.theme-container {
+    .vp-page.vp-blog,
+    .vp-page.vp-blog-home {
+        background: rgba(255, 255, 255,.2) !important; // 博客背景设置为透明
+        backdrop-filter: blur(10px);
+    }
+    
+}
+
+// 隐藏首页的内容区域
+.vp-blog-home{
+    .theme-hope-content {
+        display: none;
+        // color: #a7535a80;
+    }
+}
+
+// #region  侧边栏 和 内容区边框
+// 浅色主题
+[data-theme="light"]{
+    .theme-container{
+        background: rgba(255, 255, 255,.4);
+        // position: relative; // 确保伪元素相对于该容器定位
+        // background: linear-gradient(130deg, #a8efff 40%, var(--vp-c-accent) 60%);
+        // background: 
+        //     linear-gradient(130deg, #a8efff 40%, var(--vp-c-accent) 100%);
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // backdrop-filter: blur(10px);
+
+        // 侧边栏
+        .vp-sidebar {
+            @include theme-hope-sidebar;
+        }
+
+        // 文章内容容器
+        .theme-hope-content{
+            // background-color: rgba($color: #fff, $alpha: 0.4); // 文章背景
+            // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; // 边框阴影
+            box-shadow: $myshadow;
+            @include theme-hope-content
+        }
+    }
+    
+}
+
+// 深色主题
+[data-theme="dark"]{
+.theme-container{
+    // 文章内容容器
+    .theme-hope-content{
+        // background-color: rgba($color: #484848, $alpha: 0.4); // 文章背景
+        background-color: transparent;
+        box-shadow: $myshadowDark; // 边框阴影
+        @include theme-hope-content
+    }
+
+    // 侧边栏
+    .vp-sidebar {
+        @include theme-hope-sidebar;
+    }
+
+}
+}
+// #endregion
+
+// markdownTab
+$markdownTabColor:  rgb(255, 255, 255,.4);
+.vp-tabs{
+    border: none;
+    box-shadow: $myshadow;
+    .vp-tabs-nav{
+        // background: rgb(255, 255, 255,.4);
+        background: transparent;
+        backdrop-filter: blur(.5rem);
+
+        .active{
+            background: $markdownTabColor;
+            &::before{
+                background: radial-gradient(16px at left top, transparent 50%,  $markdownTabColor 50%);
+            }
+            &::after{
+                background: radial-gradient(16px at right top, transparent 50%,  $markdownTabColor 50%);
+
+            }
+        }
+    }
+    .vp-tab{
+        background: rgb(255, 255, 255,.4);
+ 
+    }
+
+
+}
+// #region  markdownMap
+
+// markdownMap 
+.mm-toolbar-item:hover{
+    background-color: var(--vp-c-accent-hover) !important;
+    color: var(--vp-c-accent-bg) !important;
+}
+.mm-toolbar-item.active > *, .mm-toolbar-item:hover > *{
+    // background-color: transparent;
+    color: var(--vp-c-text) !important;
+}
+
+// #endregion
+
+// #region  自定义的页脚
+// 自定义的页脚
+.vp-footer-wrapper {
+    display: flex !important;
+    justify-content: center;
+    // align-items: center !important;
+    // background-color: #fff;
+
+.vp-footer {
+    margin-right: 10px;
+    .footer-about {
+        // padding: 2px 3px;
+        // border-radius: 3px;
+        // position: relative;
+        // margin-top: 10px;
+        display: inline-block;
+        
+        a{
+            color: #fff !important;
+            margin: 0;
+            // user-select:all;
+        }
+        .footer-VuePress{
+            color: #00842a !important;
+            &:hover{
+                // background-color: rgba($color: #0c7bf4, $alpha: 0.8);
+                color: rgba($color: #0c7bf4, $alpha: 0.8);
+            }
+        }   
+        .footer-Hope{
+            color: var(--vp-c-accent)!important;
+        }
+
+    }
+    }
+    .footer-time{
+        margin-top: 0;
+        display: inline-block;
+        font-size: 12px;
+    }
+}
+// #endregion
+
+// #region  宽屏补丁
+// 让内容在更宽的屏幕上可以有更宽的显示区域，嗯，宽屏补丁。
+:root {
+    --content-width: 830px;
+    }
+    @media screen and (min-width: 1770px) {
+    :root {
+        --content-width: calc(100vw - 15rem - 6rem - var(--sidebar-width) - 20rem);
+    }
+}
+// #endregion

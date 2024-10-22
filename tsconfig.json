@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    // "module": "esnext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    
+    "esModuleInterop": true, // 启用 ES 模块与 CommonJS 模块之间的互操作性，允许你在 ES 模块中直接导入 CommonJS 模块。
+    "isolatedModules": true, // 确保每个文件都是一个独立的模块，这对于 Vue 3 的单文件组件（SFC）尤为重要。
+    // "moduleResolution": "bundler",
+    "resolveJsonModule":true, // 允许导入 .json 文件。
+
+    "baseUrl": "./",  // F:\桌面\【Vue】\Blog\keano\node_modules
+    "paths": {
+      "@/*": ["src/*"],
+      "@theme-hope/*": ["node_modules/vuepress-theme-hope/lib/client/*"],
+      "vuepress-theme-hope/*": ["node_modules/vuepress-theme-hope/lib/*"], // vuepress-theme-hope/client/components/transitions/DropTransition.js
+    },
+    "types": [
+      "vuepress/client-types"
+    ]
+  },
+  "include": [
+    "src/.vuepress/**/*.ts",
+    "src/.vuepress/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
