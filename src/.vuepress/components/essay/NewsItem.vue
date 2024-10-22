@@ -74,15 +74,18 @@ const router = useRouter();
 const route = router.resolve(props.path);
 const routePath = computed(() => (route ? route.path.toString() : ""));
 
-console.log("routePath",routePath.value);
+// console.log("routePath",routePath.value);
 
+// console.log("routePath",articleInfo);
 
 </script>
 
 <style lang="scss" scoped>
 .routerLink{
     text-decoration: none !important;
-  }
+}
+
+
 .vp-article-wrapper {
   position: relative;
   box-sizing: border-box;
@@ -176,7 +179,7 @@ $myshadowDark:
     width: 100%;
     height: 100%;
     background: url(../../public/assets/keanoLogo.gif) center/cover no-repeat;
-    opacity: 0.2;
+    opacity: 0.1;
     z-index: -1; /* 确保背景图像在内容下方 */
   }
 }
@@ -185,7 +188,7 @@ $myshadowDark:
 .news-item-content {
   position: relative;
   width: 100%;
-  padding: 20px 20px;
+  padding: 10px 10px;
   box-sizing: border-box;
   
   // 头像和作者，时间等信息
@@ -201,6 +204,8 @@ $myshadowDark:
       margin-right: 10px;
     }
   }
+  
+
 
   // .vp-article-hr {
   //   // height: 2px;
@@ -210,5 +215,9 @@ $myshadowDark:
   //       #97d9e1 33%,
   //       #ec77ab 100%);
   // }
+}
+// 
+.vp-article-item > p{
+  margin: 8px 0 !important;
 }
 </style>

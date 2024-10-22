@@ -45,13 +45,17 @@ import { HitokotoApi } from "../essay/hitokoto-api";
 const props = defineProps<{
   items: Article<ArticleInfoData>[];
 }>();
+
+// 对总随笔数量进行排序
+const sortedItem = props.items.sort((a, b) => b.info.d - a.info.d)
+
 const route = useRoute();
 const router = useRouter();
 const blogOptions = useBlogOptions();
 const updatePageview = usePageview();
 const currentPage = ref(1);
 const articlePerPage = computed(() => blogOptions.value.articlePerPage ?? 10);
-const currentArticles = computed(() => props.items.slice((currentPage.value - 1) * articlePerPage.value, currentPage.value * articlePerPage.value));
+const currentArticles = computed(() => sortedItem.slice((currentPage.value - 1) * articlePerPage.value, currentPage.value * articlePerPage.value));
 const hitokotoContent = ref(null);
 
 const imageKey = ref(Math.random());
@@ -123,6 +127,7 @@ onMounted(() => {
     }, 100);
   });
 });
+
 
 </script>
 <style lang="scss" scoped>

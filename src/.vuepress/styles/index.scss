@@ -1,6 +1,14 @@
 //  引入hope主体 的 颜色配置文件
 @use "@sass-palette/hope-config";
 
+// 阴影
+$myshadow: 
+    -.1rem -.1rem .2rem rgba(255, 255, 255,1),
+    .1rem .2rem .2rem hsl(0 0% 50% / .6);
+$myshadowDark: 
+-.1rem -.1rem .3rem hsla(0, 0%, 80%, 0.473),
+.2rem .2rem .3rem hsla(0, 0%, 0%, 0.564);
+
 // 本地字体
 @font-face {
     font-family: "xinkai";
@@ -38,6 +46,15 @@
     }
 }
 
+// 顶部目录样式
+@mixin toc-style {
+    border-radius: 0.4rem;
+    // padding: 0.6rem 0;
+    backdrop-filter: blur(15px);
+    background: transparent;
+    box-shadow: $myshadow;
+}
+
 // 隐藏组件额外文字 元素
 .none {
     width: 0;
@@ -48,13 +65,7 @@
     display: none;
 }
 
-// 阴影
-$myshadow: 
-    -.1rem -.1rem .2rem rgba(255, 255, 255,1),
-    .1rem .2rem .2rem hsl(0 0% 50% / .6);
-$myshadowDark: 
--.1rem -.1rem .3rem hsla(0, 0%, 80%, 0.473),
-.2rem .2rem .3rem hsla(0, 0%, 0%, 0.564);
+
 
 // 博客首页背景
 .theme-container {
@@ -77,6 +88,9 @@ $myshadowDark:
 // #region  侧边栏 和 内容区边框
 // 浅色主题
 [data-theme="light"]{
+    #toc{
+        @include toc-style;
+    }
     .theme-container{
         background: rgba(255, 255, 255,.4);
         // position: relative; // 确保伪元素相对于该容器定位
@@ -105,6 +119,10 @@ $myshadowDark:
 
 // 深色主题
 [data-theme="dark"]{
+#toc{
+    @include toc-style;
+    box-shadow: $myshadowDark;
+}
 .theme-container{
     // 文章内容容器
     .theme-hope-content{
