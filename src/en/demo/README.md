@@ -1,9 +1,14 @@
 ---
-title: 主要功能与配置演示
-index: false
+title: guide
 icon: laptop-code
-category:
-  - 使用指南
----
+date: 2024-10-22
 
-<Catalog />
+index: false
+timeline: false
+article: false
+---
+:::info guide
+        You can get some comprehensive guidelines from here ----
+:::
+
+<Catalog base="/en/demo/" />

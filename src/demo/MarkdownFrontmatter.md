@@ -119,6 +119,15 @@ export default defineUserConfig({
 ```
 在上方提取更深层级的标题后，你就能在 主题选项 或 页面 **Frontmatter** 中通过增加 **headerDepth** 的数值来展示更多标题了。
 
-### 9. article,timeline,index
+## README 的 frontmatter
+关于每个分类以及其子集分类的 README 的 frontmatter 的设置，可能是你不希望它出现在 article，分类，时间线，标签，sidebar等列表中，你可以设置一下属性：
+```shell
+article: false  # 此篇文章不会加入 VuePress 的默认文章分类
+timeline: false # 此篇文章不会加入 VuePress 的默认时间线分类
+index: false    # 此篇文章不会加入 VuePress 的侧边栏或目录中。
 
-对于以上三个配置项目来讲，通常用来配置在一个问价夹目录的 README.md 中，不让其出现在 sidebar ， 文章列表，以及时间轴中，当然你可以配置任何你不想让它们出现在对应位置的文件。
+```
+
+那解释一下，它们都接收一个布尔值，默认为 true。不过你不希望那一篇文章加入相应的分类，你可以指定其属性为 false ，如果不指定默认就是 true。
+
+对于一个分组的 README 来讲，只是用来生成分类目录，和展现当前分组下的描述等作用，并不需要出现在 article 分类或者时间线等分类中，所以将这些 frontmatter 设置为 false 就可以了。
