@@ -128,10 +128,15 @@ $markdownTabColor:  rgb(255, 255, 255,.4);
 .vp-tabs{
     border: none;
     box-shadow: $myshadow;
+    @media (max-width: hope-config.$mobile) {
+        margin-inline: -0.5rem !important;
+        border-radius: .5rem !important;
+        margin: -0.5rem 0;
+    }
     .vp-tabs-nav{
         // background: rgb(255, 255, 255,.4);
         background: transparent;
-        backdrop-filter: blur(.5rem);
+        // backdrop-filter: blur(.5rem);
 
         .active{
             background: $markdownTabColor;

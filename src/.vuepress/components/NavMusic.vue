@@ -352,12 +352,12 @@ $myshadowDark:
   .aplayer-controller{
     margin-top: 12px;
     width: 350px;
+    margin-left: -100px;
+    left: 0;
     @include responsive(640px) { // 在屏幕宽度小于或等于 640px 时
       width: 70vw; // 设置宽度为视口宽度的 20%
       
     }
-    margin-left: -100px;
-    left: 0;
     // 进度条容器
     .aplayer-bar-wrap{
       margin-left: 10px;

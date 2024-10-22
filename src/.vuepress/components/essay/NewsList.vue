@@ -175,13 +175,13 @@ onMounted(() => {
 .sub-title {
   font-family: xinkai;
   font-size: 1rem;
-
-  @media (max-width: hope-config.$pad) {
-    font-size: 1.0rem;
-  }
-
   font-weight: bold;
   text-align: right;
+  @media (max-width: hope-config.$pad) {
+    font-size: 1rem;
+  }
+
+
 }
 
 .sub-title::before {
