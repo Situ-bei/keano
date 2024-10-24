@@ -21,6 +21,7 @@ import "vuepress-theme-hope/presets/round-blogger-avatar.scss"  // 博主头像�
 
 // 【自定义组件】
 import Essay from "./components/essay/News.vue"
+import MyCoverLink from './components/MyCoverLink.vue'
 
 const TopNavBeautify = defineAsyncComponent(() => import('./components/TopNavBeautify.vue'));
 const HeroBG = defineAsyncComponent(() => import('./components/HeroBG.vue'));
@@ -43,7 +44,7 @@ export default defineClientConfig({
   // 客户端增强
   enhance({ app, router, siteData }) {
     // 注册全局组件
-    // app.component('MyIcon', MyIcon);
+    app.component('MyCoverLink', MyCoverLink);
   },
   
   // 全局注册

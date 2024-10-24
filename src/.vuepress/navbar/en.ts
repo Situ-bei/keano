@@ -7,11 +7,12 @@ export const enNavbar = navbar([
     icon: "icon-daohang", 
     prefix: '/en/',
     children: [
-      { text: 'navigation', icon: 'icon-daohang', link: 'demo/' },
-      { text: 'all', icon: 'icon-quanbu1', link: 'article/' },
+      { text: 'Navigation', icon: 'icon-daohang', link: 'demo/' },
+      { text: 'Article', icon: 'icon-quanbu1', link: 'article/' },
       { text: 'Category', icon: 'icon-fenlei-copy', link: 'category/' },
       { text: 'Tags', icon: 'icon-tianchongxing-', link: 'tag/' },
       { text: 'TimeLine', icon: 'icon-shijianzhou', link: 'timeline/' },
+      { text: 'Collect', icon: 'icon-shoucang', link: '/collect' },
     ],
   },
 
@@ -33,7 +34,7 @@ export const enNavbar = navbar([
           { text: "JS", icon: "icon-javascript-fill", link: "JS/",},
           { text: "NodeJS", icon: "icon-nodejsGreen", link: "NodeJS/",},
           { text: "Vue生态", icon: "icon-logo-vue", link: "Vue/",},
-          { text: "git", icon: "icon-github-fill", link: "git/",},
+          { text: "Git", icon: "icon-github-fill", link: "git/",},
           { text: "9981 difficulty", icon: "icon-martial-arts", link: "interview/",},
 
         ],

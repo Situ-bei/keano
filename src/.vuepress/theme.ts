@@ -2,8 +2,6 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
-
-
 const footerICP_HTML = 
 `
   <div class="footer-about">
@@ -26,7 +24,7 @@ export default hopeTheme({
   iconPrefix: "iconfont ",
   iconAssets: [
     "fontawesome-with-brands",
-    "//at.alicdn.com/t/c/font_4705467_b816kaf7z6.css",
+    "//at.alicdn.com/t/c/font_4705467_klo99ombxhf.css",
   ],
 
   logo: "/logo.png", // 导航栏logo
@@ -204,9 +202,29 @@ export default hopeTheme({
       lazyLoading: true,
     },
 
-    components: {
-      components: ["Badge", "VPCard","BiliBili","VidStack"],
+    // 代码块高亮 【shiki插件】
+    shiki: {
+      // 你想要使用的主题
+      themes: {
+        light: "one-light",
+        dark: "one-dark-pro",
+      },
+      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','javascript'],
+      collapsedLines: true, // 是否折叠代码行
+      notationHighlight: true,
     },
+    
+    // 【内置插件设置】
+    components: {
+      components: ["Badge", "VPCard","BiliBili","VidStack",'Share'],
+      componentOptions:{
+        share:{
+          services:["qq","qrcode","vk"],
+          
+        }
+      }
+    },
+
 
     // 这些功能可用于演示，仅保留您在此处需要的功能
     // markdown图片处理

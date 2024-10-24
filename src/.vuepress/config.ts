@@ -17,8 +17,16 @@ import { gradientCoverPlugin } from './plugins/vuepress-plugin-gradient-cover'
 // 【背景动效插件】
 import {   canvasPlugin, CanvasPluginType, } from './plugins/vuepress-plugin-canvas'
 
+// 【路径】
+import { getDirname, path } from "vuepress/utils";
+const __dirname = getDirname(import.meta.url);
+
 export default defineUserConfig({
   // base: "/",
+
+  alias: {
+    "@MyCoverLink": path.resolve(__dirname, "components/MyCoverLink.vue"),
+  },
 
   locales: {
     "/": {
@@ -39,6 +47,16 @@ export default defineUserConfig({
   // 【禁用原生pwa】
   shouldPrefetch: false,
 
+  // 【markdown配置】
+  // markdown配置  默认情况下，VuePress 只会从 Markdown 提取 h2 和 h3 标题，所以仅靠配置主题，你永远也看不见 h4 标题。
+  // https://theme-hope.vuejs.press/zh/faq/common-question.html#%E6%98%BE%E7%A4%BA%E5%9B%9B%E7%BA%A7%E6%88%96%E6%9B%B4%E5%A4%9A%E7%BA%A7%E7%9A%84%E6%A0%87%E9%A2%98
+  markdown: {
+    headers: {
+      // 用到哪一级就提取哪一级
+      level: [1,2, 3, 4, 5, 6],
+    },
+  },
+  
   // 【插件配置】
   plugins:[
     // 【搜索插件】
@@ -100,7 +118,6 @@ export default defineUserConfig({
         size: 90,
       },
     }),
-    
   ],
 
 

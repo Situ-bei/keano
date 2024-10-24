@@ -7,10 +7,12 @@ export const zhNavbar = navbar([
     icon: "icon-daohang", 
     children: [
       { text: '导航', icon: 'icon-daohang', link: '/demo/' },
-      { text: '全部', icon: 'icon-quanbu1', link: '/article/' },
+      { text: '文章', icon: 'icon-quanbu1', link: '/article/' },
       { text: '分类', icon: 'icon-fenlei-copy', link: '/category/' },
       { text: '标签', icon: 'icon-tianchongxing-', link: '/tag/' },
       { text: '时间轴', icon: 'icon-shijianzhou', link: '/timeline/' },
+      { text: '收藏', icon: 'icon-shoucang', link: '/collect' },
+
     ],
   },
 
@@ -32,7 +34,7 @@ export const zhNavbar = navbar([
           { text: "JS", icon: "icon-javascript-fill", link: "JS/",},
           { text: "NodeJS", icon: "icon-nodejsGreen", link: "NodeJS/",},
           { text: "Vue生态", icon: "icon-logo-vue", link: "Vue/",},
-          { text: "git", icon: "icon-github-fill", link: "git/",},
+          { text: "Git", icon: "icon-github-fill", link: "git/",},
           { text: "九九八十一难", icon: "icon-martial-arts", link: "interview/",},
 
         ],

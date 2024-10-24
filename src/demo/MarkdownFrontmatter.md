@@ -124,8 +124,8 @@ export default defineUserConfig({
 ```shell
 article: false  # 此篇文章不会加入 VuePress 的默认文章分类
 timeline: false # 此篇文章不会加入 VuePress 的默认时间线分类
-index: false    # 此篇文章不会加入 VuePress 的侧边栏或目录中。
-
+index: false    # 此篇文章不会加入 VuePress 的目录中。
+sidebar: false  # 此篇文章不会加入 VuePress 的侧边栏
 ```
 
 那解释一下，它们都接收一个布尔值，默认为 true。不过你不希望那一篇文章加入相应的分类，你可以指定其属性为 false ，如果不指定默认就是 true。
