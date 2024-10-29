@@ -113,9 +113,8 @@ export const zhSidebar = sidebar({
           prefix: "wiki/",
           link: "wiki/",
           collapsible: true,
-          children: "structure",},
-
-
+          children: "structure",
+        },
       ],
     },
     
@@ -154,7 +153,21 @@ export const zhSidebar = sidebar({
         },
       ],
     },
+
+    //博客
+    {
+      text: "博客",
+      icon: "icon-boke", 
+      prefix: "blog/",
+      link: "blog/",
+      collapsible: true,
+      children: "structure",
+    },
+
+    // 关于
     "intro",
+
+    // 幻灯片
     {
       text: "幻灯片",
       icon: "person-chalkboard",
@@ -296,4 +309,13 @@ export const zhSidebar = sidebar({
   ],
   //百科
   "/study/wiki/":"structure",
+
+  "/blog/":[
+    back_home,
+    {
+      text: "博客",
+      icon: "icon-boke",
+      children: "structure",
+    }
+  ],
 });

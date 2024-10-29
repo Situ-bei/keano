@@ -24,7 +24,7 @@ export default hopeTheme({
   iconPrefix: "iconfont ",
   iconAssets: [
     "fontawesome-with-brands",
-    "//at.alicdn.com/t/c/font_4705467_hgy8a1vtxri.css",
+    "//at.alicdn.com/t/c/font_4705467_yceqxte3wbr.css",
   ],
 
   logo: "/logo.png", // 导航栏logo
@@ -234,12 +234,12 @@ export default hopeTheme({
       size: true,
     },
 
-    // markdownMath: {
-    //   // install katex before enabling it
-    //   type: "katex",
-    //   // or install mathjax-full before enabling it
-    //   type: "mathjax",
-    // },
+    markdownMath: {
+      // install katex before enabling it
+      type: "katex",
+      // or install mathjax-full before enabling it
+      // type: "mathjax",
+    },
 
     // This features is enabled for demo, only preserve if you need it
     markdownTab: true,

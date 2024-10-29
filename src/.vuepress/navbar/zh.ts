@@ -58,6 +58,16 @@ export const zhNavbar = navbar([
         //   { text: "纵览", icon: "icon-cssfill", link: "overview/",},
         // ],
       },
+
+      // Blog
+      {
+        text: "博客",
+        icon: "icon-boke",
+        link: "/blog/"
+        // children: [
+        //   { text: "纵览", icon: "icon-cssfill", link: "overview/",},
+        // ],
+      },
     ]
   },
 

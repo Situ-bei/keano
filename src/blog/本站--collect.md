@@ -1,9 +1,9 @@
 ---
 date: 2024-10-29
-title: 《本站--collect》
+title: 《collect页面之整体架构》
 # icon: fab fa-markdown
 category:
-- 使用指南
+- blog
 tag:
 - 关于本站
 - 收藏
