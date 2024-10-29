@@ -20,6 +20,8 @@ VuePress 主要从 Markdown 文件生成页面。因此，你可以使用它轻�
 
 如果你是一个新手，还不会编写 Markdown，请先阅读 [Markdown 介绍](https://theme-hope.vuejs.press/zh/cookbook/markdown/) 和 [Markdown 演示](https://theme-hope.vuejs.press/zh/cookbook/markdown/demo.html)。
 
+关于本主体 [markdown](https://theme-hope.vuejs.press/zh/guide/markdown/intro.html) 详细使用指南
+
 # Markdown 配置
 
 VuePress 通过 Frontmatter 为每个 Markdown 页面引入配置。
@@ -70,11 +72,17 @@ Orange
 
 [^first]: 这是脚注内容
 
+::: details How to use it
+    此文字有脚注[^first].
+
+    [^first]: 这是脚注内容
+:::
+
 - [查看详情](https://theme-hope.vuejs.press/zh/guide/markdown/content/footnote.html)
 
 ### 3. 导入文件
 
-<!-- @include: ./README.md{11-17} -->
+`<!-- @include: ./README.md{11-17} -->`
 
 - [查看详情](https://theme-hope.vuejs.press/zh/guide/markdown/content/include.html)
 

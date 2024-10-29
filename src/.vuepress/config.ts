@@ -17,6 +17,8 @@ import { gradientCoverPlugin } from './plugins/vuepress-plugin-gradient-cover'
 // 【背景动效插件】
 import {   canvasPlugin, CanvasPluginType, } from './plugins/vuepress-plugin-canvas'
 
+
+
 // 【路径】
 import { getDirname, path } from "vuepress/utils";
 const __dirname = getDirname(import.meta.url);
@@ -24,6 +26,9 @@ const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   // base: "/",
 
+
+
+  
   alias: {
     "@MyCoverLink": path.resolve(__dirname, "components/MyCoverLink.vue"),
     "@MyData": path.resolve(__dirname, "data/collectData.ts"),
@@ -120,6 +125,7 @@ export default defineUserConfig({
         size: 90,
       },
     }),
+    
   ],
 
 

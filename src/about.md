@@ -26,3 +26,6 @@ sidebar: false
 1. 新增 [Blog](./blog/) 分类
 2. 新增文章 [《诺奖与中华文明崛起》](./study/history/overview/诺奖与中华文明崛起.md)
 3. 新增随笔 [世间一句](./essay/)
+
+### V1.2.2
+1. 配置 `console.log` 移除插件
