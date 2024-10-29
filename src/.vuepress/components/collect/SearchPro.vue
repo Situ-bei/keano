@@ -44,9 +44,7 @@
 <script setup lang="ts">
 import { ref,onMounted,inject, watch } from 'vue';
 
-// 引入搜索 【search-pro】 api
-import { createSearchWorker } from "vuepress-plugin-search-pro/client";
-const { all, suggest, search, terminate } = createSearchWorker();
+
 
 interface filterDataOptoons {
     title?: string;
