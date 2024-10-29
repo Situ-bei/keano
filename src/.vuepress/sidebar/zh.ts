@@ -16,6 +16,7 @@ export const zhSidebar = sidebar({
       icon: "icon-shiyongzhinan",
       prefix: "demo/",
       link: "demo/",
+      collapsible: true,
       children: "structure",
     },
 

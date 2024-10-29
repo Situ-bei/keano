@@ -1,6 +1,12 @@
 ---
-icon: circle-info
-cover: /assets/images/cover3.jpg
+date: 2024-10-29
+title: 关于
+icon: icon-xinxi-fang-F
+
+index: false
+timeline: false
+article: false
+sidebar: false
 ---
 
 # Intro Page

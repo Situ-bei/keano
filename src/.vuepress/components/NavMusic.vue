@@ -302,7 +302,7 @@ $myshadowDark:
   margin: 0;
   color: var(--vp-c-accent-bg) !important;
   background:  rgba(255, 255, 255, 0.6) !important;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   .aplayer-info{
     border-bottom: 0 !important;
   }
@@ -485,7 +485,7 @@ $myshadowDark:
       .aplayer-list-cur{
         margin-left: 4px;
         background-color: var(--vp-c-accent-bg) !important;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
       }
       
       // 当前播放项

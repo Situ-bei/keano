@@ -2,12 +2,12 @@
 
 
 // $theme-color: var(--vp-c-accent-hover);
-$one_color:rgba(238, 162, 162,.7);
-$two_color:rgba(227, 253, 253,.7);
-$three_color:rgb(180, 159, 218,.7);
-$four_color:rgba(255, 206, 243,.7);
-$five_color:  rgba(122, 197, 216,.7);
-$six_color: var(--vp-c-accent-hover, .7);
+$one_color:rgba(238, 162, 162,.9);
+$two_color:rgba(227, 253, 253,.9);
+$three_color:rgb(180, 159, 218,.9);
+$four_color:rgba(255, 206, 243,.9);
+$five_color:  rgba(122, 197, 216,.9);
+$six_color: var(--vp-c-accent-hover, .9);
 
 
 /* 定义 keyframes 动画 */
@@ -58,7 +58,7 @@ $six_color: var(--vp-c-accent-hover, .7);
   animation: gradientBG 15s ease infinite; /* 应用动画 */
   background-size: 300% 300%; /* 背景大小 */
   // opacity: .9;
-  backdrop-filter: blur(.55rem);
+  backdrop-filter: blur(.65rem);
 
 }
 .page-bg::after {

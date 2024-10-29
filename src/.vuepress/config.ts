@@ -26,6 +26,8 @@ export default defineUserConfig({
 
   alias: {
     "@MyCoverLink": path.resolve(__dirname, "components/MyCoverLink.vue"),
+    "@MyData": path.resolve(__dirname, "data/collectData.ts"),
+    
   },
 
   locales: {

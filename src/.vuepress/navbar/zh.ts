@@ -94,4 +94,14 @@ export const zhNavbar = navbar([
     icon: "icon-wenji-suibi",
     link: "/essay/",
   },
+  
+  // 关于
+  {
+    text: "关于",
+    icon: "icon-xinxi-fang-F",
+    children:[
+      { text: "关于", icon: "icon-xinxi-fang-F", link: "/intro" },
+      { text: "关于本站", icon: "icon-xinxi-fang-F", link: "/about" },
+    ]
+  },
 ]);

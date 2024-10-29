@@ -2,7 +2,7 @@
 date: 2024-10-21
 title: 《MarkdownFrontmatter配置》
 # icon: fab fa-markdown
-order: 1
+order: 2
 category:
 - 使用指南
 tag:
