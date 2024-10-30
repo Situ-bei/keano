@@ -1,21 +1,23 @@
 import { defineUserConfig } from "vuepress";
+import { viteBundler } from '@vuepress/bundler-vite'
+
 import theme from "./theme.js"; // 引入主题
 
 // 【搜索插件】
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 // 【鼠标特效插件】
-import { popperPlugin } from "./plugins/vuepress-plugin-popper"; //【popper】
+import { popperPlugin } from "./plugins/vuepress-plugin-popper/index.js"; //【popper】
 import { PopperShape } from "@moefy-canvas/theme-popper";
 
 import { meteorPlugin } from "./plugins/vuepress-plugin-meteor/index.js" // 【meteor】
 
 
 // 【背景遮罩插件】
-import { gradientCoverPlugin } from './plugins/vuepress-plugin-gradient-cover'
+import { gradientCoverPlugin } from './plugins/vuepress-plugin-gradient-cover/index.js'
 
 // 【背景动效插件】
-import {   canvasPlugin, CanvasPluginType, } from './plugins/vuepress-plugin-canvas'
+import {   canvasPlugin, CanvasPluginType, } from './plugins/vuepress-plugin-canvas/index.js'
 
 
 
@@ -25,10 +27,26 @@ const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   // base: "/",
-
-
-
   
+  // 【vite 配置】
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        minify: 'terser',
+        terserOptions: {
+          compress: {
+            drop_console: true,
+            drop_debugger: true,
+            pure_funcs: ['console.log', 'console.info', 'console.warn']
+          },
+          format: {
+            comments: false
+          }
+        }
+      }
+    }
+  }),
+
   alias: {
     "@MyCoverLink": path.resolve(__dirname, "components/MyCoverLink.vue"),
     "@MyData": path.resolve(__dirname, "data/collectData.ts"),
@@ -125,8 +143,6 @@ export default defineUserConfig({
         size: 90,
       },
     }),
-    
+
   ],
-
-
 });

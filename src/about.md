@@ -28,4 +28,4 @@ sidebar: false
 3. 新增随笔 [世间一句](./essay/)
 
 ### V1.2.2
-1. 配置 `console.log` 移除插件
+1. ~配置 `console.log` 移除插件~
