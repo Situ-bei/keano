@@ -32,15 +32,15 @@ export default defineUserConfig({
   bundler: viteBundler({
     viteOptions: {
       build: {
-        minify: 'terser',
+        minify: 'terser', // 使用 terser 进行代码压缩
         terserOptions: {
           compress: {
-            drop_console: true,
-            drop_debugger: true,
+            drop_console: false, // 移除所有 console.* 调用
+            drop_debugger: true, // 移除所有 debugger 语句
             pure_funcs: ['console.log'] // 'console.info', 'console.warn'
           },
           format: {
-            comments: false
+            comments: false // 移除所有注释
           }
         }
       }

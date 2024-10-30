@@ -1,5 +1,5 @@
 ---
-date: 2024-10-29
+date: 2024-10-30
 title: 《一个打包问题引出 cursor 的使用》
 # icon: fab fa-markdown
 category:
