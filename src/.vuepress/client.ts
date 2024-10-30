@@ -51,7 +51,7 @@ export default defineClientConfig({
   // 全局注册
   setup() {
     onMounted(() => {
-      console.log(
+      console.info(
         `%c ${packageJson.description} V${packageJson.version}%c✨ https://github.com/Situ-bei/keano`,
         `background: #aa96da; padding:5px; font-size:12px; color: #fff; font-weight: bold;`,
         `background: #fb9b5f; padding:5px; font-size:12px; color: #ff0000; `,

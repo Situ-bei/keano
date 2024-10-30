@@ -29,3 +29,6 @@ sidebar: false
 
 ### V1.2.2
 1. ~配置 `console.log` 移除插件~
+
+### V1.2.3
+1. 新增文章 [《一个打包问题引出 cursor 的使用》](./blog/cursor.md)

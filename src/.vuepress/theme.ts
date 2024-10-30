@@ -209,7 +209,7 @@ export default hopeTheme({
         light: "one-light",
         dark: "one-dark-pro",
       },
-      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','javascript'],
+      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','javascript','less','css','scss','typescript','html'],
       collapsedLines: true, // 是否折叠代码行
       notationHighlight: true,
     },

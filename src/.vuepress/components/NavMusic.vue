@@ -625,7 +625,7 @@ $myshadowDark:
   height: 1.6rem;
   width: 1.6rem;
   .btnImg {
-    background-image: url('../public/assets/icon/playBtn_CloudMusicLight.svg');
+    background-image: url('/assets/icon/playBtn_CloudMusicLight.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -639,7 +639,7 @@ $myshadowDark:
 [data-theme='dark']{
   #MyMusic_Menu{
     .btnImg{
-      background-image: url('../public/assets/icon/playBtn_CloudMusicDark.svg');
+      background-image: url('/assets/icon/playBtn_CloudMusicDark.svg');
     }
   }
 

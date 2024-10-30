@@ -37,7 +37,7 @@ export default defineUserConfig({
           compress: {
             drop_console: true,
             drop_debugger: true,
-            pure_funcs: ['console.log', 'console.info', 'console.warn']
+            pure_funcs: ['console.log'] // 'console.info', 'console.warn'
           },
           format: {
             comments: false

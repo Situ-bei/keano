@@ -4,12 +4,13 @@ title: 《collect页面之整体架构》
 # icon: fab fa-markdown
 category:
 - blog
+- vuepress
 tag:
 - 关于本站
 - 收藏
 - 布局
 
-article: false
+
 ---
 
 ::: info Collect
