@@ -1,6 +1,6 @@
 ---
 date: 2024-10-29
-title: 《collect页面之整体架构》
+title: collect页面之整体架构
 # icon: fab fa-markdown
 category:
 - blog

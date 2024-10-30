@@ -1,6 +1,6 @@
 ---
 date: 2024-10-30
-title: 《一个打包问题引出 cursor 的使用》
+title: 一个打包问题引出 cursor 的使用
 # icon: fab fa-markdown
 category:
 - blog
@@ -77,12 +77,12 @@ export default defineUserConfig({
     bundler: viteBundler({
         viteOptions: {
         build: {
-            minify: 'terser',
+            minify: 'terser', // 使用 terser 进行代码压缩
             terserOptions: {
             compress: {
-                drop_console: true,
-                drop_debugger: true,
-                pure_funcs: ['console.log', 'console.info', 'console.warn']
+                drop_console: true, // 移除所有 console.* 调用
+                drop_debugger: true, // 移除所有 debugger 语句
+                pure_funcs: ['console.log', 'console.info', 'console.warn'] // 指定要移除的特定函数调用
             },
             format: {
                 comments: false

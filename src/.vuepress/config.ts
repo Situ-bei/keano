@@ -37,10 +37,10 @@ export default defineUserConfig({
           compress: {
             drop_console: false, // 移除所有 console.* 调用
             drop_debugger: true, // 移除所有 debugger 语句
-            pure_funcs: ['console.log'] // 'console.info', 'console.warn'
+            pure_funcs: ['console.log'] // 'console.info', 'console.warn' // 指定要移除的特定函数调用
           },
           format: {
-            comments: false // 移除所有注释
+            comments: true // 移除所有注释
           }
         }
       }
@@ -71,6 +71,8 @@ export default defineUserConfig({
 
   // 【禁用原生pwa】
   shouldPrefetch: false,
+
+
 
   // 【markdown配置】
   // markdown配置  默认情况下，VuePress 只会从 Markdown 提取 h2 和 h3 标题，所以仅靠配置主题，你永远也看不见 h4 标题。

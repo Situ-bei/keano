@@ -6,9 +6,12 @@
       &nbsp&nbsp&nbsp&nbsp&nbsp我想写很多东西,可是又不知道怎么样下笔,浅薄的文笔,稚嫩的表达,似乎什么也说明不了.
     </div>
     <div class="header_text_submit">{{ hitokotoContent?.hitokoto }}--{{ hitokotoContent?.from }}</div>
-    <p class="sub-title" :data-item-count="String(items.length)">
-      沧海「 {{ numberToChinese(items.length) }} 」粟
-    </p>
+    <div class="count_bar">
+      <p class="essay_sort">沧海<span class="essay_sort_btn" @click="sortArticles">拾遗</span></p>
+      <p class="essay_count" :data-item-count="String(items.length)">
+        沧海「 {{ numberToChinese(items.length) }} 」粟
+      </p>
+    </div>
     <!-- <figure>
       <img class="news-top-img" src="https://tuapi.eees.cc/api.php?category=dongman&px=pc&type=302" alt="图"
         :key="imageKey" />
@@ -16,6 +19,7 @@
     <template v-if="currentArticles.length">
       <template v-for="({ info, path }, index) in currentArticles">
         <DropTransition :appear="true" :delay="index * 0.04">
+            
             <NewsItem :info="info" :path="path" :key="path" />
         </DropTransition>
       </template>
@@ -26,7 +30,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, onMounted, ref, watch, nextTick } from "vue";
+import { computed, onMounted, ref, watch, nextTick, hydrate } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { DropTransition } from "vuepress-theme-hope/client/components/transitions/DropTransition";
 import type { Article } from '@vuepress/plugin-blog/client';
@@ -47,7 +51,33 @@ const props = defineProps<{
 }>();
 
 // 对总随笔数量进行排序
-const sortedItem = props.items.sort((a, b) => b.info.d - a.info.d)
+// const sortedItem = props.items.sort((a, b) => b.info.d - a.info.d)
+
+// 使用 ref 来存储排序后的文章列表
+const sortedArticles = ref<Article<ArticleInfoData>[]>([]);
+
+// 排序按钮
+// 添加排序状态
+const sortOrder = ref('desc'); // 'desc' 为降序，'asc' 为升序
+// 添加排序方法
+const sortArticles = () => {
+  sortOrder.value = sortOrder.value === 'desc' ? 'asc' : 'desc';
+  
+
+  const newArticles = sortedArticles.value.sort((a, b) => {
+    if (sortOrder.value === 'desc') {
+      return a.info.d - b.info.d
+    }else{
+      return b.info.d - a.info.d
+    }
+  });
+  // 赋值新数组
+  sortedArticles.value = newArticles;
+  console.log('函数中排序后的数据：', sortedArticles.value);
+  console.log('升序', sortOrder.value);
+};
+
+
 
 const route = useRoute();
 const router = useRouter();
@@ -55,7 +85,8 @@ const blogOptions = useBlogOptions();
 const updatePageview = usePageview();
 const currentPage = ref(1);
 const articlePerPage = computed(() => blogOptions.value.articlePerPage ?? 10);
-const currentArticles = computed(() => sortedItem.slice((currentPage.value - 1) * articlePerPage.value, currentPage.value * articlePerPage.value));
+
+const currentArticles = computed(() => sortedArticles.value.slice((currentPage.value - 1) * articlePerPage.value, currentPage.value * articlePerPage.value));
 const hitokotoContent = ref(null);
 
 const imageKey = ref(Math.random());
@@ -115,9 +146,16 @@ const updatePage = async (page) => {
     updatePageview({ selector: ".vp-pageview" });
   }
 };
+
 onMounted(() => {
+  // 初始化时进行深拷贝
+  sortedArticles.value = [...props.items];
+  console.log('初始数据：', sortedArticles.value);
+  sortArticles();
+
   const { page } = route.query;
   void updatePage(page ? Number(page) : 1);
+  
   watch(currentPage, () => {
     // List top border distance
     const distance = document.querySelector("#article-list").getBoundingClientRect().top +
@@ -148,7 +186,7 @@ onMounted(() => {
   margin-top: 15px;
   padding: 0;
   @media (max-width: hope-config.$pad) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   
 }
@@ -176,17 +214,47 @@ onMounted(() => {
   text-align: left;
 }
 
-
-.sub-title {
+// 统计排序栏
+.count_bar{
+  display: flex;
+  justify-content: space-between;
   font-family: xinkai;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: right;
-  @media (max-width: hope-config.$pad) {
-    font-size: 1rem;
+  font-size: 1.2rem;
+  .essay_sort {
+    display: inline-block;
+    .essay_sort_btn{
+      border: none;
+      border-radius: 15px;
+      margin-left: 4px;
+      padding: 4px 6px;
+      background: rgba(83, 83, 83, 0.2);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+    }
+    @media (max-width: hope-config.$pad) {
+      font-size: 1rem;
+    }
   }
-
-
+  .essay_count {
+    display: inline-block;
+    right: 0;
+    
+    font-weight: bold;
+    text-align: right;
+    @media (max-width: hope-config.$pad) {
+      font-size: 1rem;
+    }
+  }
+}
+[data-theme="dark"]{
+  .count_bar{
+    .essay_sort{
+      .essay_sort_btn{
+        background-color: rgba(232, 232, 232, 0.2);
+      }
+      
+    }
+  }
 }
 
 .sub-title::before {
