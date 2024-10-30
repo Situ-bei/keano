@@ -17,16 +17,17 @@ import "vuepress-theme-hope/presets/left-blog-info.scss"
 import "vuepress-theme-hope/presets/round-blogger-avatar.scss"  // 博主头像裁剪为圆形
 
 // 引入音乐播放器组件
-// import NavMusic from './components/NavMusic.vue'
+import NavMusic from './components/NavMusic.vue'
 
 // 【自定义组件】
 import Essay from "./components/essay/News.vue"
 import MyCollect from './components/collect/MyCollect.vue'
 
+
 const TopNavBeautify = defineAsyncComponent(() => import('./components/TopNavBeautify.vue'));
 const HeroBG = defineAsyncComponent(() => import('./components/HeroBG.vue'));
 const HeroHitokoto = defineAsyncComponent(() => import('./components/HeroHitokoto.vue'));
-const NavMusic = defineAsyncComponent(() => import('./components/NavMusic.vue'));
+// const NavMusic = defineAsyncComponent(() => import('./components/NavMusic.vue'));
 // // const PrintVersion = defineAsyncComponent(() => import('./components/PrintVersion.vue'));
 const CommentHideBtn = defineAsyncComponent(() => import('./components/CommentHideBtn.vue'));
 // const MyIcon = defineAsyncComponent(() => import('./components/MyIcon.vue'));
@@ -41,6 +42,7 @@ export default defineClientConfig({
   layouts: {
     Essay,
     MyCollect,
+    
   },
   // 客户端增强
   enhance({ app, router, siteData }) {
@@ -85,6 +87,5 @@ export default defineClientConfig({
     BlogBeautify, // 了一些相关的主题的细节美化，包括文章分割线小汽车等，基本全是 css 效果。使用 vue 插件实现着扩展方便。
     // PreviewImage,
     // ...
-    // Essay
   ],
 });

@@ -1,86 +1,82 @@
 <script setup lang="ts">
 import 'aplayer/dist/APlayer.min.css';
 import MyIcon from './MyIcon.vue';
-import { onBeforeRouteUpdate, useRouter } from 'vue-router';
-import { ref, onMounted, nextTick, onUpdated} from 'vue';
+import { useRouter } from 'vue-router';
+import { ref, onMounted, nextTick } from 'vue';
 import axios from 'axios';
-import store from 'store';
+
+
+// 类型定义
+interface MusicItem {
+  artist: string;
+  name: string;
+  url: string;
+  cover: string;
+  lrc: string;
+}
+
+// 状态管理
 const router = useRouter();
-let musicListURL = 'https://api.injahow.cn/meting/?server=netease&type=playlist&id=596766562&auth=:auth&r=:r' ;
+let aPlayer: any = null;
+let isShow = ref(false);
+const musicList = ref<MusicItem[]>([]);
+
+
+// API 配置
+let MUSIC_API = 'https://api.injahow.cn/meting/?server=netease&type=playlist&id=596766562';
 // let musicListURL = 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=596766562&r=:r' ;
 
-
-let APlayer: any;
-let IsShow = ref(false);
-let GlobalMusicList = [];
-
-const customTemplate = 
-`
-  <div class="custom-aplayer">
-    <button class="custom-play">播放</button>
-    <button class="custom-pause">暂停</button>
-    <div class="custom-progress">
-      <div class="custom-loaded"></div>
-      <div class="custom-played"></div>
-    </div>
-  </div>
-`
 
 
 // 切换状态
 const SwitchStatus = () => {
-  IsShow.value = !IsShow.value;
+  isShow.value = !isShow.value;
 };
 
 // 关闭状态
 const CloseStatus = () => {
-  if (IsShow.value) {
-    IsShow.value = false;
+  if (isShow.value) {
+    isShow.value = false;
   }
 };
 
 // 插入菜单
 const InsertMenu = () => {
-  const navCenterElm = document.querySelector('.vp-navbar-end');
+  const navEndElement = document.querySelector('.vp-navbar-end');
+    if (!navEndElement || document.querySelector('#MyMusic_Menu')) return;
 
-  if (!navCenterElm) {
-    return;
-  }
+    const menuElement = document.createElement('div');
+    menuElement.id = 'MyMusic_Menu';
+    menuElement.classList.add('nav-item');
+    menuElement.innerHTML = '<div id="MyMusic_icon" class="btnImg"></div>';
+    navEndElement.appendChild(menuElement);
 
-  if (!document.querySelector('#MyMusic_Menu')) {
-    const elm = document.createElement('div');
-    elm.id = 'MyMusic_Menu';
-    elm.classList.add('nav-item');
-    elm.innerHTML = `<div id="MyMusic_icon" class="btnImg"></div>`; // spin="true"
-    navCenterElm.appendChild(elm);
-  }
+    // 事件绑定
+    menuElement.onclick = (event) => {
+      SwitchStatus();
+      event.stopPropagation();
+    };
 
-  const Menu = document.querySelector('#MyMusic_Menu') as HTMLElement;
-  Menu.onclick = (event) => {
-    SwitchStatus();
-    event.stopPropagation();
-  };
+    const musicWrapper = document.querySelector('.MyMusic') as HTMLElement;
+    if (musicWrapper) {
+      musicWrapper.onclick = (event) => event.stopPropagation();
+    }
+    
 
-  const MyMusicWrapper = document.querySelector('.MyMusic') as HTMLElement;
-  MyMusicWrapper.onclick = (event) => {
-    event.stopPropagation();
-  };
 };
 
-// 添加按钮旋转
-function AddBtnSpin() {
-  const Win: any = window;
-  if (Win.GlobalAPlayer && Win.GlobalAPlayer.mode) {
-    if (Win.GlobalAPlayer.paused) {
-      document.getElementById('MyMusic_icon')?.setAttribute('spin', 'false');
-    } else {
-      document.getElementById('MyMusic_icon')?.setAttribute('spin', 'true');
-    }
+// 更新按钮旋转状态
+const updateButtonSpin = () => {
+  const win = window as any;
+  if (win.GlobalAPlayer?.mode) {
+    const icon = document.getElementById('MyMusic_icon');
+    icon?.setAttribute('spin', win.GlobalAPlayer.paused ? 'false' : 'true');
   }
-}
+};
+
 // 创建播放器
 const NewPlayer = () => {
-  if (!APlayer) {
+  if (!aPlayer) {
     return;
   }
 
@@ -92,20 +88,20 @@ const NewPlayer = () => {
     return;
   }
 
-  if (GlobalMusicList.length < 1) {
+  if (musicList.value.length < 1) {
     return;
   }
 
-  AddBtnSpin();
+  updateButtonSpin();
 
   // 判断是否被 APlayer 接管
   const playExist = playElm.classList.contains('aplayer');
   if (playExist) {
     return;
   }else{
-      Win.GlobalAPlayer = new APlayer({
-      container: document.getElementById('GlobalAPlayer'),
-      audio: GlobalMusicList,
+      Win.GlobalAPlayer = new aPlayer({
+      container: playElm,
+      audio: musicList.value,
       lrcType: 3,  //歌词文件形式 1歌词直接复制进来，2html形式，3数据库获取格式跟下面的一样
       listFolded: false,
       listMaxHeight: '324px',
@@ -117,58 +113,26 @@ const NewPlayer = () => {
     console.log('APlayer 接管，播放器已创建' );
   }
 
-
-  
-  
   // Win.GlobalAPlayer = document.getElementById('GlobalAPlayer')
   
   // 让按钮旋转
-  Win.GlobalAPlayer.on('play', function () {
-    AddBtnSpin();
-  });
-  Win.GlobalAPlayer.on('pause', function () {
-    AddBtnSpin();
-  });
+  Win.GlobalAPlayer.on('play', updateButtonSpin);
+  Win.GlobalAPlayer.on('pause', updateButtonSpin);
+
+  updateButtonSpin();
 };
-
-
-
-// function StopMusic() {
-//   const Win: any = window;
-//   let toPath = window.location.pathname;
-
-//   if (toPath.includes('/music/') && Win.GlobalAPlayer) {
-//     Win.GlobalAPlayer.pause();
-//   }
-// }
-
-
-/*
-* @name: //file.mo7.cc/music/list.json
-* @params: {}
-* data:[
-*   0:{
-*     artist:'',
-*     name:'',
-*     url:'',
-*     cover:'',
-*     lrc:'',
-* }
-* 加载音乐列表
-*/
-
 
 
 const LoadMusicList = async () => {
   
-  console.log("当前歌单api",musicListURL);
+  console.log("当前歌单api",MUSIC_API);
   try {
     await axios({
       method: 'get',
       //插件作者的歌单
       // url: '//file.mo7.cc/music/list.json',
       // 自己的歌单
-      url: musicListURL,
+      url: MUSIC_API,
       params: {},
     }).then((response) => {
       console.log('获取音乐数据,判断之前',response.data.message);
@@ -176,8 +140,8 @@ const LoadMusicList = async () => {
       // // 判断接口是否可用
       if (response.data.message == '请求次数已达上限，请明天再试') {
         alert('音乐API请求次数已达上限，请明天再试');
-        musicListURL = '//api.i-meto.com/meting/api?server=netease&type=playlist&id=596766562&r=:r' 
-        alert('赋值');
+        MUSIC_API = '//api.i-meto.com/meting/api?server=netease&type=playlist&id=596766562&r=:r' 
+        alert('启用备用API');
         return LoadMusicList()
         // return;
       }
@@ -185,8 +149,8 @@ const LoadMusicList = async () => {
       // 获取歌单后赋值
       const listData = response.data;
       if (listData && listData.length > 0) {
-        GlobalMusicList = listData;
-        console.log("已经获取歌单成功并赋值",GlobalMusicList);
+        musicList.value = listData;
+        console.log("已经获取歌单成功并赋值",musicList.value);
       }
 
       // 创建播放器实例
@@ -203,50 +167,26 @@ const LoadMusicList = async () => {
   }
 };
 
-// let options = {
-//   root:  document.querySelector('#GlobalMusicList'),
-//   threshold: 0,
-// }
-
-// const callback = (entries: any, observer: any) => {
-//   // console.log('进入回调', entries, observer);
-  
-//   entries.forEach((entry: any) => {
-//     const el = entry.target 
-//     // el.vShow = entry.isIntersecting ? 'true' : 'false';
-//     // console.log('打印列表加载',entry);
-//     // console.log('打印目标元素',entry.target);
-//     // el.setAttribute('v-if', 'false' );
-    
-//     el.setAttribute('v-if', entry.isVisible ? 'true' : 'false' );
-    
-//   })
-// }
-
-// const observer = new IntersectionObserver(callback, options);
-
 const creatAplayer = () => {
   import('aplayer').then((res) => {
     nextTick(() => {
-      
-      APlayer = res.default;
+      aPlayer = res.default;  // 这里导致模式切换卡顿
+
       InsertMenu();
       NewPlayer();
-      // console.log('打印res子组件挂载',APlayer);
-      // let observerList = document.querySelectorAll('#GlobalAPlayer .aplayer-list li')
-      // observerList.forEach (item => {
-      //   observer.observe(item)
-      // })
-
-
-      // 在这里插入全局事件监听
-      // window.document.body.onclick = () => {
-      //   CloseStatus();
-      // };
     });
-    
-    // 路由更新
-    router.afterEach( (to,from) => {
+  });
+}
+
+
+onMounted( async () => {
+
+  await LoadMusicList()
+  // 在这里插入全局事件监听
+  // window.document.body.onclick = CloseStatus;
+
+  // 路由更新
+  router.afterEach( (to,from) => {
       console.log('监测到路由更新');
       setTimeout(() => {
         InsertMenu();
@@ -254,13 +194,6 @@ const creatAplayer = () => {
         console.log('路由更新,更新播放器实例afterEach');
       }, 30);
     });
-  });
-}
-
-
-onMounted(  () => {
-  LoadMusicList()
-
 });
 
 
@@ -269,7 +202,7 @@ onMounted(  () => {
 <template>
   <ClientOnly>
     <div class="MyMusic" >
-      <div class="MyMusic_Play" :class="{ hide: !IsShow }">
+      <div class="MyMusic_Play" :class="{ hide: !isShow }">
         <div class="close" @click="CloseStatus"><MyIcon name="guanbi" /></div>
         <div id="GlobalAPlayer">
           <div class="aplayer-lrc"></div>
@@ -644,4 +577,5 @@ $myshadowDark:
   }
 
 }
+
 </style>
