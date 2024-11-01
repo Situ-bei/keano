@@ -1,6 +1,6 @@
 --- 
 date: 2024-10-20
-title: 《cookie预防xss攻击》
+title: cookie预防xss攻击
 category: 
 - 前端
 - 游览器缓存

@@ -1,6 +1,6 @@
 --- 
 date: 2024-10-20
-title: 《Cookie、LocalStorage 和 SessionStorage 的区别》
+title: Cookie、LocalStorage 和 SessionStorage 的区别
 category: 
 - 前端
 - 游览器缓存

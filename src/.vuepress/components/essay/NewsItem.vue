@@ -18,12 +18,14 @@
         <slot name="excerpt" v-bind="{ excerpt }">
           <template v-if="excerpt">
             <!-- <div class="vp-article-excerpt" v-html="excerpt"></div> -->
-            <Content :path="routePath" />
+            <Content class="eassy_content" :path="routePath" />
           </template>
         </slot>
       </div>
       <div class="tag">
           <span property="headline">#{{ title }}</span>
+
+          <span class="timeAgo">{{ timeAgo(articleInfo.d) }}</span>
       </div>
     </article>
   </div>
@@ -76,7 +78,46 @@ const routePath = computed(() => (route ? route.path.toString() : ""));
 
 // console.log("routePath",routePath.value);
 
-// console.log("routePath",articleInfo);
+console.log("articleInfo",pinfo);
+
+// 获取文章的日期时间戳转换
+// 2. 自定义格式
+const formatCustomDate = (timestamp:number)=> {
+    const date = new Date(timestamp);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
+
+// 1. 转换为"几分钟前"格式
+const timeAgo = (timestamp:number)=> {
+    const seconds = Math.floor((Date.now() - timestamp) / 1000);
+    
+    const intervals = {
+        年: 31536000,
+        月: 2592000,
+        周: 604800,
+        天: 86400,
+        小时: 3600,
+        分钟: 60
+    };
+    
+    for (let [unit, secondsInUnit] of Object.entries(intervals)) {
+        const interval = Math.floor(seconds / secondsInUnit);
+        if (interval >= 1) {
+          console.log(interval,unit);
+          
+            return `${interval}${unit}前`;
+        }
+    }
+    
+    return '刚刚';
+}
 
 </script>
 
@@ -110,10 +151,13 @@ const routePath = computed(() => (route ? route.path.toString() : ""));
     // background-color: #000;
     color: var(--text-color);
     border-radius: 0.3rem;
-    font-size: 0.9rem;
+    font-size: .9rem;
     padding: 2px 6px;
     text-align: center;
-    font-family: ZWZT;
+    // font-family: xinkai;
+    .timeAgo{
+      margin-left: 5px;
+    }
 
     @media (max-width: hope-config.$pad) {
       font-size: 0.8rem;
@@ -122,15 +166,19 @@ const routePath = computed(() => (route ? route.path.toString() : ""));
 }
 
 [data-theme="dark"] .tag {
-  background-image: linear-gradient(to right, #878787 0%, #517fa4 100%);
+  background: rgba(0, 0, 1, 0.2);
+  backdrop-filter: blur(5px);
+  // box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
   opacity: .5;
   color: var(--text-color);
 }
 
 [data-theme="light"] .tag {
-  background-image: linear-gradient(to right, #808080 0%, #537895 100%);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 1, 0.2);
   opacity: .5;
-  color: #fff;
+  color: #000000;
 }
 
 
@@ -205,6 +253,10 @@ $myshadowDark:
     }
   }
   
+  // 文章内容
+  .eassy_content{
+    margin: 0 20px;
+  }
 
 
   // .vp-article-hr {
