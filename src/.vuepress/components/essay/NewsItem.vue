@@ -4,15 +4,15 @@
       <div class="news-item-content">
         <div class="info-row">
           <img class="avatar" src="../../public/assets//icon/avatar.jpg"/>
-          <div>
-            <a href="/intro"><span class="name">Keano</span></a>
-            <div class="page-info" v-if="pinfo">
-              <DateInfo v-bind="pinfo" />
-              <!-- <PageViewInfo v-bind="pinfo" /> -->
-              <TagInfo v-bind="pinfo" />
-              <WordInfo v-bind="pinfo" />
+            <div>
+              <a href="/intro"><span class="name">Keano</span></a>
+              <div class="page-info" v-if="pinfo">
+                <DateInfo v-bind="pinfo" />
+                <!-- <PageViewInfo v-bind="pinfo" /> -->
+                <TagInfo v-bind="pinfo" />
+                <WordInfo v-bind="pinfo" />
+              </div>
             </div>
-          </div>
         </div>
         <!-- <hr class="vp-article-hr" /> -->
         <slot name="excerpt" v-bind="{ excerpt }">
@@ -78,7 +78,7 @@ const routePath = computed(() => (route ? route.path.toString() : ""));
 
 // console.log("routePath",routePath.value);
 
-console.log("articleInfo",pinfo);
+// console.log("articleInfo",pinfo);
 
 // 获取文章的日期时间戳转换
 // 2. 自定义格式
@@ -110,7 +110,7 @@ const timeAgo = (timestamp:number)=> {
     for (let [unit, secondsInUnit] of Object.entries(intervals)) {
         const interval = Math.floor(seconds / secondsInUnit);
         if (interval >= 1) {
-          console.log(interval,unit);
+          // console.log(interval,unit);
           
             return `${interval}${unit}前`;
         }
@@ -150,9 +150,9 @@ const timeAgo = (timestamp:number)=> {
     right: 15px;
     // background-color: #000;
     color: var(--text-color);
-    border-radius: 0.3rem;
+    border-radius: 0.8rem;
     font-size: .9rem;
-    padding: 2px 6px;
+    padding: 4px 8px;
     text-align: center;
     // font-family: xinkai;
     .timeAgo{
@@ -243,14 +243,14 @@ $myshadowDark:
   .info-row {
     display: flex;
     flex-direction: row;
-
-    // margin: 0px 20px;
     .avatar {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       margin-right: 10px;
+      vertical-align: middle;
     }
+
   }
   
   // 文章内容

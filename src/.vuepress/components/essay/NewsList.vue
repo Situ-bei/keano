@@ -7,7 +7,7 @@
     </div>
     <div class="header_text_submit">{{ hitokotoContent?.hitokoto }}--{{ hitokotoContent?.from }}</div>
     <div class="count_bar">
-      <p class="essay_sort">沧海<span class="essay_sort_btn" @click="sortArticles">拾遗</span></p>
+      <p class="essay_sort">沧海<button class="essay_sort_btn" @click="throttledSortArticles">拾遗</button></p>
       <p class="essay_count" :data-item-count="String(items.length)">
         沧海「 {{ numberToChinese(items.length) }} 」粟
       </p>
@@ -39,7 +39,7 @@ import { EmptyIcon } from "vuepress-theme-hope/client/modules/blog/components/ic
 import { useBlogOptions } from "vuepress-theme-hope/client/modules/blog/composables/index";
 import { isSupported, usePageview } from "@vuepress/plugin-comment/pageview";
 import { ArticleInfoData } from "vuepress-theme-hope/shared";
-
+import { throttle } from "../../utils/throttle";
 
 
 
@@ -55,7 +55,7 @@ const props = defineProps<{
 
 // 使用 ref 来存储排序后的文章列表
 const sortedArticles = ref<Article<ArticleInfoData>[]>([]);
-
+let count = 0
 // 排序按钮
 // 添加排序状态
 const sortOrder = ref('desc'); // 'desc' 为降序，'asc' 为升序
@@ -63,7 +63,6 @@ const sortOrder = ref('desc'); // 'desc' 为降序，'asc' 为升序
 const sortArticles = () => {
   sortOrder.value = sortOrder.value === 'desc' ? 'asc' : 'desc';
   
-
   const newArticles = sortedArticles.value.sort((a, b) => {
     if (sortOrder.value === 'desc') {
       return a.info.d - b.info.d
@@ -73,9 +72,13 @@ const sortArticles = () => {
   });
   // 赋值新数组
   sortedArticles.value = newArticles;
-  console.log('函数中排序后的数据：', sortedArticles.value);
-  console.log('升序', sortOrder.value);
+  // console.log('函数中排序后的数据：', sortedArticles.value);
+  // console.log('升序', sortOrder.value);
+  console.log('排序函数执行完毕',count++);
 };
+
+// 使用节流函数对 sortArticles 进行节流
+const throttledSortArticles = throttle(sortArticles, 800);
 
 
 
@@ -223,10 +226,12 @@ onMounted(() => {
   .essay_sort {
     display: inline-block;
     .essay_sort_btn{
+      font-size: 1.1rem;
+      font-family: xinkai;
       border: none;
       border-radius: 15px;
       margin-left: 4px;
-      padding: 4px 6px;
+      padding: 6px 8px;
       background: rgba(83, 83, 83, 0.2);
       backdrop-filter: blur(10px);
       cursor: pointer;

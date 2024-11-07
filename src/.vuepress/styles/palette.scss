@@ -1,5 +1,6 @@
 @use "@sass-palette/hope-config";
 
+
 // mobile 首页卡片设置
 .vp-article-wrapper{
     .vp-article-item{
@@ -45,28 +46,21 @@
 }
 
 @media screen and (min-width: 1440px) {
-    $myshadow: 
-        -.1rem -.1rem .2rem rgba(255, 255, 255,1),
-        .1rem .2rem .2rem hsl(0 0% 50% / .6);
     [data-theme='light'] {
         .theme-container {
         .vp-sidebar > .vp-sidebar-links {
             & > li > .vp-sidebar-group {
                 // box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
-                box-shadow: $myshadow;
+                box-shadow: var(--my-shadow-light);
             }
         }
         }
     }
-    $myshadowDark: 
-        -.1rem -.1rem .3rem hsla(0, 0%, 80%, 0.473),
-        .2rem .2rem .3rem hsla(0, 0%, 0%, 0.517);
-
     [data-theme='dark'] {
         .theme-container {
         .vp-sidebar > .vp-sidebar-links {
             & > li > .vp-sidebar-group {
-                box-shadow: $myshadowDark;
+                box-shadow: var(--my-shadow-dark);
             }
         }
         }

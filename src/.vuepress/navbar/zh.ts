@@ -12,7 +12,7 @@ export const zhNavbar = navbar([
       { text: '标签', icon: 'icon-tianchongxing-', link: '/tag/' },
       { text: '时间轴', icon: 'icon-shijianzhou', link: '/timeline/' },
       { text: '收藏', icon: 'icon-shoucang', link: '/collect' },
-
+      { text: "TODO",icon: "icon-TODO",link: "/todo"}, // TODO
     ],
   },
 

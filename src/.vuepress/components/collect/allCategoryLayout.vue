@@ -4,17 +4,25 @@
             <div class="card_body" v-if="handelData" v-for="(item,index) in handelData" :key="item.id">
                 <!-- 标题 -->
                 <div class="title">
-                    <FontIcon :icon="iconIs(item.iconFont)"/> 
+                    <FontIcon :icon="iconIs(item.iconFont)" />
                     <span>{{ item.title ? item.title : '数据丢失啦' }}</span>
                 </div>
                 <!-- 卡片内容 -->
                 <div class="card_content" v-if="item">
                     <div class="cardList">
-                        <div class="cardList_2" v-for="(i) in item.detail" :key="i.id">
-                            <FontIcon :icon="iconIs(i.subIcon)"/> 
-                            <a :href="i.url" target="_blank" class="cardList_2_item">{{ i.name }}</a>
-                        </div>
-                    </div>  
+                        <template v-for="(i) in item.detail" :key="i.id">
+                            <a :href="i.url" target="_blank" class="link-item">
+                                <div class="a_text">
+                                    <Tooltip :text="i.name" :lines="1" >
+                                        <template #reference>
+                                            <FontIcon :icon="iconIs(i.subIcon)" />
+                                            {{ i.name }}
+                                        </template>
+                                    </Tooltip>
+                                </div>
+                            </a>
+                        </template>
+                    </div>
                 </div>
 
             </div>
@@ -27,10 +35,18 @@ import { computed, inject, ref } from "vue";
 import 'hover.css'
 
 // 引入收藏数据 和 导入类型
-import { CollectOptions } from "../../data/collectType";
+import { CollectOptions } from "../../data/Type";
 const collectData = inject<CollectOptions[]>('collectData')
 
+// 引入提示框组件
+import Tooltip from "../mycomponents/tooltip.vue";
 
+const mouseenter = (event:MouseEvent)=>{
+    console.log('jinry',Event);
+    const el = event.currentTarget as HTMLElement
+    const rect = el.getBoundingClientRect()
+    console.log('jinry.rect',rect);
+}
 
 // 对数据进行处理
 const handelData = computed<CollectOptions[]>(()=>{
@@ -137,73 +153,78 @@ $myshadowDark:
                 margin-left: 5px;
             }
         }
+        // 卡片内容
         .card_content{
             margin-top: 5px;
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+            // backdrop-filter: blur(10px);
             box-shadow: $myshadow;
             border-radius: 15px;
             height: 180px;
-            // max-height: 200px;
             overflow-y: scroll;
-
+            padding: 10px;
                 &::-webkit-scrollbar {
                     display: none; // 隐藏 WebKit 浏览器（如 Chrome 和 Safari）的滚动条
                 }
-            padding: 10px;
             .cardList{
-                // display: flex;
-                // flex-wrap: wrap;
                 display: grid;
-                grid-template-columns: repeat(3,120px);
+                grid-template-columns: repeat(auto-fit,minmax(110px,1fr));
+                gap: 15px;
                 font-size: 0.875rem;
-                margin: 5px;
-                .cardList_2{
-                    // width: 110px;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                width: 100%;
 
-                    margin: 10px;
-                    .cardList_2_item{
-                        // display: inline-block;
-                        // vertical-align: middle;
-                        -webkit-transform: perspective(10px) translateZ(0);
-                        transform: perspective(10px) translateZ(0);
+                .link-item {
+                    padding: 5px 6px;
+                    transition: all .3s;
+                    border-radius: 15px;
+                    display: block;
+                    
+                    &:hover {
+                        background: rgba(106, 106, 106, 0.2);
+                    }
+
+                    .a_text {
+                        flex: 1;
                         position: relative;
-                        margin-left: 5px;
+                        min-width: 0;
+                        // overflow: hidden;
+                        // text-overflow: ellipsis;
+                        // white-space: nowrap;
                         
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            
-                            z-index: -1;
-                            left: 0;
-                            right: 100%;
-                            bottom: 0;
+                        // 悬浮下划线动画效果
+                        &::before {
+                            content: "";// 伪元素必需属{
+                            position: absolute;// 绝对定{
+                            // z-index: 1;// 置于最底{
+                            left: 0;// 左对{
+                            right: 100%;// 右对{
+                            bottom: 0;// 底部对齐
+                
+                            // 下划线样式
                             background: var(--vp-c-accent-hover);
                             height: 2px;
                             border-radius: 5px;
-                            -webkit-transition-property: right;
-                            transition-property: right;
-                            -webkit-transition-duration: 0.3s;
-                            transition-duration: 0.4s;
-                            -webkit-transition-timing-function: ease-out;
-                            transition-timing-function: ease-out;
+                
+                            // 过渡效果
+                            transition: right 0.4s ease-out;
                         }
+                
+                        // 悬浮、焦点和激活状态的动画终点
                         &:hover::before,
-                        &:focus ::before,
-                        &:active::before {
-                            right: 0;
+                        &:focus::before,
+                        &:active::before{
+                            right: 0; // 下划线展开到100%宽度
                         }
-                        
                     }
                 }
                 
+                
+
             }
+
         }
     }
 }
+
 
 ::-webkit-scrollbar {
   width: 5px; /* 滚动条的宽度 */
@@ -225,6 +246,21 @@ $myshadowDark:
             }
         }
     }
+
+}
+
+@media (max-width: hope-config.$mobile) {
+.collect_card{
+    .card_body{
+        .card_content{
+            .cardList{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit,150px);
+                    // background-color: rgba(87, 87, 87, 1);
+                }
+        }
+    }
+}
 
 }
 </style>

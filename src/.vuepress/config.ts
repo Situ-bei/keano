@@ -3,6 +3,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 
 import theme from "./theme.js"; // 引入主题
 
+
+
 // 【搜索插件】
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 
@@ -146,5 +148,7 @@ export default defineUserConfig({
       },
     }),
 
+
+    
   ],
 });

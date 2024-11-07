@@ -21,7 +21,7 @@ import { ref,computed,inject } from 'vue';
 import linkCar from './linkCar.vue';
 
 // 注入收藏数据 和 导入类型
-import { CollectOptions } from "../../data/collectType";
+import { CollectOptions } from "../../data/Type";
 const collectData = inject<CollectOptions[]>('collectData')
 
 // 定义和接收 mycollectlayout 中传递来的 navbar 选择的分类类型的 数据类型

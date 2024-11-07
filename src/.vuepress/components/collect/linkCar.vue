@@ -34,7 +34,7 @@
 import { inject } from "vue";
 // 数据类型
 
-import type { CollectOptions } from "../../data/collectType";
+import type { CollectOptions } from "../../data/Type";
 
 // 接收父组件传值   https://cn.vuejs.org/guide/typescript/composition-api.html#complex-prop-types
 const props = defineProps<{collectData : CollectOptions }>()

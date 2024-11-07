@@ -1,13 +1,19 @@
 //  引入hope主体 的 颜色配置文件
 @use "@sass-palette/hope-config";
 
-// 阴影
-$myshadow: 
+:root{
+    --categoryNavBar-text: rgba(80, 80, 80, 0.519);
+    --categoryNavBar-text-dark: rgba(255, 255, 255, 0.38);
+    --categoryNavBar-bg: rgba(226, 226, 226, 0.455);
+    --categoryNavBar-bg-dark: rgba(157, 157, 157, 0.1);
+    --my-shadow-dark: 
+    -.1rem -.1rem .2rem hsla(0, 0%, 70%, 0.6),
+    .2rem .2rem .2rem hsla(0, 0%, 0%, 0.49);
+    --my-shadow-light: 
     -.1rem -.1rem .2rem rgba(255, 255, 255,1),
     .1rem .2rem .2rem hsl(0 0% 50% / .6);
-$myshadowDark: 
--.1rem -.1rem .3rem hsla(0, 0%, 80%, 0.473),
-.2rem .2rem .3rem hsla(0, 0%, 0%, 0.564);
+        
+}  
 
 // 本地字体
 @font-face {
@@ -52,7 +58,7 @@ $myshadowDark:
     // padding: 0.6rem 0;
     backdrop-filter: blur(15px);
     background: transparent;
-    box-shadow: $myshadow;
+    box-shadow: var(--my-shadow-light);
 }
 
 // 隐藏组件额外文字 元素
@@ -110,7 +116,7 @@ $myshadowDark:
         .theme-hope-content{
             // background-color: rgba($color: #fff, $alpha: 0.4); // 文章背景
             // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; // 边框阴影
-            box-shadow: $myshadow;
+            box-shadow: var(--my-shadow-light);
             @include theme-hope-content
         }
     }
@@ -121,14 +127,14 @@ $myshadowDark:
 [data-theme="dark"]{
 #toc{
     @include toc-style;
-    box-shadow: $myshadowDark;
+    box-shadow: var(--my-shadow-dark);
 }
 .theme-container{
     // 文章内容容器
     .theme-hope-content{
         // background-color: rgba($color: #484848, $alpha: 0.4); // 文章背景
         background-color: transparent;
-        box-shadow: $myshadowDark; // 边框阴影
+        box-shadow: var(--my-shadow-dark); // 边框阴影
         @include theme-hope-content
     }
 
@@ -145,7 +151,7 @@ $myshadowDark:
 $markdownTabColor:  rgb(255, 255, 255,.4);
 .vp-tabs{
     border: none;
-    box-shadow: $myshadow;
+    box-shadow: var(--my-shadow-light);
     @media (max-width: hope-config.$mobile) {
         margin-inline: -0.5rem !important;
         border-radius: .5rem !important;

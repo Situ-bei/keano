@@ -49,7 +49,7 @@ import detailCategoryLayout from "./detailCategoryLayout .vue";
 
 
 // 引入收藏数据 和 导入类型
-import { CollectOptions } from "../../data/collectType";
+import { CollectOptions } from "../../data/Type";
 const collectData = inject<CollectOptions[]>('collectData')
 
 

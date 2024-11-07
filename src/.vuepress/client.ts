@@ -3,6 +3,12 @@ import { onMounted } from 'vue';
 import { defineAsyncComponent } from 'vue';
 import packageJson from '../../package.json';  // 【引入包信息】
 
+import './styles/element/index.scss'
+import ElementPlus from 'element-plus' // 引入element-plus
+
+import 'element-plus/dist/index.css' // 引入element-plus样式
+import 'element-plus/theme-chalk/dark/css-vars.css'
+
 import 'vuepress-theme-hope/presets/bounce-icon.scss'; // 为页面图标添加鼠标悬停的跳动效果。
 
 
@@ -22,6 +28,7 @@ import NavMusic from './components/NavMusic.vue'
 // 【自定义组件】
 import Essay from "./components/essay/News.vue"
 import MyCollect from './components/collect/MyCollect.vue'
+import Todo from './components/todo/todo.vue'
 
 
 const TopNavBeautify = defineAsyncComponent(() => import('./components/TopNavBeautify.vue'));
@@ -42,12 +49,14 @@ export default defineClientConfig({
   layouts: {
     Essay,
     MyCollect,
-    
+    Todo,
   },
   // 客户端增强
   enhance({ app, router, siteData }) {
     // 注册全局组件
     // app.component('MyCoverLink', MyCoverLink);
+    // 注册element-plus
+    app.use(ElementPlus)
   },
   
   // 全局注册

@@ -24,7 +24,7 @@ export default hopeTheme({
   iconPrefix: "iconfont ",
   iconAssets: [
     "fontawesome-with-brands",
-    "//at.alicdn.com/t/c/font_4705467_yceqxte3wbr.css",
+    "//at.alicdn.com/t/c/font_4705467_gqxz91wk17r.css",
   ],
 
   logo: "/logo.png", // 导航栏logo
@@ -209,7 +209,7 @@ export default hopeTheme({
         light: "one-light",
         dark: "one-dark-pro",
       },
-      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','javascript','less','css','scss','typescript','html'],
+      langs: ['ts', 'json', 'vue', 'md', 'bash', 'diff','javascript','less','css','scss','typescript','html','http','py','jsx'],
       collapsedLines: true, // 是否折叠代码行
       notationHighlight: true,
     },

@@ -11,8 +11,9 @@
             <MyCoverLink />
         </div> -->
         <div class="theme-hope-content">
-            <MyCollectLayout />
-            
+            <DropTransition appear :delay="0.24">
+                <MyCollectLayout />
+            </DropTransition>
         </div>
         
         </main>
@@ -21,36 +22,21 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, resolveComponent, provide } from "vue";
-import { usePageData } from "vuepress/client";
+import { provide } from "vue";
 import BlogWrapper from "@theme-hope/modules/blog/components/BlogWrapper";
 import { DropTransition } from "@theme-hope/components/transitions/DropTransition";
-import { useDarkmode } from "@theme-hope/modules/outlook/composables/index";
-import { useBlogType } from '@vuepress/plugin-blog/client'
 import SkipLink from "@theme-hope/components/SkipLink";
 import MyCollectLayout from "./MycollectLayout.vue";
-import MyCoverLink from "./MyCoverLink.vue";
-import { ArticleInfoData } from "vuepress-theme-hope/shared";
+
 
 // 导入数据
 import  {collectData} from "../../data/collectData";
 // 导入类型
-import { CollectOptions } from "../../data/collectType";
+import { CollectOptions } from "../../data/Type";
 
 // 给所有组件注入数据
 provide<CollectOptions[]>('collectData', collectData)
 
-
-const { isDarkmode } = useDarkmode();
-const commentService = computed(() =>
-    hasGlobalComponent("CommentService") ? "CommentService" : null
-);
-
-const hasGlobalComponent = (componentName) => {
-    return !!resolveComponent(componentName);
-};
-const page = usePageData();
-const collect = useBlogType<ArticleInfoData>("collect");
 
 </script>
 

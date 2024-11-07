@@ -37,6 +37,7 @@
     "@vueuse/core": "^11.1.0",
     "aplayer": "^1.10.1",
     "axios": "^1.7.7",
+    "element-plus": "^2.8.7",
     "hover.css": "^2.3.2",
     "icynblog": "file:",
     "vuepress-plugin-search-pro": "^2.0.0-rc.59"

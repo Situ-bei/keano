@@ -1,4 +1,4 @@
-import type { CollectOptions } from './collectType.js'
+import type { CollectOptions } from './Type.js'
 export const collectData: CollectOptions [] = [
     {   
         id: 0,
@@ -376,7 +376,28 @@ export const collectData: CollectOptions [] = [
         ]
     },
 
-    
+    // Admin模板
+    {
+        id:5,
+        title:'Admin模板',
+        // iconFont: '',
+        detail:[
+            {
+                id:0,
+                name: "Ant Design Pro",
+                desc: "一个企业级中后台产品设计系统",
+                icon: "https://preview.pro.antdv.com/logo.png",
+                url: "https://pro.antdv.com/"
+            },
+            {
+                id:0,
+                name: "喵喵App管理系统",
+                desc: "喵喵App管理系统",
+                icon: "https://cloudhao1999.github.io/cloud-app-admin/assets/logo.a4c2148e.webp",
+                url: "https://cloudhao1999.github.io/cloud-app-admin/#/dashboard"
+            },
+        ]
+    },
     
     
     

@@ -65,7 +65,7 @@ const inputRef = ref(null)
 
 
 // 引入收藏数据 和 导入类型
-import { CollectOptions } from "../../data/collectType";
+import { CollectOptions } from "../../data/Type";
 const collectData = inject<CollectOptions[]>('collectData')
 
 onMounted(()=>{
@@ -177,7 +177,7 @@ $myshadow:
 .1rem .2rem .2rem hsl(0 0% 50% / .6);
 
 
-$myshadowDark: 
+$myshadowDark:  
 -.1rem -.1rem .2rem hsla(0, 0%, 53%, 0.6),
 .2rem .2rem .2rem hsla(0, 0%, 0%, 0.5);
 
@@ -252,7 +252,7 @@ a{
                 background: $mybackgroundcolor;
                 backdrop-filter: blur(0.625rem);
                 box-sizing: border-box;
-                box-shadow: $myshadow;
+                box-shadow: var(--my-shadow-light);
                 color: $mycolor;
 
                 // 输入框获取焦点时，去除边框
@@ -285,7 +285,7 @@ a{
             min-height: 180px;
             background: $mybackgroundcolor;
             backdrop-filter: blur(0.625rem);
-            box-shadow: $myshadow;
+            box-shadow: var(--my-shadow-light);
             border-top: none;
             z-index: 5;
             width: 100%;
@@ -320,7 +320,7 @@ a{
             .search_input{
                 background:$mybackgroundcolorDark;
                 backdrop-filter: blur(0.725rem);
-                box-shadow: $myshadowDark;
+                box-shadow: var(--my-shadow-dark);
                 color: $mycolorDark;
                 &::placeholder{
                     color: $mycolorDark;
@@ -333,7 +333,7 @@ a{
         .suggestions{
             background: $mybackgroundcolorDark;
             backdrop-filter: blur(0.725rem);
-            box-shadow: $myshadowDark;
+            box-shadow: var(--my-shadow-dark);
             color: $mycolorDark;
         }
     }
