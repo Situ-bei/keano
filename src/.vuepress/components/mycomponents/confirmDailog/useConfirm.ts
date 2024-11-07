@@ -10,12 +10,19 @@ export interface ConfirmOptions {
 }
 
 export function useConfirm() {
-    // 1. 创建一个 DOM 容器用于挂载弹窗
-    const container = document.createElement('div')
+
 
     // 2. 创建确认框函数，返回 Promise 以支持异步操作
     const confirm = (options: ConfirmOptions = {}): Promise<boolean> => {
         return new Promise((resolve) => {
+            // 如果是在服务器端渲染，直接返回一个未解决的 Promise
+            if (typeof window === 'undefined') {
+                // 如果在服务器端渲染，直接返回一个未解决的 Promise
+                return resolve(false);
+            }
+
+            // 1. 创建一个 DOM 容器用于挂载弹窗
+            const container = document.createElement('div')
             // 3. 定义确认按钮回调
             const handleConfirm = () => {
                 // 清理 DOM
