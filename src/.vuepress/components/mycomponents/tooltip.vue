@@ -36,6 +36,8 @@ interface Props {
     fontSize?: string
     /** 文本字体粗细 */
     fontWeight?: string | number
+    /** 文本宽度 */
+    width?: string
     /** 文本色 */
     color?: string
     /** tooltip 字体大小 */
@@ -92,6 +94,7 @@ const themeStyle = computed(() => ({
     color: isDarkMode.value ? '#ffffff' : '#333333',
     '--tooltip-arrow-color': isDarkMode.value ? 'rgba(87, 87, 87, 1)' : 'rgba(255, 255, 255, .9)' // 添加这行
 
+
 })) 
 
 
@@ -99,7 +102,8 @@ const themeStyle = computed(() => ({
 const textStyle = computed(() => ({
     fontSize: props.fontSize,
     fontWeight: props.fontWeight,
-    color: props.color
+    color: props.color,
+    width: props.width
 }))
 
 // 计算tooltip文本样式
@@ -237,11 +241,13 @@ onUnmounted(() => {
 /* 包装容器 */
 .ellipsis_wrapper {
     position: relative;
-    width: 100%;
+    // width: 100%;
+    // flex: 0;
+    // min-width: 0;
 }
 /* 单行省略 */
 .text-ellipsis {
-    width: 100%;
+    // width: inherit;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

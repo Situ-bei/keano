@@ -1,6 +1,6 @@
 ---
 layout: Todo
-title: TO Do
+title: TODO
 index: false
 timeline: false
 article: false
