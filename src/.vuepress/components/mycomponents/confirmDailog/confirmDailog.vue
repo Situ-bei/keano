@@ -173,7 +173,7 @@ defineExpose({
 
         /* 取消按钮样式 */
         .cancel-btn {
-            // background: var(--vp-c-accent-hover);
+            background: rgba(153, 153, 153, 0.5);
             // color: var(--vp-c-text-2);
         }
 

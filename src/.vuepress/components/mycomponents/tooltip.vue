@@ -46,38 +46,6 @@ interface Props {
     tooltipColor?: string
 }
 const props = defineProps<Props>()
-// const props = defineProps({
-//     text: {
-//         type: String,
-//         default: ''
-//     },
-//     lines: {
-//         type: Number,
-//         default: 1
-//     },
-//         // 添加字体相关属性
-//         fontSize: {
-//         type: String,
-//         default: '14px'
-//     },
-//     fontWeight: {
-//         type: [String, Number],
-//         default: 'normal'
-//     },
-//     color: {
-//         type: String,
-//         default: 'inherit'
-//     },
-//     // tooltip的字体样式
-//     tooltipFontSize: {
-//         type: String,
-//         default: '14px'
-//     },
-//     tooltipColor: {
-//         type: String,
-//         default: '#fff'
-//     }
-// })
 
 
 const textRef = ref<HTMLElement | null>(null)    // 文本元素引用

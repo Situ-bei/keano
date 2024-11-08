@@ -43,76 +43,83 @@
         </div>
         <!-- 计划列表 -->
         <div class="todo_list">
-            <div v-for="todo in todos" :key="todo.id" class="todo_item">
-                <!-- 左侧 -->
-                <div class="todo_item_top">
-                    <!-- 完成按钮 -->
-                    <span :class="todo.completed ? 'circle_check' : 'circle'" @click="completeTodo(todo)">
-                    </span>
+            <div ref="todoListRef" class="sortable-list">
+                <div
+                        v-for="(todo, index) in todos" 
+                        :key="todo.id" 
+                        class="todo_item" 
+                    >
 
-                    <!--  -->
-                    <div class="content_wrapper">
+                        <div class="todo_item_inner">
+                            <!-- 左侧 -->
+                            <div class="todo_item_top">
+                                <!-- 完成按钮 -->
+                                <span :class="todo.completed ? 'circle_check' : 'circle'" @click="completeTodo(todo)">
+                                </span>
 
-                        <!-- 标题 -->
-                        <span class="title">
-                            <Tooltip :text="todo.title" :lines="1" :font-weight="'bold'">
-                                <template #reference>
-                                    {{ todo.title }}
-                                </template>
-                            </Tooltip>
-                        </span>
+                                <!--  -->
+                                <div class="content_wrapper">
 
-                        <!-- 重要程度 -->
-                        <el-tag type="danger" v-if="todo.priority === 'high'">
-                            重要
-                        </el-tag>
+                                    <!-- 标题 -->
+                                    <span class="title">
+                                        <Tooltip :text="todo.title" :lines="1" :font-weight="'bold'">
+                                            <template #reference>
+                                                {{ todo.title }}
+                                            </template>
+                                        </Tooltip>
+                                    </span>
+
+                                    <!-- 重要程度 -->
+                                    <el-tag type="danger" v-if="todo.priority === 'high'">
+                                        重要
+                                    </el-tag>
+                                </div>
+
+                                <!-- 右侧delect按钮 -->
+                                <div class="delect">
+
+                                    <el-button type="danger" size="small" @click="deleteTodo(todo)">
+                                        <FontIcon icon="icon-shanchu" class="delete_icon" />删除
+                                    </el-button>
+
+                                </div>
+                            </div>
+
+                            <!-- 内容 -->
+                            <div class="todo-item-content" @dblclick="editTodo(todo)">
+                                <div class="script_tags">
+
+                                    <div class="tags">
+                                        <el-tag class="tag" v-for="tag in todo.tags" :key="tag">{{ tag }}</el-tag>
+                                    </div>
+
+                                    <!-- 内容 -->
+                                    <Tooltip :text="todo.content" :lines="5" :font-size="'0.85rem'" :width="'100%'">
+                                        <template #reference>
+                                            {{ todo.content }}
+                                        </template>
+                                    </Tooltip>
+
+                                </div>
+
+                                <div class="todo-item-time">
+                                    <div>
+                                        开始：<span>{{ formatDate(todo.startTime) }}</span>
+                                    </div>
+                                    <div>
+                                        结束：<span>{{ formatDate(todo.endTime) }}</span>
+                                    </div>
+                                    <div>
+                                        预计耗时：<span>{{ dayjs(todo.endTime).diff(dayjs(todo.startTime), 'hour') }}小时</span>
+                                    </div>
+                                    <div>
+                                        <span>{{ getTimeStatus(todo) }}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- 右侧delect按钮 -->
-                    <div class="delect">
-
-                        <el-button type="danger" size="small" @click="deleteTodo(todo)">
-                            <FontIcon icon="icon-shanchu" class="delete_icon"/>删除
-                        </el-button>
-                        
-                    </div>
-                </div>
-
-                <!-- 内容 -->
-                <div class="todo-item-content" @dblclick="editTodo(todo)">
-                    <div class="script_tags">
-
-                        <div class="tags">
-                            <el-tag class="tag" v-for="tag in todo.tags" :key="tag">{{ tag }}</el-tag>
-                        </div>
-
-                        <!-- 内容 -->
-                        <Tooltip :text="todo.content" :lines="5" :font-size="'0.85rem'" :width="'100%'">
-                            <template #reference>
-                                {{ todo.content }}
-                            </template>
-                        </Tooltip>
-
-                    </div>
-
-                    <div class="todo-item-time">
-                        <div>
-                            开始：<span>{{ formatDate(todo.startTime) }}</span>
-                        </div>
-                        <div>
-                            结束：<span>{{ formatDate(todo.endTime) }}</span>
-                        </div>
-                        <div>
-                            预计耗时：<span>{{ dayjs(todo.endTime).diff(dayjs(todo.startTime), 'hour') }}小时</span>
-                        </div>
-                        <div>
-                            <span>{{ getTimeStatus(todo) }}</span>
-                        </div>
-
-                    </div>
-                </div>
-
-
             </div>
         </div>
     </div>
@@ -171,7 +178,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed, watch, onMounted, nextTick, onUnmounted } from 'vue'
-import dayjs from 'dayjs'
+import dayjs from 'dayjs' // 引入dayjs
 import { Todo } from '../../data/Type' // todo数据类型
 
 import { ElConfigProvider } from 'element-plus' // 引入element-plus中文配置
@@ -180,6 +187,9 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn' // 引入中文
 import Tooltip from '../mycomponents/tooltip.vue' // 引入tooltip组件
 
 import { useConfirm } from '../mycomponents/confirmDailog/useConfirm' // 引入确认弹窗组件
+
+import Sortable from 'sortablejs'; // 引入拖拽库
+import { debounce } from '../../utils/debounce'// 引入防抖函数
 
 const confirmDialog = useConfirm()
 // 数据持久化相关
@@ -237,11 +247,6 @@ const progress = computed(() => {
     // Math.round 四舍五入到整数
     return Math.round((completedCount.value / totalCount.value) * 100)
 })
-
-
-
-
-
 
 // 定义todoForm数据
 const todoForm = reactive({
@@ -324,8 +329,6 @@ const deleteTodo = async (todo: Todo) => {
 
 
 }
-
-
 
 // 完成按钮
 const completeTodo = async (todo: Todo) => {
@@ -442,19 +445,125 @@ watch(
     },
     { deep: true }
 )
+
+//#region 拖拽排序实现
+const dragIndex = ref<number>(-1)
+const handleDragStart = (e: DragEvent, index: number) => {
+    dragIndex.value = index
+    if (e.target instanceof HTMLElement) {
+        e.target.style.opacity = '0.5'
+    }
+}
+
+const handleDrop = (e: DragEvent, index: number) => {
+    e.preventDefault()
+
+    // 获取拖拽的元素
+    const draggedTodo = todos.value[dragIndex.value]
+    // 删除拖拽的元素
+    todos.value.splice(dragIndex.value, 1)
+    // 在新位置插入元素
+    todos.value.splice(index, 0, draggedTodo)
+    
+    // 重置样式
+    if (e.target instanceof HTMLElement) {
+        e.target.style.opacity = '1'
+    }
+    
+    // 保存更新后的顺序
+    todoStorage.save(todos.value)
+    }
+
+// 添加拖拽结束的处理
+const handleDragEnd = (e: DragEvent) => {
+    if (e.target instanceof HTMLElement) {
+        e.target.style.opacity = '1'
+    }
+}
+//#endregion
+
+
+//#region 触摸排序实现
+const todoListRef = ref<HTMLElement | null>(null)
+let sortableInstance: Sortable | null = null
+
+
+//#endregion
+
 // 在组件挂载时启动定时器
 onMounted(() => {
+    // 倒计时
     const timer = setInterval(() => {
         currentTime.value = Date.now() // 更新响应式变量
     }, 1000)
 
+    // 添加拖拽结束的全局监听
+    // document.addEventListener('dragend', handleDragEnd)
+
+    // 初始化触摸拖拽排序
+    // 在组件挂载后初始化Sortable
+
+    if (todoListRef.value) {
+        sortableInstance = new Sortable(todoListRef.value, {
+            animation: 150, // 动画时间
+            delay: 500, // 长按延迟时间
+            delayOnTouchOnly: true, // 仅在触摸时启用延迟
+            touchStartThreshold: 5, // 触摸阈值
+
+            // 拖动时的样式
+            dragClass: 'sortable-drag',
+            ghostClass: 'sortable-ghost',
+            chosenClass: 'sortable-chosen',
+
+            // 仅允许垂直拖动
+            direction: 'vertical',
+
+            // 开始拖动时的回调
+            onStart: (evt: any) => {
+                // 可以添加自定义的开始拖动逻辑
+                if (navigator.vibrate) {
+                    navigator.vibrate(50) // 触觉反馈
+                }
+            },
+
+            // 拖动结束时的回调
+            onEnd: (evt: { oldIndex: any; newIndex: any }) => {
+                // 获取新的排序
+                const { oldIndex, newIndex } = evt
+                if (oldIndex !== newIndex && oldIndex !== undefined && newIndex !== undefined) {
+                    // 更新数组顺序
+                    const item = todos.value.splice(oldIndex, 1)[0]
+                    todos.value.splice(newIndex, 0, item)
+                    // 保存新顺序
+                    debounce(async() => {
+                        try {
+                            await todoStorage.save(todos.value)
+                            // 可选：成功提示
+                            console.log('保存成功')
+                        } catch (error) {
+                            // 错误处理
+                            console.error('保存失败:', error)
+                            // 可以添加重试逻辑
+                        }
+                    }, 1000)
+                }
+            }
+        })
+    }
     // 在组件卸载时清除定时器
     onUnmounted(() => {
         clearInterval(timer)
+        document.removeEventListener('dragend', handleDragEnd)
+
+        // 触摸排序
+        if (sortableInstance) {
+            sortableInstance.destroy()
+        }
         console.log('卸载定时器');
 
     })
 })
+
 
 
 </script>
@@ -646,212 +755,272 @@ $todo_item_bg_dark: rgba(0, 0, 0, 0.2);
 }
 
 // #endregion
+
+
+// 针对移动端的媒体查询
+// Sortable 相关样式
+// 当元素被选中准备拖动时的样式
+.sortable-chosen {
+    .todo_item_inner {
+        &::after {
+            opacity: 1;// 显示拖动手柄（就是之前定义的 ⋮⋮ 符号）
+        }
+    }
+}
+
+// 正在被拖动的元素的样式
+.sortable-drag {
+    .todo_item_inner {
+        transform: scale(1.02);// 略微放大元素
+        opacity: 0.9;// 半透明效果
+        // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+}
+// 拖动时原位置的占位元素样式
+.sortable-ghost {
+    opacity: 0.8;
+}
+
+// 移动端优化
+@media (max-width: hope-config.$mobile) {
+    .todo_list {
+        .todo_item {
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+    }
+}
+
 // 计划列表
 .todo_list {
+    // 瀑布流
     columns: auto 2;
-    /* 每列最小宽度300px，自动分配列数 */
-    column-gap: 20px;
+    column-gap: 20px; //每列最小宽度300px，自动分配列数
+    border: none;
 
-    /* 列间距 */
+    // 列间距 瀑布流移动端适配
     @media (max-width: hope-config.$pad) {
         columns: auto 1;
         /* 每列最小宽度300px，自动分配列数 */
     }
 
-    // 使用flex布局
+    // 使用flex布局 瀑布流
     // flex-direction: column;
     // flex-wrap: wrap; 
     // display: flex;
 
-    border: none;
+    // 触摸排序
+    .sortable-list {
+        position: relative;
+        .todo_item_inner {
+            // background: var(--vp-c-bg);
+            // border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
 
-    .todo_item {
-        break-inside: avoid;
-        /* 防止内容被分割到不同列 */
-        // display: flex;
-        // align-items: flex-start;
-        padding: 10px;
-        border-radius: 15px;
-        // width: 50%;
-        margin-bottom: 20px;
-
-
-        // 顶部
-        .todo_item_top {
-            color: var(--vp-c-text);
-            background-color: $todo_item_bg_light;
-            padding: 5px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            vertical-align: middle;
-            width: 97%;
-            gap: 5px; // 各元素间距
-
-            
-            // 完成按钮
-            .circle,
-            .circle_check {
-                box-sizing: border-box;
-                width: 20px;
-                height: 20px;
-                flex-shrink: 0;
-                border-radius: 50%;
-                display: inline-block;
-                cursor: pointer;
-                transition: all 0.4s ease;
-            }
-
-            .circle {
-                background-color: transparent;
-                border: 2px solid #999;
-            }
-
-            .circle_check {
-                background-color: var(--vp-c-accent-hover);
-                /* 浅绿色背景 */
-                border: none;
-                position: relative;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    left: 6px;
-                    top: 2px;
-                    width: 6px;
-                    height: 10px;
-                    border: solid white;
-                    border-radius: 1px;
-                    border-width: 0 2px 2px 0;
-                    transform: rotate(45deg);
-                    animation: checkmark 0.4s ease-in-out forwards;
-                }
-
-                @keyframes checkmark {
-                    0% {
-                        opacity: 0;
-                        transform: rotate(45deg) scale(0.5);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: rotate(45deg) scale(1);
-                    }
-                }
-            }
-            // 标题和标签
-            .content_wrapper {
-                display: flex;
-                flex: 1;
-                min-width: 0; // 允许收缩
-                align-items: center;
-                margin-right: 10px;
-                // 
-                .title {
-                    font-weight: bold;
-                    min-width: 0; // 允许收缩
-                    margin-right: 2px; // 与标签的间距
-                }
-
-                // 标签
-                .el-tag {
-                    flex-shrink: 0; // 防止标签被压缩
-                    // white-space: nowrap;
-                }
-            }
-            
-
-            // delect按钮
-            .delect {
-                flex-shrink: 0;
-                margin-left: auto; // 推到最右侧
-                // width: 30%;
-                .el-button {
-                    border: none;
-                    padding: 6px 12px;
-                    border-radius: 15px;
-                    background: transparent;
-                    box-shadow: var(--my-shadow-light);
-                    color: var(--vp-c-text);
-                    backdrop-filter: blur(10px);
-                    .delete_icon{
-                        margin-right: 1px;
-                        font-size: .8rem;
-                    }
-                }
+            // 拖动手柄
+            &::after {
+                content: '⋮⋮';
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 18px;
+                color: var(--vp-c-text-2);
+                opacity: 0;
+                transition: opacity 0.3s ease;
             }
 
         }
-
-        // 内容
-        .todo-item-content {
-            display: flex;
-            // flex: 1;
-            gap: 5px;
-            color: var(--vp-c-text);
-            // 描述和标签
-            .script_tags {
-                margin-top: 5px;
-                width: 50%;
-                background: rgba(215, 215, 215, 0.631);
-                padding: 5px;
-                border-radius: 15px;
-                overflow: hidden;
-
-                // 标签
-                .tags {
-                    display: flex;
-                    // margin-left: 20px;
-                    gap: 5px;
-
-                }
-
-                .ellipsis_wrapper {
-                    margin-top: 5px;
-                }
-
-                // 详情
-                .todo-item-detail {
-                    margin-bottom: 10px;
-                    font-size: 0.8em;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 4;
-                    /* 显示行数 */
-                    overflow: hidden;
-                    word-break: break-all;
-                    background: transparent;
-
-
-                }
-            }
-
-
-            // 时间 
-            .todo-item-time {
-                width: 50%;
-                font-size: 0.9rem;
-                // text-align: center;
-                margin-top: 5px;
-                background: rgba(215, 215, 215, 0.631);
-                border-radius: 15px;
-                padding: 8px;
-                span{
-                    font-size: .8rem;
-                }
-            }
-        }
-
 
     }
+    .todo_item {
+                break-inside: avoid;/* 防止内容被分割到不同列 */
+                padding: 10px;
+                border-radius: 15px;
+                margin-bottom: 20px;
+
+                // 触摸排序
+                touch-action: pan-y; // 允许正常的滚动
+
+                // 顶部
+                .todo_item_top {
+                    color: var(--vp-c-text);
+                    background-color: $todo_item_bg_light;
+                    padding: 5px;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    vertical-align: middle;
+                    width: 97%;
+                    gap: 5px; // 各元素间距
+
+                    
+                    // 完成按钮
+                    .circle,
+                    .circle_check {
+                        box-sizing: border-box;
+                        width: 20px;
+                        height: 20px;
+                        flex-shrink: 0;
+                        border-radius: 50%;
+                        display: inline-block;
+                        cursor: pointer;
+                        transition: all 0.4s ease;
+                    }
+
+                    .circle {
+                        background-color: transparent;
+                        border: 2px solid #999;
+                    }
+
+                    .circle_check {
+                        background-color: var(--vp-c-accent-hover);
+                        /* 浅绿色背景 */
+                        border: none;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 6px;
+                            top: 2px;
+                            width: 6px;
+                            height: 10px;
+                            border: solid white;
+                            border-radius: 1px;
+                            border-width: 0 2px 2px 0;
+                            transform: rotate(45deg);
+                            animation: checkmark 0.4s ease-in-out forwards;
+                        }
+
+                        @keyframes checkmark {
+                            0% {
+                                opacity: 0;
+                                transform: rotate(45deg) scale(0.5);
+                            }
+
+                            100% {
+                                opacity: 1;
+                                transform: rotate(45deg) scale(1);
+                            }
+                        }
+                    }
+                    // 标题和标签
+                    .content_wrapper {
+                        display: flex;
+                        flex: 1;
+                        min-width: 0; // 允许收缩
+                        align-items: center;
+                        margin-right: 10px;
+                        // 
+                        .title {
+                            font-weight: bold;
+                            min-width: 0; // 允许收缩
+                            margin-right: 2px; // 与标签的间距
+                        }
+
+                        // 标签
+                        .el-tag {
+                            flex-shrink: 0; // 防止标签被压缩
+                            // white-space: nowrap;
+                        }
+                    }
+                    
+
+                    // delect按钮
+                    .delect {
+                        flex-shrink: 0;
+                        margin-left: auto; // 推到最右侧
+                        // width: 30%;
+                        .el-button {
+                            border: none;
+                            padding: 6px 12px;
+                            border-radius: 15px;
+                            background: transparent;
+                            box-shadow: var(--my-shadow-light);
+                            color: var(--vp-c-text);
+                            backdrop-filter: blur(10px);
+                            .delete_icon{
+                                margin-right: 1px;
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+
+                }
+
+                // 内容
+                .todo-item-content {
+                    display: flex;
+                    // flex: 1;
+                    gap: 5px;
+                    color: var(--vp-c-text);
+                    // 描述和标签
+                    .script_tags {
+                        margin-top: 5px;
+                        width: 50%;
+                        background: rgba(215, 215, 215, 0.631);
+                        padding: 5px;
+                        border-radius: 15px;
+                        overflow: hidden;
+
+                        // 标签
+                        .tags {
+                            display: flex;
+                            // margin-left: 20px;
+                            gap: 5px;
+
+                        }
+
+                        .ellipsis_wrapper {
+                            margin-top: 5px;
+                        }
+
+                        // 详情
+                        .todo-item-detail {
+                            margin-bottom: 10px;
+                            font-size: 0.8em;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 4;
+                            /* 显示行数 */
+                            overflow: hidden;
+                            word-break: break-all;
+                            background: transparent;
+
+
+                        }
+                    }
+
+
+                    // 时间 
+                    .todo-item-time {
+                        width: 50%;
+                        font-size: 0.9rem;
+                        // text-align: center;
+                        margin-top: 5px;
+                        background: rgba(215, 215, 215, 0.631);
+                        border-radius: 15px;
+                        padding: 8px;
+                        span{
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+
+
+
 }
 
+//#region el-dialog
 :deep(.el-dialog) {
     // --el-bg-color: rgba(40, 40, 40, 0.6);
     // --el-bg-color-light: rgba(233, 233, 233, 0.6);
     // width: 90% !important;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+    // backdrop-filter: blur(10px);
     border-radius: 15px;
 
     .el-dialog__title {
@@ -889,11 +1058,11 @@ $todo_item_bg_dark: rgba(0, 0, 0, 0.2);
 
 :deep(.el-button+.el-button) {
     border: 1px solid var(--vp-c-accent-hover);
-    background: var(--vp-c-accent);
+    background: var(--vp-c-accent-hover);
 
     &:hover {
         border: 1px solid var(--vp-c-accent);
-        background: var(--vp-c-accent-hover);
+        opacity: .8;
         color: var(--vp-c-text);
     }
 }
@@ -920,10 +1089,9 @@ $todo_item_bg_dark: rgba(0, 0, 0, 0.2);
         }
     }
 }
+//#endregion
 
-// [data-theme="light"] {
-//     :deep(.el-button+.el-button) {
-//     }
-// }
+
+
 
 </style>

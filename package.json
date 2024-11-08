@@ -1,7 +1,7 @@
 {
   "name": "icynblog",
   "description": "Icyn'Blog",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -40,6 +40,7 @@
     "element-plus": "^2.8.7",
     "hover.css": "^2.3.2",
     "icynblog": "file:",
+    "sortablejs": "^1.15.3",
     "vuepress-plugin-search-pro": "^2.0.0-rc.59"
   }
 }
